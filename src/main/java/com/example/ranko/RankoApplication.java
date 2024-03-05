@@ -16,7 +16,7 @@ public class RankoApplication {
 	@RequestMapping("/")
     @ResponseBody
     String home() {
-      return "Hello World!";
+      return "Hello Worl!";
     }
 
 	@RequestMapping("/home")
