@@ -9,13 +9,20 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class RankoApplication {
 
-    @RequestMapping("/")
+    public static void main(String[] args) {
+        SpringApplication.run(RankoApplication.class, args);
+    }
+
+	@RequestMapping("/")
     @ResponseBody
     String home() {
       return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(RankoApplication.class, args);
+	@RequestMapping("/home")
+    @ResponseBody
+    String home2() {
+      return "Hello World2!";
     }
 }
+
