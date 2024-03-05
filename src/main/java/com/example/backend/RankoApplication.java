@@ -19,7 +19,7 @@ public class RankoApplication {
       return "Hello Worl!";
     }
 
-	@RequestMapping("/home")
+	@RequestMapping("/home2")
     @ResponseBody
     String home2() {
       return "Hello World2!";
