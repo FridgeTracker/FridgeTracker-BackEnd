@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
 
 @RestController
 @RequestMapping("/api")
@@ -29,11 +32,14 @@ public class UserController {
 
     @PostMapping("/login")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<String> loginUser(@RequestBody User loginUser){
+    public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
         if (user != null && user.getPassword().equals(loginUser.getPassword())) {
+
+            HttpSession session = request.getSession();
+            session.setAttribute("userEmail", user.getEmail());
             
             return ResponseEntity.ok("Login successful");
         }
