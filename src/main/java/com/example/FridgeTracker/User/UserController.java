@@ -47,8 +47,6 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
     }
 
-    
-
     @GetMapping("/getUser")
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<User> getUser(HttpServletRequest request) {
