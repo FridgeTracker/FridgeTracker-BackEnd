@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 
 @RestController
@@ -27,6 +28,25 @@ public class UserController {
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully");
     }
+
+    @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+
+        // Find user by email
+        User user = userRepository.findByEmail(loginUser.getEmail());
+
+        // If user exists and passwords match
+        if (user != null && user.getPassword().equals(loginUser.getPassword())) {
+            
+            HttpSession session = request.getSession();
+            session.setAttribute("userEmail", user.getEmail());
+            return ResponseEntity.ok("Login successful");
+        }
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
+    }
+
     
 
     @GetMapping("/getUser")
