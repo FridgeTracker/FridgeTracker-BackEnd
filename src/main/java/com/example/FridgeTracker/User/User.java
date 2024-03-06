@@ -26,7 +26,7 @@ public class User {
     @Column(name = "rank")
     private int rank;
 
-    //Constructor
+    /*
     User(String email, String password, int rank){
         this.email = email;
         this.password = password;
@@ -66,5 +66,5 @@ public class User {
     public void setRank(int rank){
         this.rank = rank;
     }
-
+*/
 }
