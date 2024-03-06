@@ -38,8 +38,6 @@ public class UserController {
 
         if (user != null && user.getPassword().equals(loginUser.getPassword())) {
             
-            HttpSession session = request.getSession();
-            session.setAttribute("userEmail", user.getEmail());
             return ResponseEntity.ok("Login successful");
         }
 
