@@ -48,10 +48,7 @@ public class UserController {
 
     @GetMapping("/getUser")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<User> getUser(HttpServletRequest request) {
-        
-        HttpSession session = request.getSession();
-        String userEmail = (String) session.getAttribute("userEmail");
+    public ResponseEntity<User> getUser(@RequestHeader("email-tkn") String userEmail) {       
         
         User user = userRepository.findByEmail(userEmail);
         
