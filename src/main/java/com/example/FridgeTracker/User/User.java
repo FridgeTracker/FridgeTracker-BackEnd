@@ -6,7 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name="users")
 public class User {
@@ -31,7 +33,7 @@ public class User {
         this.rank = rank;
     }
 
-    //Getters
+    //User Getters
     public long getId(){
         return id;
     }
@@ -48,7 +50,7 @@ public class User {
         return rank;
     }
 
-    //Setters
+    //User Setters
     public void setId(long id){
         this.id = id;
     }
