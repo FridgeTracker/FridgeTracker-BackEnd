@@ -34,10 +34,8 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
 
-        // Find user by email
         User user = userRepository.findByEmail(loginUser.getEmail());
 
-        // If user exists and passwords match
         if (user != null && user.getPassword().equals(loginUser.getPassword())) {
             
             HttpSession session = request.getSession();
@@ -48,10 +46,12 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
     }
 
-
     @GetMapping("/getUser")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<User> getUser(@RequestHeader("email-tkn") String userEmail) {
+    public ResponseEntity<User> getUser(HttpServletRequest request) {
+        
+        HttpSession session = request.getSession();
+        String userEmail = (String) session.getAttribute("userEmail");
         
         User user = userRepository.findByEmail(userEmail);
         
