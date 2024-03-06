@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.User;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +24,13 @@ public class UserController {
 
     @GetMapping("/getUser")
     @CrossOrigin(origins = "http://localhost:3000")
-    public String getUser(){
-        return "HELLO";
+    public ResponseEntity<String> getUser(){
+
+        String message =  "HELLO";
+
+        return ResponseEntity.ok()
+        .header("Content-Type", "application/json").body("{\"message\": \"" + message + "\"}");
+
     }
     
 }
