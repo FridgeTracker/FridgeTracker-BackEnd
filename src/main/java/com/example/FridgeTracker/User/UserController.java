@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-
 
 @RestController
 @RequestMapping("/api")
@@ -32,7 +29,7 @@ public class UserController {
 
     @PostMapping("/login")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+    public ResponseEntity<String> loginUser(@RequestBody User loginUser){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
