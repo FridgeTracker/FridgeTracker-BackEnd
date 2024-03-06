@@ -23,4 +23,7 @@ public class User {
     @Column(name = "password", length = 255)
     private String password;
 
+    @Column(name = "rank")
+    private int rank;
+
 }
