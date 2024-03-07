@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.FridgeTracker.Fridge.Fridge;
-import com.example.FridgeTracker.Fridge.NewFridgeBody;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -32,15 +30,16 @@ public class MemberController {
         User user = userRepository.findByEmail(request.getFamily().getEmail());
 
         if (user != null){
-            /*Member member = new Member();
+            Member member = new Member();
 
-            member.setAge(0);
-            fridge.setFridgeName(request.get);
-            fridge.setCapacity(request.getCapacity());
-
-            fridge.setOwner(user);*/
-
-            memberRepository.save(request);
+              // Set member attributes
+              member.setName(request.getName());
+              member.setAge(request.getAge());
+              member.setAllergies(request.getAllergies());
+              member.setFamily(user); // Set the owner (family) of the member
+  
+              // Save the member to the repository
+              memberRepository.save(member);
 
             return ResponseEntity.ok("Fridge added successfully");
         }
