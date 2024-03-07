@@ -11,6 +11,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 import com.example.FridgeTracker.User.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Data
@@ -30,6 +31,7 @@ public class Fridge {
 
     @ManyToOne
     @JoinColumn(name="ownerEmail", referencedColumnName="email")
+    @JsonIgnore
     private User owner;
 
 
