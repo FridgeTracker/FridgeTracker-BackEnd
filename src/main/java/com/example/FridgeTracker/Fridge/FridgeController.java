@@ -1,6 +1,8 @@
 package com.example.FridgeTracker.Fridge;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 // import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,7 +40,7 @@ public class FridgeController {
 
     @PostMapping("/addFridge")
     @CrossOrigin(origins = "http://localhost:3000")
-    public void addFridgeToUser(@RequestBody NewFridgeBody request){
+    public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
 
         User user = userRepository.findByEmail(request.getUserEmail());
 
@@ -51,9 +53,11 @@ public class FridgeController {
             fridge.setOwner(user);
 
             fridgeRepository.save(fridge);
+
+            return ResponseEntity.ok("Fridge added successfully");
         }
         else {
-            // error
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
         }
     }
     
