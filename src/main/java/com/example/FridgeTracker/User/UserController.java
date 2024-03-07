@@ -30,6 +30,7 @@ public class UserController {
         return ResponseEntity.ok("User registered successfully");
     }
 
+    //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
