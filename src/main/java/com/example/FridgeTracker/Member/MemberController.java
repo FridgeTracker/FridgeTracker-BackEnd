@@ -1,58 +1,46 @@
-package com.example.FridgeTracker.Fridge;
+package com.example.FridgeTracker.Member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-// import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Fridge.Fridge;
+import com.example.FridgeTracker.Fridge.NewFridgeBody;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
-import java.util.List;
-
 
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-public class FridgeController {
+public class MemberController {
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
-    private FridgeRepository fridgeRepository;
+    private MemberRepository memberRepository;
 
-
-    public List<Fridge> getFridgesByEmail(String email){
-        User user = userRepository.findByEmail(email);
-
-        if(user != null){
-            return fridgeRepository.findByOwner(user);
-        } else {
-            return null;
-        }
-    }
-
-
-    @PostMapping("/addFridge")
+    @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
+    public ResponseEntity<String> addMemberToFamily(@RequestBody Member request){
 
-        User user = userRepository.findByEmail(request.getUserEmail());
+        User user = userRepository.findByEmail(request.getFamily().getEmail());
 
         if (user != null){
-            Fridge fridge = new Fridge();
+            /*Member member = new Member();
 
-            fridge.setFridgeName(request.getFridgeName());
+            member.setAge(0);
+            fridge.setFridgeName(request.get);
             fridge.setCapacity(request.getCapacity());
 
-            fridge.setOwner(user);
+            fridge.setOwner(user);*/
 
-            fridgeRepository.save(fridge);
+            memberRepository.save(request);
 
             return ResponseEntity.ok("Fridge added successfully");
         }
@@ -60,5 +48,6 @@ public class FridgeController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
         }
     }
+
     
 }

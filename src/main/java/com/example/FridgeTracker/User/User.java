@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 import com.example.FridgeTracker.Fridge.Fridge; 
+import com.example.FridgeTracker.Member.Member;;
 
 @Data
 @Entity
@@ -33,5 +34,8 @@ public class User {
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
     private List<Fridge> fridges;
+
+    @OneToMany(mappedBy = "family", cascade = CascadeType.ALL)
+    private List<Member> members;
 
 }
