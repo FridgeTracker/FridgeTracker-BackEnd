@@ -27,7 +27,7 @@ public class MemberController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addMemberToFamily(@RequestBody MemberRequest request){
 
-        User user = userRepository.findByEmail(request.getFamilylEmail());
+        User user = userRepository.findByEmail(request.getFamilyEmail());
 
         if (user != null){
 

@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class MemberRequest {
     private Member member;
-    private String familylEmail;
+    private String familyEmail;
 }
