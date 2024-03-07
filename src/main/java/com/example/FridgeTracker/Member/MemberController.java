@@ -38,7 +38,7 @@ public class MemberController {
               // Save the member to the repository
             memberRepository.save(member);
 
-            return ResponseEntity.ok("Fridge added successfully");
+            return ResponseEntity.ok("Member added successfully");
         }
         else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
