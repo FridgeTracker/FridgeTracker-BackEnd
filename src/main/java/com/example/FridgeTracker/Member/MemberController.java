@@ -25,21 +25,18 @@ public class MemberController {
 
     @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addMemberToFamily(@RequestBody Member request){
+    public ResponseEntity<String> addMemberToFamily(@RequestBody MemberRequest request){
 
-        User user = userRepository.findByEmail(request.getFamily().getEmail());
+        User user = userRepository.findByEmail(request.getFamilylEmail());
 
         if (user != null){
-            Member member = new Member();
 
-              // Set member attributes
-              member.setName(request.getName());
-              member.setAge(request.getAge());
-              member.setAllergies(request.getAllergies());
-              member.setFamily(user); // Set the owner (family) of the member
+            Member member = request.getMember();
+
+            member.setFamily(user); // Set the owner (family) of the member
   
               // Save the member to the repository
-              memberRepository.save(member);
+            memberRepository.save(member);
 
             return ResponseEntity.ok("Fridge added successfully");
         }
