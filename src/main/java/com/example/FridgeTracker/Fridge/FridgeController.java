@@ -39,7 +39,7 @@ public class FridgeController {
 
 
     @PostMapping("/addFridge")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
 
         User user = userRepository.findByEmail(request.getUserEmail());

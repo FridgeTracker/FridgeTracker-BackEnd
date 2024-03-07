@@ -17,21 +17,21 @@ import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
     UserRepository userRepository;
 
     @PostMapping("/register")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully");
     }
 
     @PostMapping("/login")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
@@ -48,7 +48,7 @@ public class UserController {
     }
 
     @GetMapping("/getUser")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<User> getUser(@RequestHeader("email-tkn") String userEmail) {       
         
         User user = userRepository.findByEmail(userEmail);
