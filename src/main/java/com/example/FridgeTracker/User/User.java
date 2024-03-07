@@ -1,12 +1,17 @@
 package com.example.FridgeTracker.User;
 
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
+
+import com.example.FridgeTracker.Fridge.Fridge; 
 
 @Data
 @Entity
@@ -26,45 +31,7 @@ public class User {
     @Column(name = "rank")
     private int rank;
 
-    /*
-    User(String email, String password, int rank){
-        this.email = email;
-        this.password = password;
-        this.rank = rank;
-    }
+    @OneToMany(mappedBy = "ownerEmail", cascade = CascadeType.ALL)
+    private List<Fridge> fridges;
 
-    //User Getters
-    public long getId(){
-        return id;
-    }
-
-    public String getEmail(){
-        return email;
-    }
-
-    public String getPassword(){
-        return password;
-    }
-
-    public int getRank(){
-        return rank;
-    }
-
-    //User Setters
-    public void setId(long id){
-        this.id = id;
-    }
-
-    public void setEmail(String email){
-        this.email = email;
-    }
-
-    public void setPassword(String password){
-        this.password = password;
-    }
-    
-    public void setRank(int rank){
-        this.rank = rank;
-    }
-*/
 }
