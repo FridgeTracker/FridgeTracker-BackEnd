@@ -1,15 +1,20 @@
 package com.example.FridgeTracker.Fridge;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+// import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
-import java.util.List;
+// import java.util.List;
 
 
 @RestController
+@RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FridgeController {
 
     @Autowired
@@ -18,7 +23,7 @@ public class FridgeController {
     @Autowired
     private FridgeRepository fridgeRepository;
 
-    @GetMapping
+   /* @GetMapping
     public List<Fridge> getFridgesByEmail(String email){
         User user = userRepository.findByEmail(email);
 
@@ -26,6 +31,28 @@ public class FridgeController {
             return fridgeRepository.findByOwner(user);
         } else {
             return null;
+        }
+    }*/
+
+
+    @PostMapping("/addFridge")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public void addFridgeToUser(String userEmail, String fridgeName, long capacity){
+
+        User user = userRepository.findByEmail(userEmail);
+
+        if (user != null){
+            Fridge fridge = new Fridge();
+
+            fridge.setFridgeName(fridgeName);
+            fridge.setCapacity(capacity);
+
+            fridge.setOwner(user);
+
+            fridgeRepository.save(fridge);
+        }
+        else {
+            // error
         }
     }
     
