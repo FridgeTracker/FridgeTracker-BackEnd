@@ -56,7 +56,7 @@ public class UserController {
         if(user != null){
             return ResponseEntity.ok(user); 
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); 
+            return ResponseEntity.status(600).body(null); 
         }
     }
     

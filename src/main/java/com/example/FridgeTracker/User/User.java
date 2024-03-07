@@ -31,7 +31,7 @@ public class User {
     @Column(name = "rank")
     private int rank;
 
-    /*@OneToMany(mappedBy = "ownerEmail", cascade = CascadeType.ALL)
-    private List<Fridge> fridges;*/
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private List<Fridge> fridges;
 
 }
