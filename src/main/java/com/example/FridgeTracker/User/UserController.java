@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -33,7 +34,7 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+    public ResponseEntity<User> loginUser(@RequestBody User loginUser, HttpServletRequest request){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
@@ -42,17 +43,19 @@ public class UserController {
             HttpSession session = request.getSession();
             session.setAttribute("userEmail", user.getEmail());
             
-            return ResponseEntity.ok("Login successful");
+            return ResponseEntity.ok(user);
         }
 
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
     }
 
-    @GetMapping("/getUser")
+    @GetMapping("/user/{id}")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<User> getUser(@RequestHeader("email-tkn") String userEmail) {       
-        
-        User user = userRepository.findByEmail(userEmail);
+    public ResponseEntity<User> getUser(@PathVariable Long id) {       
+
+      // can also use { @RequestHeader("email-tkn") String userEmail  }
+
+        User user = userRepository.findById(id).orElse(null);
         
         if(user != null){
             return ResponseEntity.ok(user); 
