@@ -3,8 +3,8 @@
 ### Users
 
 - POST /api/register: Create a new user.
-- POST /api/login: Login using email and password for User.
-- GET /api/getUser: Get user by email.
+- POST /api/login: Login using email and password for User responds with User object.
+- GET /api/user/{id}: Get user by user id.
   
 ### Fridges
 
