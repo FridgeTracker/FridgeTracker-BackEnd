@@ -34,7 +34,7 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<User> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+    public ResponseEntity<Long> loginUser(@RequestBody User loginUser, HttpServletRequest request){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
@@ -43,7 +43,7 @@ public class UserController {
             HttpSession session = request.getSession();
             session.setAttribute("userEmail", user.getEmail());
             
-            return ResponseEntity.ok(user);
+            return ResponseEntity.ok(user.getId());
         }
 
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
