@@ -24,6 +24,8 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+
+    //endpoint needs updating with error control
     @PostMapping("/register")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
@@ -49,6 +51,8 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
     }
 
+
+    //get user object endpoint
     @GetMapping("/user/{id}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<User> getUser(@PathVariable Long id) {       

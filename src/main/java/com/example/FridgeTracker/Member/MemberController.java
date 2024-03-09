@@ -23,6 +23,7 @@ public class MemberController {
     @Autowired
     private MemberRepository memberRepository;
 
+    // Temporary add member endpoint without error control
     @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addMemberToFamily(@RequestBody MemberRequest request){
