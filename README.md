@@ -28,8 +28,8 @@
 |  email  | [string](#string) | optional |  |
 |  password  | [string](#string) | optional |  |
 |  rank  | [string](#string) | optional |  |
-|  fridges  | [Fridge](#Fridge) | repeated |  |
-|  members  | [Member](#Fridge) | repeated |  |
+|  fridges  | [Fridge](#Fridge) | repeated |  1..* Relationship |
+|  members  | [Member](#Fridge) | repeated |  1..* Relationship|
 
 
 ### Fridge
@@ -38,7 +38,7 @@
 |  id  | [Long](#string) | optional |  |
 |  fridgeName  | [string](#string) | optional |  |
 |  capacity  | [uint32](#int) | optional |  |
-|  items  | [Item](#Item) | repeated |  |
+|  items  | [Item](#Item) | repeated |  1..* Relationship |
 
 
 
