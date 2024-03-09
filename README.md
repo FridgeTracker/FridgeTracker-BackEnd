@@ -17,6 +17,7 @@
 - [Fridge](#Fridge)
 - [User](#User)
 - [Member](#Member)
+- [Item](#Item)
 
   
 ### User
@@ -25,6 +26,8 @@
 |  id  | [Long](#string) | optional |  |
 |  name  | [string](#string) | optional |  |
 |  email  | [string](#string) | optional |  |
+|  password  | [string](#string) | optional |  |
+|  rank  | [string](#string) | optional |  |
 |  fridges  | [Fridge](#Fridge) | repeated |  |
 |  members  | [Member](#Fridge) | repeated |  |
 
@@ -34,6 +37,8 @@
 | ----- | ---- | ----- | ----------- |
 |  id  | [Long](#string) | optional |  |
 |  fridgeName  | [string](#string) | optional |  |
+|  capacity  | [uint32](#int) | optional |  |
+|  items  | [Item](#Item) | repeated |  |
 
 
 
@@ -42,3 +47,15 @@
 | ----- | ---- | ----- | ----------- |
 |  id  | [Long](#string) | optional |  |
 |  memberName  | [string](#string) | optional |  |
+|  age  | [uint32](#Int) | optional |  |
+|  allergies  | [string](#string) | optional |  |
+
+
+### Item
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+|  id  | [Long](#Long) | optional |  |
+|  itemName  | [string](#string) | optional |  |
+|  quantity  | [uint32](#int) | optional |  |
+|  expiryDate  | [string](#string) | optional |  |
+|  calories  | [Long](#Long) | optional |  |
