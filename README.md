@@ -23,7 +23,7 @@
 ### User
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-|  id  | [Long](#string) | optional |  |
+|  id  | [Long](#int64) | optional |  |
 |  name  | [string](#string) | optional |  |
 |  email  | [string](#string) | optional |  |
 |  password  | [string](#string) | optional |  |
@@ -35,9 +35,9 @@
 ### Fridge
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-|  id  | [Long](#string) | optional |  |
+|  id  | [Long](#int64) | optional |  |
 |  fridgeName  | [string](#string) | optional |  |
-|  capacity  | [uint32](#int) | optional |  |
+|  capacity  | [int32](#int32) | optional |  |
 |  items  | [Item](#Item) | repeated |  1..* Relationship |
 
 
@@ -45,17 +45,30 @@
 ### Member
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-|  id  | [Long](#string) | optional |  |
+|  id  | [Long](#int64) | optional |  |
 |  memberName  | [string](#string) | optional |  |
-|  age  | [uint32](#Int) | optional |  |
+|  age  | [int32](#int32) | optional |  |
 |  allergies  | [string](#string) | optional |  |
 
 
 ### Item
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-|  id  | [Long](#Long) | optional |  |
+|  id  | [Long](#int64) | optional |  |
 |  itemName  | [string](#string) | optional |  |
-|  quantity  | [uint32](#int) | optional |  |
+|  quantity  | [int32](#int32) | optional |  |
 |  expiryDate  | [string](#string) | optional |  |
-|  calories  | [Long](#Long) | optional |  |
+|  calories  | [Long](#int64) | optional |  |
+
+
+## Scalar Value Types
+
+| .proto Type | Notes | C++ | Java | Python | Go | C# | PHP | Ruby |
+| ----------- | ----- | --- | ---- | ------ | -- | -- | --- | ---- |
+| <a name="double" /> double |  | double | double | float | float64 | double | float | Float |
+| <a name="float" /> float |  | float | float | float | float32 | float | float | Float |
+| <a name="int32" /> int32 | Uses variable-length encoding. | int32 | int | int | int32 | int | integer | Bignum or Fixnum (as required) |
+| <a name="int64" /> int64 | Uses variable-length encoding. | int64 | long | int/long | int64 | long | integer/string | Bignum |
+| <a name="bool" /> bool |  | bool | boolean | boolean | bool | bool | boolean | TrueClass/FalseClass |
+| <a name="string" /> string | A string must always contain UTF-8 encoded or 7-bit ASCII text. | string | String | str/unicode | string | string | string | String (UTF-8) |
+
