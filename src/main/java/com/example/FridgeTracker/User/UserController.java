@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,15 +73,15 @@ public class UserController {
     //get user object endpoint
     @GetMapping("/user/{id}")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<User> getUser(@PathVariable Long id) {       
+    public ResponseEntity<User> getUser(@PathVariable UUID id) {       
 
       // can also use { @RequestHeader("email-tkn") String userEmail  }
 
         //Add a error check
-        User user = userRepository.findById(id).orElse(null);
+        Optional<User> user = userRepository.findById(id);
         
         if(user != null){
-            return ResponseEntity.ok(user); 
+            return ResponseEntity.ok(user.get()); 
         } else {
             return ResponseEntity.status(600).body(null); 
         }
