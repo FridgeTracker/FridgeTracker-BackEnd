@@ -2,6 +2,7 @@ package com.example.FridgeTracker.User;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.UUID;
 
@@ -26,6 +27,8 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     //endpoint needs updating with error control
     @PostMapping("/register")
@@ -33,6 +36,8 @@ public class UserController {
     public ResponseEntity<String> addUser(@RequestBody User user){
 
         if(user != null){
+            String hashedPasswordString = passwordEncoder.encode(user.getPassword());
+            user.setPassword(hashedPasswordString);
             userRepository.save(user);
             return ResponseEntity.ok("User registered successfully");
         } else {
@@ -47,7 +52,7 @@ public class UserController {
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
-        if (user != null && user.getPassword().equals(loginUser.getPassword())) {
+        if (user != null && passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
 
             HttpSession session = request.getSession();
             session.setAttribute("userEmail", user.getEmail());
