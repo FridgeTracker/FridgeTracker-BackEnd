@@ -20,7 +20,7 @@ import jakarta.servlet.http.HttpSession;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api") // Change to user ?
 @CrossOrigin(origins = "*")
 public class UserController {
 
@@ -30,15 +30,20 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    //endpoint needs updating with error control
+
     @PostMapping("/register")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
 
         if(user != null){
+
+            //Hash and Set new password
             String hashedPasswordString = passwordEncoder.encode(user.getPassword());
             user.setPassword(hashedPasswordString);
+
+            //Import into db
             userRepository.save(user);
+
             return ResponseEntity.ok("User registered successfully");
         } else {
             return ResponseEntity.badRequest().body("Fail to register");
@@ -71,7 +76,7 @@ public class UserController {
 
       // can also use { @RequestHeader("email-tkn") String userEmail  }
 
-        
+        //Add a error check
         User user = userRepository.findById(id).orElse(null);
         
         if(user != null){
