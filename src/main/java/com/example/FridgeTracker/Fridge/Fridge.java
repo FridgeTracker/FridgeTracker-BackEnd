@@ -1,19 +1,23 @@
 package com.example.FridgeTracker.Fridge; 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
+import java.util.List;
 
 import com.example.FridgeTracker.User.User;
+import com.example.FridgeTracker.Item.Item;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -38,6 +42,9 @@ public class Fridge {
     @JoinColumn(name="ownerEmail", referencedColumnName="email")
     @JsonIgnore
     private User owner;
+
+    @OneToMany(mappedBy = "fridge", cascade = CascadeType.ALL)
+    private List<Item> items;
 
 
 }
