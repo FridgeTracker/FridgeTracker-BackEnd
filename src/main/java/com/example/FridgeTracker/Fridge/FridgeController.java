@@ -20,6 +20,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class FridgeController {
 
+    //T
     @Autowired
     private UserRepository userRepository;
 
