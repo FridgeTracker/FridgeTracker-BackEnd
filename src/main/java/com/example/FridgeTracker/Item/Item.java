@@ -31,7 +31,7 @@ public class Item {
     private int quantity;
 
     @ManyToOne
-    @JoinColumn(name="fridgeID", referencedColumnName="id", updatable=false, insertable=false, nullable=false)
+    @JoinColumn(name="fridgeIdentifier", referencedColumnName="id")
     @JsonIgnore
     private Fridge fridge;
 
