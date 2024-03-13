@@ -40,7 +40,7 @@
 |  fridgeName  | [string](#string) | optional |  |
 |  capacity  | [int32](#int32) | optional |  |
 |  items  | [Item](#Item) | repeated |  1..* Relationship |
-|  type  |  [string](#string)  |  optional  |  |
+
 
 
 
@@ -61,6 +61,7 @@
 |  quantity  | [int32](#int32) | optional |  |
 |  expiryDate  | [string](#string) | optional |  |
 |  calories  | [Long](#int64) | optional |  |
+|  type  |  [string](#string)  |  optional  |  |
 
 
 ## Scalar Value Types
