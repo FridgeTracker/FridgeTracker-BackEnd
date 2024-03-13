@@ -1,5 +1,7 @@
 ## API Endpoints
 
+### Users
+
 - POST /api/register: Create a new user.
 - POST /api/login: Login using email and password for User responds with User object.
 - GET /api/user/{uuid}: Get user by user id. Returns [User]{#User) Object
