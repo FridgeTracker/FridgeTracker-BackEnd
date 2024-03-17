@@ -21,6 +21,7 @@ import lombok.Data;
 @Table(name="members")
 public class Member {
 
+    //Auto generated unique UUID
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -36,6 +37,7 @@ public class Member {
     @Column(name="allergies")
     private String allergies;
 
+    //Connect Members to a family account
     @ManyToOne
     @JoinColumn(name="ownerEmail", referencedColumnName="email")
     @JsonIgnore

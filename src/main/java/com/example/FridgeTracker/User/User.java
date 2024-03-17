@@ -22,6 +22,7 @@ import java.util.UUID;
 @Table(name="users")
 public class User {
 
+    // Auto generate UUID *unique*
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -37,9 +38,11 @@ public class User {
     @Column(name = "rank")
     private int rank;
 
+    //Connect added fridges to account
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
     private List<Fridge> fridges;
 
+    //Connect added Members to account
     @OneToMany(mappedBy = "family", cascade = CascadeType.ALL)
     private List<Member> members;
 

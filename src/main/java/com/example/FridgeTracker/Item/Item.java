@@ -14,7 +14,7 @@ import lombok.Data;
 
 import com.example.FridgeTracker.Fridge.Fridge; 
 
-
+//Item class to store food items
 @Data
 @Entity
 @Table(name="items")
