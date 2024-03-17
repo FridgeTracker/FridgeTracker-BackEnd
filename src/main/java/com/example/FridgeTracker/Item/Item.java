@@ -30,6 +30,13 @@ public class Item {
     @Column(name="quantity")
     private int quantity;
 
+    @Column(name="calories")
+    private Long calories;
+
+    //Used to declare enums ( MEAT, DAIRY, VEGETABLE, FRUIT )
+    @Column(name="type")
+    private String type;
+
     @ManyToOne
     @JoinColumn(name="fridgeIdentifier", referencedColumnName="id")
     @JsonIgnore
