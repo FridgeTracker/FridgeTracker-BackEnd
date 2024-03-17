@@ -1,16 +1,23 @@
 ## API Endpoints
 
+### Users
+
 - POST /api/register: Create a new user.
 - POST /api/login: Login using email and password for User responds with User object.
-- GET /api/user/{id}: Get user by user id.
+- GET /api/user/{uuid}: Get user by user id. Returns [User]{#User) Object
   
 ### Fridges
 
 - POST /api/addFridge: Create a new fridge. (requires fridge data and user email)
+- GET /api/getFridge/{uuid}
 
 ### Members
 
 - POST /api/addMember: Add member to family account
+
+### Items
+
+****
 
 ## Table of Contents
 
@@ -42,6 +49,7 @@
 
 
 
+
 ### Member
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -59,6 +67,7 @@
 |  quantity  | [int32](#int32) | optional |  |
 |  expiryDate  | [string](#string) | optional |  |
 |  calories  | [Long](#int64) | optional |  |
+|  type  |  [string](#string)  |  optional  |  |
 
 
 ## Scalar Value Types
