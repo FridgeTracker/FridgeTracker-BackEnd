@@ -32,6 +32,7 @@ public class UserController {
     private BCryptPasswordEncoder passwordEncoder;
 
 
+    //Register User endpoint **Subject to change**
     @PostMapping("/register")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
