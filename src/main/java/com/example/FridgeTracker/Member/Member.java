@@ -16,6 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+//Needs getters and setters using lombok for now
 @Data
 @Entity
 @Table(name="members")
