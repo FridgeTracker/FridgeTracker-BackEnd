@@ -38,6 +38,12 @@ public class Member {
     @Column(name="allergies")
     private String allergies;
 
+    @Column(name="height")
+    private double height;
+
+    @Column(name="weight")
+    private double weight;
+
     //Connect Members to a family account
     @ManyToOne
     @JoinColumn(name="ownerEmail", referencedColumnName="email")
