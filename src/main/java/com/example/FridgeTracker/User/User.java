@@ -29,6 +29,9 @@ public class User {
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
 
+    @Column(name = "familyName", length = 255)
+    private String familyName;
+
     @Column(name = "email", length = 255)
     private String email;
 
