@@ -37,7 +37,12 @@ public class UserController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
 
+
         if(user != null){
+
+            if (userRepository.existsByEmail(user.getEmail())) {
+                return ResponseEntity.badRequest().body("User already exists");
+            }
 
             //Hash and Set new password
             String hashedPasswordString = passwordEncoder.encode(user.getPassword());
