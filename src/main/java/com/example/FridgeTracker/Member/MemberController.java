@@ -29,9 +29,9 @@ public class MemberController {
 
         
         User user = userRepository.findByEmail(request.getFamilyEmail());
-        
+
         Member member = request.getMember();
-        return ResponseEntity.ok(member);
+        return ResponseEntity.status(700).body(member);
 
 /* 
         if (user != null){
