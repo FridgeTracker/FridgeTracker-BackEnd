@@ -25,13 +25,19 @@ public class MemberController {
     // Temporary add member endpoint without error control
     @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<User> addMemberToFamily(@RequestBody MemberRequest request){
+    public ResponseEntity<Member> addMemberToFamily(@RequestBody MemberRequest request){
 
         
         User user = userRepository.findByEmail(request.getFamilyEmail());
 
         Member member = request.getMember();
-        return ResponseEntity.status(700).body(user);
+
+            member.setFamily(user); // Set the owner (family) of the member
+  
+              // Save the member to the repository
+            memberRepository.save(member);
+
+        return ResponseEntity.status(700).body(member);
 
 /* 
         if (user != null){
