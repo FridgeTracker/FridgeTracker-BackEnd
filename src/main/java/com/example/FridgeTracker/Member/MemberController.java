@@ -1,9 +1,14 @@
 package com.example.FridgeTracker.Member;
 
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,5 +51,20 @@ public class MemberController {
         }
     }
 
+    
+    @GetMapping("/getMember")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<Member> getMember(@PathVariable UUID id){
+
+         Optional<Member> member = memberRepository.findById(id);
+        
+        if(member != null){
+            return ResponseEntity.ok(member.get()); 
+        } else {
+            return ResponseEntity.status(600).body(null); 
+        }
+    }
+
+    }
     
 }
