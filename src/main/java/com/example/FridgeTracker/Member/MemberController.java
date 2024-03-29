@@ -35,7 +35,7 @@ public class MemberController {
             member.setFamily(user); // Set the owner (family) of the member
   
               // Save the member to the repository
-            memberRepository.save(member);
+            //memberRepository.save(member);
 
         return ResponseEntity.status(700).body(member);
 
