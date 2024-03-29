@@ -51,7 +51,7 @@ public class MemberController {
         }
     }
 
-    
+
     @GetMapping("/getMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<Member> getMember(@PathVariable UUID id){
@@ -67,4 +67,4 @@ public class MemberController {
 
     }
     
-}
+
