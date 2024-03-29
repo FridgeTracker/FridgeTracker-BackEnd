@@ -31,11 +31,7 @@ public class MemberController {
         User user = userRepository.findByEmail(request.getFamilyEmail());
 
         Member member = request.getMember();
-
-            member.setFamily(user); // Set the owner (family) of the member
-  
-              // Save the member to the repository
-            //memberRepository.save(member);
+       // member.setFamily(user); // Set the owner (family) of the member
 
         return ResponseEntity.status(700).body(member);
 
