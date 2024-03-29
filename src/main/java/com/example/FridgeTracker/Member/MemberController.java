@@ -1,7 +1,6 @@
 package com.example.FridgeTracker.Member;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,10 +25,15 @@ public class MemberController {
     // Temporary add member endpoint without error control
     @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addMemberToFamily(@RequestBody MemberRequest request){
+    public ResponseEntity<Member> addMemberToFamily(@RequestBody MemberRequest request){
 
+        
         User user = userRepository.findByEmail(request.getFamilyEmail());
+        
+        Member member = request.getMember();
+        return ResponseEntity.ok(member);
 
+/* 
         if (user != null){
 
             Member member = request.getMember();
@@ -44,7 +48,7 @@ public class MemberController {
         else {
             return ResponseEntity.status(700).body("Fail to add fridge");
         }
-    }
+    }*/
 
-    
+}
 }
