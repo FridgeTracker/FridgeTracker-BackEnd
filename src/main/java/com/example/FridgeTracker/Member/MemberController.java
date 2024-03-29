@@ -42,7 +42,7 @@ public class MemberController {
             return ResponseEntity.ok("Member added successfully");
         }
         else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
+            return ResponseEntity.status(700).body("Fail to add fridge");
         }
     }
 
