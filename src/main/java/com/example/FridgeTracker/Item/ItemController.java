@@ -109,11 +109,12 @@ public class ItemController {
         if (fridgeOptional.isPresent()) {
             Fridge fridge = fridgeOptional.get();
       
-            fridge.getItems().removeIf(item -> item.getFridgeID().equals(request.getItemID()));
-             
-            fridgeRepository.save(fridge);
+            Optional<Item> itemOptional = fridge.getItems().stream()
+                                    .filter(item -> item.getFridgeID().equals(request.getItemID()))
+                                    .findFirst();
 
-            return ResponseEntity.ok("" + request.getId() + request.getItemID());
+
+            return ResponseEntity.ok("" + itemOptional);
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
         }    
