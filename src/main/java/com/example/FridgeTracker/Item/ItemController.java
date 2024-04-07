@@ -109,11 +109,14 @@ public class ItemController {
 
             Fridge fridge = fridgeOptional.get();
 
-            fridge.removeItem(request.getItemID());
             return ResponseEntity.ok("Item deleted successfully.");
-
+            
             /*fridgeRepository.save(fridge);
 
+            fridge.removeItem(request.getItemID());
+            
+
+            
             return ResponseEntity.ok("Item deleted successfully.");*/
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
