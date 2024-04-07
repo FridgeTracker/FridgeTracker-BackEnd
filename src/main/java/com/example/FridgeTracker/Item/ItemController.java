@@ -102,7 +102,7 @@ public class ItemController {
     
     @PostMapping("/deleteItem")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteItemInFridge(@RequestBody ItemBody request){
+    public ResponseEntity<String> deleteItemInFridge(@RequestBody DeleteItemRequest request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
       
