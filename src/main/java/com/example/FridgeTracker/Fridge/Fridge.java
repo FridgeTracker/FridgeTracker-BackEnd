@@ -47,4 +47,17 @@ public class Fridge {
     private List<Item> items;
 
 
+    public void removeItem(Long itemId) {
+        if (items != null) {    
+            for (Item item : items) { 
+                if (item.getFridgeID().equals(itemId)) {
+                    items.remove(item);
+                    item.setFridge(null);
+                    break; 
+                }
+            }
+        }
+    }
+
+
 }

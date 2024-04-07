@@ -97,4 +97,23 @@ public class ItemController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
         }
     }
+
+    
+    @PostMapping("/deleteItem")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> deleteItemInFridge(@RequestBody ItemBody request){
+   
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+        if (fridgeOptional.isPresent()) {
+            Fridge fridge = fridgeOptional.get();
+
+            fridge.removeItem(request.getItemID());
+
+            fridgeRepository.save(fridge);
+
+            return ResponseEntity.ok("Item deleted successfully.");
+        } else {
+            return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
+        }    
+    }
 }
