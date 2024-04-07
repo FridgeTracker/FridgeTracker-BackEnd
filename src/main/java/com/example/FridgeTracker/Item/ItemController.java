@@ -114,7 +114,7 @@ public class ItemController {
                                     .findFirst();
 
 
-            return ResponseEntity.ok("" + itemOptional);
+            return ResponseEntity.ok("");
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
         }    
