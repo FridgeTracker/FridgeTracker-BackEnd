@@ -56,5 +56,38 @@ public class ItemController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add Item");
         }
     }
-    
+
+    @PostMapping("/updateItem")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> updateItemInFridge(@RequestBody ItemBody request){
+
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+
+        if (fridgeOptional != null){
+
+            Fridge fridge = fridgeOptional.get();
+            Optional<Item> itemOptional = fridge.getItems().stream()
+                                    .filter(item -> item.getFridgeID().equals(request.getItem().getFridgeID()))
+                                    .findFirst();
+
+            if (itemOptional.isPresent()) {
+                Item item = itemOptional.get();
+                // Update item properties here
+                item.setFoodName(request.getItem().getFoodName());
+                item.setQuantity(request.getItem().getQuantity());
+                item.setCalories(request.getItem().getCalories());
+                item.setType(request.getItem().getType());
+                
+                // Save the updated item back to the database
+                fridgeRepository.save(fridge);
+          
+                return ResponseEntity.ok("Item updated successfully");
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+            }
+
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge not found");
+        }
+    }
 }
