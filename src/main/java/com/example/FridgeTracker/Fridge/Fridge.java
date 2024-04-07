@@ -43,7 +43,7 @@ public class Fridge {
     @JsonIgnore
     private User owner;
 
-    @OneToMany(mappedBy = "fridge", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "fridge", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items;
 
 
