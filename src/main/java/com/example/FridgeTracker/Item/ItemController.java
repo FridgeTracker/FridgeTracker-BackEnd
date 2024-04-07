@@ -52,7 +52,7 @@ public class ItemController {
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
             item.setType(request.getType());
-            
+
             item.setFridge(fridge);
 
             itemRepository.save(item);
@@ -66,18 +66,9 @@ public class ItemController {
 
     @PostMapping("/updateItem")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> updateItemInFridge(@RequestBody Map<String, Object> request){
-
-        String idString = request.get("id").toString();
-        UUID fridgeId = UUID.fromString(idString);
-
-        Map<String, Object> itemMap = (Map<String, Object>)request.get("item");
-        String foodName = itemMap.get("foodName").toString();
-        String quantity = itemMap.get("quantity").toString();
-        String calories = itemMap.get("calories").toString();
-        String type = itemMap.get("type").toString();
-
-        Optional<Fridge> fridgeOptional = fridgeRepository.findById(fridgeId);
+    public ResponseEntity<String> updateItemInFridge(@RequestBody ItemBody request){
+   
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
 
         if(fridgeOptional != null){
             return ResponseEntity.ok("Item updated successfully");

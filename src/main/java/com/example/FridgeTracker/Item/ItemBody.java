@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class ItemBody {
 
+    private Long itemID;
     private String foodName;
     private int quantity;
     private Long calories;
