@@ -13,7 +13,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import com.example.FridgeTracker.Fridge.Fridge; 
+import com.example.FridgeTracker.Storage.Fridge; 
 import com.example.FridgeTracker.Member.Member;
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.Fridge;
+package com.example.FridgeTracker.Storage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Storage.Fridge;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 import java.util.List;

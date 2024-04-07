@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.Fridge; 
+/*package com.example.FridgeTracker.Fridge; 
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -60,4 +60,4 @@ public class Fridge {
     }
 
 
-}
+}*/

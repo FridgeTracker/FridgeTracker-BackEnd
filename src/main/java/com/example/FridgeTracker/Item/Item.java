@@ -14,7 +14,7 @@ import lombok.Data;
 
 import java.util.Optional;
 
-import com.example.FridgeTracker.Fridge.Fridge; 
+import com.example.FridgeTracker.Storage.Fridge; 
 
 //Item class to store food items
 @Data
