@@ -113,8 +113,12 @@ public class ItemController {
                                     .filter(item -> item.getFridgeID().equals(request.getItemID()))
                                     .findFirst();
 
-
-            return ResponseEntity.ok("");
+            if (itemOptional.isPresent()) {
+                Item itemToRemove = itemOptional.get();
+                fridge.getItems().remove(itemToRemove);
+                itemToRemove.setFridge(null); // Ensure the item's fridge reference is set to null
+                fridgeRepository.save(fridge); // Save the changes to the fridge
+                return ResponseEntity.ok("Item deleted successfully.");
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
         }    
