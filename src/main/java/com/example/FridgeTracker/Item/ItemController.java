@@ -89,10 +89,12 @@ public class ItemController {
                 // Save the updated fridge back to the database
                 fridgeRepository.save(fridge);
 
-
-            return ResponseEntity.ok("Item updated successfully");
-        } else{
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+                return ResponseEntity.ok("Item updated successfully");
+            } else{
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+            }
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
         }
     }
 }
