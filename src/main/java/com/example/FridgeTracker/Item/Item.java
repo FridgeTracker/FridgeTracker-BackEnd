@@ -24,7 +24,7 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "fridgeID")
+    @Column(name = "itemID")
     private Long fridgeID;
     
     @Column(name="foodName")
