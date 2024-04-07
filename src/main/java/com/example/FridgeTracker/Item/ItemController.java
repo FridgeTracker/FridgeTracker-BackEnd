@@ -1,7 +1,9 @@
 package com.example.FridgeTracker.Item;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -59,10 +61,24 @@ public class ItemController {
 
     @PostMapping("/updateItem")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> updateItemInFridge(@RequestBody ItemBody request){
+    public ResponseEntity<String> updateItemInFridge(@RequestBody Map<String, Object> request){
 
-        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
-        return ResponseEntity.ok("Item updated successfully");
+        String idString = request.get("id").toString();
+        UUID fridgeId = UUID.fromString(idString);
+
+        Map<String, Object> itemMap = (Map<String, Object>)request.get("item");
+        String foodName = itemMap.get("foodName").toString();
+        String quantity = itemMap.get("quantity").toString();
+        String calories = itemMap.get("calories").toString();
+        String type = itemMap.get("type").toString();
+
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(fridgeId);
+
+        if(fridgeOptional != null){
+            return ResponseEntity.ok("Item updated successfully");
+        } else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+        }
     }/* 
 
         if (fridgeOptional != null){
