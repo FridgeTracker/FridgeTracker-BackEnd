@@ -108,9 +108,13 @@ public class ItemController {
       
         if (fridgeOptional.isPresent()) {
             Fridge fridge = fridgeOptional.get();
+
             fridge.getItems().removeIf(item -> item.getFridgeID().equals(request.getItemID()));
-            fridgeRepository.save(fridge);
             return ResponseEntity.ok("Item deleted successfully.");
+            /* 
+            fridgeRepository.save(fridge);
+
+            return ResponseEntity.ok("Item deleted successfully.");*/
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
         }    
