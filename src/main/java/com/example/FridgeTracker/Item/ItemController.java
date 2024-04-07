@@ -104,17 +104,19 @@ public class ItemController {
     public ResponseEntity<String> deleteItemInFridge(@RequestBody ItemBody request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
-        return ResponseEntity.ok("Item deleted successfully.");/* 
+      
         if (fridgeOptional.isPresent()) {
+
             Fridge fridge = fridgeOptional.get();
 
             fridge.removeItem(request.getItemID());
-
-            fridgeRepository.save(fridge);
-
             return ResponseEntity.ok("Item deleted successfully.");
+
+            /*fridgeRepository.save(fridge);
+
+            return ResponseEntity.ok("Item deleted successfully.");*/
         } else {
             return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
-        }    */
+        }    
     }
 }
