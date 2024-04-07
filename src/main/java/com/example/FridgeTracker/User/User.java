@@ -13,8 +13,9 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import com.example.FridgeTracker.Storage.Fridge; 
 import com.example.FridgeTracker.Member.Member;
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
+
 import java.util.UUID;
 
 @Data

@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.Storage;
+package com.example.FridgeTracker.Storage.Fridge;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -12,8 +12,8 @@ import java.util.List;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.Item.Item;
+import com.example.FridgeTracker.Storage.Storage;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 
 @Data
 @Entity

@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.Storage;
+package com.example.FridgeTracker.Storage.Fridge;
 
 import lombok.Data;
 

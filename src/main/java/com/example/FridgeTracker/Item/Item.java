@@ -1,5 +1,7 @@
 package com.example.FridgeTracker.Item;
 
+import com.example.FridgeTracker.Storage.Storage;
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -12,9 +14,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import java.util.Optional;
-
-import com.example.FridgeTracker.Storage.Fridge; 
+import java.util.Optional; 
 
 //Item class to store food items
 @Data
@@ -41,7 +41,7 @@ public class Item {
     private String type;
 
     @ManyToOne
-    @JoinColumn(name="fridgeIdentifier", referencedColumnName="id")
+    @JoinColumn(name="storage_id", referencedColumnName="id")
     @JsonIgnore
     private Fridge fridge;
 
