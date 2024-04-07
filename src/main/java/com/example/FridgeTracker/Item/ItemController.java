@@ -62,6 +62,8 @@ public class ItemController {
     public ResponseEntity<String> updateItemInFridge(@RequestBody ItemBody request){
 
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+        return ResponseEntity.ok("Item updated successfully");
+    }/* 
 
         if (fridgeOptional != null){
 
@@ -89,5 +91,5 @@ public class ItemController {
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge not found");
         }
-    }
+    }*/
 }
