@@ -5,7 +5,10 @@ import lombok.Data;
 @Data
 public class ItemBody {
 
-    private Item item;
+    private String foodName;
+    private int quantity;
+    private Long calories;
+    private String type;
     private UUID id;
     
 }

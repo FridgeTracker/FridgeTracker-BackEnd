@@ -46,8 +46,13 @@ public class ItemController {
 
         if (fridge != null){
 
-            Item item = request.getItem();
+            Item item = new Item();
 
+            item.setCalories(request.getCalories());
+            item.setFoodName(request.getFoodName());
+            item.setQuantity(request.getQuantity());
+            item.setType(request.getType());
+            
             item.setFridge(fridge);
 
             itemRepository.save(item);
