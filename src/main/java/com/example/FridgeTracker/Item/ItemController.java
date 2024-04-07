@@ -71,37 +71,28 @@ public class ItemController {
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
 
         if(fridgeOptional != null){
-            return ResponseEntity.ok("Item updated successfully");
-        } else{
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
-        }
-    }/* 
-
-        if (fridgeOptional != null){
-
             Fridge fridge = fridgeOptional.get();
+
             Optional<Item> itemOptional = fridge.getItems().stream()
-                                    .filter(item -> item.getFridgeID().equals(request.getItem().getFridgeID()))
+                                    .filter(item -> item.getFridgeID().equals(request.getItemID()))
                                     .findFirst();
 
             if (itemOptional.isPresent()) {
                 Item item = itemOptional.get();
+    
                 // Update item properties here
-                item.setFoodName(request.getItem().getFoodName());
-                item.setQuantity(request.getItem().getQuantity());
-                item.setCalories(request.getItem().getCalories());
-                item.setType(request.getItem().getType());
+                item.setCalories(request.getCalories());
+                item.setFoodName(request.getFoodName());
+                item.setQuantity(request.getQuantity());
+                item.setType(request.getType());
                 
-                // Save the updated item back to the database
+                // Save the updated fridge back to the database
                 fridgeRepository.save(fridge);
-          
-                return ResponseEntity.ok("Item updated successfully");
-            } else {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
-            }
 
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge not found");
+
+            return ResponseEntity.ok("Item updated successfully");
+        } else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
         }
-    }*/
+    }
 }
