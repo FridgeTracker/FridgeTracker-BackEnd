@@ -9,15 +9,17 @@
 ### Fridges
 
 - POST /api/addFridge: Create a new fridge. (requires fridge data and user email)
-- GET /api/getFridge/{uuid}
 
 ### Members
 
 - POST /api/addMember: Add member to family account
+- GET  /api/member/{id}: using member UUID
 
 ### Items
 
-****
+- POST /api/addItem: Add item to fridge
+- POST /api/updateItem: update details of a item
+- POST /api/deleteItem: Delete item from fridge
 
 ## Table of Contents
 
@@ -43,7 +45,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 |  id  | [Long](#int64) | optional |  |
-|  fridgeName  | [string](#string) | optional |  |
+|  storageName  | [string](#string) | optional |  |
 |  capacity  | [int32](#int32) | optional |  |
 |  items  | [Item](#Item) | repeated |  1..* Relationship |
 
@@ -54,18 +56,20 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 |  id  | [Long](#int64) | optional |  |
-|  memberName  | [string](#string) | optional |  |
+|  name  | [string](#string) | optional |  |
 |  age  | [int32](#int32) | optional |  |
 |  allergies  | [string](#string) | optional |  |
+|  height  | [Long](#int64) | optional |  |
+|  weight  | [Long](#int64) | optional |  |
+|  imageURL  | [string](#string) | optional |  |
 
 
 ### Item
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-|  id  | [Long](#int64) | optional |  |
-|  itemName  | [string](#string) | optional |  |
+|  itemID  | [Long](#int64) | optional |  |
+|  foodName  | [string](#string) | optional |  |
 |  quantity  | [int32](#int32) | optional |  |
-|  expiryDate  | [string](#string) | optional |  |
 |  calories  | [Long](#int64) | optional |  |
 |  type  |  [string](#string)  |  optional  |  |
 
