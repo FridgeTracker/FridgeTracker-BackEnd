@@ -41,7 +41,7 @@ public class Item {
     private String type;
 
     @ManyToOne
-    @JoinColumn(name="storage_id", referencedColumnName="id")
+    @JoinColumn(name="fridge_id", referencedColumnName="id")
     @JsonIgnore
     private Fridge fridge;
 

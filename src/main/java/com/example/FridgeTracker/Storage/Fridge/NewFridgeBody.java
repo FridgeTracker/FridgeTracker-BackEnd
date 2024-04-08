@@ -6,7 +6,7 @@ import lombok.Data;
 public class NewFridgeBody {
 
     private String userEmail;
-    private String fridgeName;
+    private String storageName;
     private long capacity;
     
 }

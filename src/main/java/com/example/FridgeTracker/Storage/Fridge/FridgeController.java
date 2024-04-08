@@ -48,7 +48,7 @@ public class FridgeController {
         if (user != null){
             Fridge fridge = new Fridge();
 
-            fridge.setFridgeName(request.getFridgeName());
+            fridge.setStorageName(request.getStorageName());
             fridge.setCapacity(request.getCapacity());
 
             fridge.setOwner(user);
