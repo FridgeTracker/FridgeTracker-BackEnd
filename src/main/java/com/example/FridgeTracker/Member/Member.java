@@ -45,6 +45,9 @@ public class Member {
     @Column(name="weight")
     private double weight;
 
+    @Column(name="imageURL")
+    private String imageURL;
+
     //Connect Members to a family account
     @ManyToOne
     @JoinColumn(name="ownerEmail", referencedColumnName="email")
