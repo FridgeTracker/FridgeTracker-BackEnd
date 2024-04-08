@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
-import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -28,22 +28,11 @@ public class FridgeController {
     private FridgeRepository fridgeRepository;
 
 
-    public List<Fridge> getFridgesByEmail(String email){
-        User user = userRepository.findByEmail(email);
-
-        if(user != null){
-            return fridgeRepository.findByOwner(user);
-        } else {
-            return null;
-        }
-    }
-
-
     @PostMapping("/addFridge")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
 
-        User user = userRepository.findByEmail(request.getUserEmail());
+        Optional<User> user = userRepository.findById(request.getUserID());
 
         if (user != null){
             Fridge fridge = new Fridge();
