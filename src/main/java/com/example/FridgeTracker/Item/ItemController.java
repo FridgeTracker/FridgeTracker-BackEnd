@@ -72,7 +72,7 @@ public class ItemController {
             Fridge fridge = fridgeOptional.get();
 
             Optional<Item> itemOptional = fridge.getItems().stream()
-                                    .filter(item -> item.getFridgeID().equals(request.getItemID()))
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
                                     .findFirst();
 
             if (itemOptional.isPresent()) {
@@ -107,7 +107,7 @@ public class ItemController {
             Fridge fridge = fridgeOptional.get();
       
             Optional<Item> itemOptional = fridge.getItems().stream()
-                                    .filter(item -> item.getFridgeID().equals(request.getItemID()))
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
                                     .findFirst();
 
             if (itemOptional.isPresent()) {
