@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Member;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -50,5 +51,12 @@ public class Member {
     @JsonIgnore
     private User family;
 
+    // Overloaded method to accept Optional<Fridge>
+    public void setFamily(Optional<User> optionalFamily) {
+        if (optionalFamily.isPresent()) {
+            this.family = optionalFamily.get();
+        } else {
+        }
+    }
     
 }
