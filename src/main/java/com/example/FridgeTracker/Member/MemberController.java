@@ -65,6 +65,41 @@ public class MemberController {
         }
     }
 
+
+    @PostMapping("/updateMember")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> updateMemberInFamily(@RequestBody MemberRequest request){
+   
+        Optional<User> userOptional = userRepository.findById(request.getUserID());
+
+        if(userOptional.isPresent()){
+            User family = userOptional.get();
+
+            Optional<Member> memberOptional = family.getMembers().stream()
+                                    .filter(member -> member.getId().equals(request.getMember().getId()))
+                                    .findFirst();
+
+            if (memberOptional.isPresent()) {
+                Member member = memberOptional.get();
+
+                if(request.getMember().getName() != null){
+                    member.setName(request.getMember().getName());
+                }
+                if(request.getMember().getAge() != 0){
+                    member.setAge(request.getMember().getAge());
+                }
+  
+                userRepository.save(family);
+
+                return ResponseEntity.ok("Member updated successfully");
+            } else{
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Member could not be foundd in the family");
+            }
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to find user account");
+        }
+    }
+
     }
     
 
