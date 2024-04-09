@@ -88,6 +88,10 @@ public class MemberController {
                 if(request.getMember().getAge() != 0){
                     member.setAge(request.getMember().getAge());
                 }
+
+                if(request.getMember().getImageURL() != null){
+                    member.setImageURL(request.getMember().getImageURL());
+                }
   
                 userRepository.save(family);
 
