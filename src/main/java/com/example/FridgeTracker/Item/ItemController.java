@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Storage.Freezer.Freezer;
+import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
 
@@ -29,20 +31,18 @@ public class ItemController {
     @Autowired
     private FridgeRepository fridgeRepository;
 
+    @Autowired
+    private FreezerRepository freezerRepository;
 
-    //Get all items within a fridge
-    public List<Item> getItemsByFridgeId(String id){
-
-        return null;
-    }
 
     @PostMapping("/addItem")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addItemToFridge(@RequestBody ItemBody request){
 
         Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
+        Optional<Freezer> freezer = freezerRepository.findById(request.getId());
 
-        if (fridge != null){
+        if (fridge != null || freezer != null){
 
             Item item = new Item();
 
