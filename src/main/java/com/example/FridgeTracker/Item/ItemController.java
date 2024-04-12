@@ -42,7 +42,7 @@ public class ItemController {
         Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezer = freezerRepository.findById(request.getId());
 
-        if (fridge != null || freezer != null){
+        if (fridge.isPresent() || freezer.isPresent()){
 
             Item item = new Item();
 
@@ -51,7 +51,8 @@ public class ItemController {
             item.setQuantity(request.getQuantity());
             item.setType(request.getType());
 
-            item.setFridge(fridge);
+            if(freezer.isPresent()){item.setFreezer(freezer);}
+            else{item.setFridge(fridge);}   
 
             itemRepository.save(item);
 
@@ -68,7 +69,7 @@ public class ItemController {
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
 
-        if(fridgeOptional != null){
+        if(fridgeOptional.isPresent()){
             Fridge fridge = fridgeOptional.get();
 
             Optional<Item> itemOptional = fridge.getItems().stream()
