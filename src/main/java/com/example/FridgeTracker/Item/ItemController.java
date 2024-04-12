@@ -1,6 +1,5 @@
 package com.example.FridgeTracker.Item;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,34 +67,52 @@ public class ItemController {
     public ResponseEntity<String> updateItemInFridge(@RequestBody ItemBody request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+        Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
 
-        if(fridgeOptional.isPresent()){
-            Fridge fridge = fridgeOptional.get();
+        Fridge fridge = null;
+        Freezer freezer = null;
+        Optional<Item> itemOptional;
 
-            Optional<Item> itemOptional = fridge.getItems().stream()
-                                    .filter(item -> item.getItemID().equals(request.getItemID()))
-                                    .findFirst();
+        if (fridgeOptional.isPresent()){
 
-            if (itemOptional.isPresent()) {
-                Item item = itemOptional.get();
-    
-                // Update item properties here
-                item.setCalories(request.getCalories());
-                item.setFoodName(request.getFoodName());
-                item.setQuantity(request.getQuantity());
-                item.setType(request.getType());
-                
-                // Save the updated fridge back to the database
-                fridgeRepository.save(fridge);
+                fridge = fridgeOptional.get();
+                itemOptional = fridge.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        } 
+        else if(freezerOptional.isPresent()){
 
-                return ResponseEntity.ok("Item updated successfully");
-            } else{
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
-            }
-        } else {
+                freezer = freezerOptional.get();
+                itemOptional = freezer.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        }
+        else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
         }
+
+        if (itemOptional.isPresent()) {
+            Item item = itemOptional.get();
+
+            // Update item properties here
+            item.setCalories(request.getCalories());
+            item.setFoodName(request.getFoodName());
+            item.setQuantity(request.getQuantity());
+            item.setType(request.getType());
+            
+            // Save the updated fridge back to the database
+            if(fridgeOptional.isPresent()){
+                fridgeRepository.save(fridge);
+            }else{
+                freezerRepository.save(freezer);
+            }
+
+            return ResponseEntity.ok("Item updated successfully");
+        } else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+        }
     }
+    
 
     
     @PostMapping("/deleteItem")
