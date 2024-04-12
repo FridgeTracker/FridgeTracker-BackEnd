@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.Item.Item;
@@ -27,6 +28,13 @@ public class Freezer extends Storage{
 
     @OneToMany(mappedBy = "freezer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items;
+
+    public void setOwner(Optional<User> optionalOwner) {
+        if (optionalOwner.isPresent()) {
+            this.owner = optionalOwner.get();
+        } else {
+        }
+    }
 
 }
 
