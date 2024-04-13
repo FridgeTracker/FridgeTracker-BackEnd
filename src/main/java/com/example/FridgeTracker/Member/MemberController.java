@@ -85,12 +85,17 @@ public class MemberController {
                 if(request.getMember().getName() != null){
                     member.setName(request.getMember().getName());
                 }
-                if(request.getMember().getAge() != 0){
+                if(request.getMember().getAge() > 0){
                     member.setAge(request.getMember().getAge());
                 }
-
                 if(request.getMember().getImageURL() != null){
                     member.setImageURL(request.getMember().getImageURL());
+                }
+                if(request.getMember().getHeight() > 0){
+                    member.setHeight(request.getMember().getHeight());
+                }
+                if(request.getMember().getWeight() > 0){
+                    member.setWeight(request.getMember().getWeight());
                 }
   
                 userRepository.save(family);
