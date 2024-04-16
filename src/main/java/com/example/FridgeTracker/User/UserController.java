@@ -101,8 +101,12 @@ public class UserController {
             User user = OptUser.get();
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             if (encoder.matches(Request.getPassword(),user.getPassword())){
-                user.setEmail(Request.getEmail());
-                user.setFamilyName(Request.getFamilyName());
+                if (Request.getFamilyName()== null){
+                    user.setFamilyName(Request.getFamilyName());
+                }
+                if (Request.getEmail()== null){
+                    user.setEmail(Request.getEmail());
+                }
                 userRepository.save(user);
                 return ResponseEntity.ok("Password match.");
             }else{
