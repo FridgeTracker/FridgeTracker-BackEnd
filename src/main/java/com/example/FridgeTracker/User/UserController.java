@@ -96,7 +96,7 @@ public class UserController {
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
-        return ResponseEntity.ok("TI work");
+        return ResponseEntity.ok("The new user information is successfully updated.");
     }
     
 }
