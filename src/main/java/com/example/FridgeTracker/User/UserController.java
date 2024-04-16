@@ -117,7 +117,7 @@ public class UserController {
 
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
-    
+    /* 
     //Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
     public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
@@ -137,6 +137,6 @@ public class UserController {
         } else {
             return ResponseEntity.badRequest().body("Incorrect current password");
         }
-    }
+    }*/
     
 }
