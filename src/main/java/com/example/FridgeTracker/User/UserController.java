@@ -100,7 +100,7 @@ public class UserController {
         if (OptUser.isPresent()){
             User user = OptUser.get();
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            if (encoder.matches(user.getPassword(), Request.getPassword())){
+            if (encoder.matches(Request.getPassword(),user.getPassword())){
                 return ResponseEntity.ok("Password match.");
             }else{
                 return ResponseEntity.ok("Password does not match.");
