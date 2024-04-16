@@ -92,5 +92,11 @@ public class UserController {
             return ResponseEntity.status(600).body(null); 
         }
     }
+
+    @PostMapping("/updateUser")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> updateUser(@RequestBody User Request){
+        return ResponseEntity.ok("TI work");
+    }
     
 }
