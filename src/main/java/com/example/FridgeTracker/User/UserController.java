@@ -96,6 +96,11 @@ public class UserController {
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
+        Optional<User> user = userRepository.findById(Request.getId());
+        if (user.isPresent()){
+            return ResponseEntity.ok("Userfound");
+        }
+
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
     
