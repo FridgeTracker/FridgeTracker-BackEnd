@@ -96,9 +96,16 @@ public class UserController {
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
-        Optional<User> user = userRepository.findById(Request.getId());
-        if (user.isPresent()){
-            return ResponseEntity.ok("Userfound");
+        Optional<User> OptUser = userRepository.findById(Request.getId());
+        if (OptUser.isPresent()){
+            User user = OptUser.get();
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            if (encoder.matches(user.getPassword(), Request.getPassword())){
+                return ResponseEntity.ok("Password match.");
+            }else{
+                return ResponseEntity.ok("Password does not match.");
+            }
+         
         }
 
         return ResponseEntity.ok("The new user information is successfully updated.");
