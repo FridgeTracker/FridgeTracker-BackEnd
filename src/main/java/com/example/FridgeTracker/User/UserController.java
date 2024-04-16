@@ -101,8 +101,12 @@ public class UserController {
             User user = OptUser.get();
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             if (encoder.matches(Request.getPassword(),user.getPassword())){
-                user.setEmail(Request.getEmail());
-                user.setFamilyName(Request.getFamilyName());
+                if (Request.getFamilyName()== null){
+                    user.setFamilyName(Request.getFamilyName());
+                }
+                if (Request.getEmail()== null){
+                    user.setEmail(Request.getEmail());
+                }
                 userRepository.save(user);
                 return ResponseEntity.ok("Password match.");
             }else{
@@ -112,6 +116,27 @@ public class UserController {
         }
 
         return ResponseEntity.ok("The new user information is successfully updated.");
+    }
+    
+    //Change passsword endpoint **Subject to change**
+    @PostMapping("/change-password")
+    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
+        
+        User user = userRepository.findByEmail(request.getEmail());
+        
+        if (user == null) {
+            return ResponseEntity.badRequest().body("User not found");
+        }
+        if (user != null && passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
+            
+            String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
+            user.setPassword(hashedNewPassword);
+            userRepository.save(user);
+            
+            return ResponseEntity.ok("Password changed successfully");
+        } else {
+            return ResponseEntity.badRequest().body("Incorrect current password");
+        }
     }
     
 }
