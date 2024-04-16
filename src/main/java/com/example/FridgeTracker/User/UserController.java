@@ -101,10 +101,10 @@ public class UserController {
             User user = OptUser.get();
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             if (encoder.matches(Request.getPassword(),user.getPassword())){
-                if (Request.getFamilyName()!= null){
+                if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
                 }
-                if (Request.getEmail()!= null){
+                if (Request.getEmail()!= ""){
                     user.setEmail(Request.getEmail());
                 }
                 userRepository.save(user);
