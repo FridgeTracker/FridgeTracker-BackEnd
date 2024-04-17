@@ -6,7 +6,7 @@
 - POST /api/login: Login using email and password for User responds with User object.
 - GET /api/user/{uuid}: Get user by user id. Returns [User](#User) Object
 - POST /api/updateUser: Update user details. Returns [Message](#String)
-  
+  z
 ### Fridges
 
 - POST /api/addFridge: Create a new fridge. (requires fridge data and user email)
