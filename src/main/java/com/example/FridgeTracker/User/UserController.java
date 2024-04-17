@@ -127,16 +127,14 @@ public class UserController {
         if (user == null) {
             return ResponseEntity.badRequest().body("User not found");
         }
-        if (user != null && passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
-            
-            String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
-            user.setPassword(hashedNewPassword);
-            userRepository.save(user);
-            
-            return ResponseEntity.ok("Password changed successfully");
-        } else {
+        if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
             return ResponseEntity.badRequest().body("Incorrect current password");
         }
+            
+        String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
+        user.setPassword(hashedNewPassword);
+        userRepository.save(user);        
+        return ResponseEntity.ok("Password changed successfully");
     }
     
 }
