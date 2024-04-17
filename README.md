@@ -22,12 +22,25 @@
 - POST /api/updateItem: update details of a item
 - POST /api/deleteItem: Delete item from fridge
 
+
+### Meal Plans
+
+- POST /api/add_meal: Add the information of a single meal.
+- GET  /api/meal_plans: Get all informatin of all meals.
+- POST  /api/load_meal_plans: Load meals from json file.
+
+
+
 ## Table of Contents
 
 - [Fridge](#Fridge)
 - [User](#User)
 - [Member](#Member)
 - [Item](#Item)
+- [Meal_Plan](#Meal_Plan)
+- [Ingredients](#Ingredients)
+- [NutritionalInformation](#NutritionalInformation)
+
 
   
 ### User
@@ -51,8 +64,6 @@
 |  items  | [Item](#Item) | repeated |  1..* Relationship |
 
 
-
-
 ### Member
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -73,6 +84,33 @@
 |  quantity  | [int32](#int32) | optional |  |
 |  calories  | [Long](#int64) | optional |  |
 |  type  |  [string](#string)  |  optional  |  |
+
+
+### Meal_Plan
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+|  mealID  | [Long](#int64) | Primary Key |  |
+|  mealName  | [string](#string) | Optional |  |
+|  mealType  | [string](#string) | Optional |  |
+|  mealImage  | [string](#string) | Optional | Save the image file path |
+|  description  |  [string](#string)  | Optional |  |
+
+
+### Ingredients
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+|  mealPlanID  | [Long](#int64) | Foreign Key | References Meal_Plan(id) |
+|  ingredients  | [string](#string) | Optional |  |
+
+
+### NutritionalInformation
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+|  mealPlanID  | [Long](#int64) | Primary Key | References Meal_Plan(id), Composite PK |
+|  key  | [Long](#int64) | Primary Key | Composite PK |
+|  value  | [string](#string) | Optional |  |
+
+
 
 
 ## Scalar Value Types

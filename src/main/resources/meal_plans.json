@@ -1,0 +1,2313 @@
+[
+  {
+    "mealName": "Kung Pao Chicken",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Kung Pao Chicken.jpg",
+    "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers",
+    "ingredients": [
+      "Chicken breast",
+      "Peanuts",
+      "Bell peppers",
+      "Dried chili peppers",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "320",
+      "Protein": "28g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Peking Duck",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Peking Duck.jpg",
+    "description": "Crispy duck skin wrapped in thin pancakes with hoisin sauce, cucumbers, and scallions",
+    "ingredients": [
+      "Duck",
+      "Flour pancakes",
+      "Hoisin sauce",
+      "Cucumbers",
+      "Scallions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "420",
+      "Protein": "35g",
+      "Fat": "28g"
+    }
+  },
+  {
+    "mealName": "Mapo Tofu",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Mapo Tofu.jpg",
+    "description": "Spicy Sichuan dish with tofu, minced pork, and fermented black beans",
+    "ingredients": [
+      "Tofu",
+      "Ground pork",
+      "Fermented black beans",
+      "Chili bean paste",
+      "Sichuan peppercorns"
+    ],
+    "nutritionalInformation": {
+      "Calories": "280",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Hot and Sour Soup",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Hot and Sour Soup.jpg",
+    "description": "Tangy soup with mushrooms, tofu, bamboo shoots, and vinegar",
+    "ingredients": ["Tofu", "Mushrooms", "Bamboo shoots", "Eggs", "Vinegar"],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "10g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Steamed Dumplings",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Steamed Dumplings.jpg",
+    "description": "Delicate dumplings filled with pork and vegetables, served with dipping sauce",
+    "ingredients": [
+      "Ground pork",
+      "Chives",
+      "Ginger",
+      "Wonton wrappers",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "General Tso's Chicken",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/General Tsos Chicken.jpg",
+    "description": "Crispy chicken in a sweet and spicy sauce with broccoli",
+    "ingredients": [
+      "Chicken thighs",
+      "Broccoli",
+      "Soy sauce",
+      "Rice vinegar",
+      "Honey"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "30g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Beef and Broccoli Stir-Fry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef and Broccoli StirFry.jpg",
+    "description": "Tender beef slices stir-fried with broccoli in a savory sauce",
+    "ingredients": [
+      "Flank steak",
+      "Broccoli",
+      "Garlic",
+      "Ginger",
+      "Oyster sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "320",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Egg Fried Rice",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Egg Fried Rice.jpg",
+    "description": "Fried rice with scrambled eggs, peas, carrots, and green onions",
+    "ingredients": ["Cooked rice", "Eggs", "Peas", "Carrots", "Green onions"],
+    "nutritionalInformation": {
+      "Calories": "230",
+      "Protein": "8g",
+      "Fat": "6g"
+    }
+  },
+  {
+    "mealName": "Shrimp Lo Mein",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Shrimp Lo Mein.jpg",
+    "description": "Stir-fried noodles with shrimp, vegetables, and a savory sauce",
+    "ingredients": [
+      "Shrimp",
+      "Egg noodles",
+      "Bell peppers",
+      "Snow peas",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "20g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Sweet and Sour Pork",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Sweet and Sour Pork.jpg",
+    "description": "Crispy pork pieces coated in a tangy sweet and sour sauce",
+    "ingredients": [
+      "Pork tenderloin",
+      "Pineapple",
+      "Bell peppers",
+      "Onion",
+      "Ketchup"
+    ],
+    "nutritionalInformation": {
+      "Calories": "360",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Ma Po Eggplant",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Ma Po Eggplant.jpg",
+    "description": "Stir-fried eggplant in a spicy garlic sauce with minced pork",
+    "ingredients": [
+      "Chinese eggplant",
+      "Ground pork",
+      "Garlic",
+      "Chili bean paste",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "10g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Szechuan Beef",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Szechuan Beef.jpg",
+    "description": "Spicy stir-fried beef with garlic, ginger, and Szechuan peppercorns",
+    "ingredients": [
+      "Beef sirloin",
+      "Szechuan peppercorns",
+      "Bell peppers",
+      "Onion",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "340",
+      "Protein": "30g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Spring Rolls",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Spring Rolls.jpg",
+    "description": "Crispy fried rolls filled with vegetables and sometimes meat",
+    "ingredients": [
+      "Spring roll wrappers",
+      "Cabbage",
+      "Carrots",
+      "Bean sprouts",
+      "Ground pork"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "8g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Dan Dan Noodles",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Dan Dan Noodles.jpg",
+    "description": "Spicy noodles with ground pork, Sichuan peppercorns, and chili oil",
+    "ingredients": [
+      "Egg noodles",
+      "Ground pork",
+      "Soy sauce",
+      "Sesame paste",
+      "Green onions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "290",
+      "Protein": "15g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Cantonese Style Chow Mein",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Cantonese Style Chow Mein.jpg",
+    "description": "Crispy noodles topped with stir-fried vegetables and your choice of meat",
+    "ingredients": [
+      "Egg noodles",
+      "Broccoli",
+      "Carrots",
+      "Chicken breast",
+      "Oyster sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "330",
+      "Protein": "20g",
+      "Fat": "14g"
+    }
+  },
+  {
+    "mealName": "Dim Sum Platter",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Dim Sum Platter.jpg",
+    "description": "Assorted steamed and fried dumplings served with dipping sauces",
+    "ingredients": [
+      "Shrimp",
+      "Pork",
+      "Scallop",
+      "Wonton wrappers",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "280",
+      "Protein": "12g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Hunan Chicken",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Hunan Chicken.jpg",
+    "description": "Spicy stir-fried chicken with vegetables in a savory sauce",
+    "ingredients": [
+      "Chicken thighs",
+      "Bell peppers",
+      "Broccoli",
+      "Garlic",
+      "Chili paste"
+    ],
+    "nutritionalInformation": {
+      "Calories": "320",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Sesame Chicken",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Sesame Chicken.jpg",
+    "description": "Crispy chicken pieces coated in a sweet sesame glaze",
+    "ingredients": [
+      "Chicken breast",
+      "Sesame seeds",
+      "Honey",
+      "Soy sauce",
+      "Rice vinegar"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "30g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Shrimp Fried Rice",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Shrimp Fried Rice.jpg",
+    "description": "Fried rice with shrimp, eggs, peas, carrots, and green onions",
+    "ingredients": ["Cooked rice", "Shrimp", "Eggs", "Peas", "Carrots"],
+    "nutritionalInformation": {
+      "Calories": "290",
+      "Protein": "15g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Mongolian Beef",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Mongolian Beef.jpg",
+    "description": "Tender beef slices stir-fried with scallions and a sweet and savory sauce",
+    "ingredients": [
+      "Beef sirloin",
+      "Scallions",
+      "Garlic",
+      "Ginger",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Hot Pot",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Hot Pot.jpg",
+    "description": "Broth-based soup with a variety of meats, vegetables, and noodles for cooking at the table",
+    "ingredients": [
+      "Thinly sliced beef",
+      "Pork belly",
+      "Assorted vegetables",
+      "Noodles",
+      "Broth"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "30g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Scallion Pancakes",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Scallion Pancakes.jpg",
+    "description": "Crispy pancakes with chopped scallions, served with dipping sauce",
+    "ingredients": ["Flour", "Scallions", "Sesame oil", "Salt", "Soy sauce"],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Pork and Shrimp Wonton Soup",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Pork and Shrimp Wonton Soup.jpg",
+    "description": "Delicate wontons filled with pork and shrimp in a clear broth",
+    "ingredients": [
+      "Ground pork",
+      "Shrimp",
+      "Wonton wrappers",
+      "Chicken broth",
+      "Green onions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "10g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Stir-Fried Green Beans",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/StirFried Green Beans.jpg",
+    "description": "Green beans stir-fried with garlic, ginger, and soy sauce",
+    "ingredients": [
+      "Green beans",
+      "Garlic",
+      "Ginger",
+      "Soy sauce",
+      "Sesame oil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "120",
+      "Protein": "5g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Sushi Platter",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Sushi Platter.jpg",
+    "description": "Assorted nigiri and maki sushi served with pickled ginger and wasabi",
+    "ingredients": [
+      "Sushi rice",
+      "Raw fish (tuna, salmon, etc.)",
+      "Nori (seaweed)",
+      "Pickled ginger",
+      "Wasabi"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "15g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Tempura",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Tempura.jpg",
+    "description": "Lightly battered and deep-fried seafood and vegetables",
+    "ingredients": [
+      "Shrimp",
+      "Vegetables (zucchini, sweet potato, etc.)",
+      "Tempura batter",
+      "Oil for frying"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "10g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Ramen",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Ramen.jpg",
+    "description": "Noodles in a savory broth with sliced pork, boiled egg, and green onions",
+    "ingredients": [
+      "Ramen noodles",
+      "Pork broth",
+      "Pork belly",
+      "Boiled egg",
+      "Green onions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Tonkatsu",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Tonkatsu.jpg",
+    "description": "Breaded and deep-fried pork cutlet served with tonkatsu sauce and shredded cabbage",
+    "ingredients": [
+      "Pork cutlet",
+      "Panko breadcrumbs",
+      "Tonkatsu sauce",
+      "Cabbage",
+      "Rice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Gyoza",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Gyoza.jpg",
+    "description": "Pan-fried dumplings filled with pork and cabbage, served with dipping sauce",
+    "ingredients": [
+      "Ground pork",
+      "Cabbage",
+      "Gyoza wrappers",
+      "Soy sauce",
+      "Rice vinegar"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "10g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Sashimi",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Sashimi.jpg",
+    "description": "Thinly sliced raw fish served with soy sauce and wasabi",
+    "ingredients": [
+      "Assorted raw fish (tuna, salmon, etc.)",
+      "Soy sauce",
+      "Wasabi"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "20g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Okonomiyaki",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Okonomiyaki.jpg",
+    "description": "Japanese savory pancake with cabbage, pork belly, and topped with okonomi sauce and mayonnaise",
+    "ingredients": [
+      "Cabbage",
+      "Pork belly",
+      "Flour",
+      "Egg",
+      "Okonomi sauce",
+      "Mayonnaise"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "15g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Chirashi Bowl",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Chirashi Bowl.jpg",
+    "description": "Assorted sashimi served over a bed of sushi rice",
+    "ingredients": [
+      "Sushi rice",
+      "Assorted sashimi (tuna, salmon, etc.)",
+      "Vegetables (cucumber, radish, etc.)",
+      "Nori (seaweed)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "320",
+      "Protein": "20g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Miso Soup",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Miso Soup.jpg",
+    "description": "Traditional Japanese soup made with miso paste, tofu, seaweed, and green onions",
+    "ingredients": [
+      "Miso paste",
+      "Tofu",
+      "Seaweed",
+      "Green onions",
+      "Dashi broth"
+    ],
+    "nutritionalInformation": {
+      "Calories": "70",
+      "Protein": "5g",
+      "Fat": "3g"
+    }
+  },
+  {
+    "mealName": "Yakitori",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Yakitori.jpg",
+    "description": "Skewered and grilled chicken pieces brushed with a sweet soy glaze",
+    "ingredients": [
+      "Chicken thighs",
+      "Soy sauce",
+      "Mirin",
+      "Sugar",
+      "Green onions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "15g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Unagi Don",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Unagi Don.jpg",
+    "description": "Grilled eel served over a bowl of sushi rice, drizzled with eel sauce",
+    "ingredients": [
+      "Grilled eel",
+      "Sushi rice",
+      "Eel sauce",
+      "Seaweed",
+      "Sesame seeds"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Takoyaki",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Takoyaki.jpg",
+    "description": "Octopus-filled batter balls topped with takoyaki sauce, mayonnaise, and bonito flakes",
+    "ingredients": [
+      "Octopus",
+      "Takoyaki batter",
+      "Takoyaki sauce",
+      "Mayonnaise",
+      "Bonito flakes"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "10g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Soba Noodle Salad",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Soba Noodle Salad.jpg",
+    "description": "Cold buckwheat noodles served with a soy-based dipping sauce",
+    "ingredients": [
+      "Soba noodles",
+      "Cucumber",
+      "Radish",
+      "Soy sauce",
+      "Rice vinegar"
+    ],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "8g",
+      "Fat": "6g"
+    }
+  },
+  {
+    "mealName": "Onigiri",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Onigiri.jpg",
+    "description": "Japanese rice balls filled with various fillings and wrapped in seaweed",
+    "ingredients": [
+      "Sushi rice",
+      "Nori (seaweed)",
+      "Filling (tuna, salmon, pickled plum, etc.)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "5g",
+      "Fat": "3g"
+    }
+  },
+  {
+    "mealName": "Chicken Teriyaki",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Chicken Teriyaki.jpg",
+    "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce",
+    "ingredients": [
+      "Chicken thighs",
+      "Soy sauce",
+      "Mirin",
+      "Sugar",
+      "Sesame seeds"
+    ],
+    "nutritionalInformation": {
+      "Calories": "280",
+      "Protein": "20g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Tonjiru",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Tonjiru.jpg",
+    "description": "Pork and vegetable miso soup with daikon, carrots, and potatoes",
+    "ingredients": [
+      "Pork belly",
+      "Daikon radish",
+      "Carrots",
+      "Potatoes",
+      "Miso paste"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "10g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Matcha Green Tea Ice Cream",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Matcha Green Tea Ice Cream.jpg",
+    "description": "Creamy ice cream flavored with Japanese matcha green tea",
+    "ingredients": ["Matcha powder", "Milk", "Cream", "Sugar", "Egg yolks"],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "5g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Katsudon",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Katsudon.jpg",
+    "description": "Breaded and fried pork cutlet served over a bowl of rice, topped with eggs and onions",
+    "ingredients": ["Pork cutlet", "Eggs", "Onion", "Rice", "Dashi broth"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Mochi",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Mochi.jpg",
+    "description": "Chewy rice cakes filled with sweet bean paste or ice cream",
+    "ingredients": ["Glutinous rice flour", "Sweet bean paste", "Ice cream"],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "2g",
+      "Fat": "1g"
+    }
+  },
+  {
+    "mealName": "Oyakodon",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Oyakodon.jpg",
+    "description": "Chicken and egg simmered in a sweet and savory sauce served over rice",
+    "ingredients": ["Chicken thighs", "Eggs", "Onion", "Rice", "Dashi broth"],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Taiyaki",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Taiyaki.jpg",
+    "description": "Fish-shaped cake filled with sweet red bean paste or custard",
+    "ingredients": ["Flour", "Sugar", "Eggs", "Red bean paste", "Custard"],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "4g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Sukiyaki",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Sukiyaki.jpg",
+    "description": "Hot pot dish with thinly sliced beef, vegetables, tofu, and noodles cooked in a sweet soy broth",
+    "ingredients": [
+      "Thinly sliced beef",
+      "Tofu",
+      "Noodles",
+      "Shiitake mushrooms",
+      "Napa cabbage"
+    ],
+    "nutritionalInformation": {
+      "Calories": "320",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Edamame",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Edamame.jpg",
+    "description": "Boiled young soybeans served in the pod with sea salt",
+    "ingredients": ["Edamame (young soybeans)", "Sea salt"],
+    "nutritionalInformation": {
+      "Calories": "100",
+      "Protein": "8g",
+      "Fat": "4g"
+    }
+  },
+  {
+    "mealName": "Tuna Tataki",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Tuna Tataki.jpg",
+    "description": "Seared tuna slices served with ponzu sauce and grated daikon radish",
+    "ingredients": [
+      "Tuna steak",
+      "Ponzu sauce",
+      "Daikon radish",
+      "Soy sauce",
+      "Lemon juice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "20g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Spaghetti Carbonara",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Spaghetti Carbonara.jpg",
+    "description": "Pasta with eggs, cheese, pancetta, and black pepper",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pancetta",
+      "Parmesan cheese",
+      "Black pepper"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Croque Monsieur",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Croque Monsieur.jpg",
+    "description": "Grilled ham and cheese sandwich topped with béchamel sauce",
+    "ingredients": [
+      "Ham",
+      "Gruyère cheese",
+      "Bread",
+      "Butter",
+      "Flour",
+      "Milk"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Beef Bourguignon",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef Bourguignon.jpg",
+    "description": "Beef stew cooked with red wine, carrots, onions, and mushrooms",
+    "ingredients": [
+      "Beef stew meat",
+      "Red wine",
+      "Carrots",
+      "Onions",
+      "Mushrooms"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Fish and Chips",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Fish and Chips.jpg",
+    "description": "Deep-fried fish served with crispy fries and tartar sauce",
+    "ingredients": [
+      "White fish fillets",
+      "Potatoes",
+      "Beer batter",
+      "Mayonnaise",
+      "Pickles"
+    ],
+    "nutritionalInformation": {
+      "Calories": "550",
+      "Protein": "30g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Ratatouille",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Ratatouille.jpg",
+    "description": "Vegetable stew made with tomatoes, zucchini, eggplant, and bell peppers",
+    "ingredients": [
+      "Tomatoes",
+      "Zucchini",
+      "Eggplant",
+      "Bell peppers",
+      "Garlic",
+      "Herbs de Provence"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Chicken Cordon Bleu",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Chicken Cordon Bleu.jpg",
+    "description": "Chicken breast stuffed with ham and cheese, breaded and baked",
+    "ingredients": [
+      "Chicken breast",
+      "Ham",
+      "Swiss cheese",
+      "Breadcrumbs",
+      "Butter"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "35g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Moussaka",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Moussaka.jpg",
+    "description": "Layered casserole with eggplant, ground meat, and béchamel sauce",
+    "ingredients": [
+      "Eggplant",
+      "Ground beef",
+      "Tomatoes",
+      "Onions",
+      "Milk",
+      "Eggs"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Paella",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Paella.jpg",
+    "description": "Spanish rice dish with saffron, chicken, seafood, and vegetables",
+    "ingredients": [
+      "Rice",
+      "Chicken thighs",
+      "Shrimp",
+      "Mussels",
+      "Bell peppers",
+      "Saffron"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Beef Wellington",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef Wellington.jpg",
+    "description": "Tender beef fillet wrapped in puff pastry with mushrooms and pâté",
+    "ingredients": [
+      "Beef fillet",
+      "Puff pastry",
+      "Mushrooms",
+      "Pâté",
+      "Egg wash"
+    ],
+    "nutritionalInformation": {
+      "Calories": "500",
+      "Protein": "30g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Lasagna",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Lasagna.jpg",
+    "description": "Layers of pasta sheets, Bolognese sauce, and cheese, baked until bubbly",
+    "ingredients": [
+      "Lasagna noodles",
+      "Ground beef",
+      "Tomato sauce",
+      "Ricotta cheese",
+      "Mozzarella cheese"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Bangers and Mash",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Bangers and Mash.jpg",
+    "description": "Sausages served with mashed potatoes and onion gravy",
+    "ingredients": [
+      "Pork sausages",
+      "Potatoes",
+      "Butter",
+      "Milk",
+      "Onion",
+      "Beef broth"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "20g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Quiche Lorraine",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Quiche Lorraine.jpg",
+    "description": "Savory pie filled with bacon, cheese, and custard",
+    "ingredients": ["Pie crust", "Bacon", "Gruyère cheese", "Eggs", "Cream"],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Beef Stroganoff",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef Stroganoff.jpg",
+    "description": "Sautéed beef strips cooked with mushrooms and sour cream sauce, served over noodles",
+    "ingredients": [
+      "Beef sirloin",
+      "Mushrooms",
+      "Onions",
+      "Sour cream",
+      "Noodles"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Goulash",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Goulash.jpg",
+    "description": "Hungarian stew made with beef, onions, paprika, and tomatoes",
+    "ingredients": [
+      "Beef stew meat",
+      "Onions",
+      "Paprika",
+      "Tomatoes",
+      "Potatoes"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Shepherd's Pie",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Shepherds Pie.jpg",
+    "description": "Ground meat and vegetables topped with mashed potatoes, baked until golden",
+    "ingredients": ["Ground beef", "Carrots", "Peas", "Potatoes", "Beef broth"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Coq au Vin",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Coq au Vin.jpg",
+    "description": "Chicken braised with wine, mushrooms, onions, and bacon",
+    "ingredients": [
+      "Chicken thighs",
+      "Red wine",
+      "Mushrooms",
+      "Onions",
+      "Bacon"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Cottage Pie",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Cottage Pie.jpg",
+    "description": "Ground beef and vegetables topped with mashed potatoes, baked until golden",
+    "ingredients": ["Ground beef", "Carrots", "Peas", "Potatoes", "Beef broth"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Bouillabaisse",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Bouillabaisse.jpg",
+    "description": "French seafood stew with fish, shellfish, tomatoes, and saffron",
+    "ingredients": ["White fish", "Shrimp", "Mussels", "Tomatoes", "Saffron"],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Beef Rouladen",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef Rouladen.jpg",
+    "description": "Thinly sliced beef rolled with bacon, onions, and pickles, braised until tender",
+    "ingredients": ["Beef slices", "Bacon", "Onions", "Pickles", "Beef broth"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "30g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Potato Leek Soup",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Potato Leek Soup.jpg",
+    "description": "Creamy soup made with potatoes, leeks, and broth",
+    "ingredients": ["Potatoes", "Leeks", "Chicken broth", "Cream"],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Tiramisu",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Tiramisu.jpg",
+    "description": "Italian dessert made with layers of espresso-soaked ladyfingers and mascarpone cheese",
+    "ingredients": [
+      "Ladyfingers",
+      "Espresso",
+      "Mascarpone cheese",
+      "Cocoa powder",
+      "Rum"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "5g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Beef Goulash",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Beef Goulash.jpg",
+    "description": "Hungarian stew made with beef, onions, paprika, and tomatoes",
+    "ingredients": [
+      "Beef stew meat",
+      "Onions",
+      "Paprika",
+      "Tomatoes",
+      "Potatoes"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Hummus with Pita Bread",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Hummus with Pita Bread.jpg",
+    "description": "Creamy chickpea dip made with tahini, garlic, lemon juice, and olive oil, served with pita bread",
+    "ingredients": [
+      "Chickpeas",
+      "Tahini",
+      "Garlic",
+      "Lemon juice",
+      "Olive oil",
+      "Pita bread"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "8g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Falafel Wrap",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Falafel Wrap.jpg",
+    "description": "Deep-fried chickpea patties wrapped in pita bread with lettuce, tomatoes, and tahini sauce",
+    "ingredients": [
+      "Chickpeas",
+      "Onion",
+      "Garlic",
+      "Cilantro",
+      "Pita bread",
+      "Lettuce",
+      "Tomatoes",
+      "Tahini sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Shawarma Plate",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Shawarma Plate.jpg",
+    "description": "Sliced marinated meat (chicken or beef) served with rice, hummus, and salad",
+    "ingredients": [
+      "Marinated meat (chicken or beef)",
+      "Rice",
+      "Hummus",
+      "Salad (lettuce, tomatoes, cucumbers)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Baba Ganoush",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Baba Ganoush.jpg",
+    "description": "Smoky eggplant dip made with tahini, garlic, lemon juice, and olive oil",
+    "ingredients": ["Eggplant", "Tahini", "Garlic", "Lemon juice", "Olive oil"],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Tabbouleh Salad",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Tabbouleh Salad.jpg",
+    "description": "Refreshing salad made with bulgur wheat, parsley, tomatoes, cucumbers, and mint",
+    "ingredients": [
+      "Bulgur wheat",
+      "Parsley",
+      "Tomatoes",
+      "Cucumbers",
+      "Mint",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "5g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Mujadara",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Mujadara.jpg",
+    "description": "Lentils and rice cooked with caramelized onions, served with yogurt",
+    "ingredients": ["Lentils", "Rice", "Onions", "Cumin", "Yogurt"],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "10g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Kebab Platter",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Kebab Platter.jpg",
+    "description": "Grilled skewers of marinated meat (chicken, beef, or lamb) served with rice and grilled vegetables",
+    "ingredients": [
+      "Marinated meat (chicken, beef, or lamb)",
+      "Rice",
+      "Grilled vegetables (bell peppers, onions, tomatoes)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "30g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Fattoush Salad",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Fattoush Salad.jpg",
+    "description": "Mixed salad with lettuce, tomatoes, cucumbers, radishes, and crispy pieces of toasted pita bread",
+    "ingredients": [
+      "Lettuce",
+      "Tomatoes",
+      "Cucumbers",
+      "Radishes",
+      "Pita bread",
+      "Sumac",
+      "Pomegranate molasses"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "5g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Kofta",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Kofta.jpg",
+    "description": "Grilled minced meat (beef, lamb, or chicken) mixed with onions and spices, served with rice or bread",
+    "ingredients": [
+      "Minced meat (beef, lamb, or chicken)",
+      "Onions",
+      "Cumin",
+      "Coriander",
+      "Rice or bread"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Labneh Dip",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Labneh Dip.jpg",
+    "description": "Creamy strained yogurt dip flavored with garlic, olive oil, and herbs",
+    "ingredients": [
+      "Strained yogurt (labneh)",
+      "Garlic",
+      "Olive oil",
+      "Herbs (mint, dill)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Lamb Mansaf",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Lamb Mansaf.jpg",
+    "description": "Traditional Jordanian dish of tender lamb cooked in yogurt sauce, served with rice and pine nuts",
+    "ingredients": ["Lamb", "Yogurt", "Rice", "Pine nuts", "Jordanian spices"],
+    "nutritionalInformation": {
+      "Calories": "500",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Stuffed Grape Leaves (Dolma)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Stuffed Grape Leaves Dolma.jpg",
+    "description": "Grape leaves stuffed with a mixture of rice, pine nuts, and herbs, cooked in lemon juice",
+    "ingredients": [
+      "Grape leaves",
+      "Rice",
+      "Pine nuts",
+      "Herbs (parsley, dill)",
+      "Lemon juice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "4g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Kibbeh",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Kibbeh.jpg",
+    "description": "Deep-fried bulgur wheat shells stuffed with spiced ground meat and pine nuts",
+    "ingredients": [
+      "Bulgur wheat",
+      "Ground meat (beef or lamb)",
+      "Pine nuts",
+      "Onions",
+      "Spices"
+    ],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "10g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Maqluba",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Maqluba.jpg",
+    "description": "Layered dish of rice, vegetables, and meat (chicken or lamb), cooked and inverted to form a dome shape",
+    "ingredients": [
+      "Rice",
+      "Chicken or lamb",
+      "Eggplant",
+      "Potatoes",
+      "Cauliflower",
+      "Middle Eastern spices"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Ful Medames",
+    "mealType": "Breakfast",
+    "mealImage": "./downloaded_images/Ful Medames.jpg",
+    "description": "Egyptian breakfast dish made with mashed fava beans, garlic, lemon juice, and olive oil, served with bread",
+    "ingredients": [
+      "Fava beans",
+      "Garlic",
+      "Lemon juice",
+      "Olive oil",
+      "Bread"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Shakshuka",
+    "mealType": "Breakfast",
+    "mealImage": "./downloaded_images/Shakshuka.jpg",
+    "description": "Eggs poached in a spicy tomato and pepper sauce, typically served with bread",
+    "ingredients": [
+      "Eggs",
+      "Tomatoes",
+      "Bell peppers",
+      "Onions",
+      "Spices",
+      "Bread"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "10g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Lamb Kebab",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Lamb Kebab.jpg",
+    "description": "Grilled skewers of marinated lamb meat served with rice and grilled vegetables",
+    "ingredients": [
+      "Lamb meat",
+      "Middle Eastern spices",
+      "Rice",
+      "Grilled vegetables (bell peppers, onions, tomatoes)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Mansaf",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Mansaf.jpg",
+    "description": "Traditional Jordanian dish of lamb cooked in fermented yogurt sauce, served with rice and almonds",
+    "ingredients": [
+      "Lamb",
+      "Fermented yogurt",
+      "Rice",
+      "Almonds",
+      "Jordanian spices"
+    ],
+    "nutritionalInformation": {
+      "Calories": "500",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Kanafeh",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Kanafeh.jpg",
+    "description": "Middle Eastern dessert made with shredded phyllo dough, sweet cheese, and syrup",
+    "ingredients": [
+      "Phyllo dough",
+      "Sweet cheese",
+      "Butter",
+      "Sugar syrup",
+      "Pistachios"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "10g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Baklava",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Baklava.jpg",
+    "description": "Sweet pastry made with layers of phyllo dough, chopped nuts, and honey syrup",
+    "ingredients": [
+      "Phyllo dough",
+      "Mixed nuts (pistachios, walnuts)",
+      "Butter",
+      "Honey syrup"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "5g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Kunafa",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Kunafa.jpg",
+    "description": "Arabic dessert made with shredded phyllo dough, sweet cheese, and orange blossom syrup",
+    "ingredients": [
+      "Phyllo dough",
+      "Sweet cheese",
+      "Butter",
+      "Orange blossom syrup",
+      "Pistachios"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "10g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Kebbeh Nayyeh",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Kebbeh Nayyeh.jpg",
+    "description": "Lebanese raw meat dish made with minced lamb or beef, bulgur wheat, and spices",
+    "ingredients": [
+      "Minced lamb or beef",
+      "Bulgur wheat",
+      "Onions",
+      "Middle Eastern spices"
+    ],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "15g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Muhammara",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Muhammara.jpg",
+    "description": "Syrian dip made with roasted red peppers, walnuts, breadcrumbs, and pomegranate molasses",
+    "ingredients": [
+      "Roasted red peppers",
+      "Walnuts",
+      "Breadcrumbs",
+      "Pomegranate molasses",
+      "Olive oil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Tom Yum Soup",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Tom Yum Soup.jpg",
+    "description": "Spicy and sour soup with lemongrass, lime leaves, galangal, and shrimp or chicken",
+    "ingredients": [
+      "Shrimp or chicken",
+      "Lemongrass",
+      "Lime leaves",
+      "Galangal",
+      "Chili peppers",
+      "Fish sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "10g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Pad Thai",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Pad Thai.jpg",
+    "description": "Stir-fried rice noodles with eggs, tofu, shrimp or chicken, bean sprouts, and peanuts",
+    "ingredients": [
+      "Rice noodles",
+      "Eggs",
+      "Tofu",
+      "Shrimp or chicken",
+      "Bean sprouts",
+      "Peanuts"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Green Curry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Green Curry.jpg",
+    "description": "Spicy curry made with green curry paste, coconut milk, chicken or tofu, and Thai basil",
+    "ingredients": [
+      "Green curry paste",
+      "Coconut milk",
+      "Chicken or tofu",
+      "Eggplant",
+      "Thai basil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Som Tum (Green Papaya Salad)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Som Tum Green Papaya Salad.jpg",
+    "description": "Refreshing salad made with shredded green papaya, tomatoes, green beans, peanuts, and chili",
+    "ingredients": [
+      "Green papaya",
+      "Tomatoes",
+      "Green beans",
+      "Peanuts",
+      "Chili peppers",
+      "Lime juice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Massaman Curry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Massaman Curry.jpg",
+    "description": "Rich and flavorful curry with coconut milk, potatoes, peanuts, and choice of meat",
+    "ingredients": [
+      "Massaman curry paste",
+      "Coconut milk",
+      "Potatoes",
+      "Peanuts",
+      "Choice of meat (beef, chicken, or tofu)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Mango Sticky Rice",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Mango Sticky Rice.jpg",
+    "description": "Sweet dessert made with sticky rice, ripe mango slices, and coconut milk",
+    "ingredients": ["Sticky rice", "Ripe mango", "Coconut milk", "Sugar"],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Red Curry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Red Curry.jpg",
+    "description": "Spicy curry made with red curry paste, coconut milk, chicken or tofu, and bamboo shoots",
+    "ingredients": [
+      "Red curry paste",
+      "Coconut milk",
+      "Chicken or tofu",
+      "Bamboo shoots",
+      "Thai basil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Thai Basil Chicken (Pad Krapow Gai)",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Thai Basil Chicken Pad Krapow Gai.jpg",
+    "description": "Stir-fried chicken with Thai basil, chili peppers, garlic, and soy sauce, served with rice and a fried egg",
+    "ingredients": [
+      "Chicken",
+      "Thai basil",
+      "Chili peppers",
+      "Garlic",
+      "Soy sauce",
+      "Rice",
+      "Egg"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Pineapple Fried Rice",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Pineapple Fried Rice.jpg",
+    "description": "Fried rice with pineapple, shrimp or chicken, cashew nuts, raisins, and curry powder",
+    "ingredients": [
+      "Cooked rice",
+      "Pineapple",
+      "Shrimp or chicken",
+      "Cashew nuts",
+      "Raisins",
+      "Curry powder"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Panang Curry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Panang Curry.jpg",
+    "description": "Rich and creamy curry made with panang curry paste, coconut milk, chicken or beef, and kaffir lime leaves",
+    "ingredients": [
+      "Panang curry paste",
+      "Coconut milk",
+      "Chicken or beef",
+      "Kaffir lime leaves",
+      "Red chili peppers"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Chicken Satay",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Chicken Satay.jpg",
+    "description": "Grilled marinated chicken skewers served with peanut sauce and cucumber relish",
+    "ingredients": [
+      "Chicken",
+      "Coconut milk",
+      "Turmeric",
+      "Peanut sauce",
+      "Cucumber relish"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Yellow Curry",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Yellow Curry.jpg",
+    "description": "Mild and aromatic curry made with yellow curry paste, coconut milk, potatoes, and chicken or tofu",
+    "ingredients": [
+      "Yellow curry paste",
+      "Coconut milk",
+      "Potatoes",
+      "Chicken or tofu",
+      "Onions"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Thai Spring Rolls",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Spring Rolls.jpg",
+    "description": "Crispy spring rolls filled with vegetables, vermicelli noodles, and shrimp or chicken, served with sweet chili sauce",
+    "ingredients": [
+      "Spring roll wrappers",
+      "Vegetables",
+      "Vermicelli noodles",
+      "Shrimp or chicken",
+      "Sweet chili sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "8g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Tom Kha Gai",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Tom Kha Gai.jpg",
+    "description": "Creamy and aromatic soup with coconut milk, chicken, galangal, lemongrass, and mushrooms",
+    "ingredients": [
+      "Chicken",
+      "Coconut milk",
+      "Galangal",
+      "Lemongrass",
+      "Mushrooms",
+      "Thai chili peppers"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "12g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Pad See Ew",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Pad See Ew.jpg",
+    "description": "Stir-fried wide rice noodles with eggs, Chinese broccoli, and choice of meat in sweet soy sauce",
+    "ingredients": [
+      "Wide rice noodles",
+      "Eggs",
+      "Chinese broccoli",
+      "Choice of meat (beef, chicken, or pork)",
+      "Sweet soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "15g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Thai Iced Tea",
+    "mealType": "Beverage",
+    "mealImage": "./downloaded_images/Thai Iced Tea.jpg",
+    "description": "Sweet and creamy iced tea made with Thai tea leaves, sugar, and condensed milk",
+    "ingredients": ["Thai tea leaves", "Sugar", "Condensed milk", "Ice"],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "1g",
+      "Fat": "3g"
+    }
+  },
+  {
+    "mealName": "Thai Fried Chicken (Gai Tod)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Fried Chicken Gai Tod.jpg",
+    "description": "Crispy fried chicken marinated in garlic, cilantro, and fish sauce, served with sweet chili sauce",
+    "ingredients": [
+      "Chicken wings or drumsticks",
+      "Garlic",
+      "Cilantro",
+      "Fish sauce",
+      "Sweet chili sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Thai Green Papaya Salad (Som Tum)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Green Papaya Salad Som Tum.jpg",
+    "description": "Spicy salad made with shredded green papaya, tomatoes, peanuts, and chili peppers",
+    "ingredients": [
+      "Green papaya",
+      "Tomatoes",
+      "Peanuts",
+      "Chili peppers",
+      "Fish sauce",
+      "Lime juice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "5g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Thai Coconut Soup (Tom Kha)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Coconut Soup Tom Kha.jpg",
+    "description": "Creamy and fragrant soup with coconut milk, chicken or tofu, galangal, lemongrass, and mushrooms",
+    "ingredients": [
+      "Chicken or tofu",
+      "Coconut milk",
+      "Galangal",
+      "Lemongrass",
+      "Mushrooms",
+      "Thai chili peppers"
+    ],
+    "nutritionalInformation": {
+      "Calories": "220",
+      "Protein": "10g",
+      "Fat": "12g"
+    }
+  },
+  {
+    "mealName": "Thai Beef Salad (Yam Nua)",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Beef Salad Yam Nua.jpg",
+    "description": "Spicy and tangy salad made with grilled beef, cucumber, tomatoes, onions, and Thai herbs",
+    "ingredients": [
+      "Grilled beef",
+      "Cucumber",
+      "Tomatoes",
+      "Onions",
+      "Thai herbs",
+      "Fish sauce",
+      "Lime juice"
+    ],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Thai Basil Pork (Pad Krapow Moo)",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Thai Basil Pork Pad Krapow Moo.jpg",
+    "description": "Stir-fried minced pork with Thai basil, chili peppers, garlic, and soy sauce, served with rice and a fried egg",
+    "ingredients": [
+      "Minced pork",
+      "Thai basil",
+      "Chili peppers",
+      "Garlic",
+      "Soy sauce",
+      "Rice",
+      "Egg"
+    ],
+    "nutritionalInformation": {
+      "Calories": "380",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Thai Cashew Chicken",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Thai Cashew Chicken.jpg",
+    "description": "Stir-fried chicken with cashew nuts, bell peppers, onions, and chili peppers in a savory sauce",
+    "ingredients": [
+      "Chicken",
+      "Cashew nuts",
+      "Bell peppers",
+      "Onions",
+      "Chili peppers",
+      "Soy sauce"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Thai Red Curry Soup",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Thai Red Curry Soup.jpg",
+    "description": "Spicy and creamy soup with red curry paste, coconut milk, shrimp or chicken, and Thai basil",
+    "ingredients": [
+      "Red curry paste",
+      "Coconut milk",
+      "Shrimp or chicken",
+      "Mushrooms",
+      "Thai basil"
+    ],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "15g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Meat Pie",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Meat Pie.jpg",
+    "description": "Australian classic consisting of minced meat (usually beef), gravy, and pastry crust",
+    "ingredients": ["Minced beef", "Gravy", "Pastry crust"],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Fish and Chips",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Fish and Chips.jpg",
+    "description": "Battered and deep-fried fish fillets served with thick-cut potato fries",
+    "ingredients": ["Fish fillets", "Batter", "Potatoes", "Oil for frying"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Pavlova",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Pavlova.jpg",
+    "description": "Meringue-based dessert topped with whipped cream and fresh fruits, such as kiwi and strawberries",
+    "ingredients": ["Egg whites", "Sugar", "Whipped cream", "Fresh fruits"],
+    "nutritionalInformation": {
+      "Calories": "250",
+      "Protein": "3g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "BBQ Shrimp on the Barbie",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/BBQ Shrimp on the Barbie.jpg",
+    "description": "Grilled shrimp marinated in a tangy barbecue sauce, served with lemon wedges",
+    "ingredients": ["Shrimp", "Barbecue sauce", "Lemon wedges"],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "20g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Lamington",
+    "mealType": "Dessert",
+    "mealImage": "./downloaded_images/Lamington.jpg",
+    "description": "Squares of sponge cake coated in chocolate icing and shredded coconut",
+    "ingredients": ["Sponge cake", "Chocolate icing", "Shredded coconut"],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "2g",
+      "Fat": "8g"
+    }
+  },
+  {
+    "mealName": "Anzac Biscuits",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Anzac Biscuits.jpg",
+    "description": "Sweet biscuits made with oats, coconut, golden syrup, and butter, traditionally eaten on Anzac Day",
+    "ingredients": ["Oats", "Coconut", "Golden syrup", "Butter", "Flour"],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "2g",
+      "Fat": "7g"
+    }
+  },
+  {
+    "mealName": "Australian Burger",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Australian Burger.jpg",
+    "description": "Beef burger with beetroot, fried egg, pineapple, lettuce, tomato, onion, and barbecue sauce",
+    "ingredients": [
+      "Beef patty",
+      "Beetroot",
+      "Fried egg",
+      "Pineapple",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Barbecue sauce",
+      "Burger bun"
+    ],
+    "nutritionalInformation": {
+      "Calories": "500",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Chicken Parmigiana",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Chicken Parmigiana.jpg",
+    "description": "Breaded and fried chicken breast topped with marinara sauce and melted cheese, served with fries or salad",
+    "ingredients": [
+      "Chicken breast",
+      "Breadcrumbs",
+      "Marinara sauce",
+      "Cheese",
+      "Potatoes for fries or salad"
+    ],
+    "nutritionalInformation": {
+      "Calories": "450",
+      "Protein": "30g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Australian Meat Pie Floater",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Australian Meat Pie Floater.jpg",
+    "description": "Meat pie served in a bowl of thick pea soup, typically topped with tomato sauce",
+    "ingredients": ["Meat pie", "Pea soup", "Tomato sauce"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "18g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Sausage Roll",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Sausage Roll.jpg",
+    "description": "Puff pastry filled with seasoned ground meat (usually pork or beef) and baked until golden brown",
+    "ingredients": ["Puff pastry", "Ground meat (pork or beef)", "Seasonings"],
+    "nutritionalInformation": {
+      "Calories": "300",
+      "Protein": "12g",
+      "Fat": "15g"
+    }
+  },
+  {
+    "mealName": "Fairy Bread",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Fairy Bread.jpg",
+    "description": "White bread topped with butter and sprinkles, often served at children's parties",
+    "ingredients": [
+      "White bread",
+      "Butter",
+      "Sprinkles (hundreds and thousands)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "120",
+      "Protein": "2g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Chicken and Corn Soup",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Chicken and Corn Soup.jpg",
+    "description": "Comforting soup made with chicken, sweet corn, eggs, and sometimes noodles",
+    "ingredients": [
+      "Chicken",
+      "Sweet corn",
+      "Eggs",
+      "Chicken broth",
+      "Noodles (optional)"
+    ],
+    "nutritionalInformation": {
+      "Calories": "180",
+      "Protein": "8g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Vegemite on Toast",
+    "mealType": "Breakfast",
+    "mealImage": "./downloaded_images/Vegemite on Toast.jpg",
+    "description": "Australian breakfast staple featuring Vegemite spread on toasted bread",
+    "ingredients": ["Bread", "Vegemite spread"],
+    "nutritionalInformation": {
+      "Calories": "100",
+      "Protein": "2g",
+      "Fat": "1g"
+    }
+  },
+  {
+    "mealName": "Kangaroo Steak",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Kangaroo Steak.jpg",
+    "description": "Lean and flavorful steak from kangaroo meat, often served grilled or pan-seared",
+    "ingredients": ["Kangaroo meat", "Seasonings"],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "25g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Damper",
+    "mealType": "Snack",
+    "mealImage": "./downloaded_images/Damper.jpg",
+    "description": "Traditional Australian soda bread baked in campfires or ovens, often served with butter and jam",
+    "ingredients": ["Flour", "Water", "Salt", "Butter", "Jam"],
+    "nutritionalInformation": {
+      "Calories": "150",
+      "Protein": "3g",
+      "Fat": "5g"
+    }
+  },
+  {
+    "mealName": "Beetroot Salad",
+    "mealType": "Appetizer",
+    "mealImage": "./downloaded_images/Beetroot Salad.jpg",
+    "description": "Salad made with roasted or pickled beetroot, feta cheese, walnuts, and balsamic dressing",
+    "ingredients": [
+      "Beetroot",
+      "Feta cheese",
+      "Walnuts",
+      "Balsamic dressing",
+      "Mixed greens"
+    ],
+    "nutritionalInformation": {
+      "Calories": "200",
+      "Protein": "5g",
+      "Fat": "10g"
+    }
+  },
+  {
+    "mealName": "Australian Lamb Roast",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Australian Lamb Roast.jpg",
+    "description": "Roasted leg of lamb seasoned with garlic, rosemary, and thyme, served with roasted vegetables",
+    "ingredients": [
+      "Leg of lamb",
+      "Garlic",
+      "Rosemary",
+      "Thyme",
+      "Potatoes",
+      "Carrots",
+      "Green beans"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "30g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Australian Sausages",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Australian Sausages.jpg",
+    "description": "Juicy sausages made with a variety of meats and spices, often served with mashed potatoes and gravy",
+    "ingredients": [
+      "Mixed meats (beef, pork, lamb)",
+      "Spices",
+      "Mashed potatoes",
+      "Gravy"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "15g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Australian Meat Pie with Mushy Peas",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Australian Meat Pie with Mushy Peas.jpg",
+    "description": "Meat pie served with a side of mashed green peas, typically topped with tomato sauce",
+    "ingredients": ["Meat pie", "Mashed peas", "Tomato sauce"],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "20g",
+      "Fat": "18g"
+    }
+  },
+  {
+    "mealName": "Aussie Burger with the Lot",
+    "mealType": "Lunch",
+    "mealImage": "./downloaded_images/Aussie Burger with the Lot.jpg",
+    "description": "Beef burger with all the fixings, including bacon, egg, pineapple, beetroot, lettuce, tomato, onion, and barbecue sauce",
+    "ingredients": [
+      "Beef patty",
+      "Bacon",
+      "Fried egg",
+      "Pineapple",
+      "Beetroot",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Barbecue sauce",
+      "Burger bun"
+    ],
+    "nutritionalInformation": {
+      "Calories": "550",
+      "Protein": "30g",
+      "Fat": "25g"
+    }
+  },
+  {
+    "mealName": "Australian Seafood Platter",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Australian Seafood Platter.jpg",
+    "description": "Assortment of fresh seafood such as prawns, oysters, crab, and fish, served with lemon wedges and dipping sauces",
+    "ingredients": [
+      "Prawns",
+      "Oysters",
+      "Crab",
+      "Fish fillets",
+      "Lemon wedges",
+      "Dipping sauces"
+    ],
+    "nutritionalInformation": {
+      "Calories": "400",
+      "Protein": "25g",
+      "Fat": "20g"
+    }
+  },
+  {
+    "mealName": "Chicken Schnitzel",
+    "mealType": "Dinner",
+    "mealImage": "./downloaded_images/Chicken Schnitzel.jpg",
+    "description": "Breaded and fried chicken cutlet served with lemon wedges and a side salad",
+    "ingredients": [
+      "Chicken breast",
+      "Breadcrumbs",
+      "Lemon wedges",
+      "Mixed greens"
+    ],
+    "nutritionalInformation": {
+      "Calories": "350",
+      "Protein": "20g",
+      "Fat": "15g"
+    }
+  }
+]
