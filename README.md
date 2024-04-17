@@ -91,7 +91,7 @@
 |  mealID  | [Long](#int64) | Primary Key |  |
 |  mealName  | [string](#string) | Optional |  |
 |  mealType  | [string](#string) | Optional |  |
-|  mealImage  | [string](#string) | Optional |  |
+|  mealImage  | [string](#string) | Optional | Save the image file path |
 |  description  |  [string](#string)  | Optional |  |
 
 
