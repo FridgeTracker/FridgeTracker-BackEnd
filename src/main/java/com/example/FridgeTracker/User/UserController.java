@@ -92,5 +92,51 @@ public class UserController {
             return ResponseEntity.status(600).body(null); 
         }
     }
+
+    @PostMapping("/updateUser")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> updateUser(@RequestBody User Request){
+        Optional<User> OptUser = userRepository.findById(Request.getId());
+        if (OptUser.isPresent()){
+            User user = OptUser.get();
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            if (encoder.matches(Request.getPassword(),user.getPassword())){
+                if (Request.getFamilyName()!= ""){
+                    user.setFamilyName(Request.getFamilyName());
+                }
+                if (Request.getEmail()!= ""){
+                    user.setEmail(Request.getEmail());
+                }
+                userRepository.save(user);
+                return ResponseEntity.ok("Password match.");
+            }else{
+                return ResponseEntity.ok("Password does not match.");
+            }
+         
+        }
+
+        return ResponseEntity.ok("The new user information is successfully updated.");
+    }
+    /* 
+    //Change passsword endpoint **Subject to change**
+    @PostMapping("/change-password")
+    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
+        
+        User user = userRepository.findByEmail(request.getEmail());
+        
+        if (user == null) {
+            return ResponseEntity.badRequest().body("User not found");
+        }
+        if (user != null && passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
+            
+            String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
+            user.setPassword(hashedNewPassword);
+            userRepository.save(user);
+            
+            return ResponseEntity.ok("Password changed successfully");
+        } else {
+            return ResponseEntity.badRequest().body("Incorrect current password");
+        }
+    }*/
     
 }

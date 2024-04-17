@@ -59,5 +59,12 @@ public class Item {
         }
     }
 
+    public void setFreezer(Optional<Freezer> optionalFreezer) {
+        if (optionalFreezer.isPresent()) {
+            this.freezer = optionalFreezer.get();
+        } else {
+        }
+    }
+
 }
     
