@@ -120,6 +120,7 @@ public class UserController {
     
     //Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
         
         User user = userRepository.findByEmail(request.getEmail());
@@ -127,6 +128,8 @@ public class UserController {
         if (user == null) {
             return ResponseEntity.badRequest().body("User not found");
         }
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        
         if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
             return ResponseEntity.badRequest().body("Incorrect current password");
         }
