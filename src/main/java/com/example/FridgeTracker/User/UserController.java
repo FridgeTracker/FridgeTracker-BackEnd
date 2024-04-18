@@ -121,10 +121,14 @@ public class UserController {
     //Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
+    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request, HttpServletRequest request1) {
         
+        HttpSession session = request1.getSession();
+        session.getAttribute("userEmail");
+
         User user = userRepository.findByEmail(request.getEmail());
-        
+    
+            
         if (user == null) {
             return ResponseEntity.badRequest().body("User not found");
         }
