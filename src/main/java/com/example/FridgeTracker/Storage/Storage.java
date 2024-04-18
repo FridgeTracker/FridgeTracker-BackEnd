@@ -29,4 +29,6 @@ public abstract class Storage {
     @Column(name="capacity")
     private long capacity;
 
+
+
 }

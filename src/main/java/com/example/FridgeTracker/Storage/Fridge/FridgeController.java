@@ -40,7 +40,7 @@ public class FridgeController {
             fridge.setStorageName(request.getStorageName());
             fridge.setCapacity(request.getCapacity());
 
-            fridge.setOwner(user);
+            fridge.setUser(user);
 
             fridgeRepository.save(fridge);
 

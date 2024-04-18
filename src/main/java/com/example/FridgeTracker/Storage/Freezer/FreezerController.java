@@ -40,7 +40,7 @@ public class FreezerController {
             freezer.setStorageName(request.getStorageName());
             freezer.setCapacity(request.getCapacity());
 
-            freezer.setOwner(user);
+            freezer.setUser(user);
 
             freezerRepository.save(freezer);
 

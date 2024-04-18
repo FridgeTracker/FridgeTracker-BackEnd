@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public interface FreezerRepository extends JpaRepository<Freezer, UUID> {
 
-    List<Freezer> findByOwner(User owner);
+    List<Freezer> findByUser(User user);
 
     Optional<Freezer> findById(UUID id);
     

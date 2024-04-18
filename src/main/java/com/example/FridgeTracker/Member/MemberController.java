@@ -39,7 +39,7 @@ public class MemberController {
 
             Member member = request.getMember();
 
-            member.setFamily(user); // Set the owner (family) of the member
+            member.setUser(user); // Set the owner (family) of the member
   
               // Save the member to the repository
             memberRepository.save(member);

@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
+import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 
@@ -45,15 +46,15 @@ public class User {
     private int rank;
 
     //Connect added fridges to account
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Fridge> fridges;
 
     //Connect added fridges to account
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Freezer> freezers;
 
     //Connect added Members to account
-    @OneToMany(mappedBy = "family", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Member> members;
 
 
