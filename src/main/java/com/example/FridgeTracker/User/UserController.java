@@ -60,14 +60,11 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
         if (user != null && passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
-
-            HttpSession session = request.getSession();
-            session.setAttribute("userEmail", user.getEmail());
             
             return ResponseEntity.ok(user.getId());
         }
@@ -96,12 +93,20 @@ public class UserController {
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
+
         Optional<User> OptUser = userRepository.findById(Request.getId());
+
         if (OptUser.isPresent()){
             User user = OptUser.get();
-            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-            if (encoder.matches(Request.getPassword(),user.getPassword())){
+
+            if(Request.getImageData() != null){
+                user.setImageData(Request.getImageData());
+                userRepository.save(user);
+                return ResponseEntity.ok("Profile Picture Saved");
+            }
+     
+            if (passwordEncoder.matches(Request.getPassword(),user.getPassword())){
                 if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
                 }

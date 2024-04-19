@@ -39,6 +39,9 @@ public class Member {
     @Column(name="allergies")
     private String allergies;
 
+    @Column(name="preference")
+    private String preference;
+
     @Column(name="height")
     private double height;
 
@@ -50,14 +53,14 @@ public class Member {
 
     //Connect Members to a family account
     @ManyToOne
-    @JoinColumn(name="ownerEmail", referencedColumnName="email")
+    @JoinColumn(name="userID", referencedColumnName="id")
     @JsonIgnore
-    private User family;
+    private User user;
 
     // Overloaded method to accept Optional<Fridge>
-    public void setFamily(Optional<User> optionalFamily) {
-        if (optionalFamily.isPresent()) {
-            this.family = optionalFamily.get();
+    public void setUser(Optional<User> optionalUser) {
+        if (optionalUser.isPresent()) {
+            this.user = optionalUser.get();
         } else {
         }
     }

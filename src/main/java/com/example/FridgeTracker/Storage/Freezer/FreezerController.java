@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.Storage.Fridge;
+package com.example.FridgeTracker.Storage.Freezer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,36 +18,36 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-public class FridgeController {
+public class FreezerController {
 
     //T
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
-    private FridgeRepository fridgeRepository;
+    private FreezerRepository freezerRepository;
 
 
-    @PostMapping("/addFridge")
+    @PostMapping("/addFreezer")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
+    public ResponseEntity<String> addFridgeToUser(@RequestBody NewFreezerBody request){
 
         Optional<User> user = userRepository.findById(request.getUserID());
 
         if (user != null){
-            Fridge fridge = new Fridge();
+            Freezer freezer = new Freezer();
 
-            fridge.setStorageName(request.getStorageName());
-            fridge.setCapacity(request.getCapacity());
+            freezer.setStorageName(request.getStorageName());
+            freezer.setCapacity(request.getCapacity());
 
-            fridge.setUser(user);
+            freezer.setUser(user);
 
-            fridgeRepository.save(fridge);
+            freezerRepository.save(freezer);
 
-            return ResponseEntity.ok("Fridge added successfully");
+            return ResponseEntity.ok("Freezer added successfully");
         }
         else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add freezer");
         }
     }
     
