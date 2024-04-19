@@ -46,9 +46,8 @@ public class User {
     @Column(name = "rank")
     private int rank;
 
-    @Lob
     @Column(name="profile_image")
-    private byte[] imageData;
+    private String imageData;
 
     //Connect added fridges to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
