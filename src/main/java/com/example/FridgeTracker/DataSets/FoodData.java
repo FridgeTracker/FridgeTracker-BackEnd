@@ -5,6 +5,7 @@ import java.util.List;
 import com.example.FridgeTracker.Item.Item;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,10 +39,6 @@ public class FoodData {
 
     @Column(name="kilojules")
     String KJ_per100grams;
-
-    @OneToMany(mappedBy = "foodID")
-    @JsonIgnore
-    private List<Item> items;
 
 
 }
