@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -44,6 +45,10 @@ public class User {
 
     @Column(name = "rank")
     private int rank;
+
+    @Lob
+    @Column(name="profile_image")
+    private byte[] imageData;
 
     //Connect added fridges to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

@@ -96,11 +96,19 @@ public class UserController {
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
+
         Optional<User> OptUser = userRepository.findById(Request.getId());
+
         if (OptUser.isPresent()){
             User user = OptUser.get();
-            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            if (encoder.matches(Request.getPassword(),user.getPassword())){
+
+            if(Request.getImageData() != null){
+                user.setImageData(Request.getImageData());
+                userRepository.save(user);
+                return ResponseEntity.ok("Profile Picture Saved");
+            }
+     
+            if (passwordEncoder.matches(Request.getPassword(),user.getPassword())){
                 if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
                 }
