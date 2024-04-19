@@ -37,7 +37,7 @@ public class Item {
     @Column(name="quantity")
     private int quantity;
 
-    @OneToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name="food_id", referencedColumnName="id")
     private FoodData foodID;
 
