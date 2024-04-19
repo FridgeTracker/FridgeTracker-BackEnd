@@ -60,14 +60,11 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser, HttpServletRequest request){
+    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
         if (user != null && passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
-
-            HttpSession session = request.getSession();
-            session.setAttribute("userEmail", user.getEmail());
             
             return ResponseEntity.ok(user.getId());
         }
