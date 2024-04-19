@@ -100,6 +100,7 @@ public class UserController {
         if (OptUser.isPresent()){
             User user = OptUser.get();
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
             if (encoder.matches(Request.getPassword(),user.getPassword())){
                 if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
@@ -117,8 +118,36 @@ public class UserController {
 
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
+
+    @PostMapping("/changePw")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> changePassword(@RequestBody User request) {
+    Optional<User> optUser = userRepository.findById(request.getId());
+    if (optUser.isPresent()) {
+        User user = optUser.get();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+        if (request.getPassword() != null && encoder.matches(request.getPassword(), user.getPassword())) {
+            String newPassword = request.getPassword();
+            String confirmNewPassword = request.getPassword();
+            
+            if (newPassword != null && newPassword.equals(confirmNewPassword)) {
+                user.setPassword(encoder.encode(newPassword));
+                userRepository.save(user);
+                return ResponseEntity.ok("Password changed successfully.");
+            } else {
+                return ResponseEntity.ok("New password and confirm password do not match.");
+            }
+        } else {
+            return ResponseEntity.ok("Current password is incorrect.");
+        }
+    }
+
+    return ResponseEntity.ok("User not found.");
+    }
+
     
-    //Change passsword endpoint **Subject to change**
+    /*Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request, HttpServletRequest request1) {
@@ -142,6 +171,6 @@ public class UserController {
         user.setPassword(hashedNewPassword);
         userRepository.save(user);        
         return ResponseEntity.ok("Password changed successfully");
-    }
+    }*/
     
 }
