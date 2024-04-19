@@ -8,8 +8,7 @@ public class ItemBody {
     private Long itemID;
     private String foodName;
     private int quantity;
-    private Long calories;
-    private String type;
+    private Long foodID;
     private UUID id;
     
 }
