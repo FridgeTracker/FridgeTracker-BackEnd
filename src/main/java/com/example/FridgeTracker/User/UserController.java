@@ -121,23 +121,19 @@ public class UserController {
 
     @PostMapping("/changePw")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> changePassword(@RequestBody User request) {
+    public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
     Optional<User> optUser = userRepository.findById(request.getId());
     if (optUser.isPresent()) {
         User user = optUser.get();
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-        if (request.getPassword() != null && encoder.matches(request.getPassword(), user.getPassword())) {
-            String newPassword = request.getPassword();
-            String confirmNewPassword = request.getPassword();
+        if (encoder.matches(request.getPassword(), user.getPassword())) {
+            String newPassword = request.getNewPw();
             
-            if (newPassword != null && newPassword.equals(confirmNewPassword)) {
-                user.setPassword(encoder.encode(newPassword));
-                userRepository.save(user);
-                return ResponseEntity.ok("Password changed successfully.");
-            } else {
-                return ResponseEntity.ok("New password and confirm password do not match.");
-            }
+            user.setPassword(encoder.encode(newPassword));
+            userRepository.save(user);
+            return ResponseEntity.ok("Password changed successfully.");
+        
         } else {
             return ResponseEntity.ok("Current password is incorrect.");
         }
