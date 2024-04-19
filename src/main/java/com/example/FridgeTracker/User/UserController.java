@@ -99,6 +99,7 @@ public class UserController {
         if (OptUser.isPresent()){
             User user = OptUser.get();
 
+
             if(Request.getImageData() != null){
                 user.setImageData(Request.getImageData());
                 userRepository.save(user);
@@ -122,26 +123,55 @@ public class UserController {
 
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
-    /* 
-    //Change passsword endpoint **Subject to change**
+
+    @PostMapping("/changePw")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
+    Optional<User> optUser = userRepository.findById(request.getId());
+    if (optUser.isPresent()) {
+        User user = optUser.get();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+        if (encoder.matches(request.getPassword(), user.getPassword())) {
+            String newPassword = request.getNewPw();
+            
+            user.setPassword(encoder.encode(newPassword));
+            userRepository.save(user);
+            return ResponseEntity.ok("Password changed successfully.");
+        
+        } else {
+            return ResponseEntity.ok("Current password is incorrect.");
+        }
+    }
+
+    return ResponseEntity.ok("User not found.");
+    }
+
+    
+    /*Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
-    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request) {
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request, HttpServletRequest request1) {
         
+        HttpSession session = request1.getSession();
+        session.getAttribute("userEmail");
+
         User user = userRepository.findByEmail(request.getEmail());
-        
+    
+            
         if (user == null) {
             return ResponseEntity.badRequest().body("User not found");
         }
-        if (user != null && passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
-            
-            String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
-            user.setPassword(hashedNewPassword);
-            userRepository.save(user);
-            
-            return ResponseEntity.ok("Password changed successfully");
-        } else {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        
+        if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
             return ResponseEntity.badRequest().body("Incorrect current password");
         }
+            
+        String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
+        user.setPassword(hashedNewPassword);
+        userRepository.save(user);        
+        return ResponseEntity.ok("Password changed successfully");
     }*/
     
 }
