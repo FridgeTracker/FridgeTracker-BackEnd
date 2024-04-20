@@ -1,9 +1,5 @@
 package com.example.FridgeTracker.Item;
-
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,32 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.FridgeTracker.DataSets.FoodData;
-import com.example.FridgeTracker.DataSets.FoodDataRepository;
-import com.example.FridgeTracker.Storage.Freezer.Freezer;
-import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
-import com.example.FridgeTracker.Storage.Fridge.Fridge;
-import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
-
-
 
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class ItemController {
-
-    //T
-    @Autowired
-    private ItemRepository itemRepository;
-
-    @Autowired
-    private FridgeRepository fridgeRepository;
-
-    @Autowired
-    private FreezerRepository freezerRepository;
-
-    @Autowired
-    private FoodDataRepository foodDataRepository;
 
     private final ItemService itemService;
 
