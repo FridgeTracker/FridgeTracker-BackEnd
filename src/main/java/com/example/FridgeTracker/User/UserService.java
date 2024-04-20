@@ -122,7 +122,7 @@ public class UserService {
         Optional<User> optUser = userRepository.findById(request.getId());
 
             if (optUser.isPresent()) {
-                User user = optUser.get()
+                User user = optUser.get();
                 if (passwordEncoder.matches(request.getPassword(), user.getPassword())) {
                     String newPassword = request.getNewPw();
                     user.setPassword(passwordEncoder.encode(newPassword));
