@@ -1,6 +1,7 @@
 package com.example.FridgeTracker.Member;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ public class MemberService {
         this.userRepository = userRepository;
     }
 
-
+    //ADD MEMBER TO FAMILY
     public ResponseEntity<String> addMemberToFamily( MemberRequest request){
 
         Optional<User> user = userRepository.findById(request.getUserID());
@@ -42,6 +43,18 @@ public class MemberService {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
         }
     }
+
+    //GET MEMBER
+    public ResponseEntity<Member> getMember(UUID id){
+
+        Optional<Member> member = memberRepository.findById(id);
+       
+       if(member != null){
+           return ResponseEntity.ok(member.get()); 
+       } else {
+           return ResponseEntity.status(600).body(null); 
+       }
+   }
 
 
     

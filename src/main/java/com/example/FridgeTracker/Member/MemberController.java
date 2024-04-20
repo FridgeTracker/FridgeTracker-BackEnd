@@ -42,18 +42,11 @@ public class MemberController {
         return memberService.addMemberToFamily(request);
     }
 
-
+    //GET MEMBER
     @GetMapping("/member/{id}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<Member> getMember(@PathVariable UUID id){
-
-         Optional<Member> member = memberRepository.findById(id);
-        
-        if(member != null){
-            return ResponseEntity.ok(member.get()); 
-        } else {
-            return ResponseEntity.status(600).body(null); 
-        }
+        return memberService.getMember(id);
     }
 
 
