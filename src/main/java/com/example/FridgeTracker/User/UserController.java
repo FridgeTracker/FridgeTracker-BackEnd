@@ -109,6 +109,8 @@ public class UserController {
         }
     }
 
+
+    //update Account Info
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
@@ -148,11 +150,14 @@ public class UserController {
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
 
+
+    //Change Password
     @PostMapping("/changePw")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
         return userService.changePassword(request);
     }
+
 
 
     @GetMapping("/timezone")
