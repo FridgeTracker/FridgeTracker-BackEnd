@@ -1,10 +1,9 @@
 package com.example.FridgeTracker.Member;
 
-import java.util.Optional;
+
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
 @RestController
@@ -49,50 +46,15 @@ public class MemberController {
         return memberService.getMember(id);
     }
 
-
+    //UPDATE MEMBER IN FAMILY
     @PostMapping("/updateMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateMemberInFamily(@RequestBody MemberRequest request){
    
-        Optional<User> userOptional = userRepository.findById(request.getUserID());
-
-        if(userOptional.isPresent()){
-            User family = userOptional.get();
-
-            Optional<Member> memberOptional = family.getMembers().stream()
-                                    .filter(member -> member.getId().equals(request.getMember().getId()))
-                                    .findFirst();
-
-            if (memberOptional.isPresent()) {
-                Member member = memberOptional.get();
-
-                if(request.getMember().getName() != null){
-                    member.setName(request.getMember().getName());
-                }
-                if(request.getMember().getAge() > 0){
-                    member.setAge(request.getMember().getAge());
-                }
-                if(request.getMember().getImageURL() != null){
-                    member.setImageURL(request.getMember().getImageURL());
-                }
-                if(request.getMember().getHeight() > 0){
-                    member.setHeight(request.getMember().getHeight());
-                }
-                if(request.getMember().getWeight() > 0){
-                    member.setWeight(request.getMember().getWeight());
-                }
-  
-                userRepository.save(family);
-
-                return ResponseEntity.ok("Member updated successfully");
-            } else{
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Member could not be foundd in the family");
-            }
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to find user account");
-        }
-    }
+        return memberService.addMemberToFamily(request);
 
     }
+
+}
     
 
