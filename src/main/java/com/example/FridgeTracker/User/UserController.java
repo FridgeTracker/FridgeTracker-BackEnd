@@ -90,6 +90,8 @@ public class UserController {
         }
     }
 
+
+    //update Account Info
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateUser(@RequestBody User Request){
@@ -124,6 +126,8 @@ public class UserController {
         return ResponseEntity.ok("The new user information is successfully updated.");
     }
 
+
+    //Change Password
     @PostMapping("/changePw")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
@@ -146,32 +150,4 @@ public class UserController {
 
     return ResponseEntity.ok("User not found.");
     }
-
-    
-    /*Change passsword endpoint **Subject to change**
-    @PostMapping("/change-password")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request, HttpServletRequest request1) {
-        
-        HttpSession session = request1.getSession();
-        session.getAttribute("userEmail");
-
-        User user = userRepository.findByEmail(request.getEmail());
-    
-            
-        if (user == null) {
-            return ResponseEntity.badRequest().body("User not found");
-        }
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        
-        if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
-            return ResponseEntity.badRequest().body("Incorrect current password");
-        }
-            
-        String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
-        user.setPassword(hashedNewPassword);
-        userRepository.save(user);        
-        return ResponseEntity.ok("Password changed successfully");
-    }*/
-    
 }
