@@ -51,14 +51,17 @@ public class ItemController {
             Item item = new Item();
             
             Optional<FoodData> food_item = foodDataRepository.findById(request.getFoodID());
+
             if(!food_item.isPresent()){
                 System.out.println("cant find food");
             } else{
                 System.out.println("find food");
             }
+
             item.setFoodID(food_item.get());
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
+            item.setExpiryDate(request.getExpiryDate());
 
             if(freezer.isPresent()){
                 item.setFreezer(freezer);

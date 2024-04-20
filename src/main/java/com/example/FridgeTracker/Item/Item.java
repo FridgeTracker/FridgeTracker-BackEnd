@@ -18,6 +18,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Optional; 
 
 //Item class to store food items
@@ -36,6 +37,9 @@ public class Item {
 
     @Column(name="quantity")
     private int quantity;
+
+    @Column(name="expiry_date")
+    private LocalDate expiryDate;
 
     @ManyToOne
     @JoinColumn(name="food_id", referencedColumnName="id")
