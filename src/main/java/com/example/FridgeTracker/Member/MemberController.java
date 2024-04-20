@@ -51,7 +51,7 @@ public class MemberController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateMemberInFamily(@RequestBody MemberRequest request){
    
-        return memberService.addMemberToFamily(request);
+        return memberService.updateMemberInFamily(request);
 
     }
 
