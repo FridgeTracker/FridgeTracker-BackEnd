@@ -28,41 +28,25 @@ public class MemberController {
     @Autowired
     private MemberRepository memberRepository;
 
+    private final MemberService memberService;
+
+    @Autowired
+    public MemberController(MemberService memberService){
+        this.memberService = memberService;
+    }
+
     // Temporary add member endpoint without error control
     @PostMapping("/addMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addMemberToFamily(@RequestBody MemberRequest request){
-
-        Optional<User> user = userRepository.findById(request.getUserID());
-
-        if (user != null){
-
-            Member member = request.getMember();
-
-            member.setUser(user); // Set the owner (family) of the member
-  
-              // Save the member to the repository
-            memberRepository.save(member);
-
-            return ResponseEntity.ok("Member added successfully");
-        }
-        else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
-        }
+        return memberService.addMemberToFamily(request);
     }
 
-
+    //GET MEMBER
     @GetMapping("/member/{id}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<Member> getMember(@PathVariable UUID id){
-
-         Optional<Member> member = memberRepository.findById(id);
-        
-        if(member != null){
-            return ResponseEntity.ok(member.get()); 
-        } else {
-            return ResponseEntity.status(600).body(null); 
-        }
+        return memberService.getMember(id);
     }
 
 
