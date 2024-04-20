@@ -67,6 +67,52 @@ public class ItemService {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add Item");
         }
     }
+
+
     
-    
+    public ResponseEntity<String> updateItemInFridge( ItemBody request){
+   
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+        Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+
+        Fridge fridge = null;
+        Freezer freezer = null;
+        Optional<Item> itemOptional;
+
+        if (fridgeOptional.isPresent()){
+
+                fridge = fridgeOptional.get();
+                itemOptional = fridge.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        } 
+        else if(freezerOptional.isPresent()){
+
+                freezer = freezerOptional.get();
+                itemOptional = freezer.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        }
+        else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
+        }
+
+        if (itemOptional.isPresent()) {
+            Item item = itemOptional.get();
+
+            item.setQuantity(request.getQuantity());
+            item.setExpiryDate(request.getExpiryDate());
+            
+            // Save the updated fridge back to the database
+            if(fridgeOptional.isPresent()){
+                fridgeRepository.save(fridge);
+            }else{
+                freezerRepository.save(freezer);
+            }
+
+            return ResponseEntity.ok("Item updated successfully");
+        } else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
+        }
+    }
 }
