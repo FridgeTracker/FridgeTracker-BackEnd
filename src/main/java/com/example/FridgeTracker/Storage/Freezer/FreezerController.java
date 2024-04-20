@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Storage.Fridge.FridgeService;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 import java.util.Optional;
@@ -26,29 +27,19 @@ public class FreezerController {
 
     @Autowired
     private FreezerRepository freezerRepository;
+    private final FreezerService freezerService;
+
+    @Autowired
+    public FreezerController(FreezerService freezerService){
+        this.freezerService = freezerService;
+    }
 
 
     @PostMapping("/addFreezer")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addFridgeToUser(@RequestBody NewFreezerBody request){
-
-        Optional<User> user = userRepository.findById(request.getUserID());
-
-        if (user != null){
-            Freezer freezer = new Freezer();
-
-            freezer.setStorageName(request.getStorageName());
-            freezer.setCapacity(request.getCapacity());
-
-            freezer.setUser(user);
-
-            freezerRepository.save(freezer);
-
-            return ResponseEntity.ok("Freezer added successfully");
-        }
-        else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add freezer");
-        }
+        return freezerService.addFridgeToUser(request);
+    
     }
     
 }
