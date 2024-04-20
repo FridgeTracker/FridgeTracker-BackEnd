@@ -69,7 +69,7 @@ public class UserController {
             return ResponseEntity.ok(user.getId());
         }
 
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+        return ResponseEntity.status(600).body(null);
     }
 
 
