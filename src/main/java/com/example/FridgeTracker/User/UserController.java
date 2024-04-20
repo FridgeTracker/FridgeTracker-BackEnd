@@ -60,16 +60,20 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser){
+    public ResponseEntity<?> loginUser(@RequestBody User loginUser){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
-        if (user != null && passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
-            
-            return ResponseEntity.ok(user.getId());
+        if (user != null){
+
+            if(passwordEncoder.matches(loginUser.getPassword(), user.getPassword())){
+
+                return ResponseEntity.ok(user.getId());
+            }
+            return ResponseEntity.status(999).body("Passwords don't match");
         }
 
-        return ResponseEntity.status(600).body(null);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("user not found");
     }
 
 
