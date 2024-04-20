@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.DataSets.FoodData;
 import com.example.FridgeTracker.DataSets.FoodDataRepository;
@@ -12,7 +13,7 @@ import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
-
+@Service
 public class ItemService {
 
     private final ItemRepository itemRepository;
@@ -20,7 +21,7 @@ public class ItemService {
     private final FreezerRepository freezerRepository;
     private final FoodDataRepository foodDataRepository;
 
-
+    @Autowired
     public ItemService(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository){
     
         this.itemRepository = itemRepository;
