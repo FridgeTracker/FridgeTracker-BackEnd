@@ -12,5 +12,6 @@ public interface FridgeRepository extends JpaRepository<Fridge, UUID> {
     List<Fridge> findByUser(User user);
 
     Optional<Fridge> findById(UUID id);
+
     
 } 
