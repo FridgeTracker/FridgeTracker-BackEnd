@@ -27,6 +27,44 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    //UPDATE USER ACCOUNT INFO
+    public ResponseEntity<String> updateUser(User Request){
+
+        Optional<User> OptUser = userRepository.findById(Request.getId());
+
+        if (OptUser.isPresent()){
+            User user = OptUser.get();
+
+
+            if(Request.getImageData() != null){
+                user.setImageData(Request.getImageData());
+                userRepository.save(user);
+                return ResponseEntity.ok("Profile Picture Saved");
+            }
+     
+            if (passwordEncoder.matches(Request.getPassword(),user.getPassword())){
+
+                if (Request.getFamilyName()!= ""){
+                    user.setFamilyName(Request.getFamilyName());
+                }
+                if (Request.getEmail()!= ""){
+                    user.setEmail(Request.getEmail());
+                }
+                if(Request.getTimezone() != ""){
+                    user.setTimezone(Request.getTimezone());
+                }
+                
+                userRepository.save(user);
+                return ResponseEntity.ok("User information updated.");
+            }else{
+                return ResponseEntity.ok("Password does not match.");
+            }
+         
+        }
+
+        return ResponseEntity.ok("The new user information is successfully updated.");
+    }
+
     //CHANGE THE PASSWORD
     public ResponseEntity<String> changePassword(PasswordRequest request){
 
