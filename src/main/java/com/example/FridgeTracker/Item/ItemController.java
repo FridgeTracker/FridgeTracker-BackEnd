@@ -111,9 +111,8 @@ public class ItemController {
         if (itemOptional.isPresent()) {
             Item item = itemOptional.get();
 
-            // Update item properties here
-            item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
+            item.setExpiryDate(request.getExpiryDate());
             
             // Save the updated fridge back to the database
             if(fridgeOptional.isPresent()){
