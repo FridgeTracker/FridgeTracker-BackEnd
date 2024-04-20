@@ -38,45 +38,19 @@ public class ItemController {
     @Autowired
     private FoodDataRepository foodDataRepository;
 
+    private final ItemService itemService;
+
+    @Autowired
+    public ItemController(ItemService itemService){
+        this.itemService = itemService;
+    }
+
 
     @PostMapping("/addItem")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addItemToFridge(@RequestBody ItemBody request){
+        return itemService.addItemToFridge(request);
 
-        Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
-        Optional<Freezer> freezer = freezerRepository.findById(request.getId());
-
-        if (fridge.isPresent() || freezer.isPresent()){
-
-            Item item = new Item();
-            
-            Optional<FoodData> food_item = foodDataRepository.findById(request.getFoodID());
-
-            if(!food_item.isPresent()){
-                System.out.println("cant find food");
-            } else{
-                System.out.println("find food");
-            }
-
-            item.setFoodID(food_item.get());
-            item.setFoodName(request.getFoodName());
-            item.setQuantity(request.getQuantity());
-            item.setExpiryDate(request.getExpiryDate());
-
-            if(freezer.isPresent()){
-                item.setFreezer(freezer);
-            }
-            else{
-                item.setFridge(fridge);
-            }   
-
-            itemRepository.save(item);
-
-            return ResponseEntity.ok("Item added successfully");
-        }
-        else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add Item");
-        }
     }
 
     @PostMapping("/updateItem")
