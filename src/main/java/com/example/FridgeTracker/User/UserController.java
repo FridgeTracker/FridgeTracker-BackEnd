@@ -131,7 +131,7 @@ public class UserController {
                 }
                 
                 userRepository.save(user);
-                return ResponseEntity.ok("Password match.");
+                return ResponseEntity.ok("User information updated.");
             }else{
                 return ResponseEntity.ok("Password does not match.");
             }
