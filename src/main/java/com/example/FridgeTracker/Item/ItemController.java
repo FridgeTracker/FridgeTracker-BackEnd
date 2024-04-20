@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.DataSets.FoodData;
+import com.example.FridgeTracker.DataSets.FoodDataRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -33,6 +35,9 @@ public class ItemController {
     @Autowired
     private FreezerRepository freezerRepository;
 
+    @Autowired
+    private FoodDataRepository foodDataRepository;
+
 
     @PostMapping("/addItem")
     @CrossOrigin(origins = "*")
@@ -44,14 +49,26 @@ public class ItemController {
         if (fridge.isPresent() || freezer.isPresent()){
 
             Item item = new Item();
+            
+            Optional<FoodData> food_item = foodDataRepository.findById(request.getFoodID());
 
-            item.setCalories(request.getCalories());
+            if(!food_item.isPresent()){
+                System.out.println("cant find food");
+            } else{
+                System.out.println("find food");
+            }
+
+            item.setFoodID(food_item.get());
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
-            item.setType(request.getType());
+            item.setExpiryDate(request.getExpiryDate());
 
-            if(freezer.isPresent()){item.setFreezer(freezer);}
-            else{item.setFridge(fridge);}   
+            if(freezer.isPresent()){
+                item.setFreezer(freezer);
+            }
+            else{
+                item.setFridge(fridge);
+            }   
 
             itemRepository.save(item);
 
@@ -94,11 +111,8 @@ public class ItemController {
         if (itemOptional.isPresent()) {
             Item item = itemOptional.get();
 
-            // Update item properties here
-            item.setCalories(request.getCalories());
-            item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
-            item.setType(request.getType());
+            item.setExpiryDate(request.getExpiryDate());
             
             // Save the updated fridge back to the database
             if(fridgeOptional.isPresent()){

@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,6 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
+import java.time.ZoneId;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+
+
+
 
 @RestController
 @RequestMapping("/api") // Change to user ?
@@ -30,6 +38,13 @@ public class UserController {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
 
     //Register User endpoint **Subject to change**
@@ -60,16 +75,20 @@ public class UserController {
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<UUID> loginUser(@RequestBody User loginUser){
+    public ResponseEntity<?> loginUser(@RequestBody User loginUser){
 
         User user = userRepository.findByEmail(loginUser.getEmail());
 
-        if (user != null && passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
-            
-            return ResponseEntity.ok(user.getId());
+        if (user != null){
+
+            if(passwordEncoder.matches(loginUser.getPassword(), user.getPassword())){
+
+                return ResponseEntity.ok(user.getId());
+            }
+            return ResponseEntity.status(999).body("Passwords don't match");
         }
 
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("user not found");
     }
 
 
@@ -109,14 +128,19 @@ public class UserController {
             }
      
             if (passwordEncoder.matches(Request.getPassword(),user.getPassword())){
+
                 if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
                 }
                 if (Request.getEmail()!= ""){
                     user.setEmail(Request.getEmail());
                 }
+                if(Request.getTimezone() != ""){
+                    user.setTimezone(Request.getTimezone());
+                }
+                
                 userRepository.save(user);
-                return ResponseEntity.ok("Password match.");
+                return ResponseEntity.ok("User information updated.");
             }else{
                 return ResponseEntity.ok("Password does not match.");
             }
@@ -131,23 +155,15 @@ public class UserController {
     @PostMapping("/changePw")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
-    Optional<User> optUser = userRepository.findById(request.getId());
-    if (optUser.isPresent()) {
-        User user = optUser.get();
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-
-        if (encoder.matches(request.getPassword(), user.getPassword())) {
-            String newPassword = request.getNewPw();
-            
-            user.setPassword(encoder.encode(newPassword));
-            userRepository.save(user);
-            return ResponseEntity.ok("Password changed successfully.");
-        
-        } else {
-            return ResponseEntity.ok("Current password is incorrect.");
-        }
+        return userService.changePassword(request);
     }
 
-    return ResponseEntity.ok("User not found.");
+
+
+    @GetMapping("/timezone")
+    @CrossOrigin(origins = "*")
+    public List<String> getTimeZoneList() {
+        return userService.getTimeZones();
     }
+
 }

@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Item;
 
+import com.example.FridgeTracker.DataSets.FoodData;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -7,14 +8,17 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Optional; 
 
 //Item class to store food items
@@ -34,12 +38,12 @@ public class Item {
     @Column(name="quantity")
     private int quantity;
 
-    @Column(name="calories")
-    private Long calories;
+    @Column(name="expiry_date")
+    private LocalDate expiryDate;
 
-    //Used to declare enums ( MEAT, DAIRY, VEGETABLE, FRUIT )
-    @Column(name="type")
-    private String type;
+    @ManyToOne
+    @JoinColumn(name="food_id", referencedColumnName="id")
+    private FoodData foodID;
 
     @ManyToOne
     @JoinColumn(name="fridge_id", referencedColumnName="id")
