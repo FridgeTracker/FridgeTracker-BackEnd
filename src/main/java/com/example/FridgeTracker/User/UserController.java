@@ -16,14 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-
-import java.time.ZoneId;
 import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
+
 
 
 
@@ -51,62 +45,22 @@ public class UserController {
     @PostMapping("/register")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addUser(@RequestBody User user){
-
-
-        if(user != null){
-
-            if (userRepository.existsByEmail(user.getEmail())) {
-                return ResponseEntity.badRequest().body("User already exists");
-            }
-
-            //Hash and Set new password
-            String hashedPasswordString = passwordEncoder.encode(user.getPassword());
-            user.setPassword(hashedPasswordString);
-
-            //Import into db
-            userRepository.save(user);
-
-            return ResponseEntity.ok("User registered successfully");
-        } else {
-            return ResponseEntity.badRequest().body("Fail to register");
-        }
+        return userService.addUser(user);
     }
 
     //Login api endpoint
     @PostMapping("/login")
     @CrossOrigin(origins = "*")
     public ResponseEntity<?> loginUser(@RequestBody User loginUser){
-
-        User user = userRepository.findByEmail(loginUser.getEmail());
-
-        if (user != null){
-
-            if(passwordEncoder.matches(loginUser.getPassword(), user.getPassword())){
-
-                return ResponseEntity.ok(user.getId());
-            }
-            return ResponseEntity.status(999).body("Passwords don't match");
-        }
-
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("user not found");
+        return userService.loginUser(loginUser);
     }
 
 
     //get user object endpoint
     @GetMapping("/user/{id}")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<User> getUser(@PathVariable UUID id) {       
-
-      // can also use { @RequestHeader("email-tkn") String userEmail  }
-
-        //Add a error check
-        Optional<User> user = userRepository.findById(id);
-        
-        if(user != null){
-            return ResponseEntity.ok(user.get()); 
-        } else {
-            return ResponseEntity.status(600).body(null); 
-        }
+    public ResponseEntity<User> getUser(@PathVariable UUID id) {   
+        return userService.getUser(id);
     }
 
 
