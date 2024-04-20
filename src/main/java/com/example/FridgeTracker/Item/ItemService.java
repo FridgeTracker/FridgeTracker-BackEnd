@@ -29,7 +29,7 @@ public class ItemService {
         this.freezerRepository = freezerRepository;
         this.foodDataRepository = foodDataRepository;
     }
-
+    //ADD ITEM TO FRIDGE
     public ResponseEntity<String> addItemToFridge( ItemBody request){
 
         Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
@@ -69,7 +69,7 @@ public class ItemService {
     }
 
 
-    
+    //UPDATE ITEM IN FRIDGE
     public ResponseEntity<String> updateItemInFridge( ItemBody request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
@@ -114,5 +114,32 @@ public class ItemService {
         } else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found in the fridge");
         }
+    }
+
+
+    // DELETE ITEM IN FRIDGE
+    public ResponseEntity<String> deleteItemInFridge( DeleteItemRequest request){
+   
+        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
+      
+        if (fridgeOptional.isPresent()) {
+            Fridge fridge = fridgeOptional.get();
+      
+            Optional<Item> itemOptional = fridge.getItems().stream()
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
+                                    .findFirst();
+
+            if (itemOptional.isPresent()) {
+                Item itemToRemove = itemOptional.get();
+                fridge.getItems().remove(itemToRemove);
+                fridgeRepository.save(fridge); 
+                return ResponseEntity.ok("Item deleted successfully.");
+            } else {
+                return ResponseEntity.badRequest().body("no item id" + request.getId());
+            }    
+    } else {
+        return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
+    }  
+
     }
 }
