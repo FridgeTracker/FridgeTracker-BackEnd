@@ -159,35 +159,8 @@ public class UserController {
     return ResponseEntity.ok("User not found.");
     }
 
-<<<<<<< Updated upstream
-    
-    /*Change passsword endpoint **Subject to change**
-    @PostMapping("/change-password")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest request, HttpServletRequest request1) {
-        
-        HttpSession session = request1.getSession();
-        session.getAttribute("userEmail");
 
-        User user = userRepository.findByEmail(request.getEmail());
-    
-            
-        if (user == null) {
-            return ResponseEntity.badRequest().body("User not found");
-        }
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        
-        if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
-            return ResponseEntity.badRequest().body("Incorrect current password");
-        }
-            
-        String hashedNewPassword = passwordEncoder.encode(request.getNewPassword());
-        user.setPassword(hashedNewPassword);
-        userRepository.save(user);        
-        return ResponseEntity.ok("Password changed successfully");
-    }*/
-    
-=======
+
     @GetMapping("/timezone")
     @CrossOrigin(origins = "*")
     public static List<String> getTimeZoneList() {
@@ -197,5 +170,5 @@ public class UserController {
                 .collect(Collectors.toList());
     }
 
->>>>>>> Stashed changes
+
 }
