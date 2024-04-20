@@ -119,12 +119,17 @@ public class UserController {
             }
      
             if (passwordEncoder.matches(Request.getPassword(),user.getPassword())){
+
                 if (Request.getFamilyName()!= ""){
                     user.setFamilyName(Request.getFamilyName());
                 }
                 if (Request.getEmail()!= ""){
                     user.setEmail(Request.getEmail());
                 }
+                if(Request.getTimezone() != ""){
+                    user.setTimezone(Request.getTimezone());
+                }
+                
                 userRepository.save(user);
                 return ResponseEntity.ok("Password match.");
             }else{
@@ -160,7 +165,6 @@ public class UserController {
     }
 
 
-
     @GetMapping("/timezone")
     @CrossOrigin(origins = "*")
     public static List<String> getTimeZoneList() {
@@ -169,6 +173,5 @@ public class UserController {
                 .sorted()
                 .collect(Collectors.toList());
     }
-
 
 }

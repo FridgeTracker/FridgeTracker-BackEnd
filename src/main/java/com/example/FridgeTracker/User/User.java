@@ -49,6 +49,9 @@ public class User {
     @Column(name="profile_image")
     private String imageData;
 
+    @Column(name="time_zone")
+    private String timezone;
+
     //Connect added fridges to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Fridge> fridges;
