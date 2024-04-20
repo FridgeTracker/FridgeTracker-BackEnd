@@ -151,24 +151,7 @@ public class UserController {
     @PostMapping("/changePw")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> changePassword(@RequestBody PasswordRequest request) {
-    Optional<User> optUser = userRepository.findById(request.getId());
-    if (optUser.isPresent()) {
-        User user = optUser.get();
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-
-        if (encoder.matches(request.getPassword(), user.getPassword())) {
-            String newPassword = request.getNewPw();
-            
-            user.setPassword(encoder.encode(newPassword));
-            userRepository.save(user);
-            return ResponseEntity.ok("Password changed successfully.");
-        
-        } else {
-            return ResponseEntity.ok("Current password is incorrect.");
-        }
-    }
-
-    return ResponseEntity.ok("User not found.");
+        return userService.changePassword(request);
     }
 
 
