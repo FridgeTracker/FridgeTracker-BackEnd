@@ -39,6 +39,13 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
 
     //Register User endpoint **Subject to change**
     @PostMapping("/register")
@@ -167,11 +174,8 @@ public class UserController {
 
     @GetMapping("/timezone")
     @CrossOrigin(origins = "*")
-    public static List<String> getTimeZoneList() {
-        return ZoneId.getAvailableZoneIds()
-                .stream()
-                .sorted()
-                .collect(Collectors.toList());
+    public List<String> getTimeZoneList() {
+        return userService.getTimeZones();
     }
 
 }
