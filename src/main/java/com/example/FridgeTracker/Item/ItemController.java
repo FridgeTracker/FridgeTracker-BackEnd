@@ -64,27 +64,7 @@ public class ItemController {
     @PostMapping("/deleteItem")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> deleteItemInFridge(@RequestBody DeleteItemRequest request){
-   
-        Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
-      
-        if (fridgeOptional.isPresent()) {
-            Fridge fridge = fridgeOptional.get();
-      
-            Optional<Item> itemOptional = fridge.getItems().stream()
-                                    .filter(item -> item.getItemID().equals(request.getItemID()))
-                                    .findFirst();
-
-            if (itemOptional.isPresent()) {
-                Item itemToRemove = itemOptional.get();
-                fridge.getItems().remove(itemToRemove);
-                fridgeRepository.save(fridge); 
-                return ResponseEntity.ok("Item deleted successfully.");
-            } else {
-                return ResponseEntity.badRequest().body("no item id" + request.getId());
-            }    
-    } else {
-        return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
-    }  
+        return itemService.deleteItemInFridge(request);
 
     }
 }
