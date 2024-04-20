@@ -27,28 +27,20 @@ public class FridgeController {
     @Autowired
     private FridgeRepository fridgeRepository;
 
+    private final FridgeService fridgeService;
+
+    @Autowired
+    public FridgeController(FridgeService fridgeService) {
+        this.fridgeService = fridgeService;
+    }
+
+
 
     @PostMapping("/addFridge")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addFridgeToUser(@RequestBody NewFridgeBody request){
-
-        Optional<User> user = userRepository.findById(request.getUserID());
-
-        if (user != null){
-            Fridge fridge = new Fridge();
-
-            fridge.setStorageName(request.getStorageName());
-            fridge.setCapacity(request.getCapacity());
-
-            fridge.setUser(user);
-
-            fridgeRepository.save(fridge);
-
-            return ResponseEntity.ok("Fridge added successfully");
-        }
-        else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
-        }
+        return fridgeService.addFridgeToUser(request);
     }
+        
     
 }
