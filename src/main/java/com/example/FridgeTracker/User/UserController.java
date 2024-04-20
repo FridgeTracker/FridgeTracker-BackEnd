@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,6 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+
+import java.time.ZoneId;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+
+
 
 
 @RestController
@@ -147,6 +155,7 @@ public class UserController {
     return ResponseEntity.ok("User not found.");
     }
 
+<<<<<<< Updated upstream
     
     /*Change passsword endpoint **Subject to change**
     @PostMapping("/change-password")
@@ -174,4 +183,15 @@ public class UserController {
         return ResponseEntity.ok("Password changed successfully");
     }*/
     
+=======
+    @GetMapping("/timezone")
+    @CrossOrigin(origins = "*")
+    public static List<String> getTimeZoneList() {
+        return ZoneId.getAvailableZoneIds()
+                .stream()
+                .sorted()
+                .collect(Collectors.toList());
+    }
+
+>>>>>>> Stashed changes
 }
