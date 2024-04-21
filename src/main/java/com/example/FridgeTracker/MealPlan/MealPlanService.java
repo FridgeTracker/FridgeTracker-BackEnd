@@ -1,7 +1,5 @@
 package com.example.FridgeTracker.MealPlan;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,30 +7,52 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+import java.io.IOException;
+import org.springframework.util.StreamUtils;
+import org.springframework.core.io.ClassPathResource;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
 
 @Service
 public class MealPlanService {
-    private final MealPlanRepository mealPlanRepository;
-    private static final Logger logger = LoggerFactory.getLogger(MealPlanService.class);
+
+    private static final String JSON_FILE_PATH = "meal_plans.json";
+    private static final String IMAGE_FOLDER_PATH = "downloaded_images/";
 
     @Autowired
-    public MealPlanService(MealPlanRepository mealPlanRepository) {
-        this.mealPlanRepository = mealPlanRepository;
-    }
+    private MealPlanRepository mealPlanRepository;
 
-    public MealPlan createMealPlan(MealPlan mealPlan) {
-        try {
-            logger.info("Starting to add meal plan");
-            return mealPlanRepository.save(mealPlan);
-        } catch (Exception e) {
-            logger.error("An error occurred while saving the meal plan: ", e);
-            logger.error("Error message: {}", e.getMessage());
-            logger.error("Stack trace: {}", e.getStackTrace());
-            return null;
+    public void loadMealPlans() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ClassPathResource jsonResource = new ClassPathResource(JSON_FILE_PATH);
+        
+        // Read the JSON file
+        String textJson = new String(StreamUtils.copyToByteArray(jsonResource.getInputStream()), StandardCharsets.UTF_8);
+        List<MealPlan> mealPlans = mapper.readValue(textJson, new TypeReference<List<MealPlan>>() {});
+
+        for (MealPlan plan : mealPlans) {
+            // Construct the path to the image file based on the meal name
+            String imageName = plan.getMealName().replaceAll("[^a-zA-Z ]", "") + ".jpg"; 
+            imageName = imageName.replaceAll(" ", ""); 
+            ClassPathResource imgResource = new ClassPathResource(IMAGE_FOLDER_PATH + imageName);
+
+            // Read the image as a byte array
+            byte[] imageBytes;
+            try (InputStream is = imgResource.getInputStream()) {
+                imageBytes = StreamUtils.copyToByteArray(is);
+            } catch (IOException e) {
+                imageBytes = new byte[0]; 
+                System.err.println("Could not load image for " + plan.getMealName() + ": " + e.getMessage());
+            }
+
+            plan.setMealImage(imageBytes);
+            mealPlanRepository.save(plan);
         }
     }
 
@@ -44,26 +64,5 @@ public class MealPlanService {
         return mealPlanRepository.findById(id);
     }
 
-    public List<MealPlan> readMealPlansFromJson(String filePath) {
-         try {
-        Gson gson = new Gson();
-        InputStream inputStream = MealPlanService.class.getClassLoader().getResourceAsStream("meal_plans.json");
-        if (inputStream == null) {
-            logger.error("InputStream is null, file not found in classpath");
-        } else {
-            InputStreamReader reader = new InputStreamReader(inputStream);
-            Type mealPlanListType = new TypeToken<List<MealPlan>>() {}.getType();
-            List<MealPlan> mealPlans = gson.fromJson(reader, mealPlanListType);
-            return mealPlans;
-        }
-    } catch (Exception e) {
-        throw new RuntimeException("Error reading meal plans from JSON file", e);
-    }
-    return null;
-    }
-
-    public void loadMealPlansFromJson(String filePath) {
-        List<MealPlan> mealPlans = readMealPlansFromJson(filePath);
-        mealPlanRepository.saveAll(mealPlans);
-    }
+    
 }
