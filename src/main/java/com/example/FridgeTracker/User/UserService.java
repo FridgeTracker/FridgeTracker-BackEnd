@@ -58,7 +58,7 @@ public class UserService {
 
         if (user != null){
             if(passwordEncoder.matches(loginUser.getPassword(), user.getPassword())){
-                return ResponseEntity.ok(user.getId());
+                return ResponseEntity.ok(user);
             }
             return ResponseEntity.status(999).body("Passwords don't match");
         }
