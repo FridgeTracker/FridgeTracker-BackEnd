@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.io.IOException;
 
 @RestController
-@RequestMapping("/meal_plans")
+@RequestMapping("/mealPlans")
 @CrossOrigin(origins = "*")
 public class MealPlanController {
     private final MealPlanService mealPlanService;
@@ -20,39 +21,24 @@ public class MealPlanController {
         this.mealPlanService = mealPlanService;
     }
 
-    @PostMapping("/add_meal")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<MealPlan> createMealPlan(@RequestBody MealPlan mealPlan) {
-        MealPlan savedMealPlan = mealPlanService.createMealPlan(mealPlan);
-        if (savedMealPlan == null) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    @PostMapping("/loadMealPlans")
+    public ResponseEntity<String> loadMealPlans() {
+        try {
+            mealPlanService.loadMealPlans();
+            return ResponseEntity.ok("Meal plans loaded successfully");
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                                 .body("Failed to load meal plans: " + e.getMessage());
         }
-        return new ResponseEntity<>(savedMealPlan, HttpStatus.CREATED);
     }
 
-    @GetMapping
-    @CrossOrigin(origins = "*")
+    @GetMapping("/all")
     public ResponseEntity<List<MealPlan>> getAllMealPlans() {
         List<MealPlan> mealPlans = mealPlanService.getAllMealPlans();
-        return new ResponseEntity<>(mealPlans, HttpStatus.OK);
-    }
-
-    @GetMapping("/{id}")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<MealPlan> getMealPlanById(@PathVariable UUID id) {
-        Optional<MealPlan> mealPlan = mealPlanService.getMealPlanById(id);
-        return mealPlan.map(plan -> new ResponseEntity<>(plan, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-
-    @PostMapping("/load_meal_plans")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<String> loadMealPlansFromJson() {
-        try {
-            mealPlanService.loadMealPlansFromJson("../../resources/meal_plans.json");
-            return new ResponseEntity<>("Meal plans loaded successfully", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>("Failed to load meal plans: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        if (mealPlans.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        } else {
+            return ResponseEntity.ok(mealPlans);
         }
     }
 }
