@@ -14,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Data
 @Entity
-@Table(name="meal_plan")
+@Table(name="meal_plans")
 @AllArgsConstructor
 @NoArgsConstructor
 public class MealPlan {
@@ -38,8 +39,9 @@ public class MealPlan {
     @Column(name="meal_type")
     private String mealType;
 
+    @Lob
     @Column(name="meal_image")
-    private String mealImage;
+    private byte[] mealImage;
 
     @Column(name="description")
     private String description;
