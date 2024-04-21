@@ -24,9 +24,8 @@
 
 ### Meal Plans
 
-- POST /api/add_meal: Add the information of a single meal.
-- GET  /api/meal_plans: Get all informatin of all meals.
-- POST  /api/load_meal_plans: Load meals from json file.
+- POST /api/mealPlans/loadMealPlans: Add meal plans in json format to database.
+- GET  /api/mealPlans/all: Get all informatin of all meals.
 
 
 
