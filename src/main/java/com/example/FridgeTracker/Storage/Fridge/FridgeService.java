@@ -1,6 +1,7 @@
 package com.example.FridgeTracker.Storage.Fridge;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,16 +11,21 @@ import org.springframework.stereotype.Service;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
+
 
 @Service
 public class FridgeService {
     private final FridgeRepository fridgeRepository;
     private final UserRepository userRepository;
+    private final EntityManager entityManager;
 
     @Autowired
-    public FridgeService(FridgeRepository fridgeRepository,UserRepository userRepository){
+    public FridgeService(FridgeRepository fridgeRepository,UserRepository userRepository, EntityManager entityManager){
         this.fridgeRepository = fridgeRepository;
         this.userRepository = userRepository;
+        this.entityManager = entityManager;
     }
    
 
@@ -45,7 +51,18 @@ public class FridgeService {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add fridge");
         }
 
-
-    
 }
+
+    @Transactional
+    public String deleteFridge(UUID fridgeId) {
+        Fridge fridge = entityManager.find(Fridge.class, fridgeId);
+        if (fridge != null) {
+            fridge.setUser(null); 
+            entityManager.remove(fridge);
+            return "Successfully deleted Fridge";
+        } else{
+            return "Failed to delete Fridge";
+        }
+}
+
 }
