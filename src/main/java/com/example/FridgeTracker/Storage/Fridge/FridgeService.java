@@ -19,13 +19,11 @@ import jakarta.transaction.Transactional;
 public class FridgeService {
     private final FridgeRepository fridgeRepository;
     private final UserRepository userRepository;
-    private final EntityManager entityManager;
 
     @Autowired
     public FridgeService(FridgeRepository fridgeRepository,UserRepository userRepository, EntityManager entityManager){
         this.fridgeRepository = fridgeRepository;
         this.userRepository = userRepository;
-        this.entityManager = entityManager;
     }
    
 
@@ -40,6 +38,7 @@ public class FridgeService {
 
             fridge.setStorageName(request.getStorageName());
             fridge.setCapacity(request.getCapacity());
+            fridge.setType("Fridge");
 
             fridge.setUser(userOptional);
 

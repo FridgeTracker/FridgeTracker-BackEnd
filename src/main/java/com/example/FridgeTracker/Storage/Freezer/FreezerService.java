@@ -35,6 +35,7 @@ public class FreezerService {
 
             freezer.setStorageName(request.getStorageName());
             freezer.setCapacity(request.getCapacity());
+            freezer.setType("Freezer");
 
             freezer.setUser(user);
 
