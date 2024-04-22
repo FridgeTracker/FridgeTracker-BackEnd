@@ -42,8 +42,9 @@ public class Member {
     @Column(name="allergies")
     private List<String> allergies;
 
+    @ElementCollection
     @Column(name="preference")
-    private String preference;
+    private List<String> preference;
 
     @Column(name="height")
     private double height;

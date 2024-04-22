@@ -90,6 +90,9 @@ public class MemberService {
             if(request.getMember().getAllergies() != null && !request.getMember().getAllergies().isEmpty()){
                 member.setAllergies(request.getMember().getAllergies());
             }
+            if(request.getMember().getPreference() != null && !request.getMember().getPreference().isEmpty()){
+                member.setPreference(request.getMember().getPreference());
+            }
 
             userRepository.save(family);
 
