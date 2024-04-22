@@ -55,14 +55,14 @@ public class FridgeService {
 
     @Transactional
     public String deleteFridge(UUID fridgeId) {
-        Fridge fridge = entityManager.find(Fridge.class, fridgeId);
-        if (fridge != null) {
-            fridge.setUser(null); 
-            entityManager.remove(fridge);
+        Optional<Fridge> optionalFridge = fridgeRepository.findById(fridgeId);
+        if (optionalFridge.isPresent()) {
+            Fridge fridge = optionalFridge.get();
+            fridgeRepository.delete(fridge);
             return "Successfully deleted Fridge";
-        } else{
+        } else {
             return "Failed to delete Fridge";
         }
-}
+    }
 
 }
