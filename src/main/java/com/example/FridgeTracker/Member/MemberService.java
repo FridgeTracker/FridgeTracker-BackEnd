@@ -87,6 +87,9 @@ public class MemberService {
             if(request.getMember().getWeight() > 0){
                 member.setWeight(request.getMember().getWeight());
             }
+            if(request.getMember().getAllergies() != null && !request.getMember().getAllergies().isEmpty()){
+                member.setAllergies(request.getMember().getAllergies());
+            }
 
             userRepository.save(family);
 
