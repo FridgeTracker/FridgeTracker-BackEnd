@@ -1,6 +1,7 @@
 package com.example.FridgeTracker.Item;
 
 import com.example.FridgeTracker.DataSets.FoodData;
+import com.example.FridgeTracker.ShoppingList.ShoppingList;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -54,6 +55,11 @@ public class Item {
     @JoinColumn(name="freezer_id", referencedColumnName="id")
     @JsonIgnore
     private Freezer freezer;
+
+    @ManyToOne
+    @JoinColumn(name="s_listId", referencedColumnName="id")
+    @JsonIgnore
+    private ShoppingList shoppingList;
 
     // Overloaded method to accept Optional<Fridge>
     public void setFridge(Optional<Fridge> optionalFridge) {

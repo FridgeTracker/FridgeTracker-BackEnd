@@ -1,16 +1,16 @@
 package com.example.FridgeTracker.ShoppingList;
 
-import java.util.Optional;
+import java.util.List;
 
-import com.example.FridgeTracker.DataSets.FoodData;
+import com.example.FridgeTracker.Item.Item;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -23,26 +23,14 @@ public class ShoppingList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "itemID")
-    private Long itemID;
-    
-    @Column(name="foodName")
-    private String foodName;
+    @Column(name = "s_listId")
+    private Long s_listId;
 
-    @Column(name="quantity")
-    private int quantity;
+    @Column(name="s_listName")
+    private String s_listName;
 
-    @Column(name="category")
-    String FoodCategory;
+    @OneToMany(mappedBy = "shoppingList", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Item> items;
 
-    @ManyToOne
-    @JoinColumn(name="food_id", referencedColumnName="id")
-    private FoodData foodID;
 
-   /*  public void setShoppingList(Optional<ShoppingList> optionalShoppingList) {
-        if (optionalShoppingList.isPresent()) {
-            this.shoppingList = optionalShoppingList.get();
-        } else {
-        }
-    }*/
 }
