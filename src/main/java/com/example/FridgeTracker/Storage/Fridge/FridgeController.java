@@ -44,7 +44,7 @@ public class FridgeController {
         return fridgeService.addFridgeToUser(request);
     }
         
-    @PostMapping("/deleteFridge")
+    @PostMapping("/deleteFridge/{fridgeId}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> deleteFridge(@PathVariable UUID fridgeId) {
         return ResponseEntity.status(HttpStatus.OK).body(fridgeService.deleteFridge(fridgeId));
