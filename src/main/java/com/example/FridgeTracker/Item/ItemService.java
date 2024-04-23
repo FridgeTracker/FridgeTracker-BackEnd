@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.DataSets.FoodData;
 import com.example.FridgeTracker.DataSets.FoodDataRepository;
+import com.example.FridgeTracker.ShoppingList.ShoppingList;
+import com.example.FridgeTracker.ShoppingList.ShoppingListRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -20,22 +22,25 @@ public class ItemService {
     private final FridgeRepository fridgeRepository;
     private final FreezerRepository freezerRepository;
     private final FoodDataRepository foodDataRepository;
+    private final ShoppingListRepository shoppingListRepository;
 
     @Autowired
-    public ItemService(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository){
+    public ItemService(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository, ShoppingListRepository shoppingListRepository){
     
         this.itemRepository = itemRepository;
         this.fridgeRepository = fridgeRepository;
         this.freezerRepository = freezerRepository;
         this.foodDataRepository = foodDataRepository;
+        this.shoppingListRepository = shoppingListRepository;
     }
     //ADD ITEM TO FRIDGE
     public ResponseEntity<String> addItemToFridge( ItemBody request){
 
         Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezer = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> shoppingList = shoppingListRepository.findById(request.getId());
 
-        if (fridge.isPresent() || freezer.isPresent()){
+        if (fridge.isPresent() || freezer.isPresent() || shoppingList.isPresent()){
 
             Item item = new Item();
             
@@ -55,9 +60,11 @@ public class ItemService {
             if(freezer.isPresent()){
                 item.setFreezer(freezer);
             }
-            else{
+            else if(fridge.isPresent()){
                 item.setFridge(fridge);
-            }   
+            } else {
+                item.setShoppingList(shoppingList.get());
+            }
 
             itemRepository.save(item);
 
