@@ -29,5 +29,11 @@ public class ShoppingListController {
         return shoppingListService.createNews_list(request);
     }
 
+    @PostMapping("/saveList")
+    @CrossOrigin(origins="*")
+    public ResponseEntity<String> saveList(@RequestBody ShoppingListRequest request){
+        return shoppingListService.saveList(request);
+    }
+
     
 }

@@ -44,6 +44,34 @@ public class ShoppingListService {
         
     }
 
+
+    public ResponseEntity<String> saveList(ShoppingListRequest request) {
+
+        Optional<User> optionalUser = userRepository.findById(request.getUserID());
+
+        if(optionalUser.isPresent()){
+            User user = optionalUser.get();
+    
+            Optional<ShoppingList> listOptional = user.getShoppingLists().stream()
+                                    .filter(list -> list.getS_listId().equals(request.getShoppingList().getS_listId()))
+                                    .findFirst();
+    
+            if (listOptional.isPresent()) {
+                ShoppingList newList = listOptional.get();
+                newList.setItems(request.getShoppingList().getItems());
+    
+                userRepository.save(user);
+    
+                return ResponseEntity.ok("Shopping List updated successfully");
+            } else{
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("List could not be found");
+            }
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to find user account");
+        }
+
+    }
+
     
     
     
