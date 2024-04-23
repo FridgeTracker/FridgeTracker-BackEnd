@@ -7,27 +7,34 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.User.User;
+import com.example.FridgeTracker.User.UserRepository;
+
 @Service
 public class ShoppingListService {
     public final ShoppingListRepository shoppingListRepository;
+    public final UserRepository userRepository;
 
     @Autowired
-    public ShoppingListService(ShoppingListRepository shoppingListRepository){
+    public ShoppingListService(ShoppingListRepository shoppingListRepository, UserRepository userRepository){
         this.shoppingListRepository = shoppingListRepository;
+        this.userRepository = userRepository;
     }
     
    
-    public ResponseEntity<String> createNews_list(ShoppingList request){
-        Optional<ShoppingList> existingListOpt = shoppingListRepository.findById(request.getS_listId());
+    public ResponseEntity<String> createNews_list(ShoppingListRequest request){
 
-        if (!existingListOpt.isPresent()){
+        Optional<User> optionalUser = userRepository.findById(request.getUserID());
+
+        if (optionalUser.isPresent()){
 
             ShoppingList s_list = new ShoppingList();
 
-            s_list.setS_listName(request.getS_listName());
-            s_list.setItems(request.getItems());
+            s_list.setUser(optionalUser.get());
+            s_list.setS_listName(request.getShoppingList().getS_listName());
 
             shoppingListRepository.save(s_list);
+            
             return ResponseEntity.ok("New Shopping List is created.");
 
         }else{

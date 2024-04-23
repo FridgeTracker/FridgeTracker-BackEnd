@@ -25,7 +25,7 @@ public class ShoppingListController {
 
     @PostMapping("/create")
     @CrossOrigin(origins="*")
-    public ResponseEntity<String> createNews_list(@RequestBody ShoppingList request){
+    public ResponseEntity<String> createNews_list(@RequestBody ShoppingListRequest request){
         return shoppingListService.createNews_list(request);
     }
 
