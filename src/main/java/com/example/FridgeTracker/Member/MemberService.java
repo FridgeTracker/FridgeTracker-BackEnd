@@ -108,8 +108,8 @@ public class MemberService {
 }
 
     @Transactional
-    public String deleteMember(MemberRequest request){
-        Optional<Member> optionalMember = memberRepository.findById(request.getUserID());
+    public String deleteMember(Member request){
+        Optional<Member> optionalMember = memberRepository.findById(request.getId());
         if (optionalMember.isPresent()) {
             Member member = optionalMember.get();
             memberRepository.delete(member);

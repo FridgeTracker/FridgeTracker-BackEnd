@@ -58,7 +58,7 @@ public class MemberController {
     //DELETE MEMBER FROM FAMILY
     @PostMapping("/deleteMember")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteMemberInFamily(@RequestBody MemberRequest request){
+    public ResponseEntity<String> deleteMemberInFamily(@RequestBody Member request){
         return ResponseEntity.status(HttpStatus.OK).body(memberService.deleteMember(request));
     }
 
