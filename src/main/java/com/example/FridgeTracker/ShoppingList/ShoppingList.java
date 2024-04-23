@@ -3,6 +3,8 @@ package com.example.FridgeTracker.ShoppingList;
 import java.util.List;
 import java.util.UUID;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import com.example.FridgeTracker.Item.Item;
 
 import jakarta.persistence.CascadeType;
@@ -23,8 +25,9 @@ import lombok.Data;
 public class ShoppingList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "s_listId")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(name = "s_listId", updatable = false, nullable = false)
     private UUID s_listId;
 
     @Column(name="s_listName")
@@ -32,6 +35,5 @@ public class ShoppingList {
 
     @OneToMany(mappedBy = "shoppingList", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items;
-
 
 }
