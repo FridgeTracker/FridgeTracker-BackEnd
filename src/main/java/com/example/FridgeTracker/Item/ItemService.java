@@ -81,9 +81,11 @@ public class ItemService {
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> listOptional = shoppingListRepository.findById(request.getId());
 
         Fridge fridge = null;
         Freezer freezer = null;
+        ShoppingList list = null;
         Optional<Item> itemOptional;
 
         if (fridgeOptional.isPresent()){
@@ -100,21 +102,36 @@ public class ItemService {
                                         .filter(item -> item.getItemID().equals(request.getItemID()))
                                         .findFirst();
         }
+        else if(listOptional.isPresent()){
+
+            list = listOptional.get();
+            itemOptional = list.getItems().stream()
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
+                                    .findFirst();
+    }
         else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("failed to open");
         }
 
         if (itemOptional.isPresent()) {
             Item item = itemOptional.get();
 
             item.setQuantity(request.getQuantity());
-            item.setExpiryDate(request.getExpiryDate());
+            
+            if(request.getFoodName() != null){
+                item.setFoodName(request.getFoodName());
+            }
+            if(request.getExpiryDate() != null){
+                item.setExpiryDate(request.getExpiryDate());
+            }
             
             // Save the updated fridge back to the database
             if(fridgeOptional.isPresent()){
                 fridgeRepository.save(fridge);
-            }else{
+            }else if(freezerOptional.isPresent()){
                 freezerRepository.save(freezer);
+            }else if(listOptional.isPresent()){
+                shoppingListRepository.save(list);
             }
 
             return ResponseEntity.ok("Item updated successfully");
