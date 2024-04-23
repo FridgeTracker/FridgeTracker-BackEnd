@@ -52,10 +52,14 @@ public class ItemService {
                 System.out.println("find food");
             }
 
-            item.setFoodID(food_item.get());
+            if(request.getFoodID() != null){
+                item.setFoodID(food_item.get());
+            }
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
-            item.setExpiryDate(request.getExpiryDate());
+            if(request.getExpiryDate() != null){
+                item.setExpiryDate(request.getExpiryDate());
+            }
 
             if(freezer.isPresent()){
                 item.setFreezer(freezer);
