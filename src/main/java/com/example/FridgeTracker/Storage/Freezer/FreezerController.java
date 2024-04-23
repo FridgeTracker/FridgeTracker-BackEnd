@@ -27,6 +27,7 @@ public class FreezerController {
 
     @Autowired
     private FreezerRepository freezerRepository;
+    
     private final FreezerService freezerService;
 
     @Autowired

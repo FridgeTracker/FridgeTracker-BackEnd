@@ -57,7 +57,7 @@ public class Item {
     private Freezer freezer;
 
     @ManyToOne
-    @JoinColumn(name="s_listId", referencedColumnName="id")
+    @JoinColumn(name="s_listId", referencedColumnName="s_listId")
     @JsonIgnore
     private ShoppingList shoppingList;
 
