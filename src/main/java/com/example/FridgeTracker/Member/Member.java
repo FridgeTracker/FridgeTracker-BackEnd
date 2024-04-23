@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Member;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -9,6 +10,7 @@ import com.example.FridgeTracker.User.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -36,11 +38,13 @@ public class Member {
     @Column(name="age")
     private int age;
 
+    @ElementCollection
     @Column(name="allergies")
-    private String allergies;
+    private List<String> allergies;
 
+    @ElementCollection
     @Column(name="preference")
-    private String preference;
+    private List<String> preference;
 
     @Column(name="height")
     private double height;

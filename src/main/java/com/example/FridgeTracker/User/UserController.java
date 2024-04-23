@@ -87,4 +87,11 @@ public class UserController {
         return userService.getTimeZones();
     }
 
+
+    @GetMapping("/getUsers")
+    @CrossOrigin(origins = "*")
+    public List<User> getUsers(){
+        return userRepository.findAll();
+    }
+
 }

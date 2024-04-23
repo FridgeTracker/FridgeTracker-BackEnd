@@ -1,6 +1,7 @@
 package com.example.FridgeTracker.Storage.Freezer;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class FreezerService {
@@ -32,6 +35,7 @@ public class FreezerService {
 
             freezer.setStorageName(request.getStorageName());
             freezer.setCapacity(request.getCapacity());
+            freezer.setType("Freezer");
 
             freezer.setUser(user);
 
@@ -41,6 +45,19 @@ public class FreezerService {
         }
         else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fail to add freezer");
+        }
+    }
+
+
+    @Transactional
+    public String deleteFridge(UUID freezerID) {
+        Optional<Freezer> optionalFreezer = freezerRepository.findById(freezerID);
+        if (optionalFreezer.isPresent()) {
+            Freezer freezer = optionalFreezer.get();
+            freezerRepository.delete(freezer);
+            return "Successfully deleted Freezer";
+        } else {
+            return "Failed to delete Freezer";
         }
     }
     
