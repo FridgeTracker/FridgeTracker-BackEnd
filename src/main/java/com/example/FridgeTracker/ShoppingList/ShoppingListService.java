@@ -57,10 +57,13 @@ public class ShoppingListService {
                                     .findFirst();
     
             if (listOptional.isPresent()) {
-                /*ShoppingList newList = listOptional.get();
+
+                ShoppingList newList = listOptional.get();
+                
+                newList.getItems().clear();
                 newList.setItems(request.getShoppingList().getItems());
     
-                userRepository.save(user);*/
+                userRepository.save(user);
     
                 return ResponseEntity.ok("Shopping List updated successfully");
             } else{
