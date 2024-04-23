@@ -117,7 +117,7 @@ public class ItemService {
             Item item = itemOptional.get();
 
             item.setQuantity(request.getQuantity());
-            
+
             if(request.getFoodName() != null){
                 item.setFoodName(request.getFoodName());
             }
@@ -145,25 +145,59 @@ public class ItemService {
     public ResponseEntity<String> deleteItemInFridge( DeleteItemRequest request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
-      
-        if (fridgeOptional.isPresent()) {
-            Fridge fridge = fridgeOptional.get();
-      
-            Optional<Item> itemOptional = fridge.getItems().stream()
+        Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> listOptional = shoppingListRepository.findById(request.getId());
+
+        Fridge fridge = null;
+        Freezer freezer = null;
+        ShoppingList list = null;
+
+        Optional<Item> itemOptional;
+
+        if (fridgeOptional.isPresent()){
+
+            fridge = fridgeOptional.get();
+            itemOptional = fridge.getItems().stream()
                                     .filter(item -> item.getItemID().equals(request.getItemID()))
                                     .findFirst();
+        } 
+        else if(freezerOptional.isPresent()){
 
-            if (itemOptional.isPresent()) {
-                Item itemToRemove = itemOptional.get();
+                freezer = freezerOptional.get();
+                itemOptional = freezer.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        }
+        else if(listOptional.isPresent()){
+
+            list = listOptional.get();
+            itemOptional = list.getItems().stream()
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
+                                    .findFirst();
+        }
+        else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("failed to open");
+        }
+
+        if (itemOptional.isPresent()) {
+            Item itemToRemove = itemOptional.get();
+
+            if(fridgeOptional.isPresent()){
                 fridge.getItems().remove(itemToRemove);
                 fridgeRepository.save(fridge); 
-                return ResponseEntity.ok("Item deleted successfully.");
-            } else {
-                return ResponseEntity.badRequest().body("no item id" + request.getId());
-            }    
-    } else {
-        return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
-    }  
+            }else if(freezerOptional.isPresent()){
+                freezer.getItems().remove(itemToRemove);
+                freezerRepository.save(freezer); 
+            }else if(listOptional.isPresent()){
+                list.getItems().remove(itemToRemove);
+                shoppingListRepository.save(list); 
+            }
+        
+            return ResponseEntity.ok("Item deleted successfully.");
+        } else {
+            return ResponseEntity.badRequest().body("no item id" + request.getId());
+        }    
+    
 
     }
 }
