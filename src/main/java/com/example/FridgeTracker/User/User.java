@@ -16,6 +16,8 @@ import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
 import com.example.FridgeTracker.Notifications.Notifications;
+import com.example.FridgeTracker.ShoppingList.ShoppingList;
+
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -68,7 +70,9 @@ public class User {
     //Connect added Members to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Notifications> notification;
-
     
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<ShoppingList> shoppingLists;
+
 
 }
