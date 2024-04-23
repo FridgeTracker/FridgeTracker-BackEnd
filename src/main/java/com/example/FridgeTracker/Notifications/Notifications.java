@@ -1,5 +1,7 @@
 package com.example.FridgeTracker.Notifications;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import com.example.FridgeTracker.User.User;
@@ -32,6 +34,9 @@ public class Notifications {
 
     @Column(name="alert_type")
     String alert_type;
+
+    @Column(name="dateTime")
+    LocalDateTime dateTime;
 
     @ManyToOne
     @JoinColumn(name="user_id", referencedColumnName="id")
