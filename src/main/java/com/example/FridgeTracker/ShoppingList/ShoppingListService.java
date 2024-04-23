@@ -32,9 +32,10 @@ public class ShoppingListService {
 
             s_list.setUser(optionalUser.get());
             s_list.setS_listName(request.getShoppingList().getS_listName());
+            s_list.setItems(request.getShoppingList().getItems());
 
             shoppingListRepository.save(s_list);
-            
+
             return ResponseEntity.ok("New Shopping List is created.");
 
         }else{
