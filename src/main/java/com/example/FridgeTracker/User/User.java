@@ -15,6 +15,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
+import com.example.FridgeTracker.ShoppingList.ShoppingList;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -63,6 +64,10 @@ public class User {
     //Connect added Members to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Member> members;
+
+    //Connect added Members to account
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<ShoppingList> shoppingLists;
 
 
 }
