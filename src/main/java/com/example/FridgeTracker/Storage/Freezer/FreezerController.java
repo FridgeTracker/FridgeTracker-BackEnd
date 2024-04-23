@@ -19,6 +19,13 @@ import java.util.UUID;
 @CrossOrigin(origins = "*")
 public class FreezerController {
 
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private FreezerRepository freezerRepository;
+    
     private final FreezerService freezerService;
 
     @Autowired
