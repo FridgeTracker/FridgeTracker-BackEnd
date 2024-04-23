@@ -1,6 +1,7 @@
 package com.example.FridgeTracker.ShoppingList;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.example.FridgeTracker.Item.Item;
 
@@ -22,9 +23,9 @@ import lombok.Data;
 public class ShoppingList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "s_listId")
-    private Long s_listId;
+    private UUID s_listId;
 
     @Column(name="s_listName")
     private String s_listName;
