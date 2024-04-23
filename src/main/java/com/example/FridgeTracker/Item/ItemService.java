@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.DataSets.FoodData;
 import com.example.FridgeTracker.DataSets.FoodDataRepository;
+import com.example.FridgeTracker.ShoppingList.ShoppingList;
+import com.example.FridgeTracker.ShoppingList.ShoppingListRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -20,44 +22,49 @@ public class ItemService {
     private final FridgeRepository fridgeRepository;
     private final FreezerRepository freezerRepository;
     private final FoodDataRepository foodDataRepository;
+    private final ShoppingListRepository shoppingListRepository;
 
     @Autowired
-    public ItemService(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository){
+    public ItemService(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository, ShoppingListRepository shoppingListRepository){
     
         this.itemRepository = itemRepository;
         this.fridgeRepository = fridgeRepository;
         this.freezerRepository = freezerRepository;
         this.foodDataRepository = foodDataRepository;
+        this.shoppingListRepository = shoppingListRepository;
     }
     //ADD ITEM TO FRIDGE
     public ResponseEntity<String> addItemToFridge( ItemBody request){
 
         Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezer = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> shoppingList = shoppingListRepository.findById(request.getId());
 
-        if (fridge.isPresent() || freezer.isPresent()){
+        if (fridge.isPresent() || freezer.isPresent() || shoppingList.isPresent()){
 
             Item item = new Item();
+            Optional<FoodData> food_item = Optional.empty();
             
-            Optional<FoodData> food_item = foodDataRepository.findById(request.getFoodID());
-
-            if(!food_item.isPresent()){
-                System.out.println("cant find food");
-            } else{
-                System.out.println("find food");
+            if(request.getFoodID() != null){
+                food_item = foodDataRepository.findById(request.getFoodID());
+                item.setFoodID(food_item.get());
             }
 
-            item.setFoodID(food_item.get());
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
-            item.setExpiryDate(request.getExpiryDate());
+
+            if(request.getExpiryDate() != null){
+                item.setExpiryDate(request.getExpiryDate());
+            }
 
             if(freezer.isPresent()){
                 item.setFreezer(freezer);
             }
-            else{
+            else if(fridge.isPresent()){
                 item.setFridge(fridge);
-            }   
+            } else {
+                item.setShoppingList(shoppingList.get());
+            }
 
             itemRepository.save(item);
 
@@ -74,9 +81,11 @@ public class ItemService {
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> listOptional = shoppingListRepository.findById(request.getId());
 
         Fridge fridge = null;
         Freezer freezer = null;
+        ShoppingList list = null;
         Optional<Item> itemOptional;
 
         if (fridgeOptional.isPresent()){
@@ -93,21 +102,36 @@ public class ItemService {
                                         .filter(item -> item.getItemID().equals(request.getItemID()))
                                         .findFirst();
         }
+        else if(listOptional.isPresent()){
+
+            list = listOptional.get();
+            itemOptional = list.getItems().stream()
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
+                                    .findFirst();
+    }
         else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fridge failed to open");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("failed to open");
         }
 
         if (itemOptional.isPresent()) {
             Item item = itemOptional.get();
 
             item.setQuantity(request.getQuantity());
-            item.setExpiryDate(request.getExpiryDate());
+
+            if(request.getFoodName() != null){
+                item.setFoodName(request.getFoodName());
+            }
+            if(request.getExpiryDate() != null){
+                item.setExpiryDate(request.getExpiryDate());
+            }
             
             // Save the updated fridge back to the database
             if(fridgeOptional.isPresent()){
                 fridgeRepository.save(fridge);
-            }else{
+            }else if(freezerOptional.isPresent()){
                 freezerRepository.save(freezer);
+            }else if(listOptional.isPresent()){
+                shoppingListRepository.save(list);
             }
 
             return ResponseEntity.ok("Item updated successfully");
@@ -121,25 +145,59 @@ public class ItemService {
     public ResponseEntity<String> deleteItemInFridge( DeleteItemRequest request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
-      
-        if (fridgeOptional.isPresent()) {
-            Fridge fridge = fridgeOptional.get();
-      
-            Optional<Item> itemOptional = fridge.getItems().stream()
+        Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> listOptional = shoppingListRepository.findById(request.getId());
+
+        Fridge fridge = null;
+        Freezer freezer = null;
+        ShoppingList list = null;
+
+        Optional<Item> itemOptional;
+
+        if (fridgeOptional.isPresent()){
+
+            fridge = fridgeOptional.get();
+            itemOptional = fridge.getItems().stream()
                                     .filter(item -> item.getItemID().equals(request.getItemID()))
                                     .findFirst();
+        } 
+        else if(freezerOptional.isPresent()){
 
-            if (itemOptional.isPresent()) {
-                Item itemToRemove = itemOptional.get();
+                freezer = freezerOptional.get();
+                itemOptional = freezer.getItems().stream()
+                                        .filter(item -> item.getItemID().equals(request.getItemID()))
+                                        .findFirst();
+        }
+        else if(listOptional.isPresent()){
+
+            list = listOptional.get();
+            itemOptional = list.getItems().stream()
+                                    .filter(item -> item.getItemID().equals(request.getItemID()))
+                                    .findFirst();
+        }
+        else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("failed to open");
+        }
+
+        if (itemOptional.isPresent()) {
+            Item itemToRemove = itemOptional.get();
+
+            if(fridgeOptional.isPresent()){
                 fridge.getItems().remove(itemToRemove);
                 fridgeRepository.save(fridge); 
-                return ResponseEntity.ok("Item deleted successfully.");
-            } else {
-                return ResponseEntity.badRequest().body("no item id" + request.getId());
-            }    
-    } else {
-        return ResponseEntity.badRequest().body("Fridge not found with ID: " + request.getId());
-    }  
+            }else if(freezerOptional.isPresent()){
+                freezer.getItems().remove(itemToRemove);
+                freezerRepository.save(freezer); 
+            }else if(listOptional.isPresent()){
+                list.getItems().remove(itemToRemove);
+                shoppingListRepository.save(list); 
+            }
+        
+            return ResponseEntity.ok("Item deleted successfully.");
+        } else {
+            return ResponseEntity.badRequest().body("no item id" + request.getId());
+        }    
+    
 
     }
 }
