@@ -43,20 +43,16 @@ public class ItemService {
         if (fridge.isPresent() || freezer.isPresent() || shoppingList.isPresent()){
 
             Item item = new Item();
+            Optional<FoodData> food_item = Optional.empty();
             
-            Optional<FoodData> food_item = foodDataRepository.findById(request.getFoodID());
-
-            if(!food_item.isPresent()){
-                System.out.println("cant find food");
-            } else{
-                System.out.println("find food");
-            }
-
             if(request.getFoodID() != null){
+                food_item = foodDataRepository.findById(request.getFoodID());
                 item.setFoodID(food_item.get());
             }
+
             item.setFoodName(request.getFoodName());
             item.setQuantity(request.getQuantity());
+
             if(request.getExpiryDate() != null){
                 item.setExpiryDate(request.getExpiryDate());
             }
