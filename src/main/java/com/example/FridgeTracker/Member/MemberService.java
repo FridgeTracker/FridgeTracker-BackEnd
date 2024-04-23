@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
+import jakarta.transaction.Transactional;
+
 
 @Service
 public class MemberService {
@@ -104,6 +106,19 @@ public class MemberService {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to find user account");
     }
 }
+
+    @Transactional
+    public String deleteMember(MemberRequest request){
+        Optional<Member> optionalMember = memberRepository.findById(request.getUserID());
+        if (optionalMember.isPresent()) {
+            Member member = optionalMember.get();
+            memberRepository.delete(member);
+            return "Successfully deleted Member";
+        } else {
+            return "Failed to delete Member";
+        }
+
+    }
 
     
 }

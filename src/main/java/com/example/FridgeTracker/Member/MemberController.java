@@ -4,6 +4,7 @@ package com.example.FridgeTracker.Member;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,9 +51,15 @@ public class MemberController {
     @PostMapping("/updateMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateMemberInFamily(@RequestBody MemberRequest request){
-   
         return memberService.updateMemberInFamily(request);
+    }
 
+
+    //DELETE MEMBER FROM FAMILY
+    @PostMapping("/deleteMember")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> deleteMemberInFamily(@RequestBody MemberRequest request){
+        return ResponseEntity.status(HttpStatus.OK).body(memberService.deleteMember(request));
     }
 
 }
