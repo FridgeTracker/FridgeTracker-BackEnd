@@ -53,11 +53,20 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Fridge fridge : fridges){
+            List<Item> items = fridge.getItems();
 
             if(fridge.getItems().isEmpty() ||fridge.getItems().size() == fridge.getCapacity()){
                 Notifications noti = createFridgeFreezerAlert(fridge);
                 noti.setUser(optionalUser);
                 notifications.add(noti);
+            }
+
+            for(Item item: items){
+                if(item.getExpiryDate().isBefore(LocalDate.now())){
+                    Notifications noti = createNotification(item.getFoodName() + " expired on " + item.getExpiryDate(), "Notification");
+                    noti.setUser(optionalUser);
+                    notifications.add(noti);
+                }
             }
         }
 
@@ -80,7 +89,7 @@ public class NotificationsService {
 
             for(Item item: items){
                 if(item.getExpiryDate().isBefore(LocalDate.now())){
-                    Notifications noti = createNotification(item.getFoodName() + " expired on " + item.getExpiryDate());
+                    Notifications noti = createNotification(item.getFoodName() + " expired on " + item.getExpiryDate(), "Notification");
                     noti.setUser(optionalUser);
                     notifications.add(noti);
                 }
@@ -94,25 +103,25 @@ public class NotificationsService {
         if (storage instanceof Fridge) {
             Fridge fridge = (Fridge) storage;
             if (fridge.getItems().isEmpty()) {
-                return createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)");
+                return createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)", "Alert");
             } else if (fridge.getItems().size() == fridge.getCapacity()) {
-                return createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)");
+                return createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
             }
         } else if (storage instanceof Freezer) {
             Freezer freezer = (Freezer) storage;
             if (freezer.getItems().isEmpty()) {
-                return createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)");
+                return createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)", "Alert");
             } else if (freezer.getItems().size() == freezer.getCapacity()) {
-                return createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)");
+                return createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
             }
         }
         return null; // Or handle other cases as needed
     }
-    private Notifications createNotification(String message) {
+    private Notifications createNotification(String message, String alert) {
         Notifications notification = new Notifications();
         notification.setSender("System");
         notification.setMessage(message);
-        notification.setAlert_type("Alert");
+        notification.setAlert_type(alert);
         notification.setDateTime(LocalDateTime.now());
         return notification;
     }
