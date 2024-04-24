@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
+import jakarta.transaction.Transactional;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
@@ -45,6 +47,7 @@ public class NotificationsController {
 
     @GetMapping("/getAlerts/{id}")
     @CrossOrigin(origins = "*")
+    @Transactional
     public ResponseEntity<User> getAlerts(@PathVariable UUID id){
 
         Optional<User> optionalUser = userRepository.findById(id);
