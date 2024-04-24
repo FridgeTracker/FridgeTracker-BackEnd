@@ -60,7 +60,7 @@ public class NotificationsService {
                 noti.setUser(optionalUser);
                 notifications.add(noti);
             }
-            if(fridge.getItems().size() == fridge.getCapacity()){
+            if(fridge.getItems().size() == fridge.getCapacity() && user.isStorageFull()){
                 Notifications noti = createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
                 noti.setUser(optionalUser);
                 notifications.add(noti);
@@ -98,7 +98,7 @@ public class NotificationsService {
                 noti.setUser(optionalUser);
                 notifications.add(noti);
             }
-            if(freezer.getItems().size() == freezer.getCapacity()){
+            if(freezer.getItems().size() == freezer.getCapacity() && user.isStorageFull()){
                 Notifications noti = createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
                 noti.setUser(optionalUser);
                 notifications.add(noti);
