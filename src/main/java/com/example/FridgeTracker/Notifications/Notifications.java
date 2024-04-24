@@ -7,6 +7,7 @@ import java.util.Optional;
 import com.example.FridgeTracker.User.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,7 +39,7 @@ public class Notifications {
     @Column(name="dateTime")
     LocalDateTime dateTime;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="user_id", referencedColumnName="id")
     @JsonIgnore
     private User user;

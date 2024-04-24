@@ -6,12 +6,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.transaction.Transactional;
 import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
@@ -55,6 +57,15 @@ public class User {
     @Column(name="time_zone")
     private String timezone;
 
+    @Column(name="storage_empty")
+    private boolean storageEmpty;
+
+    @Column(name="storage_full")
+    private boolean storageFull;
+
+    @Column(name="expiry_date")
+    private boolean expiryDate;
+
     //Connect added fridges to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Fridge> fridges;
@@ -68,7 +79,7 @@ public class User {
     private List<Member> members;
 
     //Connect added Members to account
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Notifications> notification;
     
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
