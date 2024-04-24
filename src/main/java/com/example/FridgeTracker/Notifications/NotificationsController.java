@@ -64,7 +64,7 @@ public class NotificationsController {
             
             for(Fridge fridge : fridges){
 
-                if(fridge.getCapacity() == 0){
+                if(fridge.getItems().size() == 0){
                     Notifications nRequest = new Notifications();
                     nRequest.setUser(optionalUser);
                     nRequest.setSender("System");
@@ -74,7 +74,7 @@ public class NotificationsController {
                     notifications.add(nRequest);
                 }
             }
-            
+
             notificationsRepository.saveAll(notifications);
 
             return ResponseEntity.ok(user);
