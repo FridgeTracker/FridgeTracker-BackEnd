@@ -1,8 +1,5 @@
 package com.example.FridgeTracker.Notifications;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -16,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -58,21 +54,7 @@ public class NotificationsController {
     @GetMapping("/getAlerts/{id}")
     @CrossOrigin(origins = "*")
     @Transactional
-    public ResponseEntity<User> getAlerts(@PathVariable UUID id){
-
-        Optional<User> optionalUser = userRepository.findById(id);
-
-        if(optionalUser.isPresent()){
-            User user = optionalUser.get();
-            notificationsRepository.deleteAllByUser_Id(id);
-
-           notificationsService.generateFridgeAlerts(optionalUser);
-           notificationsService.generateFreezerAlerts(optionalUser);
-
-            return ResponseEntity.ok(user);
-        } 
-        else{
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<String> getAlerts(@PathVariable UUID id){
+        return notificationsService.generateAlerts(id);
     }
 }

@@ -4,8 +4,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
@@ -23,6 +25,23 @@ public class NotificationsService {
     public NotificationsService(NotificationsRepository notificationsRepository, UserRepository userRepository){
         this.notificationsRepository=notificationsRepository;
         this.userRepository=userRepository;
+    }
+
+    public ResponseEntity<String> generateAlerts(UUID id){
+        Optional<User> optionalUser = userRepository.findById(id);
+
+        if(optionalUser.isPresent()){
+
+            notificationsRepository.deleteAllByUser_Id(id);
+
+           generateFridgeAlerts(optionalUser);
+           generateFreezerAlerts(optionalUser);
+
+            return ResponseEntity.ok("alerts generated");
+        } 
+        else{
+            return ResponseEntity.notFound().build();
+        }
     }
 
     public void generateFridgeAlerts(Optional<User> optionalUser){
