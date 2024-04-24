@@ -55,14 +55,15 @@ public class NotificationsService {
         for(Fridge fridge : fridges){
             List<Item> items = fridge.getItems();
 
-            if(user.isStorageEmpty() || user.isStorageFull()){
-
-                if(fridge.getItems().isEmpty() || fridge.getItems().size() == fridge.getCapacity()){
-                    Notifications noti = createFridgeFreezerAlert(fridge,user);
-                    noti.setUser(optionalUser);
-                    notifications.add(noti);
-                }
-
+            if(fridge.getItems().isEmpty() && user.isStorageEmpty()){
+                Notifications noti = createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)", "Alert");
+                noti.setUser(optionalUser);
+                notifications.add(noti);
+            }
+            if(fridge.getItems().size() == fridge.getCapacity()){
+                Notifications noti = createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
+                noti.setUser(optionalUser);
+                notifications.add(noti);
             }
 
             if(user.isExpiryDate()){
@@ -92,13 +93,17 @@ public class NotificationsService {
         for(Freezer freezer : freezers){
             List<Item> items = freezer.getItems();
 
-            if(user.isStorageEmpty() || user.isStorageFull()){
-                if(freezer.getItems().isEmpty() ||freezer.getItems().size() == freezer.getCapacity()){
-                    Notifications noti = createFridgeFreezerAlert(freezer,user);
-                    noti.setUser(optionalUser);
-                    notifications.add(noti);
-                }
+            if(freezer.getItems().isEmpty() && user.isStorageEmpty()){
+                Notifications noti = createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)", "Alert");
+                noti.setUser(optionalUser);
+                notifications.add(noti);
             }
+            if(freezer.getItems().size() == freezer.getCapacity()){
+                Notifications noti = createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
+                noti.setUser(optionalUser);
+                notifications.add(noti);
+            }
+
 
             if(user.isExpiryDate()){
                 for(Item item: items){
@@ -119,24 +124,6 @@ public class NotificationsService {
         notificationsRepository.saveAll(notifications);
     }
 
-    public Notifications createFridgeFreezerAlert(Storage storage, User user) {
-        if (storage instanceof Fridge) {
-            Fridge fridge = (Fridge) storage;
-            if (fridge.getItems().isEmpty() && user.isStorageEmpty()) {
-                return createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)", "Alert");
-            } else if (fridge.getItems().size() == fridge.getCapacity() && user.isStorageFull()) {
-                return createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
-            }
-        } else if (storage instanceof Freezer) {
-            Freezer freezer = (Freezer) storage;
-            if (freezer.getItems().isEmpty() && user.isStorageEmpty()) {
-                return createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)", "Alert");
-            } else if (freezer.getItems().size() == freezer.getCapacity() && user.isStorageFull()) {
-                return createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
-            }
-        }
-        return null; // Or handle other cases as needed
-    }
     private Notifications createNotification(String message, String alert) {
         Notifications notification = new Notifications();
         notification.setSender("System");
