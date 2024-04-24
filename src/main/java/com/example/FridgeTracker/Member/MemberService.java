@@ -32,7 +32,14 @@ public class MemberService {
 
         if (user != null){
 
-            Member member = request;
+            Member member = new Member();
+            member.setName(request.getName());
+            member.setHeight(request.getHeight());
+            member.setAllergies(request.getAllergies());
+            member.setImageURL(request.getImageURL());
+            member.setPreference(request.getPreference());
+            member.setWeight(request.getWeight());
+            member.setAge(request.getAge());
 
             member.setUser(user); // Set the owner (family) of the member
   
