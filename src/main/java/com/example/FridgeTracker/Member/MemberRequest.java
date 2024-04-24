@@ -5,6 +5,7 @@ import java.util.UUID;
 import lombok.Data;
 
 @Data
-public class MemberRequest extends Member{
+public class MemberRequest {
+    private Member member;
     private UUID userID;
 }
