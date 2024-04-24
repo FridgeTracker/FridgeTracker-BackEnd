@@ -59,7 +59,7 @@ public class NotificationsService {
             notifications.add(noti);
 
             for(Item item : items){
-                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                if (item.getExpiryDate().isBefore(LocalDate.now())) {
                     noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
                     notifications.add(noti);
                 }
@@ -83,7 +83,7 @@ public class NotificationsService {
             notifications.add(noti);
 
             for(Item item : items){
-                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                if (item.getExpiryDate().isBefore(LocalDate.now())) {
                     noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
                     notifications.add(noti);
                 }
