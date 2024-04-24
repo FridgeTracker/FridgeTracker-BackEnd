@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
@@ -50,16 +51,9 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Fridge fridge : fridges){
-            if(fridge.getItems().size() == 0){
-                Notifications nRequest = new Notifications();
-                nRequest.setUser(optionalUser);
-                nRequest.setSender("System");
-                nRequest.setMessage(fridge.getStorageName() + " is empty.");
-                nRequest.setAlert_type("Alert");
-                nRequest.setDateTime(LocalDateTime.now());
-                notifications.add(nRequest);
-            }
+            notifications.add(createFridgeFreezerAlert(fridge));
         }
+        
         notificationsRepository.saveAll(notifications);
     }
 
@@ -69,17 +63,37 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Freezer freezer : freezers){
-            if(freezer.getItems().size() == 0){
-                Notifications nRequest = new Notifications();
-                nRequest.setUser(optionalUser);
-                nRequest.setSender("System");
-                nRequest.setMessage(freezer.getStorageName() + " is 0/" +freezer.getCapacity()+". (empty)");
-                nRequest.setAlert_type("Alert");
-                nRequest.setDateTime(LocalDateTime.now());
-                notifications.add(nRequest);
-            }
+            notifications.add(createFridgeFreezerAlert(freezer));
+
         }
         notificationsRepository.saveAll(notifications);
+    }
+
+    public Notifications createFridgeFreezerAlert(Storage storage) {
+        if (storage instanceof Fridge) {
+            Fridge fridge = (Fridge) storage;
+            if (fridge.getItems().isEmpty()) {
+                return createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)");
+            } else if (fridge.getItems().size() == fridge.getCapacity()) {
+                return createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)");
+            }
+        } else if (storage instanceof Freezer) {
+            Freezer freezer = (Freezer) storage;
+            if (freezer.getItems().isEmpty()) {
+                return createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)");
+            } else if (freezer.getItems().size() == freezer.getCapacity()) {
+                return createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)");
+            }
+        }
+        return null; // Or handle other cases as needed
+    }
+    private Notifications createNotification(String message) {
+        Notifications notification = new Notifications();
+        notification.setSender("System");
+        notification.setMessage(message);
+        notification.setAlert_type("Alert");
+        notification.setDateTime(LocalDateTime.now());
+        return notification;
     }
 
 
