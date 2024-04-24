@@ -33,6 +33,13 @@ public class NotificationsController {
     @Autowired
     private UserRepository userRepository;
 
+    private final NotificationsService notificationsService;
+
+    @Autowired
+    public NotificationsController(NotificationsService notificationsService){
+        this.notificationsService = notificationsService;
+    }
+
     @PostMapping("/createAlert")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> createAlert(@RequestBody NotificationRequest notification) {
@@ -59,23 +66,8 @@ public class NotificationsController {
             User user = optionalUser.get();
             notificationsRepository.deleteAllByUser_Id(id);
 
-            List<Fridge> fridges = user.getFridges();
-            List<Notifications> notifications = new ArrayList<>();
-            
-            for(Fridge fridge : fridges){
-
-                if(fridge.getItems().size() == 0){
-                    Notifications nRequest = new Notifications();
-                    nRequest.setUser(optionalUser);
-                    nRequest.setSender("System");
-                    nRequest.setMessage(fridge.getStorageName() + " is empty.");
-                    nRequest.setAlert_type("Alert");
-                    nRequest.setDateTime(LocalDateTime.now());
-                    notifications.add(nRequest);
-                }
-            }
-
-            notificationsRepository.saveAll(notifications);
+           notificationsService.generateFridgeAlerts(optionalUser);
+           notificationsService.generateFreezerAlerts(optionalUser);
 
             return ResponseEntity.ok(user);
         } 
