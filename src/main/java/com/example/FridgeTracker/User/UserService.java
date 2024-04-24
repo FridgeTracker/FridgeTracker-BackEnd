@@ -149,5 +149,20 @@ public class UserService {
     }
 
 
-    
+    public ResponseEntity<String> updateNotifications(User request){
+
+        Optional<User> optUser = userRepository.findById(request.getId());
+
+        if(optUser.isPresent()){
+            User user = optUser.get();
+            user.setExpiryDate(request.isExpiryDate());
+            user.setStorageEmpty(request.isStorageEmpty());
+            user.setStorageFull(request.isStorageFull());
+            userRepository.save(user);
+            return ResponseEntity.ok("Notifications Updated");
+        } else{
+            return ResponseEntity.ok("Failed to find user");
+        }
+
+    }
 }

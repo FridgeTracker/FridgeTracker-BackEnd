@@ -94,4 +94,10 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @PostMapping("/updateNotifications")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> updateNotifications(@RequestBody User request){
+        return userService.updateNotifications(request);
+    }
+
 }
