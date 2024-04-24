@@ -54,7 +54,7 @@ public class NotificationsController {
 
         if(optionalUser.isPresent()){
             User user = optionalUser.get();
-            notificationsRepository.deleteAllByUser(user);
+            notificationsRepository.deleteAllByUser_Id(id);
             return ResponseEntity.ok(user);
         } 
         else{
