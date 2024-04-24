@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.Storage.StorageRequest;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -28,7 +29,7 @@ public class FridgeService {
    
 
 
-    public ResponseEntity<String> addFridgeToUser(NewFridgeBody request){
+    public ResponseEntity<String> addFridgeToUser(StorageRequest request){
 
         Optional<User> userOptional = userRepository.findById(request.getUserID());
 

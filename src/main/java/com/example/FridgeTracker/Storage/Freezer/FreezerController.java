@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Storage.StorageRequest;
 import com.example.FridgeTracker.User.UserRepository;
 
 import java.util.UUID;
@@ -20,13 +21,6 @@ import java.util.UUID;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class FreezerController {
-
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private FreezerRepository freezerRepository;
     
     private final FreezerService freezerService;
 
@@ -38,7 +32,7 @@ public class FreezerController {
 
     @PostMapping("/addFreezer")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addFridgeToUser(@RequestBody NewFreezerBody request){
+    public ResponseEntity<String> addFridgeToUser(@RequestBody StorageRequest request){
         return freezerService.addFridgeToUser(request);
     
     }
