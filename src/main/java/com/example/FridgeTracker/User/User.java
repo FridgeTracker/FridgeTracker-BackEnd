@@ -76,10 +76,5 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<ShoppingList> shoppingLists;
 
-    @Transactional
-    public void clearNotifications() {
-        notification.clear();
-    }
-
 
 }

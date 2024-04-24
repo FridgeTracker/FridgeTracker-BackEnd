@@ -1,5 +1,7 @@
 package com.example.FridgeTracker.Notifications;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -55,6 +58,25 @@ public class NotificationsController {
         if(optionalUser.isPresent()){
             User user = optionalUser.get();
             notificationsRepository.deleteAllByUser_Id(id);
+
+            List<Fridge> fridges = user.getFridges();
+            List<Notifications> notifications = new ArrayList<>();
+            
+            for(Fridge fridge : fridges){
+
+                if(fridge.getCapacity() == 0){
+                    Notifications nRequest = new Notifications();
+                    nRequest.setUser(optionalUser);
+                    nRequest.setSender("System");
+                    nRequest.setMessage(fridge.getStorageName() + " is empty.");
+                    nRequest.setAlert_type("Alert");
+                    nRequest.setDateTime(LocalDateTime.now());
+                    notifications.add(nRequest);
+                }
+            }
+            
+            notificationsRepository.saveAll(notifications);
+
             return ResponseEntity.ok(user);
         } 
         else{
