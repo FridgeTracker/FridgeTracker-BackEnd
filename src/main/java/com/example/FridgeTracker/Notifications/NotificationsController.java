@@ -43,7 +43,7 @@ public class NotificationsController {
         }
     }
 
-    @GetMapping("/getAlerts")
+    @GetMapping("/getAlerts/{id}")
     @CrossOrigin(origins = "*")
     public ResponseEntity<User> getAlerts(@PathVariable UUID id){
 
@@ -54,7 +54,8 @@ public class NotificationsController {
             user.clearNotifications();
             userRepository.save(user);
             return ResponseEntity.ok(user);
-        } else{
+        } 
+        else{
             return ResponseEntity.notFound().build();
         }
     }
