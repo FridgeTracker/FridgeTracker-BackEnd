@@ -30,9 +30,6 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
-
     private final UserService userService;
 
     @Autowired

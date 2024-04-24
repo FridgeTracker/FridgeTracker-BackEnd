@@ -32,6 +32,4 @@ public abstract class Storage {
     @Column(name="type")
     private String type;
 
-
-
 }
