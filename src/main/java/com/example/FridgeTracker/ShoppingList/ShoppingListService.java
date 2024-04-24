@@ -3,12 +3,15 @@ package com.example.FridgeTracker.ShoppingList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class ShoppingListService {
@@ -90,7 +93,18 @@ public class ShoppingListService {
 
     }
 
+    public ResponseEntity<String> changeListName(ShoppingList request) {
+        Optional<ShoppingList> optShoppingList = shoppingListRepository.findById(request.getS_listId());
     
-    
+        if (optShoppingList.isPresent()) {
+            ShoppingList updateShoppingList = optShoppingList.get();
+            updateShoppingList.setS_listName(request.getS_listName());
+            shoppingListRepository.save(updateShoppingList);
+            
+            return ResponseEntity.ok("Shopping list name updated successfully.");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
     
 }
