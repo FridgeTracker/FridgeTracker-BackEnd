@@ -51,17 +51,18 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Fridge> fridges = user.getFridges();
         List<Notifications> notifications = new ArrayList<>();
-        List<Item> items = new ArrayList<>();
         
         for(Fridge fridge : fridges){
             Notifications noti = createFridgeFreezerAlert(fridge);
             noti.setUser(optionalUser);
             notifications.add(noti);
+            List<Item> items = fridge.getItems();
 
             for(Item item : items){
                 if (item.getExpiryDate().isBefore(LocalDate.now())) {
-                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
-                    notifications.add(noti);
+                    Notifications notif = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notif.setUser(optionalUser);
+                    notifications.add(notif);
                 }
 
             }
@@ -75,19 +76,19 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Freezer> freezers = user.getFreezers();
         List<Notifications> notifications = new ArrayList<>();
-        List<Item> items = new ArrayList<>();
         
         for(Freezer freezer : freezers){
             Notifications noti = createFridgeFreezerAlert(freezer);
             noti.setUser(optionalUser);
             notifications.add(noti);
+            List<Item> items = freezer.getItems();
 
             for(Item item : items){
                 if (item.getExpiryDate().isBefore(LocalDate.now())) {
-                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
-                    notifications.add(noti);
+                    Notifications notif = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notif.setUser(optionalUser);
+                    notifications.add(notif);
                 }
-
             }
 
         }
