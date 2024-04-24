@@ -26,13 +26,13 @@ public class MemberService {
     }
 
     //ADD MEMBER TO FAMILY
-    public ResponseEntity<String> addMemberToFamily( MemberRequest request){
+    public ResponseEntity<String> addMemberToFamily(MemberRequest request){
 
         Optional<User> user = userRepository.findById(request.getUserID());
 
         if (user != null){
 
-            Member member = request.getMember();
+            Member member = request;
 
             member.setUser(user); // Set the owner (family) of the member
   
@@ -68,32 +68,32 @@ public class MemberService {
         User family = userOptional.get();
 
         Optional<Member> memberOptional = family.getMembers().stream()
-                                .filter(member -> member.getId().equals(request.getMember().getId()))
+                                .filter(member -> member.getId().equals(request.getId()))
                                 .findFirst();
 
         if (memberOptional.isPresent()) {
             Member member = memberOptional.get();
 
-            if(request.getMember().getName() != null){
-                member.setName(request.getMember().getName());
+            if(request.getName() != null){
+                member.setName(request.getName());
             }
-            if(request.getMember().getAge() > 0){
-                member.setAge(request.getMember().getAge());
+            if(request.getAge() > 0){
+                member.setAge(request.getAge());
             }
-            if(request.getMember().getImageURL() != null){
-                member.setImageURL(request.getMember().getImageURL());
+            if(request.getImageURL() != null){
+                member.setImageURL(request.getImageURL());
             }
-            if(request.getMember().getHeight() > 0){
-                member.setHeight(request.getMember().getHeight());
+            if(request.getHeight() > 0){
+                member.setHeight(request.getHeight());
             }
-            if(request.getMember().getWeight() > 0){
-                member.setWeight(request.getMember().getWeight());
+            if(request.getWeight() > 0){
+                member.setWeight(request.getWeight());
             }
-            if(request.getMember().getAllergies() != null && !request.getMember().getAllergies().isEmpty()){
-                member.setAllergies(request.getMember().getAllergies());
+            if(request.getAllergies() != null && !request.getAllergies().isEmpty()){
+                member.setAllergies(request.getAllergies());
             }
-            if(request.getMember().getPreference() != null && !request.getMember().getPreference().isEmpty()){
-                member.setPreference(request.getMember().getPreference());
+            if(request.getPreference() != null && !request.getPreference().isEmpty()){
+                member.setPreference(request.getPreference());
             }
 
             userRepository.save(family);

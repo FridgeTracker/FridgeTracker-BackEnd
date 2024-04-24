@@ -31,7 +31,7 @@ public class ShoppingListService {
             ShoppingList s_list = new ShoppingList();
 
             s_list.setUser(optionalUser.get());
-            s_list.setS_listName(request.getShoppingList().getS_listName());
+            s_list.setS_listName(request.getS_listName());
 
             shoppingListRepository.save(s_list);
 
@@ -53,7 +53,7 @@ public class ShoppingListService {
             User user = optionalUser.get();
     
             Optional<ShoppingList> listOptional = user.getShoppingLists().stream()
-                                    .filter(list -> list.getS_listId().equals(request.getShoppingList().getS_listId()))
+                                    .filter(list -> list.getS_listId().equals(request.getS_listId()))
                                     .findFirst();
     
             if (listOptional.isPresent()) {
@@ -61,7 +61,7 @@ public class ShoppingListService {
                 ShoppingList newList = listOptional.get();
                 
                 newList.getItems().clear();
-                newList.setItems(request.getShoppingList().getItems());
+                newList.setItems(request.getItems());
     
                 userRepository.save(user);
     

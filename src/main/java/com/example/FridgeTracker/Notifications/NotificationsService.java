@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.Item.Item;
-import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
@@ -103,7 +102,6 @@ public class NotificationsService {
                 noti.setUser(optionalUser);
                 notifications.add(noti);
             }
-
 
             if(user.isExpiryDate()){
                 for(Item item: items){
