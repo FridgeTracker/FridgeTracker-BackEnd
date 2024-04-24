@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Notifications;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.Item.Item;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -49,11 +51,21 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Fridge> fridges = user.getFridges();
         List<Notifications> notifications = new ArrayList<>();
+        List<Item> items = new ArrayList<>();
         
         for(Fridge fridge : fridges){
             Notifications noti = createFridgeFreezerAlert(fridge);
             noti.setUser(optionalUser);
             notifications.add(noti);
+
+            for(Item item : items){
+                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notifications.add(noti);
+                }
+
+            }
+
         }
 
         notificationsRepository.saveAll(notifications);
@@ -63,11 +75,20 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Freezer> freezers = user.getFreezers();
         List<Notifications> notifications = new ArrayList<>();
+        List<Item> items = new ArrayList<>();
         
         for(Freezer freezer : freezers){
             Notifications noti = createFridgeFreezerAlert(freezer);
             noti.setUser(optionalUser);
             notifications.add(noti);
+
+            for(Item item : items){
+                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notifications.add(noti);
+                }
+
+            }
 
         }
         notificationsRepository.saveAll(notifications);
