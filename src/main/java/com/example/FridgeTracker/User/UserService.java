@@ -42,6 +42,9 @@ public class UserService {
             //Hash and Set new password
             String hashedPasswordString = passwordEncoder.encode(user.getPassword());
             user.setPassword(hashedPasswordString);
+            user.setExpiryDate(true);
+            user.setStorageEmpty(true);
+            user.setStorageFull(true);
             //Import into db
             userRepository.save(user);
 

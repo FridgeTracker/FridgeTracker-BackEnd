@@ -57,6 +57,15 @@ public class User {
     @Column(name="time_zone")
     private String timezone;
 
+    @Column(name="storage_empty")
+    private boolean storageEmpty;
+
+    @Column(name="storage_full")
+    private boolean storageFull;
+
+    @Column(name="expiry_date")
+    private boolean expiryDate;
+
     //Connect added fridges to account
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Fridge> fridges;

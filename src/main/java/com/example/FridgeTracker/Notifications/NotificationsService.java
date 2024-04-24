@@ -55,22 +55,28 @@ public class NotificationsService {
         for(Fridge fridge : fridges){
             List<Item> items = fridge.getItems();
 
-            if(fridge.getItems().isEmpty() ||fridge.getItems().size() == fridge.getCapacity()){
-                Notifications noti = createFridgeFreezerAlert(fridge);
-                noti.setUser(optionalUser);
-                notifications.add(noti);
-            }
+            if(user.isStorageEmpty() || user.isStorageFull()){
 
-            for(Item item: items){
-                if(item.getExpiryDate().isBefore(LocalDate.now())){
-                    Notifications noti = createNotification(item.getFoodName() +" in " + fridge.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
+                if(fridge.getItems().isEmpty() || fridge.getItems().size() == fridge.getCapacity()){
+                    Notifications noti = createFridgeFreezerAlert(fridge,user);
                     noti.setUser(optionalUser);
                     notifications.add(noti);
                 }
-                if(item.getExpiryDate().isEqual(LocalDate.now())){
-                    Notifications noti = createNotification(item.getFoodName() + " in " + fridge.getStorageName() + " expires TODAY! ", "Reminder");
+
+            }
+
+            if(user.isExpiryDate()){
+                for(Item item: items){
+                    if(item.getExpiryDate().isBefore(LocalDate.now())){
+                    Notifications noti = createNotification(item.getFoodName() +" in " + fridge.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
                     noti.setUser(optionalUser);
                     notifications.add(noti);
+                    }
+                    if(item.getExpiryDate().isEqual(LocalDate.now())){
+                        Notifications noti = createNotification(item.getFoodName() + " in " + fridge.getStorageName() + " expires TODAY! ", "Reminder");
+                        noti.setUser(optionalUser);
+                        notifications.add(noti);
+                    }
                 }
             }
         }
@@ -86,22 +92,26 @@ public class NotificationsService {
         for(Freezer freezer : freezers){
             List<Item> items = freezer.getItems();
 
-            if(freezer.getItems().isEmpty() ||freezer.getItems().size() == freezer.getCapacity()){
-                Notifications noti = createFridgeFreezerAlert(freezer);
-                noti.setUser(optionalUser);
-                notifications.add(noti);
-            }
-
-            for(Item item: items){
-                if(item.getExpiryDate().isBefore(LocalDate.now())){
-                    Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
+            if(user.isStorageEmpty() || user.isStorageFull()){
+                if(freezer.getItems().isEmpty() ||freezer.getItems().size() == freezer.getCapacity()){
+                    Notifications noti = createFridgeFreezerAlert(freezer,user);
                     noti.setUser(optionalUser);
                     notifications.add(noti);
                 }
-                if(item.getExpiryDate().isEqual(LocalDate.now())){
-                    Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expires TODAY! ", "Reminder");
-                    noti.setUser(optionalUser);
-                    notifications.add(noti);
+            }
+
+            if(user.isExpiryDate()){
+                for(Item item: items){
+                    if(item.getExpiryDate().isBefore(LocalDate.now())){
+                        Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
+                        noti.setUser(optionalUser);
+                        notifications.add(noti);
+                    }
+                    if(item.getExpiryDate().isEqual(LocalDate.now())){
+                        Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expires TODAY! ", "Reminder");
+                        noti.setUser(optionalUser);
+                        notifications.add(noti);
+                    }
                 }
             }
 
@@ -109,19 +119,19 @@ public class NotificationsService {
         notificationsRepository.saveAll(notifications);
     }
 
-    public Notifications createFridgeFreezerAlert(Storage storage) {
+    public Notifications createFridgeFreezerAlert(Storage storage, User user) {
         if (storage instanceof Fridge) {
             Fridge fridge = (Fridge) storage;
-            if (fridge.getItems().isEmpty()) {
+            if (fridge.getItems().isEmpty() && user.isStorageEmpty()) {
                 return createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)", "Alert");
-            } else if (fridge.getItems().size() == fridge.getCapacity()) {
+            } else if (fridge.getItems().size() == fridge.getCapacity() && user.isStorageFull()) {
                 return createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
             }
         } else if (storage instanceof Freezer) {
             Freezer freezer = (Freezer) storage;
-            if (freezer.getItems().isEmpty()) {
+            if (freezer.getItems().isEmpty() && user.isStorageEmpty()) {
                 return createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)", "Alert");
-            } else if (freezer.getItems().size() == freezer.getCapacity()) {
+            } else if (freezer.getItems().size() == freezer.getCapacity() && user.isStorageFull()) {
                 return createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
             }
         }
