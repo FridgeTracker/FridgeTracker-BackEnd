@@ -75,6 +75,21 @@ public class ShoppingListService {
 
     }
 
+
+    public ResponseEntity<String> deleteList(ShoppingList request){
+
+        Optional<ShoppingList> shoppingList = shoppingListRepository.findById(request.getS_listId());
+
+        if(shoppingList.isPresent()){
+            shoppingListRepository.delete(shoppingList.get());
+            return ResponseEntity.ok("Shopping list deleted successfully.");
+        } else{
+            return ResponseEntity.notFound().build();
+        }
+
+
+    }
+
     
     
     

@@ -35,5 +35,11 @@ public class ShoppingListController {
         return shoppingListService.saveList(request);
     }
 
+    @PostMapping("/deleteList")
+    @CrossOrigin(origins="*")
+    public ResponseEntity<String> deleteList(@RequestBody ShoppingList request){
+        return shoppingListService.deleteList(request);
+    }
+
     
 }
