@@ -51,9 +51,11 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Fridge fridge : fridges){
-            notifications.add(createFridgeFreezerAlert(fridge));
+            Notifications noti = createFridgeFreezerAlert(fridge);
+            noti.setUser(optionalUser);
+            notifications.add(noti);
         }
-        
+
         notificationsRepository.saveAll(notifications);
     }
 
@@ -63,7 +65,9 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Freezer freezer : freezers){
-            notifications.add(createFridgeFreezerAlert(freezer));
+            Notifications noti = createFridgeFreezerAlert(freezer);
+            noti.setUser(optionalUser);
+            notifications.add(noti);
 
         }
         notificationsRepository.saveAll(notifications);
