@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Notifications;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.Item.Item;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -51,7 +53,7 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Fridge fridge : fridges){
-            
+
             if(fridge.getItems().isEmpty() ||fridge.getItems().size() == fridge.getCapacity()){
                 Notifications noti = createFridgeFreezerAlert(fridge);
                 noti.setUser(optionalUser);
@@ -68,11 +70,20 @@ public class NotificationsService {
         List<Notifications> notifications = new ArrayList<>();
         
         for(Freezer freezer : freezers){
+            List<Item> items = freezer.getItems();
 
             if(freezer.getItems().isEmpty() ||freezer.getItems().size() == freezer.getCapacity()){
                 Notifications noti = createFridgeFreezerAlert(freezer);
                 noti.setUser(optionalUser);
                 notifications.add(noti);
+            }
+
+            for(Item item: items){
+                if(item.getExpiryDate().isBefore(LocalDate.now())){
+                    Notifications noti = createNotification(item.getFoodName() + " expired on " + item.getExpiryDate());
+                    noti.setUser(optionalUser);
+                    notifications.add(noti);
+                }
             }
 
         }
