@@ -1,6 +1,5 @@
 package com.example.FridgeTracker.Notifications;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.FridgeTracker.Item.Item;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
@@ -56,9 +54,6 @@ public class NotificationsService {
             Notifications noti = createFridgeFreezerAlert(fridge);
             noti.setUser(optionalUser);
             notifications.add(noti);
-            List<Item> items = fridge.getItems();
-           
-
         }
 
         notificationsRepository.saveAll(notifications);
@@ -73,7 +68,6 @@ public class NotificationsService {
             Notifications noti = createFridgeFreezerAlert(freezer);
             noti.setUser(optionalUser);
             notifications.add(noti);
-            List<Item> items = freezer.getItems();
 
         }
         notificationsRepository.saveAll(notifications);
