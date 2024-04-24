@@ -59,10 +59,9 @@ public class NotificationsService {
             List<Item> items = fridge.getItems();
 
             for(Item item : items){
-                if (item.getExpiryDate().isBefore(LocalDate.now())) {
-                    Notifications notif = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
-                    notif.setUser(optionalUser);
-                    notifications.add(notif);
+                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notifications.add(noti);
                 }
 
             }
@@ -82,13 +81,13 @@ public class NotificationsService {
             noti.setUser(optionalUser);
             notifications.add(noti);
             List<Item> items = freezer.getItems();
-
+            
             for(Item item : items){
-                if (item.getExpiryDate().isBefore(LocalDate.now())) {
-                    Notifications notif = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
-                    notif.setUser(optionalUser);
-                    notifications.add(notif);
+                if (item.getExpiryDate().isEqual(LocalDate.now())) {
+                    noti = createNotification(item.getFoodName() + " has expired on " + item.getExpiryDate());
+                    notifications.add(noti);
                 }
+
             }
 
         }
