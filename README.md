@@ -29,6 +29,10 @@
 - GET  /api/meal_plans: Get all informatin of all meals.
 - POST  /api/load_meal_plans: Load meals from json file.
 
+### Meal Records
+
+- POST /api/mealRecords: Add the information of a single meal record.
+- GET  /api/mealRecords: Get all informatin of all meal records.
 
 
 ## Table of Contents
@@ -40,7 +44,7 @@
 - [Meal_Plan](#Meal_Plan)
 - [Ingredients](#Ingredients)
 - [NutritionalInformation](#NutritionalInformation)
-
+- [Meal_Record](#Meal_Record)
 
   
 ### User
@@ -92,7 +96,7 @@
 |  mealID  | [Long](#int64) | Primary Key |  |
 |  mealName  | [string](#string) | Optional |  |
 |  mealType  | [string](#string) | Optional |  |
-|  mealImage  | [string](#string) | Optional | Save the image file path |
+|  mealImage  | [string](#string) | Optional | URL of the image path |
 |  description  |  [string](#string)  | Optional |  |
 
 
@@ -110,6 +114,14 @@
 |  key  | [Long](#int64) | Primary Key | Composite PK |
 |  value  | [string](#string) | Optional |  |
 
+
+### Meal_Record
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+|  mealRecordID  | [Long](#int64) | Primary Key |  |
+|  mealPlanID  | [Long](#int64) | Optional |  |
+|  memberID  | [Long](#int64) | Optional |  |
+|  consumedDate  | [Date] | Optional |  |
 
 
 
