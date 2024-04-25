@@ -52,6 +52,8 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Fridge> fridges = user.getFridges();
         List<Notifications> notifications = new ArrayList<>();
+        ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+        ZonedDateTime dateTimeInTimeZone = utcDateTime.withZoneSameInstant(ZoneId.of(user.getTimezone()));
         
         for(Fridge fridge : fridges){
             List<Item> items = fridge.getItems();
@@ -59,16 +61,12 @@ public class NotificationsService {
             if(fridge.getItems().isEmpty() && user.isStorageEmpty()){
                 Notifications noti = createNotification(fridge.getStorageName() + " is 0/" + fridge.getCapacity() + ". (EMPTY)", "Alert");
                 noti.setUser(optionalUser);
-                ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
-                ZonedDateTime dateTimeInTimeZone = utcDateTime.withZoneSameInstant(ZoneId.of(user.getTimezone()));
                 noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                 notifications.add(noti);
             }
             if(fridge.getItems().size() == fridge.getCapacity() && user.isStorageFull()){
                 Notifications noti = createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
                 noti.setUser(optionalUser);
-                ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
-                ZonedDateTime dateTimeInTimeZone = utcDateTime.withZoneSameInstant(ZoneId.of(user.getTimezone()));
                 noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                 notifications.add(noti);
             }
@@ -78,11 +76,13 @@ public class NotificationsService {
                     if(item.getExpiryDate().isBefore(LocalDate.now())){
                     Notifications noti = createNotification(item.getFoodName() +" in " + fridge.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
                     noti.setUser(optionalUser);
+                    noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                     notifications.add(noti);
                     }
                     if(item.getExpiryDate().isEqual(LocalDate.now())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + fridge.getStorageName() + " expires TODAY! ", "Reminder");
                         noti.setUser(optionalUser);
+                        noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                         notifications.add(noti);
                     }
                 }
@@ -96,6 +96,8 @@ public class NotificationsService {
         User user = optionalUser.get();
         List<Freezer> freezers = user.getFreezers();
         List<Notifications> notifications = new ArrayList<>();
+        ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+        ZonedDateTime dateTimeInTimeZone = utcDateTime.withZoneSameInstant(ZoneId.of(user.getTimezone()));
         
         for(Freezer freezer : freezers){
             List<Item> items = freezer.getItems();
@@ -103,11 +105,13 @@ public class NotificationsService {
             if(freezer.getItems().isEmpty() && user.isStorageEmpty()){
                 Notifications noti = createNotification(freezer.getStorageName() + " is 0/" + freezer.getCapacity() + ". (EMPTY)", "Alert");
                 noti.setUser(optionalUser);
+                noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                 notifications.add(noti);
             }
             if(freezer.getItems().size() == freezer.getCapacity() && user.isStorageFull()){
                 Notifications noti = createNotification(freezer.getStorageName() + " is " + freezer.getCapacity() + "/" + freezer.getCapacity() + ". (FULL)", "Alert");
                 noti.setUser(optionalUser);
+                noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                 notifications.add(noti);
             }
 
@@ -116,11 +120,13 @@ public class NotificationsService {
                     if(item.getExpiryDate().isBefore(LocalDate.now())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
                         noti.setUser(optionalUser);
+                        noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                         notifications.add(noti);
                     }
                     if(item.getExpiryDate().isEqual(LocalDate.now())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expires TODAY! ", "Reminder");
                         noti.setUser(optionalUser);
+                        noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                         notifications.add(noti);
                     }
                 }
@@ -135,7 +141,6 @@ public class NotificationsService {
         notification.setSender("System");
         notification.setMessage(message);
         notification.setAlert_type(alert);
-        notification.setDateTime(LocalDateTime.now());
         return notification;
     }
 
