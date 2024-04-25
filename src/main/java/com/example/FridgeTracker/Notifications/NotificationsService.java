@@ -73,13 +73,13 @@ public class NotificationsService {
 
             if(user.isExpiryDate()){
                 for(Item item: items){
-                    if(item.getExpiryDate().isBefore(LocalDate.now())){
+                    if(item.getExpiryDate().isBefore(dateTimeInTimeZone.toLocalDate())){
                     Notifications noti = createNotification(item.getFoodName() +" in " + fridge.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
                     noti.setUser(optionalUser);
                     noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                     notifications.add(noti);
                     }
-                    if(item.getExpiryDate().isEqual(LocalDate.now())){
+                    if(item.getExpiryDate().isEqual(dateTimeInTimeZone.toLocalDate())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + fridge.getStorageName() + " expires TODAY! ", "Reminder");
                         noti.setUser(optionalUser);
                         noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
@@ -117,13 +117,13 @@ public class NotificationsService {
 
             if(user.isExpiryDate()){
                 for(Item item: items){
-                    if(item.getExpiryDate().isBefore(LocalDate.now())){
+                    if(item.getExpiryDate().isBefore(dateTimeInTimeZone.toLocalDate())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expired on " + item.getExpiryDate(), "Notification");
                         noti.setUser(optionalUser);
                         noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                         notifications.add(noti);
                     }
-                    if(item.getExpiryDate().isEqual(LocalDate.now())){
+                    if(item.getExpiryDate().isEqual(dateTimeInTimeZone.toLocalDate())){
                         Notifications noti = createNotification(item.getFoodName() + " in " + freezer.getStorageName() + " expires TODAY! ", "Reminder");
                         noti.setUser(optionalUser);
                         noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
