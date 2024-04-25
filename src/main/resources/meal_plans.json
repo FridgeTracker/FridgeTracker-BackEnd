@@ -2,7 +2,7 @@
   {
     "mealName": "Kung Pao Chicken",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Kung Pao Chicken.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869897/downloaded_images/Kung_Pao_Chicken_pq5h2m.png",
     "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers",
     "ingredients": [
       "Chicken breast",
@@ -20,7 +20,7 @@
   {
     "mealName": "Peking Duck",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Peking Duck.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869926/downloaded_images/Peking_Duck_vvmqt4.png",
     "description": "Crispy duck skin wrapped in thin pancakes with hoisin sauce, cucumbers, and scallions",
     "ingredients": [
       "Duck",
@@ -38,7 +38,7 @@
   {
     "mealName": "Mapo Tofu",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Mapo Tofu.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869909/downloaded_images/Mapo_Tofu_uohbr2.png",
     "description": "Spicy Sichuan dish with tofu, minced pork, and fermented black beans",
     "ingredients": [
       "Tofu",
@@ -56,7 +56,7 @@
   {
     "mealName": "Hot and Sour Soup",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Hot and Sour Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869883/downloaded_images/Hot_and_Sour_Soup_pa7g77.png",
     "description": "Tangy soup with mushrooms, tofu, bamboo shoots, and vinegar",
     "ingredients": ["Tofu", "Mushrooms", "Bamboo shoots", "Eggs", "Vinegar"],
     "nutritionalInformation": {
@@ -68,7 +68,7 @@
   {
     "mealName": "Steamed Dumplings",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Steamed Dumplings.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869947/downloaded_images/Steamed_Dumplings_j70beq.png",
     "description": "Delicate dumplings filled with pork and vegetables, served with dipping sauce",
     "ingredients": [
       "Ground pork",
@@ -86,7 +86,7 @@
   {
     "mealName": "General Tso's Chicken",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/General Tsos Chicken.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869883/downloaded_images/General_Tsos_Chicken_rfzfnr.png",
     "description": "Crispy chicken in a sweet and spicy sauce with broccoli",
     "ingredients": [
       "Chicken thighs",
@@ -104,7 +104,7 @@
   {
     "mealName": "Beef and Broccoli Stir-Fry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef and Broccoli StirFry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869853/downloaded_images/Beef_and_Broccoli_StirFry_n1bwg7.png",
     "description": "Tender beef slices stir-fried with broccoli in a savory sauce",
     "ingredients": [
       "Flank steak",
@@ -122,7 +122,7 @@
   {
     "mealName": "Egg Fried Rice",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Egg Fried Rice.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869877/downloaded_images/Egg_Fried_Rice_tyxuw0.png",
     "description": "Fried rice with scrambled eggs, peas, carrots, and green onions",
     "ingredients": ["Cooked rice", "Eggs", "Peas", "Carrots", "Green onions"],
     "nutritionalInformation": {
@@ -134,7 +134,7 @@
   {
     "mealName": "Shrimp Lo Mein",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Shrimp Lo Mein.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869943/downloaded_images/Shrimp_Lo_Mein_qkjdda.png",
     "description": "Stir-fried noodles with shrimp, vegetables, and a savory sauce",
     "ingredients": [
       "Shrimp",
@@ -152,7 +152,7 @@
   {
     "mealName": "Sweet and Sour Pork",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Sweet and Sour Pork.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869955/downloaded_images/Sweet_and_Sour_Pork_d4ke9y.png",
     "description": "Crispy pork pieces coated in a tangy sweet and sour sauce",
     "ingredients": [
       "Pork tenderloin",
@@ -170,7 +170,7 @@
   {
     "mealName": "Ma Po Eggplant",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Ma Po Eggplant.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869904/downloaded_images/Ma_Po_Eggplant_z2srwz.png",
     "description": "Stir-fried eggplant in a spicy garlic sauce with minced pork",
     "ingredients": [
       "Chinese eggplant",
@@ -188,7 +188,7 @@
   {
     "mealName": "Szechuan Beef",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Szechuan Beef.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869954/downloaded_images/Szechuan_Beef_hqu5r7.png",
     "description": "Spicy stir-fried beef with garlic, ginger, and Szechuan peppercorns",
     "ingredients": [
       "Beef sirloin",
@@ -206,7 +206,7 @@
   {
     "mealName": "Spring Rolls",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Spring Rolls.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869947/downloaded_images/Spring_Rolls_felnpq.png",
     "description": "Crispy fried rolls filled with vegetables and sometimes meat",
     "ingredients": [
       "Spring roll wrappers",
@@ -224,7 +224,7 @@
   {
     "mealName": "Dan Dan Noodles",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Dan Dan Noodles.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869871/downloaded_images/Dan_Dan_Noodles_pyvvkr.png",
     "description": "Spicy noodles with ground pork, Sichuan peppercorns, and chili oil",
     "ingredients": [
       "Egg noodles",
@@ -242,7 +242,7 @@
   {
     "mealName": "Cantonese Style Chow Mein",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Cantonese Style Chow Mein.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869860/downloaded_images/Cantonese_Style_Chow_Mein_m27e1e.png",
     "description": "Crispy noodles topped with stir-fried vegetables and your choice of meat",
     "ingredients": [
       "Egg noodles",
@@ -260,7 +260,7 @@
   {
     "mealName": "Dim Sum Platter",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Dim Sum Platter.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869872/downloaded_images/Dim_Sum_Platter_cfjgmb.png",
     "description": "Assorted steamed and fried dumplings served with dipping sauces",
     "ingredients": [
       "Shrimp",
@@ -278,7 +278,7 @@
   {
     "mealName": "Hunan Chicken",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Hunan Chicken.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869887/downloaded_images/Hunan_Chicken_z2hf1a.png",
     "description": "Spicy stir-fried chicken with vegetables in a savory sauce",
     "ingredients": [
       "Chicken thighs",
@@ -296,7 +296,7 @@
   {
     "mealName": "Sesame Chicken",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Sesame Chicken.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869937/downloaded_images/Sesame_Chicken_dhmfq0.png",
     "description": "Crispy chicken pieces coated in a sweet sesame glaze",
     "ingredients": [
       "Chicken breast",
@@ -314,7 +314,7 @@
   {
     "mealName": "Shrimp Fried Rice",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Shrimp Fried Rice.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869943/downloaded_images/Shrimp_Fried_Rice_ubsme4.png",
     "description": "Fried rice with shrimp, eggs, peas, carrots, and green onions",
     "ingredients": ["Cooked rice", "Shrimp", "Eggs", "Peas", "Carrots"],
     "nutritionalInformation": {
@@ -326,7 +326,7 @@
   {
     "mealName": "Mongolian Beef",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Mongolian Beef.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869914/downloaded_images/Mongolian_Beef_rygjbf.png",
     "description": "Tender beef slices stir-fried with scallions and a sweet and savory sauce",
     "ingredients": [
       "Beef sirloin",
@@ -344,7 +344,7 @@
   {
     "mealName": "Hot Pot",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Hot Pot.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869887/downloaded_images/Hot_Pot_u6brrh.png",
     "description": "Broth-based soup with a variety of meats, vegetables, and noodles for cooking at the table",
     "ingredients": [
       "Thinly sliced beef",
@@ -362,7 +362,7 @@
   {
     "mealName": "Scallion Pancakes",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Scallion Pancakes.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869937/downloaded_images/Scallion_Pancakes_efwgyq.png",
     "description": "Crispy pancakes with chopped scallions, served with dipping sauce",
     "ingredients": ["Flour", "Scallions", "Sesame oil", "Salt", "Soy sauce"],
     "nutritionalInformation": {
@@ -374,7 +374,7 @@
   {
     "mealName": "Pork and Shrimp Wonton Soup",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Pork and Shrimp Wonton Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869929/downloaded_images/Pork_and_Shrimp_Wonton_Soup_fzwajg.png",
     "description": "Delicate wontons filled with pork and shrimp in a clear broth",
     "ingredients": [
       "Ground pork",
@@ -392,7 +392,7 @@
   {
     "mealName": "Stir-Fried Green Beans",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/StirFried Green Beans.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869950/downloaded_images/StirFried_Green_Beans_lm2q70.png",
     "description": "Green beans stir-fried with garlic, ginger, and soy sauce",
     "ingredients": [
       "Green beans",
@@ -410,7 +410,7 @@
   {
     "mealName": "Sushi Platter",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Sushi Platter.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869954/downloaded_images/Sushi_Platter_fhso4q.png",
     "description": "Assorted nigiri and maki sushi served with pickled ginger and wasabi",
     "ingredients": [
       "Sushi rice",
@@ -428,7 +428,7 @@
   {
     "mealName": "Tempura",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Tempura.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869959/downloaded_images/Tempura_z61hiu.png",
     "description": "Lightly battered and deep-fried seafood and vegetables",
     "ingredients": [
       "Shrimp",
@@ -445,7 +445,7 @@
   {
     "mealName": "Ramen",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Ramen.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869932/downloaded_images/Ramen_bj7a1d.png",
     "description": "Noodles in a savory broth with sliced pork, boiled egg, and green onions",
     "ingredients": [
       "Ramen noodles",
@@ -463,7 +463,7 @@
   {
     "mealName": "Tonkatsu",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Tonkatsu.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869973/downloaded_images/Tonkatsu_gzfopm.png",
     "description": "Breaded and deep-fried pork cutlet served with tonkatsu sauce and shredded cabbage",
     "ingredients": [
       "Pork cutlet",
@@ -481,7 +481,7 @@
   {
     "mealName": "Gyoza",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Gyoza.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869885/downloaded_images/Gyoza_irn1ya.png",
     "description": "Pan-fried dumplings filled with pork and cabbage, served with dipping sauce",
     "ingredients": [
       "Ground pork",
@@ -499,7 +499,7 @@
   {
     "mealName": "Sashimi",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Sashimi.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869933/downloaded_images/Sashimi_l68tun.png",
     "description": "Thinly sliced raw fish served with soy sauce and wasabi",
     "ingredients": [
       "Assorted raw fish (tuna, salmon, etc.)",
@@ -515,7 +515,7 @@
   {
     "mealName": "Okonomiyaki",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Okonomiyaki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869917/downloaded_images/Okonomiyaki_stcwta.png",
     "description": "Japanese savory pancake with cabbage, pork belly, and topped with okonomi sauce and mayonnaise",
     "ingredients": [
       "Cabbage",
@@ -534,7 +534,7 @@
   {
     "mealName": "Chirashi Bowl",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Chirashi Bowl.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869867/downloaded_images/Chirashi_Bowl_gmnp7p.png",
     "description": "Assorted sashimi served over a bed of sushi rice",
     "ingredients": [
       "Sushi rice",
@@ -551,7 +551,7 @@
   {
     "mealName": "Miso Soup",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Miso Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869912/downloaded_images/Miso_Soup_cuvvez.png",
     "description": "Traditional Japanese soup made with miso paste, tofu, seaweed, and green onions",
     "ingredients": [
       "Miso paste",
@@ -569,7 +569,7 @@
   {
     "mealName": "Yakitori",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Yakitori.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869979/downloaded_images/Yakitori_vjyyic.png",
     "description": "Skewered and grilled chicken pieces brushed with a sweet soy glaze",
     "ingredients": [
       "Chicken thighs",
@@ -587,7 +587,7 @@
   {
     "mealName": "Unagi Don",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Unagi Don.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869980/downloaded_images/Unagi_Don_m0bozv.png",
     "description": "Grilled eel served over a bowl of sushi rice, drizzled with eel sauce",
     "ingredients": [
       "Grilled eel",
@@ -605,7 +605,7 @@
   {
     "mealName": "Takoyaki",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Takoyaki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869960/downloaded_images/Takoyaki_uapwlb.png",
     "description": "Octopus-filled batter balls topped with takoyaki sauce, mayonnaise, and bonito flakes",
     "ingredients": [
       "Octopus",
@@ -623,7 +623,7 @@
   {
     "mealName": "Soba Noodle Salad",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Soba Noodle Salad.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869946/downloaded_images/Soba_Noodle_Salad_nicids.png",
     "description": "Cold buckwheat noodles served with a soy-based dipping sauce",
     "ingredients": [
       "Soba noodles",
@@ -641,7 +641,7 @@
   {
     "mealName": "Onigiri",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Onigiri.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869923/downloaded_images/Onigiri_hy6a5f.png",
     "description": "Japanese rice balls filled with various fillings and wrapped in seaweed",
     "ingredients": [
       "Sushi rice",
@@ -657,7 +657,7 @@
   {
     "mealName": "Chicken Teriyaki",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Chicken Teriyaki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869868/downloaded_images/Chicken_Teriyaki_vdf6hc.png",
     "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce",
     "ingredients": [
       "Chicken thighs",
@@ -675,7 +675,7 @@
   {
     "mealName": "Tonjiru",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Tonjiru.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869975/downloaded_images/Tonjiru_jiym4y.png",
     "description": "Pork and vegetable miso soup with daikon, carrots, and potatoes",
     "ingredients": [
       "Pork belly",
@@ -693,7 +693,7 @@
   {
     "mealName": "Matcha Green Tea Ice Cream",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Matcha Green Tea Ice Cream.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869910/downloaded_images/Matcha_Green_Tea_Ice_Cream_p4lcer.png",
     "description": "Creamy ice cream flavored with Japanese matcha green tea",
     "ingredients": ["Matcha powder", "Milk", "Cream", "Sugar", "Egg yolks"],
     "nutritionalInformation": {
@@ -705,7 +705,7 @@
   {
     "mealName": "Katsudon",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Katsudon.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869892/downloaded_images/Katsudon_pvtxdv.png",
     "description": "Breaded and fried pork cutlet served over a bowl of rice, topped with eggs and onions",
     "ingredients": ["Pork cutlet", "Eggs", "Onion", "Rice", "Dashi broth"],
     "nutritionalInformation": {
@@ -717,7 +717,7 @@
   {
     "mealName": "Mochi",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Mochi.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869913/downloaded_images/Mochi_busqz4.png",
     "description": "Chewy rice cakes filled with sweet bean paste or ice cream",
     "ingredients": ["Glutinous rice flour", "Sweet bean paste", "Ice cream"],
     "nutritionalInformation": {
@@ -729,7 +729,7 @@
   {
     "mealName": "Oyakodon",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Oyakodon.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869922/downloaded_images/Oyakodon_kuj7dk.png",
     "description": "Chicken and egg simmered in a sweet and savory sauce served over rice",
     "ingredients": ["Chicken thighs", "Eggs", "Onion", "Rice", "Dashi broth"],
     "nutritionalInformation": {
@@ -741,7 +741,7 @@
   {
     "mealName": "Taiyaki",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Taiyaki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869961/downloaded_images/Taiyaki_lmrbks.png",
     "description": "Fish-shaped cake filled with sweet red bean paste or custard",
     "ingredients": ["Flour", "Sugar", "Eggs", "Red bean paste", "Custard"],
     "nutritionalInformation": {
@@ -753,7 +753,7 @@
   {
     "mealName": "Sukiyaki",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Sukiyaki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869953/downloaded_images/Sukiyaki_msa7ib.png",
     "description": "Hot pot dish with thinly sliced beef, vegetables, tofu, and noodles cooked in a sweet soy broth",
     "ingredients": [
       "Thinly sliced beef",
@@ -771,7 +771,7 @@
   {
     "mealName": "Edamame",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Edamame.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869876/downloaded_images/Edamame_ijds4o.png",
     "description": "Boiled young soybeans served in the pod with sea salt",
     "ingredients": ["Edamame (young soybeans)", "Sea salt"],
     "nutritionalInformation": {
@@ -783,7 +783,7 @@
   {
     "mealName": "Tuna Tataki",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Tuna Tataki.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869977/downloaded_images/Tuna_Tataki_u2yezp.png",
     "description": "Seared tuna slices served with ponzu sauce and grated daikon radish",
     "ingredients": [
       "Tuna steak",
@@ -801,7 +801,7 @@
   {
     "mealName": "Spaghetti Carbonara",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Spaghetti Carbonara.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869946/downloaded_images/Spaghetti_Carbonara_haksa2.png",
     "description": "Pasta with eggs, cheese, pancetta, and black pepper",
     "ingredients": [
       "Spaghetti",
@@ -819,11 +819,11 @@
   {
     "mealName": "Croque Monsieur",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Croque Monsieur.jpg",
-    "description": "Grilled ham and cheese sandwich topped with béchamel sauce",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869867/downloaded_images/Croque_Monsieur_ahgo3l.png",
+    "description": "Grilled ham and cheese sandwich topped with b\u00e9chamel sauce",
     "ingredients": [
       "Ham",
-      "Gruyère cheese",
+      "Gruy\u00e8re cheese",
       "Bread",
       "Butter",
       "Flour",
@@ -838,7 +838,7 @@
   {
     "mealName": "Beef Bourguignon",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef Bourguignon.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869859/downloaded_images/Beef_Bourguignon_dd8ut8.png",
     "description": "Beef stew cooked with red wine, carrots, onions, and mushrooms",
     "ingredients": [
       "Beef stew meat",
@@ -856,7 +856,7 @@
   {
     "mealName": "Fish and Chips",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Fish and Chips.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869879/downloaded_images/Fish_and_Chips_xpjld9.png",
     "description": "Deep-fried fish served with crispy fries and tartar sauce",
     "ingredients": [
       "White fish fillets",
@@ -874,7 +874,7 @@
   {
     "mealName": "Ratatouille",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Ratatouille.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869933/downloaded_images/Ratatouille_gihzze.png",
     "description": "Vegetable stew made with tomatoes, zucchini, eggplant, and bell peppers",
     "ingredients": [
       "Tomatoes",
@@ -893,7 +893,7 @@
   {
     "mealName": "Chicken Cordon Bleu",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Chicken Cordon Bleu.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869862/downloaded_images/Chicken_Cordon_Bleu_z4m6h8.png",
     "description": "Chicken breast stuffed with ham and cheese, breaded and baked",
     "ingredients": [
       "Chicken breast",
@@ -911,8 +911,8 @@
   {
     "mealName": "Moussaka",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Moussaka.jpg",
-    "description": "Layered casserole with eggplant, ground meat, and béchamel sauce",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869917/downloaded_images/Moussaka_yg1kuc.png",
+    "description": "Layered casserole with eggplant, ground meat, and b\u00e9chamel sauce",
     "ingredients": [
       "Eggplant",
       "Ground beef",
@@ -930,7 +930,7 @@
   {
     "mealName": "Paella",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Paella.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869922/downloaded_images/Paella_dxewau.png",
     "description": "Spanish rice dish with saffron, chicken, seafood, and vegetables",
     "ingredients": [
       "Rice",
@@ -949,13 +949,13 @@
   {
     "mealName": "Beef Wellington",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef Wellington.jpg",
-    "description": "Tender beef fillet wrapped in puff pastry with mushrooms and pâté",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869855/downloaded_images/Beef_Wellington_soodhf.png",
+    "description": "Tender beef fillet wrapped in puff pastry with mushrooms and p\u00e2t\u00e9",
     "ingredients": [
       "Beef fillet",
       "Puff pastry",
       "Mushrooms",
-      "Pâté",
+      "P\u00e2t\u00e9",
       "Egg wash"
     ],
     "nutritionalInformation": {
@@ -967,7 +967,7 @@
   {
     "mealName": "Lasagna",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Lasagna.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869906/downloaded_images/Lasagna_x0re7n.png",
     "description": "Layers of pasta sheets, Bolognese sauce, and cheese, baked until bubbly",
     "ingredients": [
       "Lasagna noodles",
@@ -985,7 +985,7 @@
   {
     "mealName": "Bangers and Mash",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Bangers and Mash.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869849/downloaded_images/Bangers_and_Mash_f8zyka.png",
     "description": "Sausages served with mashed potatoes and onion gravy",
     "ingredients": [
       "Pork sausages",
@@ -1004,9 +1004,15 @@
   {
     "mealName": "Quiche Lorraine",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Quiche Lorraine.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869934/downloaded_images/Quiche_Lorraine_lmee5v.png",
     "description": "Savory pie filled with bacon, cheese, and custard",
-    "ingredients": ["Pie crust", "Bacon", "Gruyère cheese", "Eggs", "Cream"],
+    "ingredients": [
+      "Pie crust",
+      "Bacon",
+      "Gruy\u00e8re cheese",
+      "Eggs",
+      "Cream"
+    ],
     "nutritionalInformation": {
       "Calories": "350",
       "Protein": "15g",
@@ -1016,8 +1022,8 @@
   {
     "mealName": "Beef Stroganoff",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef Stroganoff.jpg",
-    "description": "Sautéed beef strips cooked with mushrooms and sour cream sauce, served over noodles",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869855/downloaded_images/Beef_Stroganoff_gbetxa.png",
+    "description": "Saut\u00e9ed beef strips cooked with mushrooms and sour cream sauce, served over noodles",
     "ingredients": [
       "Beef sirloin",
       "Mushrooms",
@@ -1034,7 +1040,7 @@
   {
     "mealName": "Goulash",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Goulash.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869886/downloaded_images/Goulash_nsdlhw.png",
     "description": "Hungarian stew made with beef, onions, paprika, and tomatoes",
     "ingredients": [
       "Beef stew meat",
@@ -1052,7 +1058,7 @@
   {
     "mealName": "Shepherd's Pie",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Shepherds Pie.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869941/downloaded_images/Shepherds_Pie_aqoxeh.png",
     "description": "Ground meat and vegetables topped with mashed potatoes, baked until golden",
     "ingredients": ["Ground beef", "Carrots", "Peas", "Potatoes", "Beef broth"],
     "nutritionalInformation": {
@@ -1064,7 +1070,7 @@
   {
     "mealName": "Coq au Vin",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Coq au Vin.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869872/downloaded_images/Coq_au_Vin_pfm1cf.png",
     "description": "Chicken braised with wine, mushrooms, onions, and bacon",
     "ingredients": [
       "Chicken thighs",
@@ -1082,7 +1088,7 @@
   {
     "mealName": "Cottage Pie",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Cottage Pie.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869869/downloaded_images/Cottage_Pie_fgxl7f.png",
     "description": "Ground beef and vegetables topped with mashed potatoes, baked until golden",
     "ingredients": ["Ground beef", "Carrots", "Peas", "Potatoes", "Beef broth"],
     "nutritionalInformation": {
@@ -1094,7 +1100,7 @@
   {
     "mealName": "Bouillabaisse",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Bouillabaisse.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869862/downloaded_images/Bouillabaisse_zzwawv.png",
     "description": "French seafood stew with fish, shellfish, tomatoes, and saffron",
     "ingredients": ["White fish", "Shrimp", "Mussels", "Tomatoes", "Saffron"],
     "nutritionalInformation": {
@@ -1106,7 +1112,7 @@
   {
     "mealName": "Beef Rouladen",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef Rouladen.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869856/downloaded_images/Beef_Rouladen_jmucb0.png",
     "description": "Thinly sliced beef rolled with bacon, onions, and pickles, braised until tender",
     "ingredients": ["Beef slices", "Bacon", "Onions", "Pickles", "Beef broth"],
     "nutritionalInformation": {
@@ -1118,7 +1124,7 @@
   {
     "mealName": "Potato Leek Soup",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Potato Leek Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869931/downloaded_images/Potato_Leek_Soup_w2hrbi.png",
     "description": "Creamy soup made with potatoes, leeks, and broth",
     "ingredients": ["Potatoes", "Leeks", "Chicken broth", "Cream"],
     "nutritionalInformation": {
@@ -1130,7 +1136,7 @@
   {
     "mealName": "Tiramisu",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Tiramisu.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869969/downloaded_images/Tiramisu_e7txjz.png",
     "description": "Italian dessert made with layers of espresso-soaked ladyfingers and mascarpone cheese",
     "ingredients": [
       "Ladyfingers",
@@ -1148,7 +1154,7 @@
   {
     "mealName": "Beef Goulash",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Beef Goulash.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869854/downloaded_images/Beef_Goulash_vea5tr.png",
     "description": "Hungarian stew made with beef, onions, paprika, and tomatoes",
     "ingredients": [
       "Beef stew meat",
@@ -1166,7 +1172,7 @@
   {
     "mealName": "Hummus with Pita Bread",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Hummus with Pita Bread.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869894/downloaded_images/Hummus_with_Pita_Bread_v1c0wk.png",
     "description": "Creamy chickpea dip made with tahini, garlic, lemon juice, and olive oil, served with pita bread",
     "ingredients": [
       "Chickpeas",
@@ -1185,7 +1191,7 @@
   {
     "mealName": "Falafel Wrap",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Falafel Wrap.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869876/downloaded_images/Falafel_Wrap_mqqhvi.png",
     "description": "Deep-fried chickpea patties wrapped in pita bread with lettuce, tomatoes, and tahini sauce",
     "ingredients": [
       "Chickpeas",
@@ -1206,7 +1212,7 @@
   {
     "mealName": "Shawarma Plate",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Shawarma Plate.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869944/downloaded_images/Shawarma_Plate_pi7agl.png",
     "description": "Sliced marinated meat (chicken or beef) served with rice, hummus, and salad",
     "ingredients": [
       "Marinated meat (chicken or beef)",
@@ -1223,7 +1229,7 @@
   {
     "mealName": "Baba Ganoush",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Baba Ganoush.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869846/downloaded_images/Baba_Ganoush_jkmnmv.png",
     "description": "Smoky eggplant dip made with tahini, garlic, lemon juice, and olive oil",
     "ingredients": ["Eggplant", "Tahini", "Garlic", "Lemon juice", "Olive oil"],
     "nutritionalInformation": {
@@ -1235,7 +1241,7 @@
   {
     "mealName": "Tabbouleh Salad",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Tabbouleh Salad.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869958/downloaded_images/Tabbouleh_Salad_ya1qwh.png",
     "description": "Refreshing salad made with bulgur wheat, parsley, tomatoes, cucumbers, and mint",
     "ingredients": [
       "Bulgur wheat",
@@ -1255,7 +1261,7 @@
   {
     "mealName": "Mujadara",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Mujadara.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869917/downloaded_images/Mujadara_ovojve.png",
     "description": "Lentils and rice cooked with caramelized onions, served with yogurt",
     "ingredients": ["Lentils", "Rice", "Onions", "Cumin", "Yogurt"],
     "nutritionalInformation": {
@@ -1267,7 +1273,7 @@
   {
     "mealName": "Kebab Platter",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Kebab Platter.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869895/downloaded_images/Kebab_Platter_rg3bcc.png",
     "description": "Grilled skewers of marinated meat (chicken, beef, or lamb) served with rice and grilled vegetables",
     "ingredients": [
       "Marinated meat (chicken, beef, or lamb)",
@@ -1283,7 +1289,7 @@
   {
     "mealName": "Fattoush Salad",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Fattoush Salad.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869876/downloaded_images/Fattoush_Salad_zhanjc.png",
     "description": "Mixed salad with lettuce, tomatoes, cucumbers, radishes, and crispy pieces of toasted pita bread",
     "ingredients": [
       "Lettuce",
@@ -1303,7 +1309,7 @@
   {
     "mealName": "Kofta",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Kofta.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869897/downloaded_images/Kofta_hvcwzv.png",
     "description": "Grilled minced meat (beef, lamb, or chicken) mixed with onions and spices, served with rice or bread",
     "ingredients": [
       "Minced meat (beef, lamb, or chicken)",
@@ -1321,7 +1327,7 @@
   {
     "mealName": "Labneh Dip",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Labneh Dip.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869901/downloaded_images/Labneh_Dip_zpwy1h.png",
     "description": "Creamy strained yogurt dip flavored with garlic, olive oil, and herbs",
     "ingredients": [
       "Strained yogurt (labneh)",
@@ -1338,7 +1344,7 @@
   {
     "mealName": "Lamb Mansaf",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Lamb Mansaf.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869902/downloaded_images/Lamb_Mansaf_gdvsdj.png",
     "description": "Traditional Jordanian dish of tender lamb cooked in yogurt sauce, served with rice and pine nuts",
     "ingredients": ["Lamb", "Yogurt", "Rice", "Pine nuts", "Jordanian spices"],
     "nutritionalInformation": {
@@ -1350,7 +1356,7 @@
   {
     "mealName": "Stuffed Grape Leaves (Dolma)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Stuffed Grape Leaves Dolma.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869957/downloaded_images/Stuffed_Grape_Leaves_Dolma_y2ihz7.png",
     "description": "Grape leaves stuffed with a mixture of rice, pine nuts, and herbs, cooked in lemon juice",
     "ingredients": [
       "Grape leaves",
@@ -1368,7 +1374,7 @@
   {
     "mealName": "Kibbeh",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Kibbeh.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869898/downloaded_images/Kibbeh_zqhxze.png",
     "description": "Deep-fried bulgur wheat shells stuffed with spiced ground meat and pine nuts",
     "ingredients": [
       "Bulgur wheat",
@@ -1386,7 +1392,7 @@
   {
     "mealName": "Maqluba",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Maqluba.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869913/downloaded_images/Maqluba_k9wate.png",
     "description": "Layered dish of rice, vegetables, and meat (chicken or lamb), cooked and inverted to form a dome shape",
     "ingredients": [
       "Rice",
@@ -1405,7 +1411,7 @@
   {
     "mealName": "Ful Medames",
     "mealType": "Breakfast",
-    "mealImage": "./downloaded_images/Ful Medames.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869879/downloaded_images/Ful_Medames_gw3zlu.png",
     "description": "Egyptian breakfast dish made with mashed fava beans, garlic, lemon juice, and olive oil, served with bread",
     "ingredients": [
       "Fava beans",
@@ -1423,7 +1429,7 @@
   {
     "mealName": "Shakshuka",
     "mealType": "Breakfast",
-    "mealImage": "./downloaded_images/Shakshuka.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869937/downloaded_images/Shakshuka_xsgu5m.png",
     "description": "Eggs poached in a spicy tomato and pepper sauce, typically served with bread",
     "ingredients": [
       "Eggs",
@@ -1442,7 +1448,7 @@
   {
     "mealName": "Lamb Kebab",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Lamb Kebab.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869901/downloaded_images/Lamb_Kebab_p6xdrr.png",
     "description": "Grilled skewers of marinated lamb meat served with rice and grilled vegetables",
     "ingredients": [
       "Lamb meat",
@@ -1459,7 +1465,7 @@
   {
     "mealName": "Mansaf",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Mansaf.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869907/downloaded_images/Mansaf_gwdk7z.png",
     "description": "Traditional Jordanian dish of lamb cooked in fermented yogurt sauce, served with rice and almonds",
     "ingredients": [
       "Lamb",
@@ -1477,7 +1483,7 @@
   {
     "mealName": "Kanafeh",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Kanafeh.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869892/downloaded_images/Kanafeh_qc8uu8.png",
     "description": "Middle Eastern dessert made with shredded phyllo dough, sweet cheese, and syrup",
     "ingredients": [
       "Phyllo dough",
@@ -1495,7 +1501,7 @@
   {
     "mealName": "Baklava",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Baklava.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869848/downloaded_images/Baklava_vreqno.png",
     "description": "Sweet pastry made with layers of phyllo dough, chopped nuts, and honey syrup",
     "ingredients": [
       "Phyllo dough",
@@ -1512,7 +1518,7 @@
   {
     "mealName": "Kunafa",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Kunafa.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869898/downloaded_images/Kunafa_mklmpx.png",
     "description": "Arabic dessert made with shredded phyllo dough, sweet cheese, and orange blossom syrup",
     "ingredients": [
       "Phyllo dough",
@@ -1530,7 +1536,7 @@
   {
     "mealName": "Kebbeh Nayyeh",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Kebbeh Nayyeh.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869891/downloaded_images/Kebbeh_Nayyeh_g5zo2a.png",
     "description": "Lebanese raw meat dish made with minced lamb or beef, bulgur wheat, and spices",
     "ingredients": [
       "Minced lamb or beef",
@@ -1547,7 +1553,7 @@
   {
     "mealName": "Muhammara",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Muhammara.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869920/downloaded_images/Muhammara_vcmuz6.png",
     "description": "Syrian dip made with roasted red peppers, walnuts, breadcrumbs, and pomegranate molasses",
     "ingredients": [
       "Roasted red peppers",
@@ -1565,7 +1571,7 @@
   {
     "mealName": "Tom Yum Soup",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Tom Yum Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869978/downloaded_images/Tom_Yum_Soup_cuk04y.png",
     "description": "Spicy and sour soup with lemongrass, lime leaves, galangal, and shrimp or chicken",
     "ingredients": [
       "Shrimp or chicken",
@@ -1584,7 +1590,7 @@
   {
     "mealName": "Pad Thai",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Pad Thai.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869927/downloaded_images/Pad_Thai_krqnq7.png",
     "description": "Stir-fried rice noodles with eggs, tofu, shrimp or chicken, bean sprouts, and peanuts",
     "ingredients": [
       "Rice noodles",
@@ -1603,7 +1609,7 @@
   {
     "mealName": "Green Curry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Green Curry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869885/downloaded_images/Green_Curry_l8b5l5.png",
     "description": "Spicy curry made with green curry paste, coconut milk, chicken or tofu, and Thai basil",
     "ingredients": [
       "Green curry paste",
@@ -1621,7 +1627,7 @@
   {
     "mealName": "Som Tum (Green Papaya Salad)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Som Tum Green Papaya Salad.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869942/downloaded_images/Som_Tum_Green_Papaya_Salad_cccjoq.png",
     "description": "Refreshing salad made with shredded green papaya, tomatoes, green beans, peanuts, and chili",
     "ingredients": [
       "Green papaya",
@@ -1640,7 +1646,7 @@
   {
     "mealName": "Massaman Curry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Massaman Curry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869909/downloaded_images/Massaman_Curry_lmvwcx.png",
     "description": "Rich and flavorful curry with coconut milk, potatoes, peanuts, and choice of meat",
     "ingredients": [
       "Massaman curry paste",
@@ -1658,7 +1664,7 @@
   {
     "mealName": "Mango Sticky Rice",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Mango Sticky Rice.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869906/downloaded_images/Mango_Sticky_Rice_qzgiyp.png",
     "description": "Sweet dessert made with sticky rice, ripe mango slices, and coconut milk",
     "ingredients": ["Sticky rice", "Ripe mango", "Coconut milk", "Sugar"],
     "nutritionalInformation": {
@@ -1670,7 +1676,7 @@
   {
     "mealName": "Red Curry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Red Curry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869937/downloaded_images/Red_Curry_iwn34f.png",
     "description": "Spicy curry made with red curry paste, coconut milk, chicken or tofu, and bamboo shoots",
     "ingredients": [
       "Red curry paste",
@@ -1688,7 +1694,7 @@
   {
     "mealName": "Thai Basil Chicken (Pad Krapow Gai)",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Thai Basil Chicken Pad Krapow Gai.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869961/downloaded_images/Thai_Basil_Chicken_Pad_Krapow_Gai_ozvtrp.png",
     "description": "Stir-fried chicken with Thai basil, chili peppers, garlic, and soy sauce, served with rice and a fried egg",
     "ingredients": [
       "Chicken",
@@ -1708,7 +1714,7 @@
   {
     "mealName": "Pineapple Fried Rice",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Pineapple Fried Rice.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869927/downloaded_images/Pineapple_Fried_Rice_qvm7ob.png",
     "description": "Fried rice with pineapple, shrimp or chicken, cashew nuts, raisins, and curry powder",
     "ingredients": [
       "Cooked rice",
@@ -1727,7 +1733,7 @@
   {
     "mealName": "Panang Curry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Panang Curry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869928/downloaded_images/Panang_Curry_d2bhv8.png",
     "description": "Rich and creamy curry made with panang curry paste, coconut milk, chicken or beef, and kaffir lime leaves",
     "ingredients": [
       "Panang curry paste",
@@ -1745,7 +1751,7 @@
   {
     "mealName": "Chicken Satay",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Chicken Satay.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869864/downloaded_images/Chicken_Satay_ccge8p.png",
     "description": "Grilled marinated chicken skewers served with peanut sauce and cucumber relish",
     "ingredients": [
       "Chicken",
@@ -1763,7 +1769,7 @@
   {
     "mealName": "Yellow Curry",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Yellow Curry.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869982/downloaded_images/Yellow_Curry_grieix.png",
     "description": "Mild and aromatic curry made with yellow curry paste, coconut milk, potatoes, and chicken or tofu",
     "ingredients": [
       "Yellow curry paste",
@@ -1781,7 +1787,7 @@
   {
     "mealName": "Thai Spring Rolls",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Spring Rolls.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869969/downloaded_images/Thai_Spring_Rolls_klhhso.png",
     "description": "Crispy spring rolls filled with vegetables, vermicelli noodles, and shrimp or chicken, served with sweet chili sauce",
     "ingredients": [
       "Spring roll wrappers",
@@ -1799,7 +1805,7 @@
   {
     "mealName": "Tom Kha Gai",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Tom Kha Gai.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869973/downloaded_images/Tom_Kha_Gai_ibndyr.png",
     "description": "Creamy and aromatic soup with coconut milk, chicken, galangal, lemongrass, and mushrooms",
     "ingredients": [
       "Chicken",
@@ -1818,7 +1824,7 @@
   {
     "mealName": "Pad See Ew",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Pad See Ew.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869922/downloaded_images/Pad_See_Ew_zi5wn1.png",
     "description": "Stir-fried wide rice noodles with eggs, Chinese broccoli, and choice of meat in sweet soy sauce",
     "ingredients": [
       "Wide rice noodles",
@@ -1836,7 +1842,7 @@
   {
     "mealName": "Thai Iced Tea",
     "mealType": "Beverage",
-    "mealImage": "./downloaded_images/Thai Iced Tea.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869968/downloaded_images/Thai_Iced_Tea_zlrfau.png",
     "description": "Sweet and creamy iced tea made with Thai tea leaves, sugar, and condensed milk",
     "ingredients": ["Thai tea leaves", "Sugar", "Condensed milk", "Ice"],
     "nutritionalInformation": {
@@ -1848,7 +1854,7 @@
   {
     "mealName": "Thai Fried Chicken (Gai Tod)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Fried Chicken Gai Tod.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869971/downloaded_images/Thai_Fried_Chicken_Gai_Tod_bjer8p.png",
     "description": "Crispy fried chicken marinated in garlic, cilantro, and fish sauce, served with sweet chili sauce",
     "ingredients": [
       "Chicken wings or drumsticks",
@@ -1866,7 +1872,7 @@
   {
     "mealName": "Thai Green Papaya Salad (Som Tum)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Green Papaya Salad Som Tum.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869971/downloaded_images/Thai_Green_Papaya_Salad_Som_Tum_cuwhax.png",
     "description": "Spicy salad made with shredded green papaya, tomatoes, peanuts, and chili peppers",
     "ingredients": [
       "Green papaya",
@@ -1885,7 +1891,7 @@
   {
     "mealName": "Thai Coconut Soup (Tom Kha)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Coconut Soup Tom Kha.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869966/downloaded_images/Thai_Coconut_Soup_Tom_Kha_nlmxh8.png",
     "description": "Creamy and fragrant soup with coconut milk, chicken or tofu, galangal, lemongrass, and mushrooms",
     "ingredients": [
       "Chicken or tofu",
@@ -1904,7 +1910,7 @@
   {
     "mealName": "Thai Beef Salad (Yam Nua)",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Beef Salad Yam Nua.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869963/downloaded_images/Thai_Beef_Salad_Yam_Nua_ozmzid.png",
     "description": "Spicy and tangy salad made with grilled beef, cucumber, tomatoes, onions, and Thai herbs",
     "ingredients": [
       "Grilled beef",
@@ -1924,7 +1930,7 @@
   {
     "mealName": "Thai Basil Pork (Pad Krapow Moo)",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Thai Basil Pork Pad Krapow Moo.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869965/downloaded_images/Thai_Basil_Pork_Pad_Krapow_Moo_ji4ydz.png",
     "description": "Stir-fried minced pork with Thai basil, chili peppers, garlic, and soy sauce, served with rice and a fried egg",
     "ingredients": [
       "Minced pork",
@@ -1944,7 +1950,7 @@
   {
     "mealName": "Thai Cashew Chicken",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Thai Cashew Chicken.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869964/downloaded_images/Thai_Cashew_Chicken_sgrljz.png",
     "description": "Stir-fried chicken with cashew nuts, bell peppers, onions, and chili peppers in a savory sauce",
     "ingredients": [
       "Chicken",
@@ -1963,7 +1969,7 @@
   {
     "mealName": "Thai Red Curry Soup",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Thai Red Curry Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869968/downloaded_images/Thai_Red_Curry_Soup_yvjylu.png",
     "description": "Spicy and creamy soup with red curry paste, coconut milk, shrimp or chicken, and Thai basil",
     "ingredients": [
       "Red curry paste",
@@ -1981,7 +1987,7 @@
   {
     "mealName": "Meat Pie",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Meat Pie.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869914/downloaded_images/Meat_Pie_uv9vcg.png",
     "description": "Australian classic consisting of minced meat (usually beef), gravy, and pastry crust",
     "ingredients": ["Minced beef", "Gravy", "Pastry crust"],
     "nutritionalInformation": {
@@ -1993,7 +1999,7 @@
   {
     "mealName": "Fish and Chips",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Fish and Chips.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869879/downloaded_images/Fish_and_Chips_xpjld9.png",
     "description": "Battered and deep-fried fish fillets served with thick-cut potato fries",
     "ingredients": ["Fish fillets", "Batter", "Potatoes", "Oil for frying"],
     "nutritionalInformation": {
@@ -2005,7 +2011,7 @@
   {
     "mealName": "Pavlova",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Pavlova.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869928/downloaded_images/Pavlova_ahlqig.png",
     "description": "Meringue-based dessert topped with whipped cream and fresh fruits, such as kiwi and strawberries",
     "ingredients": ["Egg whites", "Sugar", "Whipped cream", "Fresh fruits"],
     "nutritionalInformation": {
@@ -2017,7 +2023,7 @@
   {
     "mealName": "BBQ Shrimp on the Barbie",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/BBQ Shrimp on the Barbie.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869850/downloaded_images/BBQ_Shrimp_on_the_Barbie_fyzxei.png",
     "description": "Grilled shrimp marinated in a tangy barbecue sauce, served with lemon wedges",
     "ingredients": ["Shrimp", "Barbecue sauce", "Lemon wedges"],
     "nutritionalInformation": {
@@ -2029,7 +2035,7 @@
   {
     "mealName": "Lamington",
     "mealType": "Dessert",
-    "mealImage": "./downloaded_images/Lamington.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869903/downloaded_images/Lamington_f4gpxz.png",
     "description": "Squares of sponge cake coated in chocolate icing and shredded coconut",
     "ingredients": ["Sponge cake", "Chocolate icing", "Shredded coconut"],
     "nutritionalInformation": {
@@ -2041,7 +2047,7 @@
   {
     "mealName": "Anzac Biscuits",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Anzac Biscuits.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869843/downloaded_images/Anzac_Biscuits_i0bhlx.png",
     "description": "Sweet biscuits made with oats, coconut, golden syrup, and butter, traditionally eaten on Anzac Day",
     "ingredients": ["Oats", "Coconut", "Golden syrup", "Butter", "Flour"],
     "nutritionalInformation": {
@@ -2053,7 +2059,7 @@
   {
     "mealName": "Australian Burger",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Australian Burger.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869848/downloaded_images/Australian_Burger_c5yl9a.png",
     "description": "Beef burger with beetroot, fried egg, pineapple, lettuce, tomato, onion, and barbecue sauce",
     "ingredients": [
       "Beef patty",
@@ -2075,7 +2081,7 @@
   {
     "mealName": "Chicken Parmigiana",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Chicken Parmigiana.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869862/downloaded_images/Chicken_Parmigiana_rp57ag.png",
     "description": "Breaded and fried chicken breast topped with marinara sauce and melted cheese, served with fries or salad",
     "ingredients": [
       "Chicken breast",
@@ -2093,7 +2099,7 @@
   {
     "mealName": "Australian Meat Pie Floater",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Australian Meat Pie Floater.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869847/downloaded_images/Australian_Meat_Pie_Floater_qie9g9.png",
     "description": "Meat pie served in a bowl of thick pea soup, typically topped with tomato sauce",
     "ingredients": ["Meat pie", "Pea soup", "Tomato sauce"],
     "nutritionalInformation": {
@@ -2105,7 +2111,7 @@
   {
     "mealName": "Sausage Roll",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Sausage Roll.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869939/downloaded_images/Sausage_Roll_oapnla.png",
     "description": "Puff pastry filled with seasoned ground meat (usually pork or beef) and baked until golden brown",
     "ingredients": ["Puff pastry", "Ground meat (pork or beef)", "Seasonings"],
     "nutritionalInformation": {
@@ -2117,7 +2123,7 @@
   {
     "mealName": "Fairy Bread",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Fairy Bread.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869880/downloaded_images/Fairy_Bread_adkcwk.png",
     "description": "White bread topped with butter and sprinkles, often served at children's parties",
     "ingredients": [
       "White bread",
@@ -2133,7 +2139,7 @@
   {
     "mealName": "Chicken and Corn Soup",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Chicken and Corn Soup.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869861/downloaded_images/Chicken_and_Corn_Soup_mjlruj.png",
     "description": "Comforting soup made with chicken, sweet corn, eggs, and sometimes noodles",
     "ingredients": [
       "Chicken",
@@ -2151,7 +2157,7 @@
   {
     "mealName": "Vegemite on Toast",
     "mealType": "Breakfast",
-    "mealImage": "./downloaded_images/Vegemite on Toast.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869976/downloaded_images/Vegemite_on_Toast_wpsen9.png",
     "description": "Australian breakfast staple featuring Vegemite spread on toasted bread",
     "ingredients": ["Bread", "Vegemite spread"],
     "nutritionalInformation": {
@@ -2163,7 +2169,7 @@
   {
     "mealName": "Kangaroo Steak",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Kangaroo Steak.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869891/downloaded_images/Kangaroo_Steak_ytddqh.png",
     "description": "Lean and flavorful steak from kangaroo meat, often served grilled or pan-seared",
     "ingredients": ["Kangaroo meat", "Seasonings"],
     "nutritionalInformation": {
@@ -2175,7 +2181,7 @@
   {
     "mealName": "Damper",
     "mealType": "Snack",
-    "mealImage": "./downloaded_images/Damper.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869871/downloaded_images/Damper_fysstq.png",
     "description": "Traditional Australian soda bread baked in campfires or ovens, often served with butter and jam",
     "ingredients": ["Flour", "Water", "Salt", "Butter", "Jam"],
     "nutritionalInformation": {
@@ -2187,7 +2193,7 @@
   {
     "mealName": "Beetroot Salad",
     "mealType": "Appetizer",
-    "mealImage": "./downloaded_images/Beetroot Salad.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869858/downloaded_images/Beetroot_Salad_esn6vg.png",
     "description": "Salad made with roasted or pickled beetroot, feta cheese, walnuts, and balsamic dressing",
     "ingredients": [
       "Beetroot",
@@ -2205,7 +2211,7 @@
   {
     "mealName": "Australian Lamb Roast",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Australian Lamb Roast.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869842/downloaded_images/Australian_Lamb_Roast_d1ltsw.png",
     "description": "Roasted leg of lamb seasoned with garlic, rosemary, and thyme, served with roasted vegetables",
     "ingredients": [
       "Leg of lamb",
@@ -2225,7 +2231,7 @@
   {
     "mealName": "Australian Sausages",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Australian Sausages.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869849/downloaded_images/Australian_Sausages_f6080b.png",
     "description": "Juicy sausages made with a variety of meats and spices, often served with mashed potatoes and gravy",
     "ingredients": [
       "Mixed meats (beef, pork, lamb)",
@@ -2242,7 +2248,7 @@
   {
     "mealName": "Australian Meat Pie with Mushy Peas",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Australian Meat Pie with Mushy Peas.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869846/downloaded_images/Australian_Meat_Pie_with_Mushy_Peas_vsqztp.png",
     "description": "Meat pie served with a side of mashed green peas, typically topped with tomato sauce",
     "ingredients": ["Meat pie", "Mashed peas", "Tomato sauce"],
     "nutritionalInformation": {
@@ -2254,7 +2260,7 @@
   {
     "mealName": "Aussie Burger with the Lot",
     "mealType": "Lunch",
-    "mealImage": "./downloaded_images/Aussie Burger with the Lot.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869841/downloaded_images/Aussie_Burger_with_the_Lot_r0smp2.png",
     "description": "Beef burger with all the fixings, including bacon, egg, pineapple, beetroot, lettuce, tomato, onion, and barbecue sauce",
     "ingredients": [
       "Beef patty",
@@ -2277,7 +2283,7 @@
   {
     "mealName": "Australian Seafood Platter",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Australian Seafood Platter.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869841/downloaded_images/Australian_Seafood_Platter_nsojox.png",
     "description": "Assortment of fresh seafood such as prawns, oysters, crab, and fish, served with lemon wedges and dipping sauces",
     "ingredients": [
       "Prawns",
@@ -2296,7 +2302,7 @@
   {
     "mealName": "Chicken Schnitzel",
     "mealType": "Dinner",
-    "mealImage": "./downloaded_images/Chicken Schnitzel.jpg",
+    "mealImage": "https://res.cloudinary.com/dvojqvwct/image/upload/v1713869865/downloaded_images/Chicken_Schnitzel_odzfeb.png",
     "description": "Breaded and fried chicken cutlet served with lemon wedges and a side salad",
     "ingredients": [
       "Chicken breast",
