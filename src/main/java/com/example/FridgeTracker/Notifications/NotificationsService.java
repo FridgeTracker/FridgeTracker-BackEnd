@@ -67,6 +67,9 @@ public class NotificationsService {
             if(fridge.getItems().size() == fridge.getCapacity() && user.isStorageFull()){
                 Notifications noti = createNotification(fridge.getStorageName() + " is " + fridge.getCapacity() + "/" + fridge.getCapacity() + ". (FULL)", "Alert");
                 noti.setUser(optionalUser);
+                ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+                ZonedDateTime dateTimeInTimeZone = utcDateTime.withZoneSameInstant(ZoneId.of(user.getTimezone()));
+                noti.setDateTime(dateTimeInTimeZone.toLocalDateTime());
                 notifications.add(noti);
             }
 
