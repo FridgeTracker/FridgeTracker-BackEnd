@@ -2,6 +2,7 @@ package com.example.FridgeTracker.User;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -11,7 +12,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.DataSets.FoodData;
+import com.example.FridgeTracker.DataSets.FoodDataRepository;
+import com.example.FridgeTracker.Item.Item;
+import com.example.FridgeTracker.Item.ItemRepository;
+import com.example.FridgeTracker.Storage.Freezer.Freezer;
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
 
+import java.time.LocalDate;
 import java.time.ZoneId;
 
 
@@ -20,13 +28,17 @@ import java.time.ZoneId;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final FoodDataRepository foodDataRepository;
+    private final ItemRepository itemRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, FoodDataRepository foodDataRepository, ItemRepository itemRepository) {
         this.userRepository = userRepository;
+        this.itemRepository = itemRepository;
+        this.foodDataRepository = foodDataRepository;
     }
 
 
@@ -164,5 +176,67 @@ public class UserService {
             return ResponseEntity.ok("Failed to find user");
         }
 
+    }
+
+    public ResponseEntity<String> fillFridgeAndFreezer(UUID userID){
+
+        Optional<User> user = userRepository.findById(userID);
+        Random random = new Random();
+
+        if(user.isPresent()){
+
+            for(Fridge fridge:user.get().getFridges()){
+
+                while(fridge.getItems().size() < fridge.getCapacity()){
+
+                    Item item  = new Item();
+                    item.setExpiryDate(generateRandomDate());
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2744) + 1);
+                    item.setFoodID(foodData);
+                    item.setFoodName(foodData.getFoodItem());
+                    item.setQuantity(random.nextInt(5) + 1);
+
+                    item.setFridge(Optional.of(fridge));
+
+                    fridge.getItems().add(item);
+
+                    itemRepository.save(item);
+
+                }
+            }
+
+            for(Freezer freezer:user.get().getFreezers()){
+
+                while(freezer.getItems().size() < freezer.getCapacity()){
+
+                    Item item  = new Item();
+                    item.setExpiryDate(generateRandomDate());
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2744) + 1);
+                    item.setFoodID(foodData);
+                    item.setFoodName(foodData.getFoodItem());
+                    item.setQuantity(random.nextInt(5) + 1);
+
+                    item.setFreezer(Optional.of(freezer));
+
+                    freezer.getItems().add(item);
+
+                    itemRepository.save(item);
+
+                }
+            }
+
+
+            return ResponseEntity.ok("Updated Fridge and Freezer");
+        }
+        return ResponseEntity.ok("Failed to find user");
+    }
+
+    public LocalDate generateRandomDate() {
+        LocalDate currentDate = LocalDate.now();
+        Random random = new Random();
+        int randomOffset = random.nextInt(7);
+        int daysOffset = randomOffset - 1;
+        LocalDate randomDate = currentDate.plusDays(daysOffset);
+        return randomDate;
     }
 }

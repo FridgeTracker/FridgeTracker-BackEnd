@@ -97,4 +97,10 @@ public class UserController {
         return userService.updateNotifications(request);
     }
 
+    @PostMapping("/uploadFridgeAndFreezer/{id}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> uploadFridgeAndFreezer(@PathVariable UUID id){
+        return userService.fillFridgeAndFreezer(id);
+    }
+
 }

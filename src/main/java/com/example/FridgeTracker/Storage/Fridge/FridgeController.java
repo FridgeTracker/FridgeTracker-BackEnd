@@ -40,10 +40,5 @@ public class FridgeController {
         return ResponseEntity.status(HttpStatus.OK).body(fridgeService.deleteFridge(fridgeId));
     }
 
-    @PostMapping("/uploadFridge/{id}")
-    @CrossOrigin(origins = "*")
-    public ResponseEntity<String> uploadFridge(@PathVariable UUID id){
-        return fridgeService.fillFridge(id);
-    }
     
 }
