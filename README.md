@@ -121,7 +121,7 @@
 |  mealRecordID  | [Long](#int64) | Primary Key |  |
 |  mealPlanID  | [Long](#int64) | Optional |  |
 |  memberID  | [Long](#int64) | Optional |  |
-|  consumedDate  | [Date] | Optional |  |
+|  consumedDate  | [Date](#date) | Optional |  |
 
 
 
@@ -135,4 +135,6 @@
 | <a name="int64" /> Long | Uses variable-length encoding. | int64 | long | int/long | int64 | long | integer/string | Bignum |
 | <a name="bool" /> bool |  | bool | boolean | boolean | bool | bool | boolean | TrueClass/FalseClass |
 | <a name="string" /> string | A string must always contain UTF-8 encoded or 7-bit ASCII text. | string | String | str/unicode | string | string | string | String (UTF-8) |
+| <a name="date" /> Date | Represents calendar dates. | std::chrono::system_clock::time_point | java.util.Date | boolean | datetime.date | time.Time | System.DateTime |  |
+
 
