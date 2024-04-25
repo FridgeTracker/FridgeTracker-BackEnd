@@ -225,8 +225,7 @@ public class UserService {
                 }
             }
 
-
-            return ResponseEntity.ok("Updated Fridge");
+            return ResponseEntity.ok("Filled Fridge and Freezer");
         }
         return ResponseEntity.ok("Failed to find user");
     }
