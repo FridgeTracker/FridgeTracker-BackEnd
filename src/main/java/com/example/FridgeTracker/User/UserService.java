@@ -191,7 +191,7 @@ public class UserService {
 
                     Item item  = new Item();
                     item.setExpiryDate(generateRandomDate());
-                    FoodData foodData = foodDataRepository.findById(random.nextInt(2342) + 1);
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2096,2342) + 1);
                     item.setFoodID(foodData);
                     item.setFoodName(foodData.getFoodItem());
                     item.setQuantity(random.nextInt(5) + 1);
@@ -211,7 +211,7 @@ public class UserService {
 
                     Item item  = new Item();
                     item.setExpiryDate(generateRandomDate());
-                    FoodData foodData = foodDataRepository.findById(random.nextInt(2342) + 1);
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2096,2342) + 1);
                     item.setFoodID(foodData);
                     item.setFoodName(foodData.getFoodItem());
                     item.setQuantity(random.nextInt(5) + 1);

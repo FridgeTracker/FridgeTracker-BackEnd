@@ -15008,6 +15008,13 @@
         "KJ_per100grams": "1269 kJ"
     },
     {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Grilled vegetables (bell peppers, onions, tomatoes)",
+      "per100grams": "100g",
+      "Cals_per100grams": "185 cal",
+      "KJ_per100grams": "903 kJ"
+    },
+    {
         "FoodCategory": "Vegetables",
         "FoodItem": "Cucumber",
         "per100grams": "100g",
@@ -15043,6 +15050,13 @@
         "KJ_per100grams": "1224 kJ"
     },
     {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Vegetables (cucumber, radish, etc.)",
+      "per100grams": "100g",
+      "Cals_per100grams": "237 cal",
+      "KJ_per100grams": "637 kJ"
+    },
+    {
         "FoodCategory": "Vegetables",
         "FoodItem": "Green beans",
         "per100grams": "100g",
@@ -15069,6 +15083,13 @@
         "per100grams": "100g",
         "Cals_per100grams": "115 cal",
         "KJ_per100grams": "734 kJ"
+    },
+    {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Vegetables (zucchini, sweet potato, etc.)",
+      "per100grams": "100g",
+      "Cals_per100grams": "221 cal",
+      "KJ_per100grams": "232 kJ"
     },
     {
         "FoodCategory": "Vegetables",
