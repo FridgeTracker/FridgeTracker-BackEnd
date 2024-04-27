@@ -16,10 +16,13 @@ import com.example.FridgeTracker.DataSets.FoodData;
 import com.example.FridgeTracker.DataSets.FoodDataRepository;
 import com.example.FridgeTracker.Item.Item;
 import com.example.FridgeTracker.Item.ItemRepository;
+import com.example.FridgeTracker.Notifications.Notifications;
+import com.example.FridgeTracker.Notifications.NotificationsRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 
@@ -30,15 +33,17 @@ public class UserService {
     private final UserRepository userRepository;
     private final FoodDataRepository foodDataRepository;
     private final ItemRepository itemRepository;
+    private final NotificationsRepository notificationsRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository, FoodDataRepository foodDataRepository, ItemRepository itemRepository) {
+    public UserService(UserRepository userRepository, FoodDataRepository foodDataRepository, ItemRepository itemRepository, NotificationsRepository notificationsRepository) {
         this.userRepository = userRepository;
         this.itemRepository = itemRepository;
         this.foodDataRepository = foodDataRepository;
+        this.notificationsRepository = notificationsRepository;
     }
 
 
@@ -238,4 +243,52 @@ public class UserService {
         LocalDate randomDate = currentDate.plusDays(daysOffset);
         return randomDate;
     }
+
+
+    public ResponseEntity<String> adminAccessMethod(PasswordRequest request, UUID adminUuid){
+
+        Optional<User> changeUserOptional = userRepository.findById(request.getId());
+        Optional<User> adminOption = userRepository.findById(adminUuid);
+
+        if(adminOption.isPresent() && changeUserOptional.isPresent()){
+            User admin = adminOption.get();
+            if (passwordEncoder.matches(request.getPassword(), admin.getPassword())){
+                User changeUser = changeUserOptional.get();
+
+                if(request.getRank() == 3){
+                    userRepository.delete(changeUser);
+                    return ResponseEntity.ok("User Successfully Removed");
+                }
+
+                Notifications noti = new Notifications();
+                noti.setAlert_type("Admin");
+                noti.setSender("Admin");
+                noti.setUser(changeUserOptional);
+                noti.setDateTime(LocalDateTime.now());
+
+                if(request.getNewPw() != ""){
+                    String hashedPasswordString = passwordEncoder.encode(request.getNewPw());
+                    changeUser.setPassword(hashedPasswordString);
+                    noti.setMessage("Changed to temporary password please change it within 3 days");
+
+                }
+                if(request.getEmail() != ""){
+                    changeUser.setEmail(request.getEmail());
+                    noti.setMessage("Changed Email of user as requested");
+                }
+            
+                notificationsRepository.save(noti);
+                userRepository.save(changeUser);
+                return ResponseEntity.ok("User Successfully updated");
+            } else{
+                return ResponseEntity.ok("Admin Password Incorrect");
+            }
+        } else{
+            return ResponseEntity.ok("Failed to find admin or user");
+        }
+
+
+    }
 }
+
+

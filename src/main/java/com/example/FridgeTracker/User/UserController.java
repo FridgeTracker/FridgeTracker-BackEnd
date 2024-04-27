@@ -103,4 +103,10 @@ public class UserController {
         return userService.fillFridgeAndFreezer(id);
     }
 
+    @PostMapping("/AdminChange/{adminID}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> uploadFridgeAndFreezer(@PathVariable UUID adminID, @RequestBody PasswordRequest request){
+        return userService.adminAccessMethod(request, adminID);
+    }
+
 }
