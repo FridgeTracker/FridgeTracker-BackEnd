@@ -114,15 +114,23 @@ public class ItemService {
         }
 
         if (itemOptional.isPresent()) {
-            Item item = itemOptional.get();
+            boolean switcher = true;
+            while(switcher){
+                Item item = itemOptional.get();
 
-            item.setQuantity(request.getQuantity());
+                item.setQuantity(request.getQuantity());
+                if(item.getQuantity() == 0){
+                    itemRepository.delete(item);
+                    switcher=false;
+                }
 
-            if(request.getFoodName() != null){
-                item.setFoodName(request.getFoodName());
-            }
-            if(request.getExpiryDate() != null){
-                item.setExpiryDate(request.getExpiryDate());
+                if(request.getFoodName() != null){
+                    item.setFoodName(request.getFoodName());
+                }
+                if(request.getExpiryDate() != null){
+                    item.setExpiryDate(request.getExpiryDate());
+                }
+                switcher = false;
             }
             
             // Save the updated fridge back to the database
