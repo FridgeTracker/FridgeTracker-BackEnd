@@ -115,13 +115,15 @@ public class ItemService {
 
         if (itemOptional.isPresent()) {
             
+            boolean shouldDelete = false;
+
             while(true){
                 Item item = itemOptional.get();
 
                 item.setQuantity(request.getQuantity());
+
                 if(item.getQuantity() == 0){
-                    itemRepository.delete(item);
-                    break;
+                    shouldDelete = true;
                 }
 
                 if(request.getFoodName() != null){
@@ -131,6 +133,10 @@ public class ItemService {
                     item.setExpiryDate(request.getExpiryDate());
                 }
                 break;
+            }
+
+            if(shouldDelete){
+                itemRepository.delete(itemOptional.get());
             }
             
             // Save the updated fridge back to the database
