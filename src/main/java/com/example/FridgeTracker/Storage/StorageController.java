@@ -3,16 +3,14 @@ package com.example.FridgeTracker.Storage;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.FridgeTracker.Storage.Storage.StorageType;
 
 @RestController
 @RequestMapping("/api")
@@ -26,15 +24,15 @@ public class StorageController {
         this.storageService = storageService;
     }
 
-    @PostMapping("/addStorage")
+    @PostMapping("/addStorage/{id}")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addStorageToUser(@RequestBody StorageRequest request){
-        return storageService.addStorageToUser(request);
+    public ResponseEntity<String> addStorageToUser(@RequestParam UUID id, @RequestBody Storage request){
+        return storageService.addStorageToUser(id, request);
     }
 
     @PostMapping("/deleteStorage")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteStorage(@RequestBody StorageRequest request) {
+    public ResponseEntity<String> deleteStorage(@RequestBody Storage request) {
         return storageService.deleteStorage(request);
     }
 

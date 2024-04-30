@@ -30,8 +30,8 @@ public class StorageService {
         this.userRepository = userRepository;
     }
 
-    public ResponseEntity<String> addStorageToUser(StorageRequest request){
-        Optional<User> userOptional = userRepository.findById(request.getUserID());
+    public ResponseEntity<String> addStorageToUser(UUID id, Storage request){
+        Optional<User> userOptional = userRepository.findById(id);
         
         if (userOptional.isPresent()) {
             logger.info("im here");
@@ -41,6 +41,7 @@ public class StorageService {
             } else{
                 storageFactory = fridgeFactory;
             }
+
             Storage storage = storageFactory.createStorage(userOptional);
             logger.info("Storage details: {}", storage);
 
@@ -56,7 +57,7 @@ public class StorageService {
         }
     }
 
-    public ResponseEntity<String> deleteStorage(StorageRequest request){
+    public ResponseEntity<String> deleteStorage(Storage request){
 
         try {
             StorageFactory storageFactory;
@@ -65,7 +66,7 @@ public class StorageService {
             } else{
                 storageFactory = fridgeFactory;
             }
-            
+
             Storage storage = storageFactory.createStorage(Optional.empty());
             storage.setId(request.getId());
             storageFactory.delete(storage);
