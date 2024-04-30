@@ -36,11 +36,11 @@ public class ItemService {
     //ADD ITEM TO FRIDGE
     public ResponseEntity<String> addItemToFridge( ItemBody request){
 
-        Optional<Fridge> fridge = fridgeRepository.findById(request.getId());
-        Optional<Freezer> freezer = freezerRepository.findById(request.getId());
-        Optional<ShoppingList> shoppingList = shoppingListRepository.findById(request.getId());
+        Optional<Fridge> fridgeOptional  = fridgeRepository.findById(request.getId());
+        Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
+        Optional<ShoppingList> shoppingListOptional  = shoppingListRepository.findById(request.getId());
 
-        if (fridge.isPresent() || freezer.isPresent() || shoppingList.isPresent()){
+        if (fridgeOptional.isPresent() || freezerOptional.isPresent() || shoppingListOptional.isPresent()){
 
             Item item = new Item();
             Optional<FoodData> food_item = Optional.empty();
@@ -57,14 +57,10 @@ public class ItemService {
                 item.setExpiryDate(request.getExpiryDate());
             }
 
-            if(freezer.isPresent()){
-                item.setFreezer(freezer);
-            }
-            else if(fridge.isPresent()){
-                item.setFridge(fridge);
-            } else {
-                item.setShoppingList(shoppingList.get());
-            }
+            item.setFreezer((freezerOptional.isPresent() ? freezerOptional : null));
+            item.setFridge((fridgeOptional.isPresent() ? fridgeOptional : null));
+            item.setShoppingList((shoppingListOptional.isPresent() ? shoppingListOptional.get() : null));
+            
 
             itemRepository.save(item);
 
