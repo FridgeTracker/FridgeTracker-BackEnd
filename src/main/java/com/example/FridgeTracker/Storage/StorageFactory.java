@@ -27,7 +27,7 @@ class FridgeFactory implements StorageFactory{
     @Override
     public Storage createStorage(Optional<User> user) {
         Fridge fridge = new Fridge();
-        fridge.setUser(user);;
+        fridge.setUser(user);
         return fridge;
     }
 
