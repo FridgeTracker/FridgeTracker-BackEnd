@@ -38,7 +38,7 @@ public class ItemController {
     
     @PostMapping("/deleteItem")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteItemInFridge(@RequestBody DeleteItemRequest request){
+    public ResponseEntity<String> deleteItemInFridge(@RequestBody ItemBody request){
         return itemService.deleteItemInFridge(request);
 
     }

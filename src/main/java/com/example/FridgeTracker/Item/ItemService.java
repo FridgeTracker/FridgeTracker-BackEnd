@@ -136,10 +136,8 @@ public class ItemService {
             }
 
             if(shouldDelete){
-                DeleteItemRequest dItemRequest = new DeleteItemRequest();
-                dItemRequest.setId(request.getId());
-                dItemRequest.setItemID(request.getFoodID());
-                deleteItemInFridge(dItemRequest);
+                deleteItemInFridge(request);
+                return ResponseEntity.ok("Item deleted successfully");
             }
             
             // Save the updated fridge back to the database
@@ -159,7 +157,7 @@ public class ItemService {
 
 
     // DELETE ITEM IN FRIDGE
-    public ResponseEntity<String> deleteItemInFridge( DeleteItemRequest request){
+    public ResponseEntity<String> deleteItemInFridge(ItemBody request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
