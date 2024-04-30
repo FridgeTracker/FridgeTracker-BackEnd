@@ -30,8 +30,8 @@ public class StorageService {
         this.userRepository = userRepository;
     }
 
-    public ResponseEntity<String> addStorageToUser(UUID id, Storage request){
-        Optional<User> userOptional = userRepository.findById(id);
+    public ResponseEntity<String> addStorageToUser(StorageRequest request){
+        Optional<User> userOptional = userRepository.findById(request.getUserID());
         
         if (userOptional.isPresent()) {
             logger.info("im here");
