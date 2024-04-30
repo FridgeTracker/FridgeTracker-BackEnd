@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.FridgeTracker.Storage.StorageRequest;
+import com.example.FridgeTracker.Storage.Storage.StorageType;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -36,7 +37,7 @@ public class FreezerService {
 
             freezer.setStorageName(request.getStorageName());
             freezer.setCapacity(request.getCapacity());
-            freezer.setType("Freezer");
+            freezer.setType(StorageType.FREEZER);
 
             freezer.setUser(user);
 

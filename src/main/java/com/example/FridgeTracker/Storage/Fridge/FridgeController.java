@@ -27,7 +27,7 @@ public class FridgeController {
         this.fridgeService = fridgeService;
     }
 
-    @PostMapping("/addFridge")
+   // @PostMapping("/addFridge")
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> addFridgeToUser(@RequestBody StorageRequest request){
         return fridgeService.addFridgeToUser(request);

@@ -16,6 +16,11 @@ import org.hibernate.annotations.GenericGenerator;
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Storage {
+
+    public enum StorageType {
+        FREEZER,
+        FRIDGE
+    }
     
     @Id
     @GeneratedValue(generator = "UUID")
@@ -30,6 +35,6 @@ public abstract class Storage {
     private long capacity;
 
     @Column(name="type")
-    private String type;
+    private StorageType type;
 
 }

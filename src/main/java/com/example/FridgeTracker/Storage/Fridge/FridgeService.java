@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.example.FridgeTracker.Storage.StorageRequest;
+import com.example.FridgeTracker.Storage.Storage.StorageType;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -38,7 +39,7 @@ public class FridgeService {
 
             fridge.setStorageName(request.getStorageName());
             fridge.setCapacity(request.getCapacity());
-            fridge.setType("Fridge");
+            fridge.setType(StorageType.FRIDGE);
 
             fridge.setUser(userOptional);
 
