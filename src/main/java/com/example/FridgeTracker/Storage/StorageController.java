@@ -27,6 +27,7 @@ public class StorageController {
     }
 
     @PostMapping("/addStorage")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<String> addStorageToUser(@RequestBody StorageRequest request){
         return storageService.addStorageToUser(request);
     }
