@@ -77,7 +77,7 @@ public class ItemService {
 
 
     //UPDATE ITEM IN FRIDGE
-    public ResponseEntity<String> updateItemInFridge( ItemBody request){
+    public ResponseEntity<String> updateItemInFridge(ItemBody request){
    
         Optional<Fridge> fridgeOptional = fridgeRepository.findById(request.getId());
         Optional<Freezer> freezerOptional = freezerRepository.findById(request.getId());
@@ -136,7 +136,10 @@ public class ItemService {
             }
 
             if(shouldDelete){
-                itemRepository.delete(itemOptional.get());
+                DeleteItemRequest dItemRequest = new DeleteItemRequest();
+                dItemRequest.setId(request.getId());
+                dItemRequest.setItemID(request.getFoodID());
+                deleteItemInFridge(dItemRequest);
             }
             
             // Save the updated fridge back to the database
