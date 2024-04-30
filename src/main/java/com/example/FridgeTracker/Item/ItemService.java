@@ -114,14 +114,14 @@ public class ItemService {
         }
 
         if (itemOptional.isPresent()) {
-            boolean switcher = true;
-            while(switcher){
+            
+            while(true){
                 Item item = itemOptional.get();
 
                 item.setQuantity(request.getQuantity());
                 if(item.getQuantity() == 0){
                     itemRepository.delete(item);
-                    switcher=false;
+                    break;
                 }
 
                 if(request.getFoodName() != null){
@@ -130,7 +130,7 @@ public class ItemService {
                 if(request.getExpiryDate() != null){
                     item.setExpiryDate(request.getExpiryDate());
                 }
-                switcher = false;
+                break;
             }
             
             // Save the updated fridge back to the database
