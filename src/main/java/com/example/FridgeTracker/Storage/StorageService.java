@@ -44,7 +44,7 @@ public class StorageService {
         }
     }
 
-    public ResponseEntity<String> deleteStorage(Storage request){
+    public ResponseEntity<String> deleteStorage(StorageRequest request){
 
         try {
             StorageFactory storageFactory;

@@ -30,7 +30,7 @@ public class StorageController {
 
     @PostMapping("/deleteStorage")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteStorage(@RequestBody Storage request) {
+    public ResponseEntity<String> deleteStorage(@RequestBody StorageRequest request) {
         return storageService.deleteStorage(request);
     }
 
