@@ -1,32 +1,21 @@
 package com.example.FridgeTracker.Storage;
 
 import java.util.Optional;
-import java.util.UUID;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.FridgeTracker.MealPlan.MealPlanService;
 import com.example.FridgeTracker.Storage.Storage.StorageType;
-import com.example.FridgeTracker.Storage.Freezer.Freezer;
-import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
 @Service
 public class StorageService {
 
-    private final StorageFactory fridgeFactory;
-    private final StorageFactory freezerFactory;
     private final UserRepository userRepository;
-    private static final Logger logger = LoggerFactory.getLogger(StorageService.class);
 
-     public StorageService(StorageFactory fridgeFactory, StorageFactory freezerFactory, UserRepository userRepository) {
-        this.fridgeFactory = fridgeFactory;
-        this.freezerFactory = freezerFactory;
+     public StorageService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -34,17 +23,15 @@ public class StorageService {
         Optional<User> userOptional = userRepository.findById(request.getUserID());
         
         if (userOptional.isPresent()) {
-            logger.info("im here");
+
             StorageFactory storageFactory;
             if(request.getType() == StorageType.FREEZER){
-                storageFactory = freezerFactory;
+                storageFactory = new FreezerFactory();
             } else{
-                storageFactory = fridgeFactory;
+                storageFactory = new FridgeFactory();
             }
 
             Storage storage = storageFactory.createStorage(userOptional);
-            logger.info("Storage details: {}", storage);
-
             storage.setType(request.getType());
             storage.setCapacity(request.getCapacity());
             storage.setStorageName(request.getStorageName());
@@ -62,9 +49,9 @@ public class StorageService {
         try {
             StorageFactory storageFactory;
             if(request.getType() == StorageType.FREEZER){
-                storageFactory = freezerFactory;
+                storageFactory = new FreezerFactory();
             } else{
-                storageFactory = fridgeFactory;
+                storageFactory = new FridgeFactory();
             }
 
             Storage storage = storageFactory.createStorage(Optional.empty());
