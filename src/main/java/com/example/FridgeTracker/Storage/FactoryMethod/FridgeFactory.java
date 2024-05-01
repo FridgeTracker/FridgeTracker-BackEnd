@@ -1,5 +1,7 @@
 package com.example.FridgeTracker.Storage.FactoryMethod;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,7 @@ public class FridgeFactory implements StorageFactory{
 
     @Override
     public void delete(Storage storage){
+        ((Fridge)storage).setItems(Collections.emptyList());
         fridgeRepository.delete((Fridge)storage);
     }
 }

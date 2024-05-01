@@ -1,5 +1,6 @@
 package com.example.FridgeTracker.Storage.FactoryMethod;
 
+import java.util.Collections;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.User.User;
 
 @Component
@@ -30,6 +32,7 @@ public class FreezerFactory implements StorageFactory{
 
     @Override
     public void delete(Storage storage){
+        ((Freezer)storage).setItems(Collections.emptyList());
         freezerRepository.delete((Freezer) storage);
     }
 
