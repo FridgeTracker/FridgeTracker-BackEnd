@@ -2,11 +2,14 @@ package com.example.FridgeTracker.Commands.StorageCommands;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import com.example.FridgeTracker.Commands.Command;
+import com.example.FridgeTracker.MealPlan.MealPlanService;
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Storage.StorageType;
 import com.example.FridgeTracker.Storage.StorageRequest;
@@ -24,6 +27,8 @@ public class AddStorageCommand implements Command{
     private FridgeFactory fridgeFactory;
     private FreezerFactory freezerFactory;
     private ShoppingListFactory shoppingListFactory;
+    
+    private static final Logger logger = LoggerFactory.getLogger(AddStorageCommand.class);
 
     @Autowired
     public AddStorageCommand(UserRepository userRepository, StorageRequest request, FridgeFactory fridgeFactory, FreezerFactory freezerFactory, ShoppingListFactory shoppingListFactory){
@@ -50,9 +55,11 @@ public class AddStorageCommand implements Command{
             }else {
                 storageFactory = shoppingListFactory;
             }
+            logger.info("",storageFactory);
 
             Storage storage = storageFactory.createStorage();
             storage.setUser(userOptional);
+            logger.info("",storage.getUser());
             storage.setType(request.getType());
             if(request.getCapacity() == 0){
                 storage.setCapacity(0);
@@ -60,6 +67,7 @@ public class AddStorageCommand implements Command{
                 storage.setCapacity(request.getCapacity());
             }
             storage.setStorageName(request.getStorageName());
+            logger.info("",storage);
             storageFactory.save(storage);
 
             return ResponseEntity.ok("Storage added successfully");

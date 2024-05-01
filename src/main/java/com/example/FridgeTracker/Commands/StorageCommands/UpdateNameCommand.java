@@ -4,15 +4,16 @@ import java.util.Optional;
 import org.springframework.http.ResponseEntity;
 
 import com.example.FridgeTracker.Commands.Command;
+import com.example.FridgeTracker.Storage.StorageRequest;
 import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
 import com.example.FridgeTracker.Storage.ShoppingList.ShoppingListRepository;
 
 public class UpdateNameCommand implements Command{
     
-    private ShoppingList request;
+    private StorageRequest request;
     private ShoppingListRepository shoppingListRepository;
 
-    public UpdateNameCommand(ShoppingList request, ShoppingListRepository shoppingListRepository) {
+    public UpdateNameCommand(StorageRequest request, ShoppingListRepository shoppingListRepository) {
         this.request = request;
         this.shoppingListRepository = shoppingListRepository;
     }

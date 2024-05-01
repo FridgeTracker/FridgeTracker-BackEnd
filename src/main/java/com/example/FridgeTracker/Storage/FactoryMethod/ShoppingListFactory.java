@@ -20,7 +20,7 @@ public class ShoppingListFactory implements StorageFactory{
 
     @Override
     public void save(Storage storage) {
-        shoppingListRepository.delete((ShoppingList) storage);
+        shoppingListRepository.save((ShoppingList) storage);
     }
 
     @Override

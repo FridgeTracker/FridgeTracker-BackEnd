@@ -12,9 +12,12 @@ import com.example.FridgeTracker.Commands.Command;
 import com.example.FridgeTracker.Commands.CommandInvoker;
 import com.example.FridgeTracker.Commands.StorageCommands.AddStorageCommand;
 import com.example.FridgeTracker.Commands.StorageCommands.DeleteStorageCommand;
+import com.example.FridgeTracker.Commands.StorageCommands.UpdateNameCommand;
 import com.example.FridgeTracker.Storage.FactoryMethod.FreezerFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.FridgeFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.ShoppingListFactory;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingListRepository;
 import com.example.FridgeTracker.User.UserRepository;
 
 
@@ -24,16 +27,19 @@ import com.example.FridgeTracker.User.UserRepository;
 public class StorageController {
 
     private final UserRepository userRepository;
+    private final ShoppingListRepository shoppingListRepository;
     private final FridgeFactory fridgeFactory;
     private final FreezerFactory freezerFactory;
     private final ShoppingListFactory shoppingListFactory;
 
     @Autowired
-    public StorageController(UserRepository userRepository, FridgeFactory fridgeFactory, FreezerFactory freezerFactory, ShoppingListFactory shoppingListFactory) {
+    public StorageController(UserRepository userRepository, FridgeFactory fridgeFactory, FreezerFactory freezerFactory, 
+                ShoppingListFactory shoppingListFactory, ShoppingListRepository shoppingListRepository) {
         this.userRepository = userRepository;
         this.fridgeFactory = fridgeFactory;
         this.freezerFactory = freezerFactory;
         this.shoppingListFactory = shoppingListFactory;
+        this.shoppingListRepository = shoppingListRepository;
     }
 
     @PostMapping("/addStorage")
@@ -48,6 +54,14 @@ public class StorageController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<?> deleteStorage(@RequestBody StorageRequest request) {
         Command createCommand = new DeleteStorageCommand(request, fridgeFactory, freezerFactory, shoppingListFactory);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
+    }
+
+    @PostMapping("/changeListName")
+    @CrossOrigin(origins ="*")
+    public ResponseEntity<?> changeListName(@RequestBody StorageRequest request){
+        Command createCommand = new UpdateNameCommand(request, shoppingListRepository);
         CommandInvoker invoker = new CommandInvoker(createCommand);
         return invoker.executeCommand();
     }
