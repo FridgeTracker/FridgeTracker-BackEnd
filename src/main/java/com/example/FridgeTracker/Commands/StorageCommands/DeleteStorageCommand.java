@@ -1,5 +1,7 @@
 package com.example.FridgeTracker.Commands.StorageCommands;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,7 +42,7 @@ public class DeleteStorageCommand implements Command {
                 storageFactory = shoppingListFactory;
             }
 
-            Storage storage = storageFactory.createStorage();
+            Storage storage = storageFactory.createStorage(Optional.empty());
             storage.setId(request.getId());
             storageFactory.delete(storage);
             
