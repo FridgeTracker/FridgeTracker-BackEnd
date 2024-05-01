@@ -22,10 +22,10 @@ public class MealRecord {
     private UUID id;
 
     @Column(name = "member_id", nullable = false)
-    private Long memberId;
+    private UUID memberId;
 
     @Column(name = "meal_id", nullable = false)
-    private Long mealId;
+    private UUID mealId;
 
     @Column(name = "recorded_at", nullable = false)
     private LocalDateTime recordedAt;
