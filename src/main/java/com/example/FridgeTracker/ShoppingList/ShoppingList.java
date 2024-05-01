@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.ShoppingList;
+/*package com.example.FridgeTracker.ShoppingList;
 
 import java.util.List;
 import java.util.UUID;
@@ -44,3 +44,4 @@ public class ShoppingList {
     @JsonIgnore
     private User user;
 }
+*/

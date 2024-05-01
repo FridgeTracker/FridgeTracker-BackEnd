@@ -10,6 +10,7 @@ import com.example.FridgeTracker.Storage.Storage.StorageType;
 import com.example.FridgeTracker.Storage.StorageRequest;
 import com.example.FridgeTracker.Storage.FactoryMethod.FreezerFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.FridgeFactory;
+import com.example.FridgeTracker.Storage.FactoryMethod.ShoppingListFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.StorageFactory;
 
 public class DeleteStorageCommand implements Command {
@@ -17,12 +18,14 @@ public class DeleteStorageCommand implements Command {
     private StorageRequest request;
     private FridgeFactory fridgeFactory;
     private FreezerFactory freezerFactory;
+    private ShoppingListFactory shoppingListFactory;
 
     @Autowired
-    public DeleteStorageCommand(StorageRequest request, FridgeFactory fridgeFactory, FreezerFactory freezerFactory){
+    public DeleteStorageCommand(StorageRequest request, FridgeFactory fridgeFactory, FreezerFactory freezerFactory, ShoppingListFactory shoppingListFactory){
         this.request = request;
         this.fridgeFactory = fridgeFactory;
         this.freezerFactory = freezerFactory;
+        this.shoppingListFactory = shoppingListFactory;
     }
 
     @Override
@@ -31,8 +34,10 @@ public class DeleteStorageCommand implements Command {
             StorageFactory storageFactory;
             if(request.getType() == StorageType.FREEZER){
                 storageFactory = freezerFactory;
-            } else{
+            } else if(request.getType() == StorageType.FRIDGE){
                 storageFactory = fridgeFactory;
+            } else{
+                storageFactory = shoppingListFactory;
             }
 
             Storage storage = storageFactory.createStorage();

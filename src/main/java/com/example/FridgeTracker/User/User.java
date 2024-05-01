@@ -16,10 +16,10 @@ import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
 import com.example.FridgeTracker.Notifications.Notifications;
-import com.example.FridgeTracker.ShoppingList.ShoppingList;
 
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
 
 import java.util.UUID;
 

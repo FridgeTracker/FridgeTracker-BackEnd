@@ -13,9 +13,9 @@ import com.example.FridgeTracker.Commands.ItemCommands.AddItemCommand;
 import com.example.FridgeTracker.Commands.ItemCommands.DeleteItemCommand;
 import com.example.FridgeTracker.Commands.ItemCommands.UpdateItemCommand;
 import com.example.FridgeTracker.DataSets.FoodDataRepository;
-import com.example.FridgeTracker.ShoppingList.ShoppingListRepository;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingListRepository;
 
 
 @RestController
@@ -23,7 +23,6 @@ import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
 @CrossOrigin(origins = "*")
 public class ItemController {
 
-    private final ItemService itemService;
     private final ItemRepository itemRepository;
     private final FridgeRepository fridgeRepository;
     private final FreezerRepository freezerRepository;
@@ -31,14 +30,13 @@ public class ItemController {
     private final ShoppingListRepository shoppingListRepository;
 
     @Autowired
-    public ItemController(ItemService itemService,ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository, ShoppingListRepository shoppingListRepository){
+    public ItemController(ItemRepository itemRepository,FridgeRepository fridgeRepository,FreezerRepository freezerRepository,FoodDataRepository foodDataRepository, ShoppingListRepository shoppingListRepository){
     
         this.itemRepository = itemRepository;
         this.fridgeRepository = fridgeRepository;
         this.freezerRepository = freezerRepository;
         this.foodDataRepository = foodDataRepository;
         this.shoppingListRepository = shoppingListRepository;
-        this.itemService = itemService;
     }
 
 

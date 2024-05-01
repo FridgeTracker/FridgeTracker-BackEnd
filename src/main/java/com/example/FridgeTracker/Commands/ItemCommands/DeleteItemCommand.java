@@ -9,12 +9,12 @@ import org.springframework.http.ResponseEntity;
 import com.example.FridgeTracker.Commands.Command;
 import com.example.FridgeTracker.Item.Item;
 import com.example.FridgeTracker.Item.ItemBody;
-import com.example.FridgeTracker.ShoppingList.ShoppingList;
-import com.example.FridgeTracker.ShoppingList.ShoppingListRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Freezer.FreezerRepository;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingListRepository;
 
 public class DeleteItemCommand implements Command{
 

@@ -1,21 +1,18 @@
 package com.example.FridgeTracker.Item;
 
 import com.example.FridgeTracker.DataSets.FoodData;
-import com.example.FridgeTracker.ShoppingList.ShoppingList;
-import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -57,7 +54,7 @@ public class Item {
     private Freezer freezer;
 
     @ManyToOne
-    @JoinColumn(name="shopping_Id", referencedColumnName="s_listId")
+    @JoinColumn(name="shopping_Id", referencedColumnName="id")
     @JsonIgnore
     private ShoppingList shoppingList;
 

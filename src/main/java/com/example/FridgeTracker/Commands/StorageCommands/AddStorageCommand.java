@@ -12,6 +12,7 @@ import com.example.FridgeTracker.Storage.Storage.StorageType;
 import com.example.FridgeTracker.Storage.StorageRequest;
 import com.example.FridgeTracker.Storage.FactoryMethod.FreezerFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.FridgeFactory;
+import com.example.FridgeTracker.Storage.FactoryMethod.ShoppingListFactory;
 import com.example.FridgeTracker.Storage.FactoryMethod.StorageFactory;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
@@ -22,13 +23,15 @@ public class AddStorageCommand implements Command{
     private StorageRequest request;
     private FridgeFactory fridgeFactory;
     private FreezerFactory freezerFactory;
+    private ShoppingListFactory shoppingListFactory;
 
     @Autowired
-    public AddStorageCommand(UserRepository userRepository, StorageRequest request, FridgeFactory fridgeFactory, FreezerFactory freezerFactory){
+    public AddStorageCommand(UserRepository userRepository, StorageRequest request, FridgeFactory fridgeFactory, FreezerFactory freezerFactory, ShoppingListFactory shoppingListFactory){
         this.request = request;
         this.userRepository = userRepository;
         this.fridgeFactory = fridgeFactory;
         this.freezerFactory = freezerFactory;
+        this.shoppingListFactory = shoppingListFactory;
     }
 
 
@@ -40,12 +43,22 @@ public class AddStorageCommand implements Command{
         if (userOptional.isPresent()) {
 
             StorageFactory storageFactory;
-            storageFactory = (request.getType() == StorageType.FREEZER) ? freezerFactory : fridgeFactory;
+            if(request.getType() == StorageType.FREEZER){
+                storageFactory = freezerFactory;
+            }else if(request.getType() == StorageType.FRIDGE){
+                storageFactory = fridgeFactory;
+            }else {
+                storageFactory = shoppingListFactory;
+            }
 
             Storage storage = storageFactory.createStorage();
             storage.setUser(userOptional);
             storage.setType(request.getType());
-            storage.setCapacity(request.getCapacity());
+            if(request.getCapacity() == 0){
+                storage.setCapacity(0);
+            }else{
+                storage.setCapacity(request.getCapacity());
+            }
             storage.setStorageName(request.getStorageName());
             storageFactory.save(storage);
 

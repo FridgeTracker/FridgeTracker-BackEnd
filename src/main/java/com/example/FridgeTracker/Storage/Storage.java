@@ -25,7 +25,8 @@ public abstract class Storage {
 
     public enum StorageType {
         FREEZER,
-        FRIDGE
+        FRIDGE,
+        SHOPPING
     }
     
     @Id

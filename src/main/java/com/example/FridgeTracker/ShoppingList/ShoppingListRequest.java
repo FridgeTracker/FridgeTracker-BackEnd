@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.ShoppingList;
+/*package com.example.FridgeTracker.ShoppingList;
 
 import java.util.UUID;
 import lombok.Data;
@@ -7,3 +7,4 @@ import lombok.Data;
 public class ShoppingListRequest extends ShoppingList{
     UUID userID;
 }
+*/

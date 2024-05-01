@@ -1,4 +1,4 @@
-package com.example.FridgeTracker.ShoppingList;
+package com.example.FridgeTracker.Storage.ShoppingList;
 
 import java.util.Optional;
 import java.util.UUID;

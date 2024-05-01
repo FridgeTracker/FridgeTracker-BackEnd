@@ -1,7 +1,5 @@
 package com.example.FridgeTracker.MealPlan;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;

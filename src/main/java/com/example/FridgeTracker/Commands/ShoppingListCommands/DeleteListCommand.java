@@ -1,11 +1,11 @@
-package com.example.FridgeTracker.Commands.ShoppingListCommands;
+/*package com.example.FridgeTracker.Commands.ShoppingListCommands;
 import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 
 import com.example.FridgeTracker.Commands.Command;
 import com.example.FridgeTracker.ShoppingList.ShoppingList;
-import com.example.FridgeTracker.ShoppingList.ShoppingListRepository;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingListRepository;
 
 public class DeleteListCommand implements Command {
 
@@ -29,4 +29,4 @@ public class DeleteListCommand implements Command {
         }
     }
     
-}
+}*/
