@@ -57,9 +57,7 @@ public class AddStorageCommand implements Command{
             }
             logger.info("",storageFactory);
 
-            Storage storage = storageFactory.createStorage();
-            storage.setUser(userOptional);
-            logger.info("",storage.getUser());
+            Storage storage = storageFactory.createStorage(userOptional);
             storage.setType(request.getType());
             if(request.getCapacity() == 0){
                 storage.setCapacity(0);

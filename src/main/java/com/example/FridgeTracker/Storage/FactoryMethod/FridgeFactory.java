@@ -1,11 +1,14 @@
 package com.example.FridgeTracker.Storage.FactoryMethod;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
 import com.example.FridgeTracker.Storage.Fridge.FridgeRepository;
+import com.example.FridgeTracker.User.User;
 
 @Component
 public class FridgeFactory implements StorageFactory{
@@ -14,8 +17,10 @@ public class FridgeFactory implements StorageFactory{
     private FridgeRepository fridgeRepository;
 
     @Override
-    public Storage createStorage() {
-        return new Fridge();
+    public Storage createStorage(Optional<User> userOptional) {
+        Fridge fridge = new Fridge();
+        fridge.setUser(userOptional);
+        return fridge;
     }
 
     @Override

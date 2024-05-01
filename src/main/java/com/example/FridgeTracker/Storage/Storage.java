@@ -44,16 +44,5 @@ public abstract class Storage {
     @Column(name="type")
     private StorageType type;
 
-    @ManyToOne
-    @JoinColumn(name="userID", referencedColumnName="id")
-    @JsonIgnore
-    private User user;
-
-    public void setUser(Optional<User> optionalUser) {
-        if (optionalUser.isPresent()) {
-            this.user = optionalUser.get();
-        } else {
-        }
-    }
 
 }

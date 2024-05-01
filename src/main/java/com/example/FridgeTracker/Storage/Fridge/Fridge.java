@@ -21,8 +21,20 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name="fridges")
 public class Fridge extends Storage{
 
+    @ManyToOne
+    @JoinColumn(name="userID", referencedColumnName="id")
+    @JsonIgnore
+    private User user;
+
     @OneToMany(mappedBy = "fridge", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items;
+
+    public void setUser(Optional<User> optionalUser) {
+        if (optionalUser.isPresent()) {
+            this.user = optionalUser.get();
+        } else {
+        }
+    }
 
 
 }
