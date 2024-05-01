@@ -8,42 +8,49 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Commands.Command;
+import com.example.FridgeTracker.Commands.CommandInvoker;
+import com.example.FridgeTracker.Commands.ShoppingListCommands.CreateShoppingListCommand;
+import com.example.FridgeTracker.Commands.ShoppingListCommands.DeleteListCommand;
+import com.example.FridgeTracker.Commands.ShoppingListCommands.UpdateListNameCommand;
+import com.example.FridgeTracker.User.UserRepository;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 
 public class ShoppingListController {
 
-    private final ShoppingListService shoppingListService;
+    public final ShoppingListRepository shoppingListRepository;
+    public final UserRepository userRepository;
 
     @Autowired
-    public ShoppingListController(ShoppingListService shoppingListService){
-        this.shoppingListService  = shoppingListService;
-
+    public ShoppingListController(UserRepository userRepository, ShoppingListRepository shoppingListRepository){
+        this.userRepository = userRepository;
+        this.shoppingListRepository = shoppingListRepository;
     }
-    // CALLL METHOD HERE FROM SHOPPINGLIST SERVICE
 
     @PostMapping("/create")
     @CrossOrigin(origins="*")
-    public ResponseEntity<String> createNews_list(@RequestBody ShoppingListRequest request){
-        return shoppingListService.createNews_list(request);
-    }
-
-    @PostMapping("/saveList")
-    @CrossOrigin(origins="*")
-    public ResponseEntity<String> saveList(@RequestBody ShoppingListRequest request){
-        return shoppingListService.saveList(request);
+    public ResponseEntity<?> createNews_list(@RequestBody ShoppingListRequest request){
+        Command createCommand = new CreateShoppingListCommand(request, userRepository, shoppingListRepository);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
     }
 
     @PostMapping("/deleteList")
     @CrossOrigin(origins="*")
-    public ResponseEntity<String> deleteList(@RequestBody ShoppingList request){
-        return shoppingListService.deleteList(request);
+    public ResponseEntity<?> deleteList(@RequestBody ShoppingList request){
+        Command createCommand = new DeleteListCommand(request, shoppingListRepository);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
     }
 
     @PostMapping("/changeListName")
     @CrossOrigin(origins ="*")
-    public ResponseEntity<String>changeListName(@RequestBody ShoppingList request){
-        return shoppingListService.changeListName(request);
+    public ResponseEntity<?> changeListName(@RequestBody ShoppingList request){
+        Command createCommand = new UpdateListNameCommand(request, shoppingListRepository);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
     }
 }

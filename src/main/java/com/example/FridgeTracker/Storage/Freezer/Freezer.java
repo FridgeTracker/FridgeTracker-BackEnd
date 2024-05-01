@@ -21,20 +21,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name="freezers")
 public class Freezer extends Storage{
 
-    @ManyToOne
-    @JoinColumn(name="userID", referencedColumnName="id")
-    @JsonIgnore
-    private User user;
-
     @OneToMany(mappedBy = "freezer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items;
 
-    public void setUser(Optional<User> optionalUser) {
-        if (optionalUser.isPresent()) {
-            this.user = optionalUser.get();
-        } else {
-        }
-    }
 
 }
 

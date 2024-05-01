@@ -5,12 +5,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
+
+import com.example.FridgeTracker.User.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Data
 @MappedSuperclass
@@ -36,5 +42,17 @@ public abstract class Storage {
 
     @Column(name="type")
     private StorageType type;
+
+    @ManyToOne
+    @JoinColumn(name="userID", referencedColumnName="id")
+    @JsonIgnore
+    private User user;
+
+    public void setUser(Optional<User> optionalUser) {
+        if (optionalUser.isPresent()) {
+            this.user = optionalUser.get();
+        } else {
+        }
+    }
 
 }

@@ -8,6 +8,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.Commands.Command;
+import com.example.FridgeTracker.Commands.CommandInvoker;
+import com.example.FridgeTracker.Commands.StorageCommands.AddStorageCommand;
+import com.example.FridgeTracker.Commands.StorageCommands.DeleteStorageCommand;
+import com.example.FridgeTracker.Storage.FactoryMethod.FreezerFactory;
+import com.example.FridgeTracker.Storage.FactoryMethod.FridgeFactory;
+import com.example.FridgeTracker.User.UserRepository;
 
 
 @RestController
@@ -15,23 +22,31 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class StorageController {
 
-    private final StorageService storageService;
+    private final UserRepository userRepository;
+    private final FridgeFactory fridgeFactory;
+    private final FreezerFactory freezerFactory;
 
     @Autowired
-    public StorageController(StorageService storageService){
-        this.storageService = storageService;
+    public StorageController(UserRepository userRepository, FridgeFactory fridgeFactory, FreezerFactory freezerFactory) {
+        this.userRepository = userRepository;
+        this.fridgeFactory = fridgeFactory;
+        this.freezerFactory = freezerFactory;
     }
 
     @PostMapping("/addStorage")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addStorageToUser(@RequestBody StorageRequest request){
-        return storageService.addStorageToUser(request);
+    public ResponseEntity<?> addStorageToUser(@RequestBody StorageRequest request){
+        Command createCommand = new AddStorageCommand(userRepository, request, fridgeFactory, freezerFactory);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
     }
 
     @PostMapping("/deleteStorage")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> deleteStorage(@RequestBody StorageRequest request) {
-        return storageService.deleteStorage(request);
+    public ResponseEntity<?> deleteStorage(@RequestBody StorageRequest request) {
+        Command createCommand = new DeleteStorageCommand(request, fridgeFactory, freezerFactory);
+        CommandInvoker invoker = new CommandInvoker(createCommand);
+        return invoker.executeCommand();
     }
 
 
