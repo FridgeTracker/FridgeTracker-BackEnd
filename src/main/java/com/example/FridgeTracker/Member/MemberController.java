@@ -18,6 +18,7 @@ import com.example.FridgeTracker.Commands.CommandInvoker;
 import com.example.FridgeTracker.Commands.MemberCommands.AddMemberCommand;
 import com.example.FridgeTracker.Commands.MemberCommands.DeleteMemberCommand;
 import com.example.FridgeTracker.Commands.MemberCommands.GetMemberCommand;
+import com.example.FridgeTracker.Commands.MemberCommands.UpdateMemberCommand;
 import com.example.FridgeTracker.User.UserRepository;
 
 @RestController
@@ -55,7 +56,7 @@ public class MemberController {
     @PostMapping("/updateMember")
     @CrossOrigin(origins = "*")
     public ResponseEntity<?> updateMemberInFamily(@RequestBody MemberRequest request){
-        Command createCommand = new AddMemberCommand(request,userRepository, memberRepository);
+        Command createCommand = new UpdateMemberCommand(request,userRepository);
         CommandInvoker invoker = new CommandInvoker(createCommand);
         return invoker.executeCommand();
     }
