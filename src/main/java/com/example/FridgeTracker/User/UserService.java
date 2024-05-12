@@ -2,6 +2,7 @@ package com.example.FridgeTracker.User;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -11,7 +12,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.example.FridgeTracker.DataSets.FoodData;
+import com.example.FridgeTracker.DataSets.FoodDataRepository;
+import com.example.FridgeTracker.Item.Item;
+import com.example.FridgeTracker.Item.ItemRepository;
+import com.example.FridgeTracker.Notifications.Notifications;
+import com.example.FridgeTracker.Notifications.NotificationsRepository;
+import com.example.FridgeTracker.Storage.Freezer.Freezer;
+import com.example.FridgeTracker.Storage.Fridge.Fridge;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 
@@ -20,13 +31,19 @@ import java.time.ZoneId;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final FoodDataRepository foodDataRepository;
+    private final ItemRepository itemRepository;
+    private final NotificationsRepository notificationsRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, FoodDataRepository foodDataRepository, ItemRepository itemRepository, NotificationsRepository notificationsRepository) {
         this.userRepository = userRepository;
+        this.itemRepository = itemRepository;
+        this.foodDataRepository = foodDataRepository;
+        this.notificationsRepository = notificationsRepository;
     }
 
 
@@ -165,4 +182,113 @@ public class UserService {
         }
 
     }
+
+    public ResponseEntity<String> fillFridgeAndFreezer(UUID userID){
+
+        Optional<User> user = userRepository.findById(userID);
+        Random random = new Random();
+
+        if(user.isPresent()){
+
+            for(Fridge fridge:user.get().getFridges()){
+
+                while(fridge.getItems().size() < fridge.getCapacity()){
+
+                    Item item  = new Item();
+                    item.setExpiryDate(generateRandomDate());
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2096,2342) + 1);
+                    item.setFoodID(foodData);
+                    item.setFoodName(foodData.getFoodItem());
+                    item.setQuantity(random.nextInt(5) + 1);
+
+                    item.setFridge(Optional.of(fridge));
+
+                    fridge.getItems().add(item);
+
+                    itemRepository.save(item);
+
+                }
+            }
+
+            for(Freezer freezer:user.get().getFreezers()){
+
+                while(freezer.getItems().size() < freezer.getCapacity()){
+
+                    Item item  = new Item();
+                    item.setExpiryDate(generateRandomDate());
+                    FoodData foodData = foodDataRepository.findById(random.nextInt(2096,2342) + 1);
+                    item.setFoodID(foodData);
+                    item.setFoodName(foodData.getFoodItem());
+                    item.setQuantity(random.nextInt(5) + 1);
+
+                    item.setFreezer(Optional.of(freezer));
+
+                    freezer.getItems().add(item);
+
+                    itemRepository.save(item);
+
+                }
+            }
+
+            return ResponseEntity.ok("Filled Fridge and Freezer");
+        }
+        return ResponseEntity.ok("Failed to find user");
+    }
+
+    public LocalDate generateRandomDate() {
+        LocalDate currentDate = LocalDate.now();
+        Random random = new Random();
+        int randomOffset = random.nextInt(7);
+        int daysOffset = randomOffset - 1;
+        LocalDate randomDate = currentDate.plusDays(daysOffset);
+        return randomDate;
+    }
+
+
+    public ResponseEntity<String> adminAccessMethod(PasswordRequest request, UUID adminUuid){
+
+        Optional<User> changeUserOptional = userRepository.findById(request.getId());
+        Optional<User> adminOption = userRepository.findById(adminUuid);
+
+        if(adminOption.isPresent() && changeUserOptional.isPresent()){
+            User admin = adminOption.get();
+            if (passwordEncoder.matches(request.getPassword(), admin.getPassword())){
+                User changeUser = changeUserOptional.get();
+
+                if(request.getRank() == 3){
+                    userRepository.delete(changeUser);
+                    return ResponseEntity.ok("User Successfully Removed");
+                }
+
+                Notifications noti = new Notifications();
+                noti.setAlert_type("Admin");
+                noti.setSender("Admin");
+                noti.setUser(changeUserOptional);
+                noti.setDateTime(LocalDateTime.now());
+
+                if(request.getNewPw() != ""){
+                    String hashedPasswordString = passwordEncoder.encode(request.getNewPw());
+                    changeUser.setPassword(hashedPasswordString);
+                    noti.setMessage("Changed to temporary password please change it within 3 days");
+
+                }
+                if(request.getEmail() != ""){
+                    changeUser.setEmail(request.getEmail());
+                    noti.setMessage("Changed Email of user as requested");
+                }
+            
+                notificationsRepository.save(noti);
+                userRepository.save(changeUser);
+                return ResponseEntity.ok("User Successfully updated");
+            } else{
+                return ResponseEntity.ok("Admin Password Incorrect");
+            }
+        } else{
+            return ResponseEntity.ok("Failed to find admin or user");
+        }
+
+
+    }
 }
+
+

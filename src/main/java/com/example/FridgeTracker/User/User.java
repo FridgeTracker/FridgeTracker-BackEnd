@@ -10,19 +10,16 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.transaction.Transactional;
 import lombok.Data;
 
 import com.example.FridgeTracker.Member.Member;
 import com.example.FridgeTracker.Notifications.Notifications;
-import com.example.FridgeTracker.ShoppingList.ShoppingList;
 
-import com.example.FridgeTracker.Storage.Storage;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
+import com.example.FridgeTracker.Storage.ShoppingList.ShoppingList;
 
 import java.util.UUID;
 

@@ -1,12 +1,7 @@
 package com.example.FridgeTracker.User;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -95,6 +90,18 @@ public class UserController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<String> updateNotifications(@RequestBody User request){
         return userService.updateNotifications(request);
+    }
+
+    @PostMapping("/uploadFridgeAndFreezer/{id}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> uploadFridgeAndFreezer(@PathVariable UUID id){
+        return userService.fillFridgeAndFreezer(id);
+    }
+
+    @PostMapping("/AdminChange/{adminID}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> uploadFridgeAndFreezer(@PathVariable UUID adminID, @RequestBody PasswordRequest request){
+        return userService.adminAccessMethod(request, adminID);
     }
 
 }

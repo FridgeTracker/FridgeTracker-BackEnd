@@ -10605,916 +10605,6 @@
    "KJ_per100grams": "1478 kJ"
  },
  {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Baby Back Ribs",
-   "per100grams": "100g",
-   "Cals_per100grams": "259 cal",
-   "KJ_per100grams": "1088 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Bacon and Eggs",
-   "per100grams": "100g",
-   "Cals_per100grams": "252 cal",
-   "KJ_per100grams": "1058 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Baked Beans",
-   "per100grams": "100g",
-   "Cals_per100grams": "94 cal",
-   "KJ_per100grams": "395 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Baked Chicken",
-   "per100grams": "100g",
-   "Cals_per100grams": "164 cal",
-   "KJ_per100grams": "689 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "BBQ Ribs",
-   "per100grams": "100g",
-   "Cals_per100grams": "255 cal",
-   "KJ_per100grams": "1071 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Beef Stew",
-   "per100grams": "100g",
-   "Cals_per100grams": "95 cal",
-   "KJ_per100grams": "399 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Biryani",
-   "per100grams": "100g",
-   "Cals_per100grams": "176 cal",
-   "KJ_per100grams": "739 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Black Pudding",
-   "per100grams": "100g",
-   "Cals_per100grams": "253 cal",
-   "KJ_per100grams": "1063 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Black Rice",
-   "per100grams": "100g",
-   "Cals_per100grams": "323 cal",
-   "KJ_per100grams": "1357 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "BLT",
-   "per100grams": "100g",
-   "Cals_per100grams": "247 cal",
-   "KJ_per100grams": "1037 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Brown Rice",
-   "per100grams": "100g",
-   "Cals_per100grams": "362 cal",
-   "KJ_per100grams": "1520 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Burrito",
-   "per100grams": "100g",
-   "Cals_per100grams": "163 cal",
-   "KJ_per100grams": "685 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Butter Chicken",
-   "per100grams": "100g",
-   "Cals_per100grams": "140 cal",
-   "KJ_per100grams": "588 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "California Roll",
-   "per100grams": "100g",
-   "Cals_per100grams": "93 cal",
-   "KJ_per100grams": "391 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Caesar Salad",
-   "per100grams": "100g",
-   "Cals_per100grams": "127 cal",
-   "KJ_per100grams": "533 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Fried Steak",
-   "per100grams": "100g",
-   "Cals_per100grams": "151 cal",
-   "KJ_per100grams": "634 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Marsala",
-   "per100grams": "100g",
-   "Cals_per100grams": "96 cal",
-   "KJ_per100grams": "403 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Parmesan",
-   "per100grams": "100g",
-   "Cals_per100grams": "110 cal",
-   "KJ_per100grams": "462 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Pot Pie",
-   "per100grams": "100g",
-   "Cals_per100grams": "223 cal",
-   "KJ_per100grams": "937 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chicken Tikka Masala",
-   "per100grams": "100g",
-   "Cals_per100grams": "81 cal",
-   "KJ_per100grams": "340 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chili con Carne",
-   "per100grams": "100g",
-   "Cals_per100grams": "105 cal",
-   "KJ_per100grams": "441 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Chimichanga",
-   "per100grams": "100g",
-   "Cals_per100grams": "232 cal",
-   "KJ_per100grams": "974 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Cobb Salad",
-   "per100grams": "100g",
-   "Cals_per100grams": "118 cal",
-   "KJ_per100grams": "496 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Collard Greens",
-   "per100grams": "100g",
-   "Cals_per100grams": "28 cal",
-   "KJ_per100grams": "118 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Corn Dog",
-   "per100grams": "100g",
-   "Cals_per100grams": "250 cal",
-   "KJ_per100grams": "1050 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Corned Beef Hash",
-   "per100grams": "100g",
-   "Cals_per100grams": "164 cal",
-   "KJ_per100grams": "689 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Cottage Pie",
-   "per100grams": "100g",
-   "Cals_per100grams": "139 cal",
-   "KJ_per100grams": "584 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Dal",
-   "per100grams": "100g",
-   "Cals_per100grams": "330 cal",
-   "KJ_per100grams": "1386 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Deviled Eggs",
-   "per100grams": "100g",
-   "Cals_per100grams": "201 cal",
-   "KJ_per100grams": "844 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Dim Sum",
-   "per100grams": "100g",
-   "Cals_per100grams": "193 cal",
-   "KJ_per100grams": "811 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Dosa",
-   "per100grams": "100g",
-   "Cals_per100grams": "66 cal",
-   "KJ_per100grams": "277 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Enchiladas",
-   "per100grams": "100g",
-   "Cals_per100grams": "168 cal",
-   "KJ_per100grams": "706 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Fajita",
-   "per100grams": "100g",
-   "Cals_per100grams": "117 cal",
-   "KJ_per100grams": "491 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Fish and Chips",
-   "per100grams": "100g",
-   "Cals_per100grams": "195 cal",
-   "KJ_per100grams": "819 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Fried Rice",
-   "per100grams": "100g",
-   "Cals_per100grams": "186 cal",
-   "KJ_per100grams": "781 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Fried Shrimp",
-   "per100grams": "100g",
-   "Cals_per100grams": "277 cal",
-   "KJ_per100grams": "1163 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Grilled Cheese Sandwich",
-   "per100grams": "100g",
-   "Cals_per100grams": "288 cal",
-   "KJ_per100grams": "1210 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Ham and Cheese Sandwich",
-   "per100grams": "100g",
-   "Cals_per100grams": "241 cal",
-   "KJ_per100grams": "1012 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Hummus",
-   "per100grams": "100g",
-   "Cals_per100grams": "177 cal",
-   "KJ_per100grams": "743 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Jambalaya",
-   "per100grams": "100g",
-   "Cals_per100grams": "100 cal",
-   "KJ_per100grams": "420 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Kebab",
-   "per100grams": "100g",
-   "Cals_per100grams": "215 cal",
-   "KJ_per100grams": "903 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Lasagne",
-   "per100grams": "100g",
-   "Cals_per100grams": "132 cal",
-   "KJ_per100grams": "554 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Mac and Cheese",
-   "per100grams": "100g",
-   "Cals_per100grams": "370 cal",
-   "KJ_per100grams": "1554 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Macaroni and Cheese",
-   "per100grams": "100g",
-   "Cals_per100grams": "370 cal",
-   "KJ_per100grams": "1554 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Mashed Potatoes",
-   "per100grams": "100g",
-   "Cals_per100grams": "83 cal",
-   "KJ_per100grams": "349 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Meat Pie",
-   "per100grams": "100g",
-   "Cals_per100grams": "242 cal",
-   "KJ_per100grams": "1016 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Meatloaf",
-   "per100grams": "100g",
-   "Cals_per100grams": "254 cal",
-   "KJ_per100grams": "1067 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Naan",
-   "per100grams": "100g",
-   "Cals_per100grams": "310 cal",
-   "KJ_per100grams": "1302 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Orange Chicken",
-   "per100grams": "100g",
-   "Cals_per100grams": "259 cal",
-   "KJ_per100grams": "1088 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Pad Thai",
-   "per100grams": "100g",
-   "Cals_per100grams": "150 cal",
-   "KJ_per100grams": "630 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Paella",
-   "per100grams": "100g",
-   "Cals_per100grams": "156 cal",
-   "KJ_per100grams": "655 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Paratha",
-   "per100grams": "100g",
-   "Cals_per100grams": "325 cal",
-   "KJ_per100grams": "1365 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Pea Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "75 cal",
-   "KJ_per100grams": "315 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Peanut Butter Sandwich",
-   "per100grams": "100g",
-   "Cals_per100grams": "408 cal",
-   "KJ_per100grams": "1714 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Peking Duck",
-   "per100grams": "100g",
-   "Cals_per100grams": "225 cal",
-   "KJ_per100grams": "945 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Philly Cheese Steak",
-   "per100grams": "100g",
-   "Cals_per100grams": "250 cal",
-   "KJ_per100grams": "1050 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Pizza",
-   "per100grams": "100g",
-   "Cals_per100grams": "267 cal",
-   "KJ_per100grams": "1121 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Pork Chop",
-   "per100grams": "100g",
-   "Cals_per100grams": "225 cal",
-   "KJ_per100grams": "945 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Potato Salad",
-   "per100grams": "100g",
-   "Cals_per100grams": "143 cal",
-   "KJ_per100grams": "601 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Pulled Pork Sandwich",
-   "per100grams": "100g",
-   "Cals_per100grams": "211 cal",
-   "KJ_per100grams": "886 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Ramen",
-   "per100grams": "100g",
-   "Cals_per100grams": "447 cal",
-   "KJ_per100grams": "1877 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Ravioli",
-   "per100grams": "100g",
-   "Cals_per100grams": "203 cal",
-   "KJ_per100grams": "853 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Reuben Sandwich",
-   "per100grams": "100g",
-   "Cals_per100grams": "208 cal",
-   "KJ_per100grams": "874 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Roast Beef",
-   "per100grams": "100g",
-   "Cals_per100grams": "111 cal",
-   "KJ_per100grams": "466 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Roast Dinner",
-   "per100grams": "100g",
-   "Cals_per100grams": "198 cal",
-   "KJ_per100grams": "832 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Samosa",
-   "per100grams": "100g",
-   "Cals_per100grams": "214 cal",
-   "KJ_per100grams": "899 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Sausage Roll",
-   "per100grams": "100g",
-   "Cals_per100grams": "350 cal",
-   "KJ_per100grams": "1470 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Sausage Rolls",
-   "per100grams": "100g",
-   "Cals_per100grams": "297 cal",
-   "KJ_per100grams": "1247 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Shepherds Pie",
-   "per100grams": "100g",
-   "Cals_per100grams": "70 cal",
-   "KJ_per100grams": "294 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Shrimp Cocktail",
-   "per100grams": "100g",
-   "Cals_per100grams": "464 cal",
-   "KJ_per100grams": "1949 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Sloppy Joe",
-   "per100grams": "100g",
-   "Cals_per100grams": "71 cal",
-   "KJ_per100grams": "298 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Sloppy Joes",
-   "per100grams": "100g",
-   "Cals_per100grams": "154 cal",
-   "KJ_per100grams": "647 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Spaghetti Bolognese",
-   "per100grams": "100g",
-   "Cals_per100grams": "132 cal",
-   "KJ_per100grams": "554 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Spring Roll",
-   "per100grams": "100g",
-   "Cals_per100grams": "250 cal",
-   "KJ_per100grams": "1050 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Spring Rolls",
-   "per100grams": "100g",
-   "Cals_per100grams": "250 cal",
-   "KJ_per100grams": "1050 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Taco",
-   "per100grams": "100g",
-   "Cals_per100grams": "217 cal",
-   "KJ_per100grams": "911 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Tandoori Chicken",
-   "per100grams": "100g",
-   "Cals_per100grams": "113 cal",
-   "KJ_per100grams": "475 kJ"
- },
- {
-   "FoodCategory": "Dishes&Meals",
-   "FoodItem": "Yorkshire Pudding",
-   "per100grams": "100g",
-   "Cals_per100grams": "553 cal",
-   "KJ_per100grams": "2323 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Alphabet Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "25 cal",
-   "KJ_per100grams": "105 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Bean Stew",
-   "per100grams": "100g",
-   "Cals_per100grams": "133 cal",
-   "KJ_per100grams": "559 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Beef Bouillon",
-   "per100grams": "100g",
-   "Cals_per100grams": "3 cal",
-   "KJ_per100grams": "13 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Beef Noodle Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "34 cal",
-   "KJ_per100grams": "143 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Beef Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "33 cal",
-   "KJ_per100grams": "139 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Bouillon",
-   "per100grams": "100g",
-   "Cals_per100grams": "16 cal",
-   "KJ_per100grams": "67 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Broccoli Cheese Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "87 cal",
-   "KJ_per100grams": "365 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Broccoli Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "87 cal",
-   "KJ_per100grams": "365 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cabbage Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "28 cal",
-   "KJ_per100grams": "118 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Carrot Ginger Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "25 cal",
-   "KJ_per100grams": "105 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Carrot Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "25 cal",
-   "KJ_per100grams": "105 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Bouillon",
-   "per100grams": "100g",
-   "Cals_per100grams": "4 cal",
-   "KJ_per100grams": "17 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Broth",
-   "per100grams": "100g",
-   "Cals_per100grams": "16 cal",
-   "KJ_per100grams": "67 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Gumbo Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "23 cal",
-   "KJ_per100grams": "97 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Noodle Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "25 cal",
-   "KJ_per100grams": "105 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Stock",
-   "per100grams": "100g",
-   "Cals_per100grams": "16 cal",
-   "KJ_per100grams": "67 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken Vegetable Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "31 cal",
-   "KJ_per100grams": "130 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Chicken with Rice Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "24 cal",
-   "KJ_per100grams": "101 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Asparagus Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "35 cal",
-   "KJ_per100grams": "147 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Broccoli Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "45 cal",
-   "KJ_per100grams": "189 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Celery Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "37 cal",
-   "KJ_per100grams": "155 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Chicken Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "48 cal",
-   "KJ_per100grams": "202 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Mushroom Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "39 cal",
-   "KJ_per100grams": "164 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Onion Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "44 cal",
-   "KJ_per100grams": "185 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Cream of Potato Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "30 cal",
-   "KJ_per100grams": "126 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Creamy Chicken Noodle Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "23 cal",
-   "KJ_per100grams": "97 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "French Onion Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "23 cal",
-   "KJ_per100grams": "97 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Golden Mushroom Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "65 cal",
-   "KJ_per100grams": "273 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Goulash",
-   "per100grams": "100g",
-   "Cals_per100grams": "1009 cal",
-   "KJ_per100grams": "4238 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Instant Ramen",
-   "per100grams": "100g",
-   "Cals_per100grams": "436 cal",
-   "KJ_per100grams": "1831 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Lentil Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "56 cal",
-   "KJ_per100grams": "235 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Lobster Bisque Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "100 cal",
-   "KJ_per100grams": "420 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Meatball Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "49 cal",
-   "KJ_per100grams": "206 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Minestrone",
-   "per100grams": "100g",
-   "Cals_per100grams": "34 cal",
-   "KJ_per100grams": "143 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Mushroom Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "35 cal",
-   "KJ_per100grams": "147 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Noodle Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "34 cal",
-   "KJ_per100grams": "143 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Onion Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "23 cal",
-   "KJ_per100grams": "97 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Oxtail Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "28 cal",
-   "KJ_per100grams": "118 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Pea Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "75 cal",
-   "KJ_per100grams": "315 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Potato Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "80 cal",
-   "KJ_per100grams": "336 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Pumpkin Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "29 cal",
-   "KJ_per100grams": "122 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Ramen",
-   "per100grams": "100g",
-   "Cals_per100grams": "436 cal",
-   "KJ_per100grams": "1831 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Scotch Broth",
-   "per100grams": "100g",
-   "Cals_per100grams": "33 cal",
-   "KJ_per100grams": "139 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Succotash",
-   "per100grams": "100g",
-   "Cals_per100grams": "115 cal",
-   "KJ_per100grams": "483 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Thai Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "60 cal",
-   "KJ_per100grams": "252 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Tomato Rice Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "47 cal",
-   "KJ_per100grams": "197 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Tomato Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "30 cal",
-   "KJ_per100grams": "126 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Vegetable Beef Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "31 cal",
-   "KJ_per100grams": "130 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Vegetable Broth",
-   "per100grams": "100g",
-   "Cals_per100grams": "5 cal",
-   "KJ_per100grams": "21 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Vegetable Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "28 cal",
-   "KJ_per100grams": "118 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Vegetable Stock",
-   "per100grams": "100g",
-   "Cals_per100grams": "5 cal",
-   "KJ_per100grams": "21 kJ"
- },
- {
-   "FoodCategory": "Soups",
-   "FoodItem": "Wedding Soup",
-   "per100grams": "100g",
-   "Cals_per100grams": "53 cal",
-   "KJ_per100grams": "223 kJ"
- },
- {
    "FoodCategory": "Legumes",
    "FoodItem": "Azuki Bean",
    "per100grams": "100g",
@@ -15573,5 +14663,1755 @@
    "per100grams": "100g",
    "Cals_per100grams": "286 cal",
    "KJ_per100grams": "1201 kJ"
- }
+ },
+ {
+        "FoodCategory": "Meat",
+        "FoodItem": "Ground pork",
+        "per100grams": "100g",
+        "Cals_per100grams": "110 cal",
+        "KJ_per100grams": "708 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Mixed meats (beef, pork, lamb)",
+        "per100grams": "100g",
+        "Cals_per100grams": "151 cal",
+        "KJ_per100grams": "805 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Marinated meat (chicken, beef, or lamb)",
+        "per100grams": "100g",
+        "Cals_per100grams": "288 cal",
+        "KJ_per100grams": "209 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Minced pork",
+        "per100grams": "100g",
+        "Cals_per100grams": "244 cal",
+        "KJ_per100grams": "602 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Ground meat (pork or beef)",
+        "per100grams": "100g",
+        "Cals_per100grams": "203 cal",
+        "KJ_per100grams": "1095 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Ham",
+        "per100grams": "100g",
+        "Cals_per100grams": "163 cal",
+        "KJ_per100grams": "1157 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Shrimp or chicken",
+        "per100grams": "100g",
+        "Cals_per100grams": "67 cal",
+        "KJ_per100grams": "336 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Minced beef",
+        "per100grams": "100g",
+        "Cals_per100grams": "218 cal",
+        "KJ_per100grams": "1050 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Kangaroo meat",
+        "per100grams": "100g",
+        "Cals_per100grams": "139 cal",
+        "KJ_per100grams": "728 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Choice of meat (beef, chicken, or tofu)",
+        "per100grams": "100g",
+        "Cals_per100grams": "89 cal",
+        "KJ_per100grams": "781 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken",
+        "per100grams": "100g",
+        "Cals_per100grams": "206 cal",
+        "KJ_per100grams": "665 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Pork belly",
+        "per100grams": "100g",
+        "Cals_per100grams": "250 cal",
+        "KJ_per100grams": "360 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Beef fillet",
+        "per100grams": "100g",
+        "Cals_per100grams": "214 cal",
+        "KJ_per100grams": "646 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Beef patty",
+        "per100grams": "100g",
+        "Cals_per100grams": "189 cal",
+        "KJ_per100grams": "1080 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken or tofu",
+        "per100grams": "100g",
+        "Cals_per100grams": "131 cal",
+        "KJ_per100grams": "579 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Grilled eel",
+        "per100grams": "100g",
+        "Cals_per100grams": "126 cal",
+        "KJ_per100grams": "995 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Ground meat (beef or lamb)",
+        "per100grams": "100g",
+        "Cals_per100grams": "111 cal",
+        "KJ_per100grams": "869 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Assorted raw fish (tuna, salmon, etc.)",
+        "per100grams": "100g",
+        "Cals_per100grams": "287 cal",
+        "KJ_per100grams": "1273 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Grilled beef",
+        "per100grams": "100g",
+        "Cals_per100grams": "155 cal",
+        "KJ_per100grams": "259 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Choice of meat (beef, chicken, or pork)",
+        "per100grams": "100g",
+        "Cals_per100grams": "78 cal",
+        "KJ_per100grams": "803 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Pork",
+        "per100grams": "100g",
+        "Cals_per100grams": "68 cal",
+        "KJ_per100grams": "1350 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Shrimp",
+        "per100grams": "100g",
+        "Cals_per100grams": "202 cal",
+        "KJ_per100grams": "539 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Pork sausages",
+        "per100grams": "100g",
+        "Cals_per100grams": "300 cal",
+        "KJ_per100grams": "1310 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken or lamb",
+        "per100grams": "100g",
+        "Cals_per100grams": "64 cal",
+        "KJ_per100grams": "816 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Ground beef",
+        "per100grams": "100g",
+        "Cals_per100grams": "299 cal",
+        "KJ_per100grams": "1324 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Pancetta",
+        "per100grams": "100g",
+        "Cals_per100grams": "158 cal",
+        "KJ_per100grams": "1413 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Beef stew meat",
+        "per100grams": "100g",
+        "Cals_per100grams": "300 cal",
+        "KJ_per100grams": "1369 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Tuna steak",
+        "per100grams": "100g",
+        "Cals_per100grams": "143 cal",
+        "KJ_per100grams": "781 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Minced lamb or beef",
+        "per100grams": "100g",
+        "Cals_per100grams": "218 cal",
+        "KJ_per100grams": "214 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Minced meat (beef, lamb, or chicken)",
+        "per100grams": "100g",
+        "Cals_per100grams": "195 cal",
+        "KJ_per100grams": "1100 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Fish fillets",
+        "per100grams": "100g",
+        "Cals_per100grams": "205 cal",
+        "KJ_per100grams": "1034 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken breast",
+        "per100grams": "100g",
+        "Cals_per100grams": "157 cal",
+        "KJ_per100grams": "1211 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Pork cutlet",
+        "per100grams": "100g",
+        "Cals_per100grams": "80 cal",
+        "KJ_per100grams": "490 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Crab",
+        "per100grams": "100g",
+        "Cals_per100grams": "122 cal",
+        "KJ_per100grams": "1413 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Lamb meat",
+        "per100grams": "100g",
+        "Cals_per100grams": "288 cal",
+        "KJ_per100grams": "650 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken wings or drumsticks",
+        "per100grams": "100g",
+        "Cals_per100grams": "242 cal",
+        "KJ_per100grams": "760 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Beef slices",
+        "per100grams": "100g",
+        "Cals_per100grams": "227 cal",
+        "KJ_per100grams": "550 kJ"
+    },
+    {
+        "FoodCategory": "Meat",
+        "FoodItem": "Chicken or beef",
+        "per100grams": "100g",
+        "Cals_per100grams": "222 cal",
+        "KJ_per100grams": "200 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Potatoes",
+        "per100grams": "100g",
+        "Cals_per100grams": "115 cal",
+        "KJ_per100grams": "876 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cauliflower",
+        "per100grams": "100g",
+        "Cals_per100grams": "228 cal",
+        "KJ_per100grams": "855 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cooked rice",
+        "per100grams": "100g",
+        "Cals_per100grams": "234 cal",
+        "KJ_per100grams": "208 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cilantro",
+        "per100grams": "100g",
+        "Cals_per100grams": "213 cal",
+        "KJ_per100grams": "919 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Water",
+        "per100grams": "100g",
+        "Cals_per100grams": "209 cal",
+        "KJ_per100grams": "674 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Fresh fruits",
+        "per100grams": "100g",
+        "Cals_per100grams": "129 cal",
+        "KJ_per100grams": "787 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Snow peas",
+        "per100grams": "100g",
+        "Cals_per100grams": "64 cal",
+        "KJ_per100grams": "854 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Lentils",
+        "per100grams": "100g",
+        "Cals_per100grams": "85 cal",
+        "KJ_per100grams": "697 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Daikon radish",
+        "per100grams": "100g",
+        "Cals_per100grams": "54 cal",
+        "KJ_per100grams": "1371 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Tomato",
+        "per100grams": "100g",
+        "Cals_per100grams": "292 cal",
+        "KJ_per100grams": "583 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "140 cal",
+        "KJ_per100grams": "1269 kJ"
+    },
+    {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Grilled vegetables (bell peppers, onions, tomatoes)",
+      "per100grams": "100g",
+      "Cals_per100grams": "185 cal",
+      "KJ_per100grams": "903 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cucumber",
+        "per100grams": "100g",
+        "Cals_per100grams": "118 cal",
+        "KJ_per100grams": "494 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Thai herbs",
+        "per100grams": "100g",
+        "Cals_per100grams": "172 cal",
+        "KJ_per100grams": "1029 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Mixed greens",
+        "per100grams": "100g",
+        "Cals_per100grams": "98 cal",
+        "KJ_per100grams": "1315 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Red chili peppers",
+        "per100grams": "100g",
+        "Cals_per100grams": "198 cal",
+        "KJ_per100grams": "1412 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Bell peppers",
+        "per100grams": "100g",
+        "Cals_per100grams": "260 cal",
+        "KJ_per100grams": "1224 kJ"
+    },
+    {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Vegetables (cucumber, radish, etc.)",
+      "per100grams": "100g",
+      "Cals_per100grams": "237 cal",
+      "KJ_per100grams": "637 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Green beans",
+        "per100grams": "100g",
+        "Cals_per100grams": "104 cal",
+        "KJ_per100grams": "1289 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Green papaya",
+        "per100grams": "100g",
+        "Cals_per100grams": "63 cal",
+        "KJ_per100grams": "909 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Chinese eggplant",
+        "per100grams": "100g",
+        "Cals_per100grams": "109 cal",
+        "KJ_per100grams": "1481 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Edamame (young soybeans)",
+        "per100grams": "100g",
+        "Cals_per100grams": "115 cal",
+        "KJ_per100grams": "734 kJ"
+    },
+    {
+      "FoodCategory": "Vegetables",
+      "FoodItem": "Vegetables (zucchini, sweet potato, etc.)",
+      "per100grams": "100g",
+      "Cals_per100grams": "221 cal",
+      "KJ_per100grams": "232 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Thai basil",
+        "per100grams": "100g",
+        "Cals_per100grams": "122 cal",
+        "KJ_per100grams": "329 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Green onions",
+        "per100grams": "100g",
+        "Cals_per100grams": "84 cal",
+        "KJ_per100grams": "420 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Eggplant",
+        "per100grams": "100g",
+        "Cals_per100grams": "227 cal",
+        "KJ_per100grams": "1029 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Radishes",
+        "per100grams": "100g",
+        "Cals_per100grams": "82 cal",
+        "KJ_per100grams": "1103 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Beetroot",
+        "per100grams": "100g",
+        "Cals_per100grams": "119 cal",
+        "KJ_per100grams": "1191 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Bean sprouts",
+        "per100grams": "100g",
+        "Cals_per100grams": "76 cal",
+        "KJ_per100grams": "340 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Chinese broccoli",
+        "per100grams": "100g",
+        "Cals_per100grams": "70 cal",
+        "KJ_per100grams": "1406 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cabbage",
+        "per100grams": "100g",
+        "Cals_per100grams": "224 cal",
+        "KJ_per100grams": "1428 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Tomatoes",
+        "per100grams": "100g",
+        "Cals_per100grams": "250 cal",
+        "KJ_per100grams": "780 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Zucchini",
+        "per100grams": "100g",
+        "Cals_per100grams": "121 cal",
+        "KJ_per100grams": "539 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Herbs (mint, dill)",
+        "per100grams": "100g",
+        "Cals_per100grams": "259 cal",
+        "KJ_per100grams": "1238 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Garlic",
+        "per100grams": "100g",
+        "Cals_per100grams": "206 cal",
+        "KJ_per100grams": "1451 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Fava beans",
+        "per100grams": "100g",
+        "Cals_per100grams": "64 cal",
+        "KJ_per100grams": "398 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Carrots",
+        "per100grams": "100g",
+        "Cals_per100grams": "50 cal",
+        "KJ_per100grams": "1459 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Mushrooms",
+        "per100grams": "100g",
+        "Cals_per100grams": "104 cal",
+        "KJ_per100grams": "852 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Assorted vegetables",
+        "per100grams": "100g",
+        "Cals_per100grams": "111 cal",
+        "KJ_per100grams": "623 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Kaffir lime leaves",
+        "per100grams": "100g",
+        "Cals_per100grams": "111 cal",
+        "KJ_per100grams": "747 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Dried chili peppers",
+        "per100grams": "100g",
+        "Cals_per100grams": "100 cal",
+        "KJ_per100grams": "985 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Lettuce",
+        "per100grams": "100g",
+        "Cals_per100grams": "182 cal",
+        "KJ_per100grams": "500 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Potatoes for fries or salad",
+        "per100grams": "100g",
+        "Cals_per100grams": "225 cal",
+        "KJ_per100grams": "1294 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Lime leaves",
+        "per100grams": "100g",
+        "Cals_per100grams": "177 cal",
+        "KJ_per100grams": "1487 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Peas",
+        "per100grams": "100g",
+        "Cals_per100grams": "190 cal",
+        "KJ_per100grams": "1015 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Cucumbers",
+        "per100grams": "100g",
+        "Cals_per100grams": "97 cal",
+        "KJ_per100grams": "611 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Galangal",
+        "per100grams": "100g",
+        "Cals_per100grams": "152 cal",
+        "KJ_per100grams": "1252 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Parsley",
+        "per100grams": "100g",
+        "Cals_per100grams": "120 cal",
+        "KJ_per100grams": "644 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Pineapple",
+        "per100grams": "100g",
+        "Cals_per100grams": "152 cal",
+        "KJ_per100grams": "877 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Roasted red peppers",
+        "per100grams": "100g",
+        "Cals_per100grams": "97 cal",
+        "KJ_per100grams": "847 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Wasabi",
+        "per100grams": "100g",
+        "Cals_per100grams": "275 cal",
+        "KJ_per100grams": "535 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Mint",
+        "per100grams": "100g",
+        "Cals_per100grams": "77 cal",
+        "KJ_per100grams": "882 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Salad (lettuce, tomatoes, cucumbers)",
+        "per100grams": "100g",
+        "Cals_per100grams": "163 cal",
+        "KJ_per100grams": "1462 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Lemongrass",
+        "per100grams": "100g",
+        "Cals_per100grams": "109 cal",
+        "KJ_per100grams": "754 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Napa cabbage",
+        "per100grams": "100g",
+        "Cals_per100grams": "92 cal",
+        "KJ_per100grams": "1108 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Bamboo shoots",
+        "per100grams": "100g",
+        "Cals_per100grams": "254 cal",
+        "KJ_per100grams": "882 kJ"
+    },
+    {
+        "FoodCategory": "Vegetables",
+        "FoodItem": "Scallions",
+        "per100grams": "100g",
+        "Cals_per100grams": "176 cal",
+        "KJ_per100grams": "1289 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Chili paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "116 cal",
+        "KJ_per100grams": "684 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pomegranate molasses",
+        "per100grams": "100g",
+        "Cals_per100grams": "117 cal",
+        "KJ_per100grams": "516 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sea salt",
+        "per100grams": "100g",
+        "Cals_per100grams": "173 cal",
+        "KJ_per100grams": "1372 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Seaweed",
+        "per100grams": "100g",
+        "Cals_per100grams": "113 cal",
+        "KJ_per100grams": "977 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Rum",
+        "per100grams": "100g",
+        "Cals_per100grams": "253 cal",
+        "KJ_per100grams": "1088 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Hoisin sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "63 cal",
+        "KJ_per100grams": "508 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Red bean paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "91 cal",
+        "KJ_per100grams": "428 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Beer batter",
+        "per100grams": "100g",
+        "Cals_per100grams": "129 cal",
+        "KJ_per100grams": "1077 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Takoyaki sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "126 cal",
+        "KJ_per100grams": "1222 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Olive oil",
+        "per100grams": "100g",
+        "Cals_per100grams": "63 cal",
+        "KJ_per100grams": "1357 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Tomato",
+        "per100grams": "100g",
+        "Cals_per100grams": "199 cal",
+        "KJ_per100grams": "951 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Fermented black beans",
+        "per100grams": "100g",
+        "Cals_per100grams": "91 cal",
+        "KJ_per100grams": "722 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sugar",
+        "per100grams": "100g",
+        "Cals_per100grams": "77 cal",
+        "KJ_per100grams": "459 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Cocoa powder",
+        "per100grams": "100g",
+        "Cals_per100grams": "204 cal",
+        "KJ_per100grams": "714 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Ice cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "61 cal",
+        "KJ_per100grams": "1364 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Ice",
+        "per100grams": "100g",
+        "Cals_per100grams": "232 cal",
+        "KJ_per100grams": "1472 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Saffron",
+        "per100grams": "100g",
+        "Cals_per100grams": "93 cal",
+        "KJ_per100grams": "1364 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Yellow curry paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "179 cal",
+        "KJ_per100grams": "240 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Coconut milk",
+        "per100grams": "100g",
+        "Cals_per100grams": "120 cal",
+        "KJ_per100grams": "1073 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Rosemary",
+        "per100grams": "100g",
+        "Cals_per100grams": "111 cal",
+        "KJ_per100grams": "1411 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "107 cal",
+        "KJ_per100grams": "684 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Yogurt",
+        "per100grams": "100g",
+        "Cals_per100grams": "174 cal",
+        "KJ_per100grams": "500 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Soy sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "275 cal",
+        "KJ_per100grams": "627 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Egg whites",
+        "per100grams": "100g",
+        "Cals_per100grams": "275 cal",
+        "KJ_per100grams": "1118 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Peanut sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "186 cal",
+        "KJ_per100grams": "466 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Jam",
+        "per100grams": "100g",
+        "Cals_per100grams": "227 cal",
+        "KJ_per100grams": "820 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sichuan peppercorns",
+        "per100grams": "100g",
+        "Cals_per100grams": "96 cal",
+        "KJ_per100grams": "1303 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Fermented yogurt",
+        "per100grams": "100g",
+        "Cals_per100grams": "70 cal",
+        "KJ_per100grams": "632 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pickled ginger",
+        "per100grams": "100g",
+        "Cals_per100grams": "263 cal",
+        "KJ_per100grams": "462 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Mayonnaise",
+        "per100grams": "100g",
+        "Cals_per100grams": "225 cal",
+        "KJ_per100grams": "665 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Orange blossom syrup",
+        "per100grams": "100g",
+        "Cals_per100grams": "111 cal",
+        "KJ_per100grams": "862 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Dipping sauces",
+        "per100grams": "100g",
+        "Cals_per100grams": "86 cal",
+        "KJ_per100grams": "1382 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pork broth",
+        "per100grams": "100g",
+        "Cals_per100grams": "189 cal",
+        "KJ_per100grams": "825 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Rice vinegar",
+        "per100grams": "100g",
+        "Cals_per100grams": "106 cal",
+        "KJ_per100grams": "298 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Szechuan peppercorns",
+        "per100grams": "100g",
+        "Cals_per100grams": "247 cal",
+        "KJ_per100grams": "499 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Lemon juice",
+        "per100grams": "100g",
+        "Cals_per100grams": "137 cal",
+        "KJ_per100grams": "540 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pickles",
+        "per100grams": "100g",
+        "Cals_per100grams": "152 cal",
+        "KJ_per100grams": "453 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Cumin",
+        "per100grams": "100g",
+        "Cals_per100grams": "118 cal",
+        "KJ_per100grams": "297 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Herbs de Provence",
+        "per100grams": "100g",
+        "Cals_per100grams": "202 cal",
+        "KJ_per100grams": "817 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sprinkles (hundreds and thousands)",
+        "per100grams": "100g",
+        "Cals_per100grams": "266 cal",
+        "KJ_per100grams": "1057 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Bonito flakes",
+        "per100grams": "100g",
+        "Cals_per100grams": "201 cal",
+        "KJ_per100grams": "247 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Ketchup",
+        "per100grams": "100g",
+        "Cals_per100grams": "94 cal",
+        "KJ_per100grams": "1198 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sesame paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "101 cal",
+        "KJ_per100grams": "238 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sweet chili sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "203 cal",
+        "KJ_per100grams": "1257 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Egg wash",
+        "per100grams": "100g",
+        "Cals_per100grams": "54 cal",
+        "KJ_per100grams": "660 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Shredded coconut",
+        "per100grams": "100g",
+        "Cals_per100grams": "68 cal",
+        "KJ_per100grams": "352 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Matcha powder",
+        "per100grams": "100g",
+        "Cals_per100grams": "126 cal",
+        "KJ_per100grams": "1263 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Salt",
+        "per100grams": "100g",
+        "Cals_per100grams": "128 cal",
+        "KJ_per100grams": "1431 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Chili bean paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "224 cal",
+        "KJ_per100grams": "1312 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Jordanian spices",
+        "per100grams": "100g",
+        "Cals_per100grams": "235 cal",
+        "KJ_per100grams": "466 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Spices",
+        "per100grams": "100g",
+        "Cals_per100grams": "254 cal",
+        "KJ_per100grams": "1085 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Golden syrup",
+        "per100grams": "100g",
+        "Cals_per100grams": "292 cal",
+        "KJ_per100grams": "480 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Milk",
+        "per100grams": "100g",
+        "Cals_per100grams": "189 cal",
+        "KJ_per100grams": "1142 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Glutinous rice flour",
+        "per100grams": "100g",
+        "Cals_per100grams": "229 cal",
+        "KJ_per100grams": "448 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pine nuts",
+        "per100grams": "100g",
+        "Cals_per100grams": "55 cal",
+        "KJ_per100grams": "1385 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Honey syrup",
+        "per100grams": "100g",
+        "Cals_per100grams": "84 cal",
+        "KJ_per100grams": "457 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Chives",
+        "per100grams": "100g",
+        "Cals_per100grams": "239 cal",
+        "KJ_per100grams": "815 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sumac",
+        "per100grams": "100g",
+        "Cals_per100grams": "277 cal",
+        "KJ_per100grams": "1029 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Balsamic dressing",
+        "per100grams": "100g",
+        "Cals_per100grams": "108 cal",
+        "KJ_per100grams": "1000 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sesame seeds",
+        "per100grams": "100g",
+        "Cals_per100grams": "259 cal",
+        "KJ_per100grams": "758 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Whipped cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "69 cal",
+        "KJ_per100grams": "1246 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sour cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "281 cal",
+        "KJ_per100grams": "1120 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Dashi broth",
+        "per100grams": "100g",
+        "Cals_per100grams": "53 cal",
+        "KJ_per100grams": "454 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Eel sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "180 cal",
+        "KJ_per100grams": "1397 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Takoyaki batter",
+        "per100grams": "100g",
+        "Cals_per100grams": "204 cal",
+        "KJ_per100grams": "219 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Miso paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "266 cal",
+        "KJ_per100grams": "854 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Cucumber relish",
+        "per100grams": "100g",
+        "Cals_per100grams": "117 cal",
+        "KJ_per100grams": "630 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Oats",
+        "per100grams": "100g",
+        "Cals_per100grams": "246 cal",
+        "KJ_per100grams": "806 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Black pepper",
+        "per100grams": "100g",
+        "Cals_per100grams": "86 cal",
+        "KJ_per100grams": "763 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Fish sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "165 cal",
+        "KJ_per100grams": "1366 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Mashed peas",
+        "per100grams": "100g",
+        "Cals_per100grams": "224 cal",
+        "KJ_per100grams": "1181 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sweet corn",
+        "per100grams": "100g",
+        "Cals_per100grams": "257 cal",
+        "KJ_per100grams": "1002 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Okonomi sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "206 cal",
+        "KJ_per100grams": "1425 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Oil for frying",
+        "per100grams": "100g",
+        "Cals_per100grams": "127 cal",
+        "KJ_per100grams": "1189 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Thai tea leaves",
+        "per100grams": "100g",
+        "Cals_per100grams": "91 cal",
+        "KJ_per100grams": "1318 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Custard",
+        "per100grams": "100g",
+        "Cals_per100grams": "233 cal",
+        "KJ_per100grams": "1181 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Mashed potatoes",
+        "per100grams": "100g",
+        "Cals_per100grams": "298 cal",
+        "KJ_per100grams": "210 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Broth",
+        "per100grams": "100g",
+        "Cals_per100grams": "215 cal",
+        "KJ_per100grams": "762 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Ginger",
+        "per100grams": "100g",
+        "Cals_per100grams": "94 cal",
+        "KJ_per100grams": "862 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sugar syrup",
+        "per100grams": "100g",
+        "Cals_per100grams": "116 cal",
+        "KJ_per100grams": "801 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Mirin",
+        "per100grams": "100g",
+        "Cals_per100grams": "253 cal",
+        "KJ_per100grams": "209 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Tahini sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "90 cal",
+        "KJ_per100grams": "1453 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Marinara sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "70 cal",
+        "KJ_per100grams": "1004 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Espresso",
+        "per100grams": "100g",
+        "Cals_per100grams": "94 cal",
+        "KJ_per100grams": "647 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Breadcrumbs",
+        "per100grams": "100g",
+        "Cals_per100grams": "275 cal",
+        "KJ_per100grams": "1393 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Thyme",
+        "per100grams": "100g",
+        "Cals_per100grams": "185 cal",
+        "KJ_per100grams": "743 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Hummus",
+        "per100grams": "100g",
+        "Cals_per100grams": "296 cal",
+        "KJ_per100grams": "1026 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Peanuts",
+        "per100grams": "100g",
+        "Cals_per100grams": "224 cal",
+        "KJ_per100grams": "607 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Condensed milk",
+        "per100grams": "100g",
+        "Cals_per100grams": "292 cal",
+        "KJ_per100grams": "715 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Herbs (parsley, dill)",
+        "per100grams": "100g",
+        "Cals_per100grams": "183 cal",
+        "KJ_per100grams": "237 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Honey",
+        "per100grams": "100g",
+        "Cals_per100grams": "300 cal",
+        "KJ_per100grams": "496 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Ponzu sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "232 cal",
+        "KJ_per100grams": "1015 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Middle Eastern spices",
+        "per100grams": "100g",
+        "Cals_per100grams": "155 cal",
+        "KJ_per100grams": "387 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Beef broth",
+        "per100grams": "100g",
+        "Cals_per100grams": "84 cal",
+        "KJ_per100grams": "852 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Pea soup",
+        "per100grams": "100g",
+        "Cals_per100grams": "112 cal",
+        "KJ_per100grams": "1055 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Coriander",
+        "per100grams": "100g",
+        "Cals_per100grams": "179 cal",
+        "KJ_per100grams": "862 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Thai chili peppers",
+        "per100grams": "100g",
+        "Cals_per100grams": "165 cal",
+        "KJ_per100grams": "724 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Egg yolks",
+        "per100grams": "100g",
+        "Cals_per100grams": "133 cal",
+        "KJ_per100grams": "1242 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Seasonings",
+        "per100grams": "100g",
+        "Cals_per100grams": "272 cal",
+        "KJ_per100grams": "834 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Gravy",
+        "per100grams": "100g",
+        "Cals_per100grams": "285 cal",
+        "KJ_per100grams": "311 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Green curry paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "153 cal",
+        "KJ_per100grams": "1428 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Vinegar",
+        "per100grams": "100g",
+        "Cals_per100grams": "178 cal",
+        "KJ_per100grams": "719 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Noodles (optional)",
+        "per100grams": "100g",
+        "Cals_per100grams": "228 cal",
+        "KJ_per100grams": "1009 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Chicken broth",
+        "per100grams": "100g",
+        "Cals_per100grams": "263 cal",
+        "KJ_per100grams": "411 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Tahini",
+        "per100grams": "100g",
+        "Cals_per100grams": "217 cal",
+        "KJ_per100grams": "1177 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Vegemite spread",
+        "per100grams": "100g",
+        "Cals_per100grams": "160 cal",
+        "KJ_per100grams": "529 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sweet bean paste",
+        "per100grams": "100g",
+        "Cals_per100grams": "89 cal",
+        "KJ_per100grams": "721 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Flour pancakes",
+        "per100grams": "100g",
+        "Cals_per100grams": "279 cal",
+        "KJ_per100grams": "909 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Parmesan cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "106 cal",
+        "KJ_per100grams": "608 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Oyster sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "179 cal",
+        "KJ_per100grams": "880 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Lime juice",
+        "per100grams": "100g",
+        "Cals_per100grams": "126 cal",
+        "KJ_per100grams": "481 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Curry powder",
+        "per100grams": "100g",
+        "Cals_per100grams": "123 cal",
+        "KJ_per100grams": "882 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Sweet soy sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "299 cal",
+        "KJ_per100grams": "536 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Barbecue sauce",
+        "per100grams": "100g",
+        "Cals_per100grams": "227 cal",
+        "KJ_per100grams": "750 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "126 cal",
+        "KJ_per100grams": "898 kJ"
+    },
+    {
+        "FoodCategory": "Condiments",
+        "FoodItem": "Raisins",
+        "per100grams": "100g",
+        "Cals_per100grams": "231 cal",
+        "KJ_per100grams": "524 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Flour",
+        "per100grams": "100g",
+        "Cals_per100grams": "297 cal",
+        "KJ_per100grams": "207 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "White bread",
+        "per100grams": "100g",
+        "Cals_per100grams": "183 cal",
+        "KJ_per100grams": "734 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Ladyfingers",
+        "per100grams": "100g",
+        "Cals_per100grams": "262 cal",
+        "KJ_per100grams": "305 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Wide rice noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "267 cal",
+        "KJ_per100grams": "686 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Ricotta cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "300 cal",
+        "KJ_per100grams": "329 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Burger bun",
+        "per100grams": "100g",
+        "Cals_per100grams": "229 cal",
+        "KJ_per100grams": "864 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Sweet cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "101 cal",
+        "KJ_per100grams": "1340 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Batter",
+        "per100grams": "100g",
+        "Cals_per100grams": "156 cal",
+        "KJ_per100grams": "1056 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Nori (seaweed)",
+        "per100grams": "100g",
+        "Cals_per100grams": "263 cal",
+        "KJ_per100grams": "1422 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Pita bread",
+        "per100grams": "100g",
+        "Cals_per100grams": "102 cal",
+        "KJ_per100grams": "639 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Rice",
+        "per100grams": "100g",
+        "Cals_per100grams": "183 cal",
+        "KJ_per100grams": "461 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Rice noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "172 cal",
+        "KJ_per100grams": "1001 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Pastry crust",
+        "per100grams": "100g",
+        "Cals_per100grams": "280 cal",
+        "KJ_per100grams": "1486 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Bread",
+        "per100grams": "100g",
+        "Cals_per100grams": "145 cal",
+        "KJ_per100grams": "288 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Tempura batter",
+        "per100grams": "100g",
+        "Cals_per100grams": "94 cal",
+        "KJ_per100grams": "1184 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Sticky rice",
+        "per100grams": "100g",
+        "Cals_per100grams": "230 cal",
+        "KJ_per100grams": "791 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Lasagna noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "219 cal",
+        "KJ_per100grams": "1293 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Gyoza wrappers",
+        "per100grams": "100g",
+        "Cals_per100grams": "113 cal",
+        "KJ_per100grams": "1370 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Vermicelli noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "94 cal",
+        "KJ_per100grams": "531 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Mozzarella cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "290 cal",
+        "KJ_per100grams": "288 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Panko breadcrumbs",
+        "per100grams": "100g",
+        "Cals_per100grams": "116 cal",
+        "KJ_per100grams": "257 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Egg noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "210 cal",
+        "KJ_per100grams": "421 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Rice or bread",
+        "per100grams": "100g",
+        "Cals_per100grams": "78 cal",
+        "KJ_per100grams": "819 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Ramen noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "239 cal",
+        "KJ_per100grams": "931 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Pie crust",
+        "per100grams": "100g",
+        "Cals_per100grams": "211 cal",
+        "KJ_per100grams": "741 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Phyllo dough",
+        "per100grams": "100g",
+        "Cals_per100grams": "59 cal",
+        "KJ_per100grams": "793 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Spaghetti",
+        "per100grams": "100g",
+        "Cals_per100grams": "117 cal",
+        "KJ_per100grams": "1398 kJ"
+    },
+    {
+        "FoodCategory": "Grain Products",
+        "FoodItem": "Soba noodles",
+        "per100grams": "100g",
+        "Cals_per100grams": "118 cal",
+        "KJ_per100grams": "326 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Feta cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "156 cal",
+        "KJ_per100grams": "1246 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Ricotta cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "75 cal",
+        "KJ_per100grams": "1162 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Sweet cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "148 cal",
+        "KJ_per100grams": "1020 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Yogurt",
+        "per100grams": "100g",
+        "Cals_per100grams": "158 cal",
+        "KJ_per100grams": "848 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "98 cal",
+        "KJ_per100grams": "982 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Ice cream",
+        "per100grams": "100g",
+        "Cals_per100grams": "141 cal",
+        "KJ_per100grams": "1252 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Mozzarella cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "209 cal",
+        "KJ_per100grams": "836 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Parmesan cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "252 cal",
+        "KJ_per100grams": "496 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Mascarpone cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "278 cal",
+        "KJ_per100grams": "1486 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Strained yogurt (labneh)",
+        "per100grams": "100g",
+        "Cals_per100grams": "161 cal",
+        "KJ_per100grams": "606 kJ"
+    },
+    {
+        "FoodCategory": "Dairy Products",
+        "FoodItem": "Gruy\u00e8re cheese",
+        "per100grams": "100g",
+        "Cals_per100grams": "256 cal",
+        "KJ_per100grams": "212 kJ"
+    }
 ]
