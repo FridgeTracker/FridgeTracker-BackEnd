@@ -1,9 +1,11 @@
 package com.example.FridgeTracker.User;
 
-import org.springframework.http.ResponseEntity;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,9 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
-
-
 
 
 
@@ -36,7 +35,18 @@ public class UserController {
     //Register User endpoint **Subject to change**
     @PostMapping("/register")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> addUser(@RequestBody User user){
+    public ResponseEntity<String> addUser(@RequestBody UserDTO userDTO) {
+        User user = new UserBuilder()
+            .setFamilyName(userDTO.getFamilyName())
+            .setEmail(userDTO.getEmail())
+            .setPassword(userDTO.getPassword())
+            .setRank(userDTO.getRank())
+            .setImageData(userDTO.getImageData())
+            .withTimezone(userDTO.getTimezone())
+            .withStorageEmpty(userDTO.isStorageEmpty())
+            .withStorageFull(userDTO.isStorageFull())
+            .withExpiryDate(userDTO.isExpiryDate())
+            .build();
         return userService.addUser(user);
     }
 
@@ -59,9 +69,26 @@ public class UserController {
     //update Account Info
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> updateUser(@RequestBody User Request){
-        return userService.updateUser(Request);
+    public ResponseEntity<String> updateUser(@RequestBody UserDTO userDTO) {
+        Optional<User> optUser = userRepository.findById(userDTO.getId());
+        if (optUser.isPresent()) {
+            User user = optUser.get();
+            user.setFamilyName(userDTO.getFamilyName());
+            user.setEmail(userDTO.getEmail());
+            user.setPassword(userDTO.getPassword());
+            user.setRank(userDTO.getRank());
+            user.setImageData(userDTO.getImageData());
+            user.setTimezone(userDTO.getTimezone());
+            user.setStorageEmpty(userDTO.isStorageEmpty());
+            user.setStorageFull(userDTO.isStorageFull());
+            user.setExpiryDate(userDTO.isExpiryDate());
+            userRepository.save(user);
+            return ResponseEntity.ok("User updated successfully.");
+        } else {
+            return ResponseEntity.ok("User not found.");
+        }
     }
+
 
 
     //Change Password
