@@ -1,5 +1,8 @@
 package com.example.FridgeTracker.User;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -20,10 +23,6 @@ import com.example.FridgeTracker.Notifications.Notifications;
 import com.example.FridgeTracker.Notifications.NotificationsRepository;
 import com.example.FridgeTracker.Storage.Freezer.Freezer;
 import com.example.FridgeTracker.Storage.Fridge.Fridge;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 
 
@@ -103,7 +102,7 @@ public class UserService {
     }
 
     //UPDATE USER ACCOUNT INFO
-    public ResponseEntity<String> updateUser(User Request){
+    public ResponseEntity<String> updateUser(UserDTO Request){
 
         Optional<User> OptUser = userRepository.findById(Request.getId());
 
@@ -166,7 +165,7 @@ public class UserService {
     }
 
 
-    public ResponseEntity<String> updateNotifications(User request){
+    public ResponseEntity<String> updateNotifications(UserDTO request){
 
         Optional<User> optUser = userRepository.findById(request.getId());
 

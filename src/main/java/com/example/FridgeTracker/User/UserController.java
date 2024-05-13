@@ -1,7 +1,6 @@
 package com.example.FridgeTracker.User;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,24 +68,8 @@ public class UserController {
     //update Account Info
     @PostMapping("/updateUser")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> updateUser(@RequestBody UserDTO userDTO) {
-        Optional<User> optUser = userRepository.findById(userDTO.getId());
-        if (optUser.isPresent()) {
-            User user = optUser.get();
-            user.setFamilyName(userDTO.getFamilyName());
-            user.setEmail(userDTO.getEmail());
-            user.setPassword(userDTO.getPassword());
-            user.setRank(userDTO.getRank());
-            user.setImageData(userDTO.getImageData());
-            user.setTimezone(userDTO.getTimezone());
-            user.setStorageEmpty(userDTO.isStorageEmpty());
-            user.setStorageFull(userDTO.isStorageFull());
-            user.setExpiryDate(userDTO.isExpiryDate());
-            userRepository.save(user);
-            return ResponseEntity.ok("User updated successfully.");
-        } else {
-            return ResponseEntity.ok("User not found.");
-        }
+    public ResponseEntity<String> updateUser(@RequestBody UserDTO Request){
+        return userService.updateUser(Request);
     }
 
 
@@ -115,7 +98,7 @@ public class UserController {
 
     @PostMapping("/updateNotifications")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<String> updateNotifications(@RequestBody User request){
+    public ResponseEntity<String> updateNotifications(@RequestBody UserDTO request){
         return userService.updateNotifications(request);
     }
 
