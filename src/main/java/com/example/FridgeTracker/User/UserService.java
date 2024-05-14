@@ -255,7 +255,7 @@ public class UserService {
                 User changeUser = changeUserOptional.get();
 
                 if(request.getRank() == 3){
-                    userRepository.delete(changeUser);
+                    //userRepository.delete(changeUser);
                     return ResponseEntity.ok("User Successfully Removed");
                 }
 
