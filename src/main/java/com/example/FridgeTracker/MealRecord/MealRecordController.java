@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.UUID;
 
 @CrossOrigin
@@ -36,6 +39,15 @@ public class MealRecordController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<List<MealRecord>> getMemberRecords(@PathVariable UUID memberId){
         List<MealRecord> mealRecords = mealRecordRepository.findByMemberId(memberId);
-        return ResponseEntity.ok(mealRecords);
+        Set<UUID> uniqueMealIds = new HashSet<>();
+        List<MealRecord> uniqueRecords = new ArrayList<>();
+
+        for (MealRecord record : mealRecords) {
+            if (!uniqueMealIds.contains(record.getMealId())) {
+                uniqueMealIds.add(record.getMealId());
+                uniqueRecords.add(record);
+            }
+        }
+        return ResponseEntity.ok(uniqueRecords);
     }
 }
