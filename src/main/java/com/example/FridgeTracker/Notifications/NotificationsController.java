@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.FridgeTracker.User.PasswordRequest;
 import com.example.FridgeTracker.User.User;
 import com.example.FridgeTracker.User.UserRepository;
 
@@ -56,5 +57,11 @@ public class NotificationsController {
     @Transactional
     public ResponseEntity<String> getAlerts(@PathVariable UUID id){
         return notificationsService.generateAlerts(id);
+    }
+
+    @PostMapping("/forgetPassword/{email}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<?> forgetPassword(@PathVariable String email){
+        return notificationsService.forgetPassword(email);
     }
 }

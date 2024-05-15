@@ -144,6 +144,27 @@ public class NotificationsService {
         return notification;
     }
 
+    public ResponseEntity<?> forgetPassword(String email){
+
+        List<User> admins = userRepository.findByRank(1);
+        List<Notifications> notifications = new ArrayList<>();
+
+        for (User admin : admins) {
+            Notifications notification = new Notifications();
+            notification.setSender("User");
+            notification.setMessage(email);
+            notification.setAlert_type("Forget Password");
+            Optional<User> optionalUser = Optional.ofNullable(admin);
+            notification.setUser(optionalUser); // Set the admin user
+            notification.setDateTime(LocalDateTime.now());
+            notifications.add(notification);
+        }
+
+        notificationsRepository.saveAll(notifications);
+        return ResponseEntity.ok("Message sent to admins");
+
+    }
+
 
     
 }

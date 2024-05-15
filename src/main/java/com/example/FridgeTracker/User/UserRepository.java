@@ -19,6 +19,8 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
     List<User> findAll();
 
+    List<User> findByRank(int rank);
+
     //Add get all Users method
 }
 
