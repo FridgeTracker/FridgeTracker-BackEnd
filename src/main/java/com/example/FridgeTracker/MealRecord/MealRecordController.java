@@ -7,10 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @CrossOrigin
 @RestController
@@ -39,15 +42,19 @@ public class MealRecordController {
     @CrossOrigin(origins = "*")
     public ResponseEntity<List<MealRecord>> getMemberRecords(@PathVariable UUID memberId){
         List<MealRecord> mealRecords = mealRecordRepository.findByMemberId(memberId);
-        Set<UUID> uniqueMealIds = new HashSet<>();
-        List<MealRecord> uniqueRecords = new ArrayList<>();
 
-        for (MealRecord record : mealRecords) {
-            if (!uniqueMealIds.contains(record.getMealId())) {
-                uniqueMealIds.add(record.getMealId());
-                uniqueRecords.add(record);
-            }
-        }
-        return ResponseEntity.ok(uniqueRecords);
+        Map<UUID, Long> mealTypeCounts = mealRecords.stream()
+                .collect(Collectors.groupingBy(MealRecord::getMealId, Collectors.counting()));
+
+        List<MealRecord> result = mealRecords.stream()
+                .filter(record -> mealTypeCounts.getOrDefault(record.getMealId(), 0L) >= 2)
+                .collect(Collectors.toList());
+
+        Map<UUID, Boolean> uniqueMealTypes = new HashMap<>();
+        result = result.stream()
+                .filter(record -> uniqueMealTypes.putIfAbsent(record.getMealId(), Boolean.TRUE) == null)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(result);
     }
 }
