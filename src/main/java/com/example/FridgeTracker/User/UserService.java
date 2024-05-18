@@ -61,6 +61,7 @@ public class UserService {
             user.setExpiryDate(true);
             user.setStorageEmpty(true);
             user.setStorageFull(true);
+            user.setTimezone("Australia/ACT");
             //Import into db
             userRepository.save(user);
 
