@@ -1,3 +1,5 @@
+# Backend Disabled as of 13/04/2024
+
 ## API Endpoints
 
 ### Users
